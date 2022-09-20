@@ -1,0 +1,777 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3997985681973076687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3997985681973076697}
+  - component: {fileID: 3997985681973076696}
+  - component: {fileID: 3997985681973076695}
+  - component: {fileID: 3997985681973076699}
+  - component: {fileID: 3997985681973076698}
+  - component: {fileID: 3997985681973076701}
+  - component: {fileID: 3997985681973076700}
+  - component: {fileID: 3997985681973076703}
+  - component: {fileID: 3997985681973076702}
+  - component: {fileID: 3997985681973076673}
+  - component: {fileID: 3997985681973076672}
+  - component: {fileID: 3997985681973076675}
+  - component: {fileID: 3997985681973076674}
+  - component: {fileID: 3997985681973076694}
+  - component: {fileID: 3997985681973076679}
+  - component: {fileID: 3997985681973076678}
+  - component: {fileID: 3997985681973076681}
+  - component: {fileID: 3997985681973076680}
+  - component: {fileID: 3997985681973076683}
+  - component: {fileID: 3997985681973076682}
+  - component: {fileID: 3997985681973076684}
+  - component: {fileID: 3997985681973076693}
+  - component: {fileID: 3997985681973076692}
+  - component: {fileID: 3997985681973076676}
+  - component: {fileID: 3997985681973076677}
+  - component: {fileID: 1851630372104010110}
+  m_Layer: 0
+  m_Name: Player (Spaceship Weaponized)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3997985681973076697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3997985681973076696
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 4bf22a03ae55deb4ba41c1857e7947d4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.96, y: 1.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &3997985681973076695
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73e076f6d7491a64ca7d0ff488ddb85b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &3997985681973076699
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32
+--- !u!114 &3997985681973076698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557780fd7adf90044af115e19176a158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Player 1
+--- !u!114 &3997985681973076701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Main Gun
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.15
+    counter: 500
+    counterReachedZero: 0
+  prefab: {fileID: 5322387968320073750, guid: 2d1a1a5f2def3b4469db3484b31fc8ba, type: 3}
+  prefabSmartOverrides: 1
+  mode: 3
+  position: {x: 0.6, y: 0, z: 0}
+  scale: 1
+  speed: 18
+  targetEnemySettings:
+    toughestFirst: 0
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &3997985681973076700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Cannon
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.25
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 2810408086072053405, guid: 41ff4fa9a2cab6c4a8c0f2923dd70a58, type: 3}
+  prefabSmartOverrides: 1
+  mode: 3
+  position: {x: 0.5, y: -0.3, z: 0}
+  scale: 1
+  speed: 20
+  targetEnemySettings:
+    toughestFirst: 0
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &3997985681973076703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Cannon
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.25
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 2810408086072053405, guid: 41ff4fa9a2cab6c4a8c0f2923dd70a58, type: 3}
+  prefabSmartOverrides: 1
+  mode: 3
+  position: {x: 0.5, y: 0.3, z: 0}
+  scale: 1
+  speed: 20
+  targetEnemySettings:
+    toughestFirst: 0
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &3997985681973076702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Phaser
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.2
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 7468486278026618430, guid: 5677dcf62ecec4a49a7d57ea364122f4, type: 3}
+  prefabSmartOverrides: 1
+  mode: 1
+  position: {x: 0, y: 0, z: 0}
+  scale: 1
+  speed: 22
+  targetEnemySettings:
+    toughestFirst: 1
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: 5}
+--- !u!114 &3997985681973076673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3 Way Shooter
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.25
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 787315027656738199, guid: 19fd17be2f9fd664584feaf2cb200bcc, type: 3}
+  prefabSmartOverrides: 1
+  mode: 3
+  position: {x: 0.575, y: 0, z: 0}
+  scale: 1
+  speed: 19
+  targetEnemySettings:
+    toughestFirst: 0
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: 180}
+--- !u!114 &3997985681973076672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3 Way Shooter
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.25
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 787315027656738199, guid: 19fd17be2f9fd664584feaf2cb200bcc, type: 3}
+  prefabSmartOverrides: 1
+  mode: 3
+  position: {x: 0.75, y: 0, z: 0}
+  scale: 1
+  speed: 19
+  targetEnemySettings:
+    toughestFirst: 0
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: 90}
+--- !u!114 &3997985681973076675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3dbe5784db7f74c9de0fb45bd8ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3 Way Shooter
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.25
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 787315027656738199, guid: 19fd17be2f9fd664584feaf2cb200bcc, type: 3}
+  prefabSmartOverrides: 1
+  mode: 3
+  position: {x: 0.75, y: 0, z: 0}
+  scale: 1
+  speed: 19
+  targetEnemySettings:
+    toughestFirst: 0
+    targetRange: 0
+  directionSettings:
+    smartSpawn: 0
+    rotation: {x: 0, y: 0, z: -90}
+--- !u!114 &3997985681973076674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e58905d06b4e0498f4bcf1b539a485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Laser
+  triggerId: 
+  trigger: {fileID: 0}
+  automatically: 1
+  timer:
+    timer: 0
+    delay: 0.075
+    counter: 0
+    counterReachedZero: 0
+  prefab: {fileID: 1069129441568076, guid: d55cb3335f107db4f86cab2647a02a40, type: 3}
+  playerIndex: 0
+  size: 1
+  orderInLayer: 22
+  range: 7
+  damage: 1
+  ttl: 0.125
+  index: 0
+  audioProperties:
+    audioClip: {fileID: 8300000, guid: 9dd0e65a4fbd16240ad5fb0e9442fd69, type: 3}
+    volumeScale: 1
+    panStereo: 0
+    pitch: 2
+    enabled: 1
+--- !u!114 &3997985681973076694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1092cb9f60721949bb8dae608342762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    deactivatedId: Deactivated
+    reloadedId: Reloaded
+  id: Main Gun Ammo
+  spawners: []
+  spawnerId: Main Gun
+  mode: 0
+  increase: 250
+  max: 500
+  activatedText: Gun Activated  Activated At %
+  deactivatedText: Gun Deactivated
+  reloadedText: Main Gun At %
+--- !u!114 &3997985681973076679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1092cb9f60721949bb8dae608342762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    deactivatedId: Deactivated
+    reloadedId: Reloaded
+  id: Cannon Ammo
+  spawners: []
+  spawnerId: Cannon
+  mode: 0
+  increase: 250
+  max: 1000
+  activatedText: Cannons Activated At %
+  deactivatedText: Cannons Deactivated
+  reloadedText: Cannons At %
+--- !u!114 &3997985681973076678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1092cb9f60721949bb8dae608342762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    deactivatedId: Deactivated
+    reloadedId: Reloaded
+  id: Phaser Ammo
+  spawners: []
+  spawnerId: Phaser
+  mode: 0
+  increase: 250
+  max: 1000
+  activatedText: Phaser Activated At %
+  deactivatedText: Phaser Deactivated
+  reloadedText: Phaser At %
+--- !u!114 &3997985681973076681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1092cb9f60721949bb8dae608342762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    deactivatedId: Deactivated
+    reloadedId: Reloaded
+  id: 3 Way Shooter Ammo
+  spawners: []
+  spawnerId: 3 Way Shooter
+  mode: 0
+  increase: 250
+  max: 1000
+  activatedText: 3 Way Shooter Activated At %
+  deactivatedText: 3 Way Shooter Deactivated
+  reloadedText: Gun At %
+--- !u!114 &3997985681973076680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c807487d1a2ee478357415efbcc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    deactivatedId: Deactivated
+    reloadedId: Reloaded
+  id: Laser Ammo
+  spawner: {fileID: 0}
+  spawnerId: Laser
+  mode: 0
+  increase: 50
+  max: 200
+  activatedText: Laser Activated At %
+  deactivatedText: Laser Deactivated
+  reloadedText: Laser At %
+--- !u!114 &3997985681973076683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479eb19cdd89f3e4ea68737b9c0286a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    reloadedId: Reloaded
+  id: Shield
+  prefab: {fileID: 5825313023868159098, guid: 8c39c0ec1f2d4f74d88db278dffa386a, type: 3}
+  mode: 0
+  increase: 50
+  max: 200
+  activatedText: Shield Activated At %
+  reloadedText: Shield At %
+--- !u!114 &3997985681973076682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0558d99d31b0390429ae193b4e70fc84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  id: Nuke
+  emitter: Nuke
+--- !u!114 &3997985681973076684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941424a1797a7d44baede4f42c512652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    genericId: Generic
+  id: Health
+  mode: 0
+  increase: 25
+  max: 100
+  text: Integrity at %
+--- !u!114 &3997985681973076693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bd976d555852b47bddcdca365fe10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    activatedId: Activated
+    reloadedId: Reloaded
+  id: Wrecking Ball
+  prefab: {fileID: 2914729422674145614, guid: 78259d2bd6251b5489aa0be0ff2b791e, type: 3}
+  mode: 0
+  increase: 25
+  max: 100
+  distance: 0.75
+  speed: 15
+  activatedText: Wrecking Ball Activated At %
+  reloadedText: Wrecking Ball At %
+--- !u!114 &3997985681973076692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc182b2acd73bbe4f8321a6c1bb231fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  messengerSettings:
+    genericId: Generic
+  id: Speed
+  mode: 0
+  increase: 0.5
+  max: 3
+  text: Speed At %
+  additionalSettings:
+    autoDecrease: 1
+    decrease: 0.5
+    sustain: 180
+    min: 0
+    text: Speed at %
+--- !u!114 &3997985681973076676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98f9ae6b5ef2444fad5a7e6ac109f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  mode: 0
+  swipeSettings:
+    speed: 1
+    rotation: 0
+    rotationSpeed: 250
+    friction: 1
+    velocity: {x: 0, y: 0, z: 0}
+    boundaries: 1
+    horizontal: 1
+    vertical: 1
+  zigZagSettings:
+    controlKey: 0
+    rotationSpeed: 100
+    speed: 1
+  wasdSettings:
+    horizontal: Horizontal
+    vertical: Vertical
+    speed: 8
+    boundaries: 1
+  mouseSettings:
+    steps: {x: 16, y: 16}
+    requireMouseButton: 0
+    horizontal: 1
+    vertical: 1
+  rocketSettings:
+    horizontal: Horizontal
+    vertical: Vertical
+    rotationSpeed: 250
+    speed: 10
+    friction: 1
+    velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &3997985681973076677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be82b93f4842c94c82743b17a137e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: Player
+  colliders: []
+  id: 
+  _material: Metal
+  _structuralIntegrity: 100
+  _points: 0
+  autoPoints: 1
+  _indestructible: 0
+  _friend: {fileID: 0}
+  bodyCount: 0
+  outroSettings:
+    emitterId: Explosion Red
+    emitterScale: 1
+    messengerSettings:
+      messengerId: Score
+      text: 
+      enabled: 1
+    audioSettings:
+      audioClip: {fileID: 8300000, guid: f25d7e945a04bc34f9d6c8c199fd55f0, type: 3}
+      volumeScale: 1
+      panStereo: 0
+      pitch: 1
+      enabled: 1
+    enabled: 1
+  cargoSettings:
+    prefab: []
+    mode: 0
+    scale: 1
+  spriteRenderer: {fileID: 0}
+  generateBoxCollider: 1
+  ghostMaterial: {fileID: 2100000, guid: bb7b330a3d22c9f4f9e1d0fab8c1c266, type: 2}
+  ghostSustain: 3
+--- !u!114 &1851630372104010110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997985681973076687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669aae502e387164d8fff5ceaeb3f067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  flickerSettings:
+    count: 15
+    sustain: 1
+    collisionBase: {fileID: 0}
+  spriteRenderer: {fileID: 0}

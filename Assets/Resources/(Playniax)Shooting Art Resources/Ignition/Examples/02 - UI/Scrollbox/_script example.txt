@@ -1,0 +1,55 @@
+textCropping=true
+textBorders=32
+verticalSpacing=true
+lineSpacing=2
+imageRowSpacing=24
+scale=1
+font=Arial
+fontSize=48
+textColor=1,.5,0
+saveSettings=0
+
+textColor=1,1,0
+fontSize=32
+saveSettings=1
+
+textColor=1,1,1
+fontSize=21
+text=(external script test)
+y+=8
+
+loadSettings=0
+text=PROLOGUE
+loadSettings=1
+textAsset=prologue
+
+y+=32
+
+loadSettings=0
+text=HOW TO PLAY
+loadSettings=1
+textAsset=how to play
+
+y+=8
+
+loadSettings=1
+
+fontSize=21
+textColor=.5,1,.5
+text=You can add an image
+image=playniax
+text=Or a row of images
+imageRow=playniax,playniax,playniax
+link=playniax.com&www.playniax.com
+
+textAlignment=left
+text=Text on the left side
+textAlignment=right
+text=Text on the right side
+textAlignment=middle
+text=Text in the middle again
+
+y+=8
+
+textColor=1,1,.5
+text=And this is|a line|break example

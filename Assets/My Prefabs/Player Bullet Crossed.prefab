@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4328895016701065903}
   m_Layer: 0
   m_Name: Player Bullet Crossed
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,3 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2dcc621d042e642b86df60c55f5dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 3

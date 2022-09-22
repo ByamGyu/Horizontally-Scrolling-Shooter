@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7005658269449543226}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   _speed: 5
   _Bullet_Shot_Delay_Cur: 0
   _Bullet_Shot_Delay_Max: 0.15
+  power: 1
   _isTouchTop: 0
   _isTouchBottom: 0
   _isTouchRight: 0

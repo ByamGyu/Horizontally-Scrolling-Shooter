@@ -5,30 +5,28 @@ using UnityEngine;
 public class Enemy_Base : MonoBehaviour
 {
     [SerializeReference]
-    public float _speed;
+    protected float _speed;
     [SerializeReference]
-    public float _life;
+    protected float _life;
     [SerializeReference]
-    Rigidbody2D _rigid;
+    protected Rigidbody2D _rigid;
+    [SerializeReference]
+    protected GameObject _Player = null;
 
 
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
-        _rigid.velocity = Vector2.left * _speed;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         
     }
 
-    void Move()
-    {
+    protected virtual void SimpleMove() { } // 각자의 스크립트에서 구현하도록 함
 
-    }
-
-    void OnHit(int damage)
+    void OnHit(int damage) // 피격 판정
     {
         _life -= damage;
 
@@ -38,15 +36,15 @@ public class Enemy_Base : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // 트리거
     {
-        if(collision.gameObject.tag == "BorderBullet")
+        if(collision.gameObject.tag == "BorderBullet") // 경계선에서 사라짐
         {
             Destroy(gameObject);
         }
-        else if(collision.gameObject.tag == "PlayerBullet")
+        else if(collision.gameObject.tag == "PlayerBullet") // 플레이어 기체 공격에 피격
         {
-            // 닿은 플레이어의 탄환 정보를 가져온다
+            // 닿은 플레이어의 탄환 정보(공격력)를 가져온다
             Bullet_Base bullet = collision.gameObject.GetComponent<Bullet_Base>();
             OnHit(bullet._damage);
 

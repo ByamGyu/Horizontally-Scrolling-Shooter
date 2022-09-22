@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8052048388823854437}
   - component: {fileID: 8052048388823854433}
   - component: {fileID: 8052048388823854446}
+  - component: {fileID: 6714895453753958950}
   m_Layer: 0
   m_Name: Enemy_Satelite
   m_TagString: Enemy
@@ -147,9 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7294b80aaf91a5545a48335c4ff71c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
+  _speed: 0.5
   _life: 10
   _rigid: {fileID: 0}
+  _Player: {fileID: 0}
 --- !u!95 &8052048388823854446
 Animator:
   serializedVersion: 4
@@ -170,3 +172,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6714895453753958950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8052048388823854436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cebe6fc79762ee469da4cfa025694c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0.5
+  _life: 10
+  _rigid: {fileID: 0}
+  _Player: {fileID: 0}
+  _Bullet_Shot_Delay_Cur: 0
+  _Bullet_Shot_Delay_Max: 2
+  _Bullet1: {fileID: 7183522887647324722, guid: f119dfc4b8ea00846a707469b1efde2d, type: 3}

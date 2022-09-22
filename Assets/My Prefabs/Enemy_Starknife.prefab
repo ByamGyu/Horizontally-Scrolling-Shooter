@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2796436489418051500}
   - component: {fileID: 2796436489418051488}
   - component: {fileID: 2796436489418051489}
+  - component: {fileID: 1502683150054008973}
   m_Layer: 0
   m_Name: Enemy_Starknife
   m_TagString: Enemy
@@ -170,3 +171,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1502683150054008973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796436489418051499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c62f6022f11af429b60b5d085e533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _life: 3
+  _rigid: {fileID: 0}

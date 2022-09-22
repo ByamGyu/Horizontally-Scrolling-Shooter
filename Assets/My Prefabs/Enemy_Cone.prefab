@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5938416252446286909}
   - component: {fileID: 5938416252446286908}
   - component: {fileID: 5938416252446286911}
-  - component: {fileID: 5938416252446286883}
   - component: {fileID: 5938416252446286880}
+  - component: {fileID: -8259353681359657866}
   m_Layer: 0
   m_Name: Enemy_Cone
   m_TagString: Enemy
@@ -135,21 +135,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5938416252446286883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5938416252446286910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7294b80aaf91a5545a48335c4ff71c0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 2
-  _life: 5
-  _rigid: {fileID: 0}
 --- !u!95 &5938416252446286880
 Animator:
   serializedVersion: 4
@@ -170,3 +155,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8259353681359657866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5938416252446286910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcda8e5860d4f4d448d0e6f8682333cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2.5
+  _life: 5
+  _rigid: {fileID: 0}
+  _Player: {fileID: 0}
+  _Bullet_Shot_Delay_Cur: 0
+  _Bullet_Shot_Delay_Max: 2.5
+  _Bullet1: {fileID: 3480909200592439645, guid: 5920c851c00a7e445ab0aaf67a36ff32, type: 3}

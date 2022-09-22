@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5089265047572772595}
   - component: {fileID: 5089265047572772592}
   - component: {fileID: 5089265047572772593}
-  - component: {fileID: 5089265047572772597}
   - component: {fileID: 5089265047572772596}
+  - component: {fileID: -922463207029713737}
   m_Layer: 0
   m_Name: Enemy_Ring
   m_TagString: Enemy
@@ -125,21 +125,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!114 &5089265047572772597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5089265047572772494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7294b80aaf91a5545a48335c4ff71c0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 1
-  _life: 5
-  _rigid: {fileID: 0}
 --- !u!95 &5089265047572772596
 Animator:
   serializedVersion: 4
@@ -160,3 +145,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-922463207029713737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089265047572772494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c5683b7720f434d91d56b4e926d7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
+  _life: 5
+  _rigid: {fileID: 0}
+  _Player: {fileID: 0}
+  _Bullet_Shot_Delay_Cur: 0
+  _Bullet_Shot_Delay_Max: 3.5
+  _Bullet1: {fileID: 4844583600547209502, guid: b41da5ff34c662b4699eb3f234f6ea89, type: 3}

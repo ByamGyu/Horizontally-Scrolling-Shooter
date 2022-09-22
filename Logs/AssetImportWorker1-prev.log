@@ -15,7 +15,7 @@ G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-1784
+14851
 Successfully changed project path to: G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 87.40 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 83.92 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path G:/Unity Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,53 +63,53 @@ Initialize mono
 Mono path[0] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003049 seconds.
+Registered in 0.003188 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 86.07 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 83.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.521 seconds
+- Completed reload, in  0.481 seconds
 Domain Reload Profiling:
-	ReloadAssembly (522ms)
-		BeginReloadAssembly (83ms)
+	ReloadAssembly (481ms)
+		BeginReloadAssembly (68ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (368ms)
-			LoadAssemblies (83ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (346ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (75ms)
+			SetupTypeCache (70ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (234ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (222ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (45ms)
+				InitializePlatformSupportModulesInManaged (42ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (86ms)
+				RefreshPlugins (84ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (70ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				ProcessInitializeOnLoadAttributes (66ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007561 seconds.
+Registered in 0.007548 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -117,32 +117,32 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 86.31 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 85.64 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
+- Completed reload, in  1.073 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1152ms)
-		BeginReloadAssembly (235ms)
+	ReloadAssembly (1073ms)
+		BeginReloadAssembly (199ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (129ms)
-		EndReloadAssembly (841ms)
-			LoadAssemblies (129ms)
+			CreateAndSetChildDomain (118ms)
+		EndReloadAssembly (802ms)
+			LoadAssemblies (106ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (194ms)
+			SetupTypeCache (177ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (476ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (462ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (86ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (206ms)
-				ProcessInitializeOnLoadMethodAttributes (70ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (198ms)
+				ProcessInitializeOnLoadMethodAttributes (68ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -150,13 +150,13 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5635 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 6076.
-Memory consumption went from 223.4 MB to 222.2 MB.
-Total: 4.736100 ms (FindLiveObjects: 0.436000 ms CreateObjectMapping: 0.129700 ms MarkObjects: 3.733100 ms  DeleteObjects: 0.436600 ms)
+Unloading 5636 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 6077.
+Memory consumption went from 223.5 MB to 222.3 MB.
+Total: 3.563000 ms (FindLiveObjects: 0.351500 ms CreateObjectMapping: 0.140800 ms MarkObjects: 2.693000 ms  DeleteObjects: 0.377000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,142 +170,52 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 449105.314130 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pulsating red bullet.png
-  artifactKey: Guid(488882b1d2d9f3948ba7e8d410e17efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pulsating red bullet.png using Guid(488882b1d2d9f3948ba7e8d410e17efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc669936ff6ac30683655d4c5cb34f32') in 0.125263 seconds 
+  Time since last request: 466602.778394 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Enemies/cone.controller
+  artifactKey: Guid(8e36183d34573fe4092a4c4e9f570a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Enemies/cone.controller using Guid(8e36183d34573fe4092a4c4e9f570a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77dd7f530585121099c735ae3228fa8') in 0.033367 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.794780 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0009.png
-  artifactKey: Guid(cef9865007e5c4226a6743cc2347bb42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0009.png using Guid(cef9865007e5c4226a6743cc2347bb42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd140c38759df820e3117213780dabb') in 0.034405 seconds 
+  Time since last request: 10.642017 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0017.png
+  artifactKey: Guid(bc1f61d022381c54cb4d148f82e2a0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0017.png using Guid(bc1f61d022381c54cb4d148f82e2a0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '810dad34cb8bcec1cc8959ef4b54c771') in 0.099756 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0012.png
-  artifactKey: Guid(af64b2efc9a054eb1818184a2e4e54db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0012.png using Guid(af64b2efc9a054eb1818184a2e4e54db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651c852e8a6de38d1aebb5f4dfe65b50') in 0.016875 seconds 
+  Time since last request: 0.000020 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0023.png
+  artifactKey: Guid(439b2183f43738f40967f3fa287b0dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0023.png using Guid(439b2183f43738f40967f3fa287b0dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '190cbe80dffb074d0bf3aafd561d2d16') in 0.017286 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 23.874855 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Prefabs/Players (Bullets)/Player Bullet (Red).prefab
-  artifactKey: Guid(2d1a1a5f2def3b4469db3484b31fc8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Prefabs/Players (Bullets)/Player Bullet (Red).prefab using Guid(2d1a1a5f2def3b4469db3484b31fc8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb1987b0563b8a4a880ae9bff08c662c') in 0.011278 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0022.png
+  artifactKey: Guid(2eb421eef2ad1764a94b4c9ae86339cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0022.png using Guid(2eb421eef2ad1764a94b4c9ae86339cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a41927a01095318ac8721c4ee4b4cd7d') in 0.015367 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 271.716481 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Bolt/bolt2.png
-  artifactKey: Guid(1cd30868a44d44b629d279c30fbf7c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Bolt/bolt2.png using Guid(1cd30868a44d44b629d279c30fbf7c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5c9297355cf4b028d684ffcb1acf68a') in 0.012515 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0028.png
+  artifactKey: Guid(937c335a8bbd81b4497a9240fddfabb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0028.png using Guid(937c335a8bbd81b4497a9240fddfabb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599e15ee16c4d1635eef2680b1edf253') in 0.016713 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Bolt/bolt4.png
-  artifactKey: Guid(18e43425d25ba4059b0c5ed560a3622d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Bolt/bolt4.png using Guid(18e43425d25ba4059b0c5ed560a3622d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0722f8b56abb8a4abe729e57aeecef') in 0.011208 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.138807 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Charged/charged2.png
-  artifactKey: Guid(4ef69770c17cd47219e76038736e9e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Charged/charged2.png using Guid(4ef69770c17cd47219e76038736e9e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b619663dd44fb0f63ed02d3735c2544f') in 0.012920 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Charged/charged5.png
-  artifactKey: Guid(bf2a7bc626bdb40adac0b5f94edeaca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Charged/charged5.png using Guid(bf2a7bc626bdb40adac0b5f94edeaca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8ec32ba5390c3474fdec09a3884f69f') in 0.013373 seconds 
+  Time since last request: 0.000018 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0018.png
+  artifactKey: Guid(56764de370568344387bce1851d6fd76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0018.png using Guid(56764de370568344387bce1851d6fd76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '345c673948a3a716f1c2528d517dcfd7') in 0.015250 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Charged/charged4.png
-  artifactKey: Guid(b1487fd8c4d1a4193a036cbc5cf81bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Charged/charged4.png using Guid(b1487fd8c4d1a4193a036cbc5cf81bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c00a692b83ef137cfb4e714070583e0d') in 0.010917 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.471275 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Crossed/crossed2.png
-  artifactKey: Guid(0387054b082bb48b288527af5ce34c02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Crossed/crossed2.png using Guid(0387054b082bb48b288527af5ce34c02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2812f1d47a8332605762081058e9c09') in 0.011898 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Crossed/crossed3.png
-  artifactKey: Guid(2923b2bd71b7543f0abec5366236955b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Crossed/crossed3.png using Guid(2923b2bd71b7543f0abec5366236955b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '801edea49199b4f1256cbece31b0df08') in 0.011315 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Crossed/crossed4.png
-  artifactKey: Guid(7b72a4a7f319f495d9ce0dde84843b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Crossed/crossed4.png using Guid(7b72a4a7f319f495d9ce0dde84843b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1011ecddcf8b10ea47f2bca419cfab6') in 0.011768 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.771386 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-2.png
-  artifactKey: Guid(54d143e2b2e3041e8988b21d3e7eb773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-2.png using Guid(54d143e2b2e3041e8988b21d3e7eb773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e39acf12004a11cc9b67edeecde113') in 0.011306 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-5.png
-  artifactKey: Guid(99e36729618df468b8a418b22c04d92d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-5.png using Guid(99e36729618df468b8a418b22c04d92d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '304bfc5c3a80c109b15debc1fc2480d8') in 0.011185 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.778540 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-2/hits-2-2.png
-  artifactKey: Guid(d5e3988cacb5346db8efe0d6f8745731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-2/hits-2-2.png using Guid(d5e3988cacb5346db8efe0d6f8745731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7fe6ab957ba0b946c43f36c77281ae3') in 0.013654 seconds 
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0024.png
+  artifactKey: Guid(c5914ebc9ecd01f4ca8a502d5628a4cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0024.png using Guid(c5914ebc9ecd01f4ca8a502d5628a4cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd87e95bb75b33d1a0bce1629d7de636') in 0.018307 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-2/hits-2-6.png
-  artifactKey: Guid(d9b8cd64d65c64ca88939384ea5e4f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-2/hits-2-6.png using Guid(d9b8cd64d65c64ca88939384ea5e4f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ce9653c12cc6499e0f9688f3f8ddd5') in 0.012961 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-2/hits-2-5.png
-  artifactKey: Guid(a7432d62b8b8749f9828cc9ab98283e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-2/hits-2-5.png using Guid(a7432d62b8b8749f9828cc9ab98283e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3b8e5df92e65148474b50b8f0fe1426') in 0.011727 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.494827 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-4/hits-4-2.png
-  artifactKey: Guid(0472674fab30c4376ace461facdf4a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-4/hits-4-2.png using Guid(0472674fab30c4376ace461facdf4a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a050ef52c01d0ab93d1a872622cbfa75') in 0.012495 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-4/hits-4-6.png
-  artifactKey: Guid(5f4745d425b4c429aa661475139c9fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-4/hits-4-6.png using Guid(5f4745d425b4c429aa661475139c9fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d942be55fdbf49fd5a900c82c2eb2e8') in 0.012728 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.225350 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-3/hits-3-2.png
-  artifactKey: Guid(19fdcb82191b34d74986844e288c775a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-3/hits-3-2.png using Guid(19fdcb82191b34d74986844e288c775a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13236e946a90e2c26c02e01aefd130f7') in 0.012041 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-3/hits-3-5.png
-  artifactKey: Guid(8dbd3fe0520d840e4a365469cb9bafb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-3/hits-3-5.png using Guid(8dbd3fe0520d840e4a365469cb9bafb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a5f8a376a2d9ea8c008006eb3b094f9') in 0.011042 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.964341 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-5/hits-5-2.png
-  artifactKey: Guid(cfae240c2be114e3c8d2c78724b93f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-5/hits-5-2.png using Guid(cfae240c2be114e3c8d2c78724b93f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0abd4ab1fbbf4c013220e1b56309292') in 0.014621 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-5/hits-5-7.png
-  artifactKey: Guid(6f9b078fb946e46179dd1dcf754a2844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Warped Shooting Fx/Pixel Art/Hits/Hit-5/hits-5-7.png using Guid(6f9b078fb946e46179dd1dcf754a2844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69eb7f4237270ca43da6f124d97493df') in 0.011466 seconds 
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0029.png
+  artifactKey: Guid(fa70949e13c420b4c9ac06ee9dc20ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0029.png using Guid(fa70949e13c420b4c9ac06ee9dc20ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57b3a5c932dc99ce9b71a9880cac301') in 0.015416 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

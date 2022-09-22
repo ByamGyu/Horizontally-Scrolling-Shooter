@@ -15,7 +15,7 @@ G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-1784
+14851
 Successfully changed project path to: G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 89.36 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 86.66 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path G:/Unity Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,53 +63,53 @@ Initialize mono
 Mono path[0] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56952
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56908
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003135 seconds.
+Registered in 0.002976 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 87.89 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 84.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.520 seconds
+- Completed reload, in  0.483 seconds
 Domain Reload Profiling:
-	ReloadAssembly (521ms)
-		BeginReloadAssembly (78ms)
+	ReloadAssembly (484ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (371ms)
-			LoadAssemblies (79ms)
+		EndReloadAssembly (346ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (74ms)
+			SetupTypeCache (70ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (239ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (222ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (44ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (88ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (85ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (72ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				ProcessInitializeOnLoadAttributes (66ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007681 seconds.
+Registered in 0.007393 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -117,32 +117,32 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 85.69 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 84.97 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
+- Completed reload, in  1.071 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1152ms)
-		BeginReloadAssembly (234ms)
+	ReloadAssembly (1072ms)
+		BeginReloadAssembly (199ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (129ms)
-		EndReloadAssembly (842ms)
-			LoadAssemblies (129ms)
+			CreateAndSetChildDomain (119ms)
+		EndReloadAssembly (801ms)
+			LoadAssemblies (106ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (197ms)
+			SetupTypeCache (178ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (474ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (460ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (86ms)
-				BeforeProcessingInitializeOnLoad (95ms)
-				ProcessInitializeOnLoadAttributes (206ms)
-				ProcessInitializeOnLoadMethodAttributes (71ms)
+				RefreshPlugins (85ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (199ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -151,12 +151,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.05 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5635 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 6076.
-Memory consumption went from 223.4 MB to 222.2 MB.
-Total: 3.706000 ms (FindLiveObjects: 0.402200 ms CreateObjectMapping: 0.152700 ms MarkObjects: 2.724300 ms  DeleteObjects: 0.426000 ms)
+Unloading 5636 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 6077.
+Memory consumption went from 223.5 MB to 222.3 MB.
+Total: 3.352900 ms (FindLiveObjects: 0.341700 ms CreateObjectMapping: 0.140900 ms MarkObjects: 2.485400 ms  DeleteObjects: 0.384300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,46 +170,76 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 449105.261438 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/blue spark.png
-  artifactKey: Guid(f382af085f0305045b57b87f3e9199f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/blue spark.png using Guid(f382af085f0305045b57b87f3e9199f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f796b63156fe57716a3d739eea3ca5') in 0.119028 seconds 
+  Time since last request: 466602.765373 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Enemies/gunner.anim
+  artifactKey: Guid(499e272d72dd10547aadee1ee97c4d19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Enemies/gunner.anim using Guid(499e272d72dd10547aadee1ee97c4d19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3e7b652e71c5d25964446815e93462') in 0.034266 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/player thrust.png
-  artifactKey: Guid(8a1edc8bbdefc4fa495d83898d9d4d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/player thrust.png using Guid(8a1edc8bbdefc4fa495d83898d9d4d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ef0db5e3df156cf3ea5cec6f0135aa') in 0.016229 seconds 
+  Time since last request: 9.839022 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain
+  artifactKey: Guid(aa6a8aa22153b1645805fae7074bcfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain using Guid(aa6a8aa22153b1645805fae7074bcfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cee11b4997fb9dbdd6cdf69904c5b39e') in 0.001117 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pulsating blue bullet.png
-  artifactKey: Guid(ac7d670418ccf464791f6b215f59ccc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pulsating blue bullet.png using Guid(ac7d670418ccf464791f6b215f59ccc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74161c3e17c479a00a8c6d311b449b6e') in 0.012627 seconds 
+  Time since last request: 0.731799 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack
+  artifactKey: Guid(166184e5984348b4b8dd3545390552bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack using Guid(166184e5984348b4b8dd3545390552bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63806c9f9234474b58302ab1f4147a34') in 0.001094 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/green thrust.png
-  artifactKey: Guid(14d2d893a278b3d428b55a4b8fdaeb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/green thrust.png using Guid(14d2d893a278b3d428b55a4b8fdaeb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2143abe6fc7fdc2a95e1d5b0581d8630') in 0.011967 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.791589 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0008.png
-  artifactKey: Guid(94e3f4df8ed3f4bd5bd88719e29a5577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0008.png using Guid(94e3f4df8ed3f4bd5bd88719e29a5577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a6c851ffaa54b744da6729131df562') in 0.033868 seconds 
+  Time since last request: 0.067287 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0016.png
+  artifactKey: Guid(686041f5132cb654ea628a27ce0d524e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0016.png using Guid(686041f5132cb654ea628a27ce0d524e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb2b44178134dc880e5c41ef3c775b6') in 0.096900 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0015.png
-  artifactKey: Guid(f0b7d55a4ac664495a73d90f55d41b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Buzz Saw/Idle/bs0015.png using Guid(f0b7d55a4ac664495a73d90f55d41b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56da2b93a5a10f45012bba538ea964b') in 0.018510 seconds 
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0019.png
+  artifactKey: Guid(740ca9a204f315f409b000b88f8b1222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0019.png using Guid(740ca9a204f315f409b000b88f8b1222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e00beb8129b19d1bcbcb027047165d3') in 0.016587 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 23.874822 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Prefabs/Players (Bullets)/Player Bullet (Purple).prefab
-  artifactKey: Guid(5677dcf62ecec4a49a7d57ea364122f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Prefabs/Players (Bullets)/Player Bullet (Purple).prefab using Guid(5677dcf62ecec4a49a7d57ea364122f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ea2b0f340ba60a3a5db21175b0f5cd') in 0.011416 seconds 
+  Time since last request: 0.000016 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0026.png
+  artifactKey: Guid(437a4ea6db5a86640b4591f598d28595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0026.png using Guid(437a4ea6db5a86640b4591f598d28595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '173432c46d725ee574c62b76f4e74911') in 0.015440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0020.png
+  artifactKey: Guid(93ef5d3a11952b24bb04be70958112ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0020.png using Guid(93ef5d3a11952b24bb04be70958112ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00f8bd9226a9fff08ab8be89540d5eae') in 0.015686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0030.png
+  artifactKey: Guid(8beb577288e37e04dbefa4c50f888413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0030.png using Guid(8beb577288e37e04dbefa4c50f888413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35ea3fab44c2c26635639bfc45097d50') in 0.014826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0025.png
+  artifactKey: Guid(d3a946a0a4beb48478a149cfdd27cb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0025.png using Guid(d3a946a0a4beb48478a149cfdd27cb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7d38d8e922365628e3641921e0d3507') in 0.017483 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0027.png
+  artifactKey: Guid(edb7d29c7c63de041b173f9839a6396a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0027.png using Guid(edb7d29c7c63de041b173f9839a6396a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b14d99f114c311ca7682f21a213df06') in 0.015002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0021.png
+  artifactKey: Guid(123729590c44e9641936f75c861287d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0021.png using Guid(123729590c44e9641936f75c861287d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7f277bfd1692640464a40e5e5a85384') in 0.016775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.363034 seconds.
+  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0031.png
+  artifactKey: Guid(1dddd9f591d75de47af7fb723111aec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0031.png using Guid(1dddd9f591d75de47af7fb723111aec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd1f9030a490b8de820a365cf6bf5d48') in 0.016322 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

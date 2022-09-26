@@ -9,6 +9,8 @@ public class Enemy_Base : MonoBehaviour
     [SerializeReference]
     public float _life;
     [SerializeReference]
+    public int _score = 100;
+    [SerializeReference]
     public Rigidbody2D _rigid;
     [SerializeReference]
     public GameObject _Player = null;
@@ -16,6 +18,8 @@ public class Enemy_Base : MonoBehaviour
 
     private void Awake()
     {
+        _Player = GameObject.FindGameObjectWithTag("Player");
+
         _rigid = GetComponent<Rigidbody2D>();
     }
 
@@ -34,6 +38,10 @@ public class Enemy_Base : MonoBehaviour
 
         if(_life <= 0)
         {
+            _Player = GameObject.FindGameObjectWithTag("Player"); // 처음 몇 개체만 플레이어가 null로 잡히는 이상한 버그 해결용
+            PlayerController playerinfo = _Player.GetComponent<PlayerController>();
+            playerinfo.AddScore(_score);
+
             Destroy(gameObject);
         }
     }
@@ -55,7 +63,13 @@ public class Enemy_Base : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
+            // !!!!!플레이어가 먼저 사라지면서 null뜸
+            //PlayerController playerinfo = _Player.GetComponent<PlayerController>();
+            //playerinfo.AddScore(_score);
+
             Destroy(gameObject);
         }
     }
+
+    public int GetScore() { return _score; }
 }

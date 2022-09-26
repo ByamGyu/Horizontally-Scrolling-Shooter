@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     int _life = 3;
     [SerializeField]
     int _score = 0;
+    [SerializeField]
+    float _invincibleTime = 2.5f;
+    [SerializeField]
+    bool _isHit = false;
 
     // 플레이어 이동 판정
     [SerializeField]
@@ -58,9 +62,27 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        CalculateInvincible();
         Move();
         Fire_Bullet();
         Bullet_Delay();
+    }
+
+    void CalculateInvincible()
+    {
+        if (_invincibleTime <= 0) // 무적시간이 없으면
+        {
+            _invincibleTime = 0.0f;
+        }
+        else // 무적시간이 남아있으면
+        {
+            _invincibleTime -= Time.deltaTime;
+        }
+    }
+
+    public void SetInvincibleTime(float time)
+    {
+        _invincibleTime = time;
     }
 
     void Move()
@@ -126,8 +148,6 @@ public class PlayerController : MonoBehaviour
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
         }
-
-        
     }
 
     void Bullet_Delay()
@@ -159,10 +179,23 @@ public class PlayerController : MonoBehaviour
         }
         else if(collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
         {
-            SetLife();
+            // 무적상태면 return;
+            if (_invincibleTime > 0) return;
+
+            // 한번에 여러번 맞는 현상 방지
+            if (_isHit == true) return;
+            _isHit = true;
+
+            if(collision.gameObject.tag == "Enemy")
+            {
+                Enemy_Base enemyinfo = collision.gameObject.GetComponent<Enemy_Base>();
+                AddScore(enemyinfo.GetScore());
+            }
+
+            SetLife(-1);
+            manager.UpdateLifeIcon(GetLife());
 
             manager.RespawnPlayerInvoke(2.0f);
-
             gameObject.SetActive(false);
         }
     }
@@ -189,14 +222,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetLife()
+    void SetLife(int tmp)
     {
-        if (_life <= -1) _life = -1;
-        else _life -= 1;
+        _life = _life + tmp;
+
+        if(_life <= -1)
+        {
+            _life = -1;
+
+            manager.GameOver();
+        }
     }
 
-    public int GetLife()
-    {
-        return _life;
-    }
+    public int GetLife() { return _life; }
+    public void AddScore(int score) { _score += score; }
+    public int GetScore() { return _score; }
+    public void SetIsHit(bool tmp) { _isHit = tmp; }
+    public bool GetIsHit() { return _isHit; }
 }

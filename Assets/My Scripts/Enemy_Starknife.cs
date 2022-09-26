@@ -8,7 +8,7 @@ public class Enemy_Starknife : Enemy_Base
     {
         _rigid = GetComponent<Rigidbody2D>();
 
-        _Player = GameObject.FindGameObjectWithTag("Player");
+        //_Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Update()

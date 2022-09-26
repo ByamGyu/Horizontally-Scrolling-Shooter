@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +18,14 @@ public class GameManager : MonoBehaviour
     [SerializeReference]
     public GameObject _Player = null;
 
+    // UI
+    [SerializeReference]
+    public Text _scoreText;
+    [SerializeReference]
+    public Image[] _lifeImage;
+    [SerializeReference]
+    public GameObject _GameOverGroup;
+
     private void Update()
     {
         _Spawn_Delay_Time_Cur += Time.deltaTime;
@@ -25,6 +36,10 @@ public class GameManager : MonoBehaviour
             _Spawn_Delay_Time_Max = Random.Range(0.5f, 3.0f); // 원본 0.5f, 3.0f
             _Spawn_Delay_Time_Cur = 0.0f;
         }
+
+        // 점수 갱신
+        PlayerController playerinfo = _Player.GetComponent<PlayerController>();
+        _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
     }
 
     void SpawnEnemy()
@@ -64,11 +79,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateLifeIcon(int life)
+    {
+        // 라이프 아이콘 이미지 상태 초기화
+        for (int i = 0; i < 3; i++)
+        {
+            _lifeImage[i].color = new Color(1, 1, 1, 0); // 알파값을 0으로 해서 안보이게 한다
+        }
+
+        // 라이프 아이콘 이미지 상태 반영
+        for (int i = 0; i < life; i++)
+        {
+            _lifeImage[i].color = new Color(1, 1, 1, 1); // 알파값을 1로 해서 보이게 한다
+        }
+    }
+
     public void RespawnPlayerInvoke(float time)
     {
         Invoke("RespawnPlayer", time);
         RespawnPlayer();
-    }
+    }    
 
     void RespawnPlayer()
     {
@@ -77,6 +107,25 @@ public class GameManager : MonoBehaviour
         if (playerinfo.GetLife() == -1) return;
 
         _Player.transform.position = new Vector3(-8, 0, 0);
+        playerinfo.SetInvincibleTime(2.5f); // 무적시간 설정
+        playerinfo.SetIsHit(false);
         _Player.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        _GameOverGroup.SetActive(true);
+
+        // EditorApplication.isPaused = true; // 게임 일시 정지
+    }
+
+    public void GameRetry()
+    {
+        SceneManager.LoadScene(0); // 씬 번호(파일 -> 빌드 설정 -> 빌드의 씬에서 확인 가능)
+    }
+
+    public void GameQuit()
+    {
+        Application.Quit();
     }
 }

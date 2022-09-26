@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2.5
   _life: 5
+  _score: 100
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
   _Bullet_Shot_Delay_Cur: 0

@@ -10,16 +10,18 @@ public class Enemy_Satelite : Enemy_Base
     [SerializeField]
     float _Bullet_Shot_Delay_Max = 5.0f;
 
+
     // 오브젝트 저장 변수
     [SerializeField]
     public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
+
 
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
         SimpleMoveLeft();
 
-        _Player = GameObject.FindGameObjectWithTag("Player");
+        //_Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Update()

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // 게임 매니저 저장
+    public GameManager manager;
+
     // 플레이어 능력치
     [SerializeField]
     float _speed = 5.0f; // 이동 속도 변수
@@ -13,6 +16,10 @@ public class PlayerController : MonoBehaviour
     float _Bullet_Shot_Delay_Max = 0.2f;
     [SerializeField]
     int power = 1;
+    [SerializeField]
+    int _life = 3;
+    [SerializeField]
+    int _score = 0;
 
     // 플레이어 이동 판정
     [SerializeField]
@@ -150,6 +157,14 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
+        else if(collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
+        {
+            SetLife();
+
+            manager.RespawnPlayerInvoke(2.0f);
+
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -172,5 +187,16 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void SetLife()
+    {
+        if (_life <= -1) _life = -1;
+        else _life -= 1;
+    }
+
+    public int GetLife()
+    {
+        return _life;
     }
 }

@@ -14,16 +14,10 @@ public class Enemy_Satelite : Enemy_Base
     [SerializeField]
     public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
 
-    void Awake()
-    {
-        _rigid = GetComponent<Rigidbody2D>();
-
-        SimpleMove();
-    }
-
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
+        SimpleMoveLeft();
 
         _Player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -34,13 +28,15 @@ public class Enemy_Satelite : Enemy_Base
         Bullet_Delay();
     }
 
-    protected override void SimpleMove()
+    public override void SimpleMoveLeft()
     {
         _rigid.velocity = Vector2.left * _speed;
     }
 
     void Fire_Bullet()
     {
+        if (_Player == null) return; // 플레이어 기체가 없으면 return
+
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 

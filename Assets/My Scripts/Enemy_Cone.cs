@@ -14,12 +14,10 @@ public class Enemy_Cone : Enemy_Base
     [SerializeField]
     public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
 
-    void Awake()
+    void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
-
-        SimpleMove();
-    }
+    }    
 
     protected override void Update()
     {
@@ -27,9 +25,18 @@ public class Enemy_Cone : Enemy_Base
         Bullet_Delay();
     }
 
-    protected override void SimpleMove()
+    public override void SimpleMoveLeft()
     {
         _rigid.velocity = Vector2.left * _speed;
+    }
+    public override void SimpleMoveUp()
+    {
+        _rigid.velocity = Vector2.up * _speed * (0.5f);
+    }
+
+    public override void SimpleMoveDown()
+    {
+        _rigid.velocity = Vector2.up * _speed * (-0.5f);
     }
 
     void Fire_Bullet()

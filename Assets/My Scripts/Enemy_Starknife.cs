@@ -20,12 +20,12 @@ public class Enemy_Starknife : Enemy_Base
         }
     }
 
-    protected override void SimpleMove()
+    public override void SimpleMoveLeft()
     {
         _rigid.velocity = Vector2.left * _speed;
     }
 
-    void Stalk_Player(GameObject player)
+    public void Stalk_Player(GameObject player)
     {
         if (player == null) return;
         else

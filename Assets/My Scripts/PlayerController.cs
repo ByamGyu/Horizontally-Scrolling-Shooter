@@ -159,9 +159,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Border")
+        if (collision.gameObject.tag == "Border")
         {
-            switch(collision.gameObject.name)
+            switch (collision.gameObject.name)
             {
                 case "Border_Top":
                     _isTouchTop = true;
@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-        else if(collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
+        else if (collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
         {
             // 무적상태면 return;
             if (_invincibleTime > 0) return;
@@ -186,10 +186,15 @@ public class PlayerController : MonoBehaviour
             if (_isHit == true) return;
             _isHit = true;
 
-            if(collision.gameObject.tag == "Enemy")
+            if (collision.gameObject.tag == "Enemy")
             {
                 Enemy_Base enemyinfo = collision.gameObject.GetComponent<Enemy_Base>();
                 AddScore(enemyinfo.GetScore());
+            }
+
+            if (collision.gameObject.tag == "EnemyBullet")
+            {
+                Destroy(collision.gameObject);
             }
 
             SetLife(-1);

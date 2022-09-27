@@ -505,7 +505,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757852991 stripped
 GameObject:
@@ -541,7 +541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406550034029981635, guid: 1333e457a95660d4185108cca7f633b3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1406550034029981635, guid: 1333e457a95660d4185108cca7f633b3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -984,7 +984,7 @@ Transform:
   - {fileID: 1544772004}
   - {fileID: 842375886}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544772003
 GameObject:
@@ -1656,7 +1656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 241963354718199530, guid: 56d2d9e6c85f42741a073d180924432e, type: 3}
       propertyPath: _power
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 241963354718199530, guid: 56d2d9e6c85f42741a073d180924432e, type: 3}
       propertyPath: manager
@@ -1666,6 +1666,14 @@ PrefabInstance:
       propertyPath: _Bullet5
       value: 
       objectReference: {fileID: 8121836157209830083, guid: 7dd31c27110c70e4e944685557a3a08c, type: 3}
+    - target: {fileID: 241963354718199530, guid: 56d2d9e6c85f42741a073d180924432e, type: 3}
+      propertyPath: _guideattack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 241963354718199530, guid: 56d2d9e6c85f42741a073d180924432e, type: 3}
+      propertyPath: _GuideAttack_Delay_Max
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 241963354718199534, guid: 56d2d9e6c85f42741a073d180924432e, type: 3}
       propertyPath: m_Name
       value: Player

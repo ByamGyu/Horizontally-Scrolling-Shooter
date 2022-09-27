@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4516288852333960920}
   - component: {fileID: -4051315127586712497}
   - component: {fileID: -3744002102105411757}
-  - component: {fileID: -190459166397935854}
+  - component: {fileID: 2960851991325199921}
   m_Layer: 0
   m_Name: Player Bullet Waveform
   m_TagString: PlayerBullet
@@ -169,7 +169,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-190459166397935854
+--- !u!114 &2960851991325199921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,5 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   _target: {fileID: 0}
-  _speed: 2
-  _rotspeed: 2
+  _nomoresearch: 0
+  _speed_cur: 5
+  _speed_max: 10
+  _rotspeed: 1

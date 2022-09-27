@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float _GuideAttack_Delay_Cur = 0.0f;
     [SerializeField]
-    float _GuideAttack_Delay_Max = 3.0f;
+    float _GuideAttack_Delay_Max = 1.0f;
     [SerializeField]
     int _life = 3;
     [SerializeField]
@@ -69,11 +69,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // 무적 시간
         CalculateInvincible();
+
+        // 이동 입력
         Move();
+
+        // 기본 탄환 발사 관련
         Fire_Bullet();
         Bullet_Delay();
+
+        // 유도탄 관련
         GuideAttack_Delay();
+        Fire_GuideAttack();
     }
 
     void CalculateInvincible()
@@ -167,10 +175,7 @@ public class PlayerController : MonoBehaviour
 
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
-            case 5: // 테스트 용도
-                GameObject test = Instantiate(_Bullet6, transform.position + Vector3.right * 0.5f, transform.rotation);
-                
-                _Bullet_Shot_Delay_Cur = 0.0f;
+            case 5: // 테스트 용도                
                 break;
         }
     }
@@ -181,12 +186,30 @@ public class PlayerController : MonoBehaviour
         // 누르는 시간에 비례해서 데미지도 증가
     }
 
+    void GuideAttack_Delay()
+    {
+        if (_GuideAttack_Delay_Cur > 10) return;
+
+        _GuideAttack_Delay_Cur += Time.deltaTime;
+    }
+
     void Fire_GuideAttack()
     {
+        // 유도탄 아이템을 먹었는지 판별
+        if (_guideattack == false) return;
+
         // 유도탄 딜레이 시간 판별
-        if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
+        if (_GuideAttack_Delay_Cur < _GuideAttack_Delay_Max) return;
 
         // 유도탄 프리팹 스폰하는 방식으로
+        GameObject chasebulletTop = Instantiate(_Bullet6, transform.position + Vector3.up * 0.5f, Quaternion.Euler(new Vector3(0, 0, 90f)));
+        GameObject chasebulletDown = Instantiate(_Bullet6, transform.position + Vector3.down * 0.5f, Quaternion.Euler(new Vector3(0, 0, -90f)));
+
+        Rigidbody2D rigidTop = chasebulletTop.GetComponent<Rigidbody2D>();
+        Rigidbody2D rigidBottom = chasebulletDown.GetComponent<Rigidbody2D>();
+
+        rigidTop.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        rigidBottom.AddForce(Vector2.down * 10, ForceMode2D.Impulse);
 
         _GuideAttack_Delay_Cur = 0.0f;
     }
@@ -196,13 +219,15 @@ public class PlayerController : MonoBehaviour
         if (_Bullet_Shot_Delay_Cur > 10) return;
 
         _Bullet_Shot_Delay_Cur += Time.deltaTime;
-    }
+    }    
 
-    void GuideAttack_Delay()
+    void Dead()
     {
-        if (_GuideAttack_Delay_Cur > 10) return;
-
-        _GuideAttack_Delay_Cur += Time.deltaTime;
+        // 기체가 파괴되면 능력치 하락 및 특수 공격 초기화
+        SetSpeed(-1.25f);
+        SetPower(-1);
+        SetGuideAttack(false);
+        SetChargeAttack(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -248,7 +273,9 @@ public class PlayerController : MonoBehaviour
                 Destroy(collision.gameObject);
             }
 
-            SetLife(-1);            
+            SetLife(-1);
+
+            Dead();
 
             manager.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);

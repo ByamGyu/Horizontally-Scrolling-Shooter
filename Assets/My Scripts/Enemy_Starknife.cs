@@ -7,23 +7,15 @@ public class Enemy_Starknife : Enemy_Base
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
-
-        //_Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Update()
     {
         if (_Player == null) return;
-        else
-        {
-            Stalk_Player(_Player);
-        }
+        else Stalk_Player(_Player);
     }
 
-    public override void SimpleMoveLeft()
-    {
-        _rigid.velocity = Vector2.left * _speed;
-    }
+    public override void SimpleMoveLeft() { _rigid.velocity = Vector2.left * _speed; }
 
     public void Stalk_Player(GameObject player)
     {
@@ -36,10 +28,7 @@ public class Enemy_Starknife : Enemy_Base
             float _angle = Mathf.Atan2(-_distance.y, -_distance.x) * Mathf.Rad2Deg;
 
             // 플레이어 기체의 x좌표를 기준으로 추적을 포기한다.
-            if(transform.position.x - 1.0f < _Player.transform.position.x)
-            {
-                return;
-            }
+            if(transform.position.x - 1.0f < _Player.transform.position.x) return;
 
             // 거리 및 방향 적용
             _rigid.velocity = _distance * _speed;

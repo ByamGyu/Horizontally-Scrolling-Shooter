@@ -20,8 +20,6 @@ public class Enemy_Satelite : Enemy_Base
     {
         _rigid = GetComponent<Rigidbody2D>();
         SimpleMoveLeft();
-
-        //_Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Update()

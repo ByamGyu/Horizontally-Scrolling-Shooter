@@ -15,9 +15,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float _Bullet_Shot_Delay_Max = 0.2f;
     [SerializeField]
-    int power = 1;
+    float _GuideAttack_Delay_Cur = 0.0f;
+    [SerializeField]
+    float _GuideAttack_Delay_Max = 3.0f;
     [SerializeField]
     int _life = 3;
+    [SerializeField]
+    int _power = 1;
+    [SerializeField]
+    bool _guideattack = false;
+    [SerializeField]
+    bool _chargeattack = false;
+    [SerializeField]
+    int _ult = 3;
     [SerializeField]
     int _score = 0;
     [SerializeField]
@@ -34,10 +44,6 @@ public class PlayerController : MonoBehaviour
     bool _isTouchRight = false;
     [SerializeField]
     bool _isTouchLeft = false;
-
-    // 플레이어 애니메이션?
-    [SerializeField]
-    Animator _anim;
 
     // 오브젝트 저장 변수
     [SerializeField]
@@ -58,14 +64,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        manager.UpdateLifeIcon(GetLife());
     }
+
     void Update()
     {
         CalculateInvincible();
         Move();
         Fire_Bullet();
         Bullet_Delay();
+        GuideAttack_Delay();
     }
 
     void CalculateInvincible()
@@ -109,7 +117,7 @@ public class PlayerController : MonoBehaviour
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
-        switch(power) // 일반 탄환
+        switch(_power) // 일반 탄환
         {
             case 1: // 파워레벨 1
                 // 프리팹(_Bullet1)을 오브젝트로 생성, 생성 위치, 생성 방향
@@ -117,6 +125,7 @@ public class PlayerController : MonoBehaviour
 
                 // 탄환에 힘을 가해 움직이게 한다.
                 Rigidbody2D rigid1 = bulletMid1.GetComponent<Rigidbody2D>();
+
                 rigid1.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
 
                 // 총알 생성 딜레이 시간 초기화
@@ -128,6 +137,7 @@ public class PlayerController : MonoBehaviour
 
                 Rigidbody2D rigidTop2 = bulletTop2.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidBottom2 = bulletDown2.GetComponent<Rigidbody2D>();
+
                 rigidTop2.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
                 rigidBottom2.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
 
@@ -137,6 +147,7 @@ public class PlayerController : MonoBehaviour
                 GameObject bulletTop3 = Instantiate(_Bullet1, transform.position + Vector3.up * 0.25f + Vector3.right * 0.5f, transform.rotation);
                 GameObject bulletMid3 = Instantiate(_Bullet1, transform.position + Vector3.right * 0.75f, transform.rotation);
                 GameObject bulletBottom3 = Instantiate(_Bullet1, transform.position + Vector3.down * 0.25f + Vector3.right * 0.5f, transform.rotation);
+
                 Rigidbody2D rigidTop3 = bulletTop3.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidMid3 = bulletMid3.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidBottom3 = bulletBottom3.GetComponent<Rigidbody2D>();
@@ -147,7 +158,37 @@ public class PlayerController : MonoBehaviour
 
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
+            case 4: // 파워레벨 4
+                GameObject bulletMid4 = Instantiate(_Bullet5, transform.position + Vector3.right * 0.5f, transform.rotation);
+                
+                Rigidbody2D rigidMid1 = bulletMid4.GetComponent<Rigidbody2D>();
+
+                rigidMid1.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
+
+                _Bullet_Shot_Delay_Cur = 0.0f;
+                break;
+            case 5: // 테스트 용도
+                GameObject test = Instantiate(_Bullet6, transform.position + Vector3.right * 0.5f, transform.rotation);
+                
+                _Bullet_Shot_Delay_Cur = 0.0f;
+                break;
         }
+    }
+
+    void Fire_ChargeAttack()
+    {
+        // 누르는 시간에 비례해서 스케일을 키우는 방식으로
+        // 누르는 시간에 비례해서 데미지도 증가
+    }
+
+    void Fire_GuideAttack()
+    {
+        // 유도탄 딜레이 시간 판별
+        if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
+
+        // 유도탄 프리팹 스폰하는 방식으로
+
+        _GuideAttack_Delay_Cur = 0.0f;
     }
 
     void Bullet_Delay()
@@ -157,9 +198,16 @@ public class PlayerController : MonoBehaviour
         _Bullet_Shot_Delay_Cur += Time.deltaTime;
     }
 
+    void GuideAttack_Delay()
+    {
+        if (_GuideAttack_Delay_Cur > 10) return;
+
+        _GuideAttack_Delay_Cur += Time.deltaTime;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Border")
+        if (collision.gameObject.tag == "Border") // 경계선 이동 제한
         {
             switch (collision.gameObject.name)
             {
@@ -177,7 +225,7 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-        else if (collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
+        else if (collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Item_Shielded")
         {
             // 무적상태면 return;
             if (_invincibleTime > 0) return;
@@ -191,14 +239,16 @@ public class PlayerController : MonoBehaviour
                 Enemy_Base enemyinfo = collision.gameObject.GetComponent<Enemy_Base>();
                 AddScore(enemyinfo.GetScore());
             }
-
-            if (collision.gameObject.tag == "EnemyBullet")
+            else if (collision.gameObject.tag == "EnemyBullet")
+            {
+                Destroy(collision.gameObject);
+            }
+            else if(collision.gameObject.tag == "Item_Shielded")
             {
                 Destroy(collision.gameObject);
             }
 
-            SetLife(-1);
-            manager.UpdateLifeIcon(GetLife());
+            SetLife(-1);            
 
             manager.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);
@@ -227,7 +277,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetLife(int tmp)
+    public void SetLife(int tmp)
     {
         _life = _life + tmp;
 
@@ -237,6 +287,11 @@ public class PlayerController : MonoBehaviour
 
             manager.GameOver();
         }
+
+        // 최대 체력은 3
+        if (_life >= 3) _life = 3;
+
+        manager.UpdateLifeIcon(GetLife());
     }
 
     public int GetLife() { return _life; }
@@ -244,4 +299,44 @@ public class PlayerController : MonoBehaviour
     public int GetScore() { return _score; }
     public void SetIsHit(bool tmp) { _isHit = tmp; }
     public bool GetIsHit() { return _isHit; }
+
+    public void SetPower(int tmp)
+    {
+        _power += tmp;
+
+        if (_power >= 4) _power = 4;
+        else if (_power <= 1) _power = 1;
+    }
+
+    public void SetSpeed(float tmp)
+    {
+        _speed += tmp;
+
+        if (_speed >= 7.5f) _speed = 7.5f;
+        else if (_speed <= 2.5f) _speed = 2.5f;
+    }
+
+    public void SetUlt(int tmp)
+    {
+        _ult += tmp;
+
+        if (_ult >= 3) _ult = 3;
+        else if (_ult <= 0) _ult = 0;
+    }
+
+    public void SetGuideAttack(bool tmp)
+    {
+        _guideattack = tmp;
+    }
+
+    public void SetChargeAttack(bool tmp)
+    {
+        _chargeattack = tmp;
+    }
+
+    public bool GetChargeAttack()
+    {
+        return _chargeattack;
+    }
+
 }

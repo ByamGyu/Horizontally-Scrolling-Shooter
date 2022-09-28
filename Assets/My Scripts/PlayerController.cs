@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
     public GameObject _Bullet6;
     [SerializeField]
     public GameObject _Bullet7;
+    [SerializeField]
+    public GameObject _Ult;
 
 
     void Start()
@@ -67,7 +69,7 @@ public class PlayerController : MonoBehaviour
         manager.UpdateLifeIcon(GetLife());
     }
 
-    void Update()
+    void Update() // FixedUpdate()를 사용하면 입력이 씹히는 현상 발생
     {
         // 무적 시간
         CalculateInvincible();
@@ -76,12 +78,15 @@ public class PlayerController : MonoBehaviour
         Move();
 
         // 기본 탄환 발사 관련
-        Fire_Bullet();
+        Fire_DefaultBullet();
         Bullet_Delay();
 
         // 유도탄 관련
         GuideAttack_Delay();
         Fire_GuideAttack();
+
+        // 궁극기 관련
+        Fire_Ult();
     }
 
     void CalculateInvincible()
@@ -117,7 +122,7 @@ public class PlayerController : MonoBehaviour
         transform.position = CurPos + NextPos; // 다음 위치
     }
 
-    void Fire_Bullet()
+    void Fire_DefaultBullet()
     {
         // '['를 누르면 발사
         if (!Input.GetKey(KeyCode.LeftBracket)) return;
@@ -184,6 +189,19 @@ public class PlayerController : MonoBehaviour
     {
         // 누르는 시간에 비례해서 스케일을 키우는 방식으로
         // 누르는 시간에 비례해서 데미지도 증가
+    }
+
+    void Fire_Ult()
+    {
+        if (_ult <= 0) return;
+
+        // '스페이스바'를 누르면 발사
+        if (!Input.GetKeyDown(KeyCode.Space)) return;
+
+        // 프리팹(_Bullet1)을 오브젝트로 생성, 생성 위치, 생성 방향
+        GameObject Ult = Instantiate(_Ult, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(90f, 0, 0f)));
+
+        SetUlt(-1);
     }
 
     void GuideAttack_Delay()

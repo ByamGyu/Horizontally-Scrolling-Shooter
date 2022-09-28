@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeReference]
     public GameObject _GameOverGroup;
 
-    private void Update()
+    private void FixedUpdate()
     {
         _Spawn_Delay_Time_Cur += Time.deltaTime;
 

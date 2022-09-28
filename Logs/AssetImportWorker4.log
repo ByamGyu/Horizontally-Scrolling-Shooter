@@ -1,0 +1,934 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.8f1 (b30333d56e81) revision 11731763'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ko' Physical Memory: 65450 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+G:\Unity Editor\2021.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+9395
+Successfully changed project path to: G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
+G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 100.72 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.8f1 (b30333d56e81)
+[Subsystems] Discovering subsystems at path G:/Unity Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6600 XT (ID=0x73ff)
+    Vendor:   ATI
+    VRAM:     8147 MB
+    Driver:   30.0.15021.11005
+Initialize mono
+Mono path[0] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002916 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 92.43 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.505 seconds
+Domain Reload Profiling:
+	ReloadAssembly (505ms)
+		BeginReloadAssembly (72ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (365ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (72ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (237ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (42ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (92ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (69ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006844 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 94.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.162 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1162ms)
+		BeginReloadAssembly (195ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (116ms)
+		EndReloadAssembly (858ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (196ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (493ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (95ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (218ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.16 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5735 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 6187.
+Memory consumption went from 236.4 MB to 235.2 MB.
+Total: 3.458900 ms (FindLiveObjects: 0.366600 ms CreateObjectMapping: 0.150100 ms MarkObjects: 2.516000 ms  DeleteObjects: 0.425600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 324821.296000 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3MobileSettings.lighting
+  artifactKey: Guid(79680e855bccbe3448ada7311f2c347f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3MobileSettings.lighting using Guid(79680e855bccbe3448ada7311f2c347f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: 'e7d93ac8fb302e24b4ca961f250cbfff') in 0.036510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.080463 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3Settings.lighting
+  artifactKey: Guid(0f2a02e5ea8e3084c88792209a6d0aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3Settings.lighting using Guid(0f2a02e5ea8e3084c88792209a6d0aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: 'c7c4a17c68975e130d3a3d79e24faf05') in 0.001569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.519146 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3.unity
+  artifactKey: Guid(850770bf668a17f4195b719343aa1033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3.unity using Guid(850770bf668a17f4195b719343aa1033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ceb7f745f47fcdc598e45b563c1e89') in 0.001073 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009829 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.062 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1063ms)
+		BeginReloadAssembly (236ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (753ms)
+			LoadAssemblies (213ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (200ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (374ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (196ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.72 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5622 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.2 MB). Loaded Objects now: 6191.
+Memory consumption went from 226.9 MB to 225.7 MB.
+Total: 3.745900 ms (FindLiveObjects: 0.348700 ms CreateObjectMapping: 0.122600 ms MarkObjects: 2.801800 ms  DeleteObjects: 0.472100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 36.518658 seconds.
+  path: Assets/Scenes/TestScene.unity
+  artifactKey: Guid(acb47fbff39e4ec4c8a40025885c91d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene.unity using Guid(acb47fbff39e4ec4c8a40025885c91d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b45e79669d9da56e4dea0d2d95159c') in 0.008993 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007923 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1010ms)
+		BeginReloadAssembly (198ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (744ms)
+			LoadAssemblies (165ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (201ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (383ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (205ms)
+				ProcessInitializeOnLoadMethodAttributes (71ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5622 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.2 MB). Loaded Objects now: 6194.
+Memory consumption went from 226.9 MB to 225.7 MB.
+Total: 3.721400 ms (FindLiveObjects: 0.339800 ms CreateObjectMapping: 0.120000 ms MarkObjects: 2.812800 ms  DeleteObjects: 0.447900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 38.044272 seconds.
+  path: Assets/Settings/UniversalRP.asset
+  artifactKey: Guid(681886c5eb7344803b6206f758bf0b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/UniversalRP.asset using Guid(681886c5eb7344803b6206f758bf0b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd0d744cad13a06a30645a85709f93a') in 0.043786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.415546 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3.unity
+  artifactKey: Guid(850770bf668a17f4195b719343aa1033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Unity5_EffectDemo3.unity using Guid(850770bf668a17f4195b719343aa1033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8251b33629d78863bcaeefe234d293') in 0.001084 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007165 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.842 seconds
+Domain Reload Profiling:
+	ReloadAssembly (843ms)
+		BeginReloadAssembly (120ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (661ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (180ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (337ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Switching render pipeline 00000000000000000000000000000000 -> 681886c5eb7344803b6206f758bf0b1c
+Refreshing native plugins compatible for Editor in 2.32 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5673 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.2 MB). Loaded Objects now: 6248.
+Memory consumption went from 232.5 MB to 231.3 MB.
+Total: 4.283200 ms (FindLiveObjects: 0.332900 ms CreateObjectMapping: 0.268800 ms MarkObjects: 3.203800 ms  DeleteObjects: 0.476800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006898 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Domain Reload Profiling:
+	ReloadAssembly (853ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (674ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (179ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (337ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (64ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching render pipeline 00000000000000000000000000000000 -> 681886c5eb7344803b6206f758bf0b1c
+Refreshing native plugins compatible for Editor in 2.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5622 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.2 MB). Loaded Objects now: 6251.
+Memory consumption went from 230.9 MB to 229.7 MB.
+Total: 3.692000 ms (FindLiveObjects: 0.339900 ms CreateObjectMapping: 0.299500 ms MarkObjects: 2.585000 ms  DeleteObjects: 0.466500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007581 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.865 seconds
+Domain Reload Profiling:
+	ReloadAssembly (865ms)
+		BeginReloadAssembly (128ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (676ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (181ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (337ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.28 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5622 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 96 unused Assets / (1.2 MB). Loaded Objects now: 6203.
+Memory consumption went from 230.9 MB to 229.7 MB.
+Total: 3.658200 ms (FindLiveObjects: 0.311400 ms CreateObjectMapping: 0.127000 ms MarkObjects: 2.364800 ms  DeleteObjects: 0.854200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006928 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.855 seconds
+Domain Reload Profiling:
+	ReloadAssembly (855ms)
+		BeginReloadAssembly (125ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (669ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (175ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (340ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (64ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.33 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5622 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.2 MB). Loaded Objects now: 6206.
+Memory consumption went from 230.9 MB to 229.7 MB.
+Total: 3.325400 ms (FindLiveObjects: 0.318100 ms CreateObjectMapping: 0.115500 ms MarkObjects: 2.465300 ms  DeleteObjects: 0.425900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 188.261847 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Other/Rock1.FBX
+  artifactKey: Guid(dfbf77845411d54469fcca1222f5797d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Other/Rock1.FBX using Guid(dfbf77845411d54469fcca1222f5797d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7cd6625b30331e3a680f6a297f0135') in 0.121492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 157.922263 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/GammaBeamMat.mat
+  artifactKey: Guid(14c6b96415d44a54c8bd3aebdb4e9dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/GammaBeamMat.mat using Guid(14c6b96415d44a54c8bd3aebdb4e9dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c26babfaaf6ca26fa0adbda305e82279') in 0.025430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/GridCutOut.png
+  artifactKey: Guid(f72cf70f05ac9e845afaaaa62ec6d22a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/GridCutOut.png using Guid(f72cf70f05ac9e845afaaaa62ec6d22a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '379688b65e40dd20ca20db91c594633c') in 0.022829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/LightningCore.mat
+  artifactKey: Guid(7eb5e05806b43084bb2829476702626a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/LightningCore.mat using Guid(7eb5e05806b43084bb2829476702626a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b5e26e5d7327f09f4c261ac7c93a1d8') in 0.010772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/LightningParticles.png
+  artifactKey: Guid(4102682929168184896f6897df0914f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/LightningParticles.png using Guid(4102682929168184896f6897df0914f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15b89464740a3bfe47c5d02ac0961779') in 0.005940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/Particles 1.mat
+  artifactKey: Guid(cff282d8f4e8a8447a5c1ee2a0c9d0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Waves/GammaBeam/Particles 1.mat using Guid(cff282d8f4e8a8447a5c1ee2a0c9d0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d59528bf4c9a1b4587216eecac0147a') in 0.012209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.119588 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/BlackHole/Rocks.mat
+  artifactKey: Guid(eba4b828c78bb2744a91b7ff64a5610b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/BlackHole/Rocks.mat using Guid(eba4b828c78bb2744a91b7ff64a5610b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f50c6822cf9fde5ec86c9c46444964c') in 0.008607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.369836 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog 1.mat
+  artifactKey: Guid(a9abe5f100820044085f20b829475d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog 1.mat using Guid(a9abe5f100820044085f20b829475d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb409b48d90a38b9d3e9b85aeb94965') in 0.048582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/SmokeTile.png
+  artifactKey: Guid(06a5e076fdca49540ac4747acd640f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/SmokeTile.png using Guid(06a5e076fdca49540ac4747acd640f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fdc1364052828939edad25cd4b07450') in 0.010012 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog3.mat
+  artifactKey: Guid(97aa2158b7cf16840bb29b27c70ea01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog3.mat using Guid(97aa2158b7cf16840bb29b27c70ea01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '226d4e71d05e1bd4509a320cd6b59cf5') in 0.010144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog2.mat
+  artifactKey: Guid(19506e4c15f343948885775cea411aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog2.mat using Guid(19506e4c15f343948885775cea411aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d15d0858204cac87a40e3c23c1a75e9') in 0.013888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog4.mat
+  artifactKey: Guid(af9c5f125de873344a02f4b769720892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shadow/Fog4.mat using Guid(af9c5f125de873344a02f4b769720892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3838ea1012518d7717c4b8e368bae97a') in 0.009617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.751839 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Nexus/CoreParticles.mat
+  artifactKey: Guid(6dc8298d065cd1c48b24c204866f9dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Nexus/CoreParticles.mat using Guid(6dc8298d065cd1c48b24c204866f9dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c97bc4dcd5f1ce248669ae21b017f78f') in 0.010542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Nexus/DistortionMobile.mat
+  artifactKey: Guid(67558469c81def1459848dec0b248189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Nexus/DistortionMobile.mat using Guid(67558469c81def1459848dec0b248189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfcfe8cdf219397e08fd0661fa7ff3b1') in 0.010783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Nexus/ParticlesMobile.mat
+  artifactKey: Guid(03a7004a64fe15b47b8a0944856517ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Nexus/ParticlesMobile.mat using Guid(03a7004a64fe15b47b8a0944856517ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaaf745f91cf1fab363fae67b5eb2911') in 0.009207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.341380 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/Core.mat
+  artifactKey: Guid(4f59ea4ddfed2fa44907dc0aceb06cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/Core.mat using Guid(4f59ea4ddfed2fa44907dc0aceb06cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da9d2c9612529ee451244e06344b15c9') in 0.009783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006562 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/FrostOnHitMobile.prefab
+  artifactKey: Guid(a04504b22bcdf014aaa4087ead4207b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/FrostOnHitMobile.prefab using Guid(a04504b22bcdf014aaa4087ead4207b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcfea2dc31c2193ceabccf6791ea5a93') in 0.008465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/FrostOnHit.prefab
+  artifactKey: Guid(d20b9e19f15648d4086a403f1f8cf6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/FrostOnHit.prefab using Guid(d20b9e19f15648d4086a403f1f8cf6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0959ae8ca5b789cc8940e65cb8bb1b32') in 0.023682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/Ice.mat
+  artifactKey: Guid(fbbb84be2d00d8c428de400ba092405d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/Ice.mat using Guid(fbbb84be2d00d8c428de400ba092405d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ecace9f474a06ce17bb94290514b2d9') in 0.016699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/ExplosionFogMobile.mat
+  artifactKey: Guid(177e00a5abc64d04a97a5a5977817b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/ExplosionFogMobile.mat using Guid(177e00a5abc64d04a97a5a5977817b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273c76b0de433262d21e3fb37324bd90') in 0.013105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/FrostBall.png
+  artifactKey: Guid(c61fd716e8d6c9a469a1e653c47257bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/FrostBall/FrostBall.png using Guid(c61fd716e8d6c9a469a1e653c47257bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ae2dfc08efec084b400cda3dc54e91') in 0.008115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.733659 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/CollisionDistortion.mat
+  artifactKey: Guid(7e287d27c7d0b824392439bcc99d8561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/CollisionDistortion.mat using Guid(7e287d27c7d0b824392439bcc99d8561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e894a7540e4dcf9bfc1baf756d8acdaf') in 0.009947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/CraterCore3.png
+  artifactKey: Guid(6224ecbdf995ca040a3e221eb8904e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/CraterCore3.png using Guid(6224ecbdf995ca040a3e221eb8904e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fa8dbe79425c2f25558b7d56da3666') in 0.011509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Particles 1.mat
+  artifactKey: Guid(ee90785d632e73248ae79690b65e55bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Particles 1.mat using Guid(ee90785d632e73248ae79690b65e55bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ec4e205378c5b0925e76d5461bd702') in 0.017036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Rock 1.mat
+  artifactKey: Guid(0ff3d96c99e79314da1e3ef79f3deedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Rock 1.mat using Guid(0ff3d96c99e79314da1e3ef79f3deedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6a9a6b092c67115e65abce94de37638') in 0.009502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/FlameMobile.mat
+  artifactKey: Guid(ae855e6eb8a8b864994564864df5cfc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/FlameMobile.mat using Guid(ae855e6eb8a8b864994564864df5cfc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6f3ff95dabe459a3539ad46990e1f1a') in 0.014059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Distortion.mat
+  artifactKey: Guid(a79462cbf248f6f4f9b10f6bd47e7a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Distortion.mat using Guid(a79462cbf248f6f4f9b10f6bd47e7a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d61df185e898d24bd552af4e2c92912') in 0.010295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.194639 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Rocket.png
+  artifactKey: Guid(010715111d57ba446a52a2e3209962c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Rockets/InfernoRocket/Rocket.png using Guid(010715111d57ba446a52a2e3209962c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1681dad4e2ee5585746966aaf2f8c325') in 0.007860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.355130 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Core.mat
+  artifactKey: Guid(7b0913f0f7f0a7144baf48c3af3d80e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Core.mat using Guid(7b0913f0f7f0a7144baf48c3af3d80e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efc39600692fcb8c12cec0083b95dba') in 0.008910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Line5.mat
+  artifactKey: Guid(ba9422b67c34287499435a88ba6692a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Line5.mat using Guid(ba9422b67c34287499435a88ba6692a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a5b282a1caf2ca2db3e3efb77b9695') in 0.008783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Line2.mat
+  artifactKey: Guid(00c139351f170c046ab2ad441feb09f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Line2.mat using Guid(00c139351f170c046ab2ad441feb09f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf487275a734214ff019c840d6ad8c30') in 0.008629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Particle.png
+  artifactKey: Guid(840ef8a9ff745f14c91b83415bed1e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Particle.png using Guid(840ef8a9ff745f14c91b83415bed1e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7551bcaccca313443acba9d67ecf9245') in 0.006914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Line4.mat
+  artifactKey: Guid(3ade621bbdd9a1841b237e98a2161db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Line4.mat using Guid(3ade621bbdd9a1841b237e98a2161db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77466a4c1151c6f3f4a42ebf99881737') in 0.007771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Stars.png
+  artifactKey: Guid(81385eaede042c04b9a9e1997db31dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/Shackles/Stars.png using Guid(81385eaede042c04b9a9e1997db31dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75d7b185bbdba925d4ae31f0571ad403') in 0.006613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.223307 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/Crater.mat
+  artifactKey: Guid(b6a9784ee7da00a459053161983ea094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/Crater.mat using Guid(b6a9784ee7da00a459053161983ea094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e5df414c17fa8d16f2f3ae49e655d59') in 0.011431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/FireBall13.png
+  artifactKey: Guid(cd8b5702bf21d21469bde4f15343f5e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/FireBall13.png using Guid(cd8b5702bf21d21469bde4f15343f5e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '499cfbee05adb7dfd39e932d87e35015') in 0.008209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/ExplosionFlame.mat
+  artifactKey: Guid(5ce9542e1e600ea4a946dc7cb7b2e0c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/ExplosionFlame.mat using Guid(5ce9542e1e600ea4a946dc7cb7b2e0c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2268a5ae2e7df08748ef3d77dfd3123d') in 0.020730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/ExplosionSmoke.mat
+  artifactKey: Guid(f0da5ce89b5f28d42b89629233701885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Objects/GrenadeExplosion/ExplosionSmoke.mat using Guid(f0da5ce89b5f28d42b89629233701885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c94beca86d3c300283d9f2d06ad0c6') in 0.015151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.279578 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/SlimeBomb/Core.mat
+  artifactKey: Guid(196bb1ba05527874a93671ad4025b819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/SlimeBomb/Core.mat using Guid(196bb1ba05527874a93671ad4025b819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad992427fe485a02b1d3303fc767297') in 0.010741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/SlimeBomb/DropExplosion2Mobile.mat
+  artifactKey: Guid(85dc6b64e96ce8c40a2ceb3795736ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/SlimeBomb/DropExplosion2Mobile.mat using Guid(85dc6b64e96ce8c40a2ceb3795736ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aeb00676bd3e06207bb77a2365760a7') in 0.016102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/SlimeBomb/SlimeDrops.mat
+  artifactKey: Guid(f9962e5b32341664bac4d08f7afa1beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KriptoFX/Realistic Effects Pack 3/Materials/Balls/SlimeBomb/SlimeDrops.mat using Guid(f9962e5b32341664bac4d08f7afa1beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b63f6776f57103676150d20ef3d5e59b') in 0.013149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.196921 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(3a72b8863cb23264dbb4f6228e7f0391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(3a72b8863cb23264dbb4f6228e7f0391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '814dc9b7648ececdade91ac39730c424') in 0.002002 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010275 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.942 seconds
+Domain Reload Profiling:
+	ReloadAssembly (942ms)
+		BeginReloadAssembly (190ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (688ms)
+			LoadAssemblies (170ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (179ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (345ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (65ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.31 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5570 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 90 unused Assets / (1.2 MB). Loaded Objects now: 6214.
+Memory consumption went from 229.6 MB to 228.4 MB.
+Total: 3.601600 ms (FindLiveObjects: 0.351700 ms CreateObjectMapping: 0.118100 ms MarkObjects: 2.654600 ms  DeleteObjects: 0.476000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008604 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.025 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1025ms)
+		BeginReloadAssembly (211ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (744ms)
+			LoadAssemblies (193ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (191ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (378ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (187ms)
+				ProcessInitializeOnLoadMethodAttributes (72ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.59 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5570 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.2 MB). Loaded Objects now: 6217.
+Memory consumption went from 229.7 MB to 228.5 MB.
+Total: 3.472100 ms (FindLiveObjects: 0.345200 ms CreateObjectMapping: 0.123900 ms MarkObjects: 2.543800 ms  DeleteObjects: 0.458600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

@@ -63,10 +63,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public GameObject _Ult;
 
+    // 효과음 변수
+    [SerializeField]
+    public Dictionary<string, AudioClip> _SoundEffects;
+
 
     void Start()
     {
         manager.UpdateLifeIcon(GetLife());
+
+
     }
 
     void Update() // FixedUpdate()를 사용하면 입력이 씹히는 현상 발생

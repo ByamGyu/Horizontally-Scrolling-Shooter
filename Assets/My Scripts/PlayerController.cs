@@ -243,15 +243,6 @@ public class PlayerController : MonoBehaviour
         if (_Bullet_Shot_Delay_Cur > 10) return;
 
         _Bullet_Shot_Delay_Cur += Time.deltaTime;
-    }    
-
-    void Dead()
-    {
-        // 기체가 파괴되면 능력치 하락 및 특수 공격 초기화
-        SetSpeed(-1.25f);
-        SetPower(-1);
-        SetGuideAttack(false);
-        SetChargeAttack(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -274,7 +265,8 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-        else if (collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Item_Shielded")
+        //else if (collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Item_Shielded")
+        else // 이동제한 경계선이 아닌 모든 처리
         {
             // 무적상태면 return;
             if (_invincibleTime > 0) return;
@@ -285,25 +277,41 @@ public class PlayerController : MonoBehaviour
 
             if (collision.gameObject.tag == "Enemy")
             {
+                // 일반 적과 충돌이면 적 파괴 및 점수 획득
                 Enemy_Base enemyinfo = collision.gameObject.GetComponent<Enemy_Base>();
                 AddScore(enemyinfo.GetScore());
             }
+            else if (collision.gameObject.tag == "Enemy_Boss")
+            {
+                // 보스와 충돌이면
+
+            }
             else if (collision.gameObject.tag == "EnemyBullet")
             {
+                // 적 탄환과 충돌이면 적 탄환 파괴
                 Destroy(collision.gameObject);
             }
             else if(collision.gameObject.tag == "Item_Shielded")
             {
+                // Item_Shielded와 충돌하면 Item_Shielded 파괴
                 Destroy(collision.gameObject);
             }
 
             SetLife(-1);
-
             Dead();
 
             manager.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);
         }
+    }
+
+    void Dead()
+    {
+        // 기체가 파괴되면 능력치 하락 및 특수 공격 초기화
+        SetSpeed(-1.25f);
+        SetPower(-1);
+        SetGuideAttack(false);
+        SetChargeAttack(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

@@ -29,8 +29,10 @@ namespace Playniax.SpaceShooterArtPack02
 
         void Awake()
         {
+            // 카메라를 기준으로 이동 범위 잡기
             if (Camera.main.orthographic && bounds == Vector2.zero) bounds = CameraHelpers.OrthographicBounds(Camera.main).extents * autoboundsMultiplier;
 
+            // 시작 위치 잡기
             if (startPosition != StartPosition.Fixed) _SetStartPosition();
 
             GameObject clone = default;
@@ -38,6 +40,7 @@ namespace Playniax.SpaceShooterArtPack02
             var leader = transform;
             var space = bodySettings.space;
 
+            // 몸통 복사 붙여넣기
             for (int i = 0; i < bodySettings.count; i++)
             {
                 clone = Instantiate(bodySettings.prefab);
@@ -53,6 +56,7 @@ namespace Playniax.SpaceShooterArtPack02
                 space = bodySettings.space;
             }
 
+            // 꼬리가 있으면 꼬리 달아주기
             if (tail)
             {
                 _bodyParts.Add(tail);
@@ -65,6 +69,7 @@ namespace Playniax.SpaceShooterArtPack02
                 serpentBody.transform.position = transform.position;
             }
 
+            // ???
             if (bodySettings.prefab.scene.rootCount > 0)
             {
                 bodySettings.prefab.SetActive(false);
@@ -97,17 +102,23 @@ namespace Playniax.SpaceShooterArtPack02
             }
         }
 
+
         void Update()
         {
+            // 플레이어를 향하는 위치
             var direction = _targetPosition - transform.position;
+            // 플레이어를 향하는 각도
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            // 위에서 구한 각도 반영 및 부드럽게 회전
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * rotationSpeed);
 
+            // transform.Translate은 이동함수
             transform.Translate(Vector3.right * speed * Time.deltaTime);
 
+            // 나와 타겟 사이의 거리가 recalculatedistance(1.0f)보다 작으면 새로운 타겟 잡기
             if (Vector3.Distance(transform.position, _targetPosition) < recalculatedistance)
             {
-                var player = PlayersGroup.GetRandom();
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
 
                 if (tagetPlayer && player)
                 {
@@ -115,6 +126,7 @@ namespace Playniax.SpaceShooterArtPack02
                 }
                 else
                 {
+                    // 타겟이 없으면 랜덤 위치 이동
                     _targetPosition = _RandomPosition();
                 }
             }

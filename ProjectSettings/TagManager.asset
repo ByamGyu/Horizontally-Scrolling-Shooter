@@ -11,6 +11,7 @@ TagManager:
   - EnemyBullet
   - Item_Shielded
   - Item
+  - Enemy_Boss
   layers:
   - Default
   - TransparentFX

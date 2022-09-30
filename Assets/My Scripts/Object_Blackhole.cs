@@ -14,10 +14,6 @@ public class Object_Blackhole : MonoBehaviour
     [SerializeField]
     float _totaltime = 0;
 
-    // 효과음 파일
-    [SerializeField]
-    public AudioClip _soundeffect;
-
     Vector3 _dir;
 
 
@@ -83,7 +79,7 @@ public class Object_Blackhole : MonoBehaviour
 
     void PlaySound()
     {
-        SoundManager.instance.PlaySoundEffect("BlackHole", _soundeffect);
+        SoundManager.instance.PlaySoundEffect("BlackHole");
     }
 
     void stopthis(float time)

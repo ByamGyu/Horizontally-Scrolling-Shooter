@@ -1857,8 +1857,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1191277510}
     - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _BGMs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _BGMs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9144503e40fefa04e8adf615d5bb26f7, type: 3}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
       propertyPath: _BGMLists.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _BGMNames.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
       propertyPath: _BGMLists.Array.data[0]
@@ -1877,8 +1889,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: d29dfffd1d7162e4b9a5bb5feb9cb0d3, type: 3}
     - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _BGMNames.Array.data[0]
+      value: Stage_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _SoundEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _SoundEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b1e10a77d5beee438d6ba1aac3d197a, type: 3}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _SoundEffectNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
       propertyPath: _MyDic_Sounds.m_keys.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
+      propertyPath: _SoundEffectNames.Array.data[0]
+      value: BlackHole
       objectReference: {fileID: 0}
     - target: {fileID: 7927460914570588609, guid: 6df1e0e95ad7a9842981355fe4097ddc, type: 3}
       propertyPath: _MyDic_Sounds.m_values.Array.size

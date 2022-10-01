@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //_Spawn_Delay_Time_Cur += Time.deltaTime;
+        _Spawn_Delay_Time_Cur += Time.deltaTime;
 
         if(_Spawn_Delay_Time_Cur > _Spawn_Delay_Time_Max)
         {

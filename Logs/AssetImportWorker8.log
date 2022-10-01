@@ -15,7 +15,7 @@ G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 -logFile
 Logs/AssetImportWorker8.log
 -srvPort
-8479
+3367
 Successfully changed project path to: G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 118.61 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 201.26 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path G:/Unity Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,53 +63,54 @@ Initialize mono
 Mono path[0] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56564
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003354 seconds.
+Registered in 0.004224 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 103.72 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 105.08 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.564 seconds
+- Completed reload, in  0.589 seconds
 Domain Reload Profiling:
-	ReloadAssembly (564ms)
-		BeginReloadAssembly (100ms)
+	ReloadAssembly (589ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (387ms)
-			LoadAssemblies (102ms)
+		EndReloadAssembly (407ms)
+			LoadAssemblies (106ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (78ms)
+			SetupTypeCache (87ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (249ms)
+			SetupLoadedEditorAssemblies (257ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (44ms)
+				InitializePlatformSupportModulesInManaged (45ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (104ms)
+				RefreshPlugins (105ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (69ms)
-				ProcessInitializeOnLoadMethodAttributes (31ms)
+				ProcessInitializeOnLoadAttributes (73ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008889 seconds.
+Registered in 0.010581 seconds.
+Android Extension - Scanning For ADB Devices 4505 ms
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
@@ -117,33 +118,33 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 100.83 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 99.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.312 seconds
+- Completed reload, in  1.463 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1313ms)
-		BeginReloadAssembly (253ms)
+	ReloadAssembly (1464ms)
+		BeginReloadAssembly (127ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (137ms)
-		EndReloadAssembly (975ms)
-			LoadAssemblies (137ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1236ms)
+			LoadAssemblies (390ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (204ms)
+			SetupTypeCache (205ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (593ms)
+			SetupLoadedEditorAssemblies (595ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (101ms)
+				RefreshPlugins (100ms)
 				BeforeProcessingInitializeOnLoad (109ms)
-				ProcessInitializeOnLoadAttributes (254ms)
-				ProcessInitializeOnLoadMethodAttributes (112ms)
+				ProcessInitializeOnLoadAttributes (257ms)
+				ProcessInitializeOnLoadMethodAttributes (111ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -151,13 +152,13 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.33 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6276 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 92 unused Assets / (1.2 MB). Loaded Objects now: 6710.
-Memory consumption went from 255.1 MB to 253.9 MB.
-Total: 6.707300 ms (FindLiveObjects: 0.420300 ms CreateObjectMapping: 0.343700 ms MarkObjects: 5.490200 ms  DeleteObjects: 0.452300 ms)
+Unloading 78 unused Assets / (0.7 MB). Loaded Objects now: 6707.
+Memory consumption went from 249.2 MB to 248.5 MB.
+Total: 6.999100 ms (FindLiveObjects: 0.486600 ms CreateObjectMapping: 0.154600 ms MarkObjects: 5.658800 ms  DeleteObjects: 0.698000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,191 +171,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 4239.718507 seconds.
-  path: Assets/KriptoFX/Realistic Effects Pack 3/Scene/Demo/Effects/ParticleFlamesSheet.png
-  artifactKey: Guid(0152e34d879bd824db6f38da8f357687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KriptoFX/Realistic Effects Pack 3/Scene/Demo/Effects/ParticleFlamesSheet.png using Guid(0152e34d879bd824db6f38da8f357687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c84568baf3964b0d4b2a9c3f867d7043') in 0.083789 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 61.196453 seconds.
-  path: Assets/KriptoFX/Realistic Effects Pack 3/Scene/Demo/Effects/lensflare_003.tga
-  artifactKey: Guid(190a6ac226a016d468017e09d4cfe502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KriptoFX/Realistic Effects Pack 3/Scene/Demo/Effects/lensflare_003.tga using Guid(190a6ac226a016d468017e09d4cfe502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4ac7f58dc43c39673980e496e120448') in 0.022598 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.318276 seconds.
-  path: Assets/KriptoFX/Realistic Effects Pack 3/Scene/Demo/Effects/fx_smoke_01_d.tif
-  artifactKey: Guid(61a2cde4348944047813a51b3cf82c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KriptoFX/Realistic Effects Pack 3/Scene/Demo/Effects/fx_smoke_01_d.tif using Guid(61a2cde4348944047813a51b3cf82c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd745744e7b11c54a8bbade4eda5cbdd') in 0.011354 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.602276 seconds.
-  path: Assets/My Prefabs/Effect
-  artifactKey: Guid(88c2b0b5398f5b34281ccd24c89fbb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect using Guid(88c2b0b5398f5b34281ccd24c89fbb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04bfad4d77bce75fb449dfb561d598c') in 0.003844 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.306757 seconds.
-  path: Assets/My Prefabs/Effect/Explosion
-  artifactKey: Guid(a27e79048c1a5f7448a713013a53bae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion using Guid(a27e79048c1a5f7448a713013a53bae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8257c3ca0253cc10b60eab4fcb284e3c') in 0.003094 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.279479 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Sparks.mat
-  artifactKey: Guid(b683457f6ec5a324fa8beb4bb3298bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Sparks.mat using Guid(b683457f6ec5a324fa8beb4bb3298bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1161cbcd1039336d17c7703caf7aeae') in 0.050561 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.981802 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Explosion_Red.prefab
-  artifactKey: Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Explosion_Red.prefab using Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5dcec3810148356329ff5e2f1ae4fff') in 0.020860 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.202418 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Explosion_Red 1.prefab
-  artifactKey: Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Explosion_Red 1.prefab using Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd457502d9a45fc5a7788e74418771cd7') in 0.010704 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.213963 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Explosion_Cyber.prefab
-  artifactKey: Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Explosion_Cyber.prefab using Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130d1775af36f41e4b6aae7aaf576f6b') in 0.010958 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 70.235816 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Explosion_Red.prefab
-  artifactKey: Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Explosion_Red.prefab using Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e383cab7552a421c0b80808a560a017') in 0.013275 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.855465 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Explosion_Cyber.prefab
-  artifactKey: Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Explosion_Cyber.prefab using Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5732ca4e821933ef7b7daddfe5720ac0') in 0.013487 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 42.382894 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effec_Explosion_Cyber.prefab
-  artifactKey: Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effec_Explosion_Cyber.prefab using Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bd3bb818913cefcf342b340ff6fdce') in 0.014116 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.168220 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Red.prefab
-  artifactKey: Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Red.prefab using Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5f7d21451f3c1ba823a690b4f5a572') in 0.011835 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.185747 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Cyber.prefab
-  artifactKey: Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Cyber.prefab using Guid(8b4cb643289b43a4cbb7a96a3f5d4565) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a73115ffa0e24a5a0180d8107b32164') in 0.011667 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.412473 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_RedSpark.prefab
-  artifactKey: Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_RedSpark.prefab using Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8866328990524e1b21335325bd290383') in 0.010571 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.132287 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark.prefab
-  artifactKey: Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark.prefab using Guid(13b6d92f780a13c43aee546359b81930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c164dd794f69fca8876ff7070601fd8a') in 0.010053 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 89.454278 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/blue spark.png
-  artifactKey: Guid(a8dce8d61f3829049ab55de1e2b765d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/blue spark.png using Guid(a8dce8d61f3829049ab55de1e2b765d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed33b08e64cc1d86dd128ae944afb70') in 0.016193 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/serpent eye glow.png
-  artifactKey: Guid(7c84f8feb2f6b6148896432a6786e4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/serpent eye glow.png using Guid(7c84f8feb2f6b6148896432a6786e4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e41b89d3a447d7d6b6d21b6aa838df') in 0.010374 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/red spark.png
-  artifactKey: Guid(9a5c8f5258ce3ed49bfa29e29b44d37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/red spark.png using Guid(9a5c8f5258ce3ed49bfa29e29b44d37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e119fa1693785b8d79be3ce90f8bb949') in 0.010676 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.243377 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 1.prefab
-  artifactKey: Guid(98264ae3b76254d4d9475b69228e2e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 1.prefab using Guid(98264ae3b76254d4d9475b69228e2e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b9d8880a77f09812c6a5e76283bf68f') in 0.011440 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.256239 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 2.prefab
-  artifactKey: Guid(0ecaa505a1c374343a2770bc17a19a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 2.prefab using Guid(0ecaa505a1c374343a2770bc17a19a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba2eeb6ae395cbfec96c35076fa41f15') in 0.009883 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.192670 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 3.prefab
-  artifactKey: Guid(d996719cc12708c49a12cc71cdb610ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 3.prefab using Guid(d996719cc12708c49a12cc71cdb610ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '614c4cfa1eb3234998dd7ac8588739e1') in 0.010922 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.950811 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 4.prefab
-  artifactKey: Guid(8fb3b39255553834594cc813421eb38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Redspark 4.prefab using Guid(8fb3b39255553834594cc813421eb38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ddaf9f2f949a0d7a32900428f263b4f') in 0.010724 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.018340 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Bluespark.prefab
-  artifactKey: Guid(98264ae3b76254d4d9475b69228e2e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Effect_Explosion_Bluespark.prefab using Guid(98264ae3b76254d4d9475b69228e2e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365eeb9b65beedac3b833c9ff72b93b3') in 0.010725 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 37.176029 seconds.
-  path: Assets/My Prefabs/Effect/Explosion/Bluespark.mat
-  artifactKey: Guid(e2235b8c536c9fb4886499f62009ac0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Prefabs/Effect/Explosion/Bluespark.mat using Guid(e2235b8c536c9fb4886499f62009ac0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a201d923e8c4c53f32a45039746202') in 0.016491 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 57.088942 seconds.
-  path: Assets/My Resources/Items/Cube Special Attack/Cube Guided Attack/3 way shielded.PNG
-  artifactKey: Guid(1a0154a238ff89a4c84297b3dfe588f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Resources/Items/Cube Special Attack/Cube Guided Attack/3 way shielded.PNG using Guid(1a0154a238ff89a4c84297b3dfe588f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9b42ea7e0651eab95e4b6edca86ee7') in 0.098018 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/My Resources/Space Shooter Art Resources/Textures/Background/Rocky/back_rocks01.png
-  artifactKey: Guid(940f3011f4a3f3d42912b633c4fa3386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Background/Rocky/back_rocks01.png using Guid(940f3011f4a3f3d42912b633c4fa3386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55991af5d7872c707fd3bd88cb987dde') in 0.031249 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.570331 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Brain/Idle/bb0013.png
-  artifactKey: Guid(4585d6ba035414c959c588c207f19cc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Bosses/Brain/Idle/bb0013.png using Guid(4585d6ba035414c959c588c207f19cc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11570424bf7d396cab0db531e061b7ef') in 0.020445 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Particle System/Textures/black 3.png
-  artifactKey: Guid(4030235a408aa0a42ba51229f4651fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Particle System/Textures/black 3.png using Guid(4030235a408aa0a42ba51229f4651fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9855265372c9258daf01785cb3b1374e') in 0.015860 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0030.png
-  artifactKey: Guid(8beb577288e37e04dbefa4c50f888413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Resources/Space Shooter Art Resources/Textures/Bosses/Brain/Attack/bb_attack0030.png using Guid(8beb577288e37e04dbefa4c50f888413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2cbea2ff0f851957338144c73c906a9') in 0.018528 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.832002 seconds.
-  path: Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Particle System/Textures/blue glow.png
-  artifactKey: Guid(0b2f3426523fb774d986f1d0fa8e758c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/(Playniax)Shooting Art Resources/Prototyping/Particle System/Textures/blue glow.png using Guid(0b2f3426523fb774d986f1d0fa8e758c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4931335504222412a8b61e8085b563c6') in 0.015136 seconds 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011763 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.107 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1107ms)
+		BeginReloadAssembly (175ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (861ms)
+			LoadAssemblies (155ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (455ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (113ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6148 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 65 unused Assets / (0.7 MB). Loaded Objects now: 6710.
+Memory consumption went from 238.4 MB to 237.7 MB.
+Total: 6.545800 ms (FindLiveObjects: 0.365100 ms CreateObjectMapping: 0.278800 ms MarkObjects: 5.652700 ms  DeleteObjects: 0.248500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

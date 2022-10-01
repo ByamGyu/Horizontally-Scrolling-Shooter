@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &121023627
 Transform:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &222248938
 Transform:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &265696939
 Transform:
   m_ObjectHideFlags: 0
@@ -624,7 +624,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &926267632
 Transform:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1124067474
 Transform:
   m_ObjectHideFlags: 0
@@ -731,7 +731,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1193986834
 Transform:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2037895668
 Transform:
   m_ObjectHideFlags: 0
@@ -1504,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2117943818
 Transform:
   m_ObjectHideFlags: 0
@@ -1535,7 +1535,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2133095684
 Transform:
   m_ObjectHideFlags: 0
@@ -1649,15 +1649,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1695428841615876954, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6304379
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1695428841615876954, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.37910792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1695428841615876954, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.087765634
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1695428841615876954, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1689,11 +1689,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectLists.Array.size
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectNames.Array.size
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectLists.Array.data[0]
@@ -1780,12 +1780,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7695402934210276667, guid: 430e2f12a68187b41bcb531ba3041e29, type: 3}
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
+      propertyPath: _EffectLists.Array.data[11]
+      value: 
+      objectReference: {fileID: 1036710331049782, guid: e431adb1c67ae0d4b84c62f1ebd4f46e, type: 3}
+    - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
+      propertyPath: _EffectLists.Array.data[12]
+      value: 
+      objectReference: {fileID: 1457510095980042, guid: d6026771dddcb304a969aab68cb97a87, type: 3}
+    - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectNames.Array.data[10]
       value: Effect_Explosion_Purplespark
       objectReference: {fileID: 0}
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectNames.Array.data[11]
-      value: Effect_Explosion_Greenspark
+      value: Effect_Boss_Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
+      propertyPath: _EffectNames.Array.data[12]
+      value: Effect_Boss_Laser_Hit
       objectReference: {fileID: 0}
     - target: {fileID: 7325541075372883813, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: m_Name

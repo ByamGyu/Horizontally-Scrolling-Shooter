@@ -39,8 +39,10 @@ public class SoundManager : MonoBehaviour
 
     void InitDictionary() // 딕셔너리 초기화
     {
-        if(_DicBGMStorage.Count != 0) _DicBGMStorage.Clear();
-        if(_DicSoundEffectStorage.Count != 0) _DicSoundEffectStorage.Clear();
+        // 꼭 이 함수 실행시켜!
+
+        if (_DicBGMStorage.Count != 0) _DicBGMStorage.Clear();
+        if (_DicSoundEffectStorage.Count != 0) _DicSoundEffectStorage.Clear();
 
         for (int i = 0; i < _BGMNames.Length; i++)
         {

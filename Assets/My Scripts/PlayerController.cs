@@ -312,6 +312,10 @@ public class PlayerController : MonoBehaviour
         SetPower(-1);
         SetGuideAttack(false);
         SetChargeAttack(false);
+
+        // 이펙트 스폰
+        // PlayEffect(string _effectname, Vector3 _pos, Vector3 _transform, Transform _parent = null)
+        EffectManager.instance.PlayEffect("Effect_Explosion_Orangespark", transform.position, new Vector3(0, 0, 0));
     }
 
     private void OnTriggerExit2D(Collider2D collision)

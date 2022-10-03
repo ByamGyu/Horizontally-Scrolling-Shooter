@@ -4666,7 +4666,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3045710cfa63df4479db66c81a6b758c, type: 2}
-  - {fileID: 2100000, guid: 3045710cfa63df4479db66c81a6b758c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4728,6 +4727,7 @@ GameObject:
   - component: {fileID: 4428229055872938}
   - component: {fileID: 198411547839823782}
   - component: {fileID: 199503971572066214}
+  - component: {fileID: -4514136859512308260}
   m_Layer: 0
   m_Name: Effect_Boss_Laser_Hit
   m_TagString: Untagged
@@ -4763,7 +4763,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 0.5
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9431,7 +9431,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e7d7171d7afaa0e40bd862f322df4117, type: 2}
-  - {fileID: 2100000, guid: e7d7171d7afaa0e40bd862f322df4117, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9482,6 +9481,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-4514136859512308260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457510095980042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcee28697bc94734692269aeea998884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1808828208804054
 GameObject:
   m_ObjectHideFlags: 0
@@ -14148,7 +14159,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3045710cfa63df4479db66c81a6b758c, type: 2}
-  - {fileID: 2100000, guid: 3045710cfa63df4479db66c81a6b758c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18801,7 +18811,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e7d7171d7afaa0e40bd862f322df4117, type: 2}
   - {fileID: 2100000, guid: e7d7171d7afaa0e40bd862f322df4117, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

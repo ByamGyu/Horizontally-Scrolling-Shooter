@@ -45,30 +45,23 @@ public class EffectManager : MonoBehaviour
     }
 
     // pos: 위치, transform: 회전값, parent: 이펙트를 어느 오브젝트 자식으로 둘지
-    public void PlayEffect(string _effectname, Vector3 _pos, Vector3 _transform, Transform _parent = null)
+    public void SpawnEffect(string _effectname, Vector3 _pos, Vector3 _transform, Transform _parent = null)
     {
         if(_DicEffectStorage.ContainsKey(_effectname))
         {
-            GameObject go = new GameObject("EffectObject: " + _effectname);
-            go.AddComponent<SpriteRenderer>();
-            SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-            
-
-            go = Instantiate(_DicEffectStorage[_effectname], _pos, Quaternion.Euler(_transform.x, _transform.y, _transform.z));
-
-            if (_parent != null)
-            {                
+            if (_parent != null) // 부모 지정할 객체의 transform을 _parent에 넣어주면 됨
+            {
+                GameObject go = Instantiate(_DicEffectStorage[_effectname], _pos, Quaternion.Euler(_transform.x, _transform.y, _transform.z));
                 go.transform.SetParent(_parent);
-            }            
+            }
+            else
+            {
+                Instantiate(_DicEffectStorage[_effectname], _pos, Quaternion.Euler(_transform.x, _transform.y, _transform.z));
+            }
         }
         else
         {
             Debug.Log("Effect: " + _effectname + " is not exist");
         }
-    }
-
-    public void DestroyThis()
-    {
-        Destroy(gameObject);
     }
 }

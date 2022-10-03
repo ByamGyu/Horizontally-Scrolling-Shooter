@@ -234,12 +234,11 @@ public class Enemy_Claw : MonoBehaviour
         // 방향 벡터
         Vector3 _dir = _Player.transform.position - transform.position;
         // 플레이어를 바라보는 방향
-        //float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg;
-        Vector3 _angle = new Vector3(_dir.x, _dir.y, _dir.z);
-        Quaternion _fixangle = Quaternion.Euler(_angle);
+        float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg;
+        //Vector3 _angle = new Vector3(-_dir.y, -_dir.x, -_dir.z);
 
-        // 방향 적용
-        // _rigid.rotation = _angle;
-        transform.rotation = Quaternion.Slerp(transform.rotation, _fixangle, Time.deltaTime * 1f);
+
+        // 회전
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_angle, Vector3.forward), Time.deltaTime * 1f);
     }
 }

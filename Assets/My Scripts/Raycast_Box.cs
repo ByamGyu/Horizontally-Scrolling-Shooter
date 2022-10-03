@@ -26,9 +26,9 @@ public class Raycast_Box : MonoBehaviour
 
         Vector2 look = transform.TransformDirection(Vector2.left);
 
-        Debug.DrawRay(transform.position, look * _distance, _color);
+        Debug.DrawRay(transform.position, -look * _distance, _color);
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, look * _distance);
+        RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0f, Vector2.right);
         if(hitInfo.collider != null)
         {
             if (hitInfo.collider.tag == "Player")

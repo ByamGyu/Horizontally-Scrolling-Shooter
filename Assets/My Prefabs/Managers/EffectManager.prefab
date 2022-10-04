@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7325541075372883813
+--- !u!1 &7206574313061028410
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1695428841615876954}
-  - component: {fileID: 6850386849717330715}
+  - component: {fileID: 7991654469032562538}
+  - component: {fileID: 1225442937405739267}
   m_Layer: 0
   m_Name: EffectManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1695428841615876954
+--- !u!4 &7991654469032562538
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7325541075372883813}
+  m_GameObject: {fileID: 7206574313061028410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,15 +32,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6850386849717330715
+--- !u!114 &1225442937405739267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7325541075372883813}
+  m_GameObject: {fileID: 7206574313061028410}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e38295f0756b90479278609ee9497df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _EffectNames:
+  - Effect_PlayerBullet_Hit01
+  - Effect_PlayerBullet_Hit02
+  - Effect_PlayerBullet_Hit03
+  - Effect_PlayerBullet_Hit04
+  - Effect_PlayerBullet_Hit05
+  - Effect_PlayerBullet_Hit06
+  - Effect_Explosion_Cyberspark
+  - Effect_Explosion_Redspark
+  - Effect_Explosion_Orangespark
+  - Effect_Explosion_Greenspark
+  - Effect_Explosion_Purplespark
+  - Effect_Boss_Laser
+  - Effect_Boss_Laser_Hit
+  - Effect_Boss_Laser_Charge
+  - Effect_Player_Charge
+  _EffectLists:
+  - {fileID: 7607424608030398489, guid: d15e8a09cf370cc4c8e616a55f639760, type: 3}
+  - {fileID: 6362662320982798599, guid: 23134b4debf00234ba2321b061f4a73f, type: 3}
+  - {fileID: 5395809482970300447, guid: c14a9a82c113827418a3a6d5e1a8e05c, type: 3}
+  - {fileID: 6763240955610486423, guid: f919c4f6ef879b74190478841cb6a581, type: 3}
+  - {fileID: 3971272377291815333, guid: 7f2e2ef761f3fc540ab290bd5d0f094a, type: 3}
+  - {fileID: 7514941582572089924, guid: f34e8a4054e21bb49a729b7e8d3f1572, type: 3}
+  - {fileID: 7990346818635312762, guid: 8b4cb643289b43a4cbb7a96a3f5d4565, type: 3}
+  - {fileID: 1147241389087103300, guid: 13b6d92f780a13c43aee546359b81930, type: 3}
+  - {fileID: 2870600805938595669, guid: 8a8438ca995ef0944bc0bfd667ed613b, type: 3}
+  - {fileID: 1821239338856136456, guid: fb84e8f4486125e459590472e45241de, type: 3}
+  - {fileID: 7695402934210276667, guid: 430e2f12a68187b41bcb531ba3041e29, type: 3}
+  - {fileID: 1036710331049782, guid: 18a201a57332c474cb84a9d2db3c2926, type: 3}
+  - {fileID: 1457510095980042, guid: d6026771dddcb304a969aab68cb97a87, type: 3}
+  - {fileID: 646533957051977075, guid: b21d6705a915d7d4faab135af5dd70c4, type: 3}
+  - {fileID: 3362589723407869925, guid: bc0fe9ccc3196074eb0826f1fe34069b, type: 3}

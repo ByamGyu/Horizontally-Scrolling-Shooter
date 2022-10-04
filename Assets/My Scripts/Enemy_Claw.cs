@@ -243,12 +243,13 @@ public class Enemy_Claw : MonoBehaviour
             {
                 _chargeattackeffecton = true;
 
-                //Vector3 _laserrot = new Vector3(transform.rotation.x, transform.rotation.y, -(180 - transform.rotation.z));
-                //Debug.Log(_laserrot);
+                Vector3 _dir = _Player.transform.position - transform.position;
+                // Enemy_Claw가 좀 특수한 상태라서 180도를 더해줘야 함
+                // 참고로 이펙트의 z축을 회전시켜야 됨
+                float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg + 180f;
 
-                Vector3 _laserrot = _Player.transform.position - transform.position;
-
-                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, new Vector3(90, 90, 90), new Vector3(1, 1, 1), this.transform);
+                                                                                            // 회전값                 // 스케일 값                                 
+                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, new Vector3(0, 0, _angle), new Vector3(1, 1, 1), this.transform);
             }
 
             _chargeattacktime += Time.deltaTime;

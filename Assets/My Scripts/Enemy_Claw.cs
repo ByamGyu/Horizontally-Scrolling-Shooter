@@ -37,8 +37,10 @@ public class Enemy_Claw : MonoBehaviour
     float _y;
     [SerializeField]
     float _chargetime = 0;
+    bool _chargeeffecton = false;
     [SerializeField]
     float _chargeattacktime = 0;
+    bool _chargeattackeffecton = false;
 
     public int frame;
 
@@ -196,7 +198,12 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 5) // charge 상태
         {
-            if (_chargetime <= 0.1) EffectManager.instance.SpawnEffect("Effect_Boss_Laser_Charge", transform.position, new Vector3(0, 0, 0), this.transform);
+            if (_chargeeffecton == false)
+            {
+                _chargeeffecton = true;
+                // Enemy_Claw의 원본 x 스케일이 -1이라서 x 스케일 값에 -1을 넣어줘야 함
+                EffectManager.instance.SpawnEffect("Effect_Boss_Laser_Charge", transform.position, new Vector3(0, 0, 0), new Vector3(-1, 1, 1), this.transform);
+            }
 
             _chargetime += Time.deltaTime;
             
@@ -220,6 +227,7 @@ public class Enemy_Claw : MonoBehaviour
                     if (_chargetime >= 4.0f)
                     {
                         _chargetime = 0;
+                        _chargeeffecton = false;
                         _rotations = 0;
                         _state += 1;
                     }
@@ -229,6 +237,20 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 6) // ChargeAttack 상태
         {
+            if (_Player != null) RotationSlerpToTarget(_Player);
+
+            if (_chargeattackeffecton == false)
+            {
+                _chargeattackeffecton = true;
+
+                //Vector3 _laserrot = new Vector3(transform.rotation.x, transform.rotation.y, -(180 - transform.rotation.z));
+                //Debug.Log(_laserrot);
+
+                Vector3 _laserrot = _Player.transform.position - transform.position;
+
+                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, new Vector3(90, 90, 90), new Vector3(1, 1, 1), this.transform);
+            }
+
             _chargeattacktime += Time.deltaTime;
 
             spriteRenderer.sprite = chargeattack.sprites[frame];
@@ -248,6 +270,7 @@ public class Enemy_Claw : MonoBehaviour
                     if(_chargeattacktime >= 6.0f)
                     {
                         _chargeattacktime = 0;
+                        _chargeattackeffecton = false;
                         _rotations = 0;
                         _state = 0;
                     }

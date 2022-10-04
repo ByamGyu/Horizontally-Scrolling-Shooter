@@ -64,4 +64,25 @@ public class EffectManager : MonoBehaviour
             Debug.Log("Effect: " + _effectname + " is not exist");
         }
     }
+
+    public void SpawnEffect(string _effectname, Vector3 _pos, Vector3 _transform, Vector3 _scale, Transform _parent = null)
+    {
+        if (_DicEffectStorage.ContainsKey(_effectname))
+        {
+            if (_parent != null) // 부모 지정할 객체의 transform을 _parent에 넣어주면 됨
+            {
+                GameObject go = Instantiate(_DicEffectStorage[_effectname], _pos, Quaternion.Euler(_transform.x, _transform.y, _transform.z));
+                go.transform.localScale = new Vector3(_scale.x, _scale.y, _scale.z);
+                go.transform.SetParent(_parent);
+            }
+            else
+            {
+                Instantiate(_DicEffectStorage[_effectname], _pos, Quaternion.Euler(_transform.x, _transform.y, _transform.z));
+            }
+        }
+        else
+        {
+            Debug.Log("Effect: " + _effectname + " is not exist");
+        }
+    }
 }

@@ -11,35 +11,54 @@ public class Raycast_Box : MonoBehaviour
     [SerializeField]
     public bool use = false;
 
+    [SerializeReference]
+    public GameObject _Player = null;
+
 
     void FixedUpdate()
     {
-        if(use == true)
+        _Player = GameObject.FindGameObjectWithTag("Player");
+
+        if (use == true)
         {
             RaycastOn();
         }
     }
 
-    string RaycastOn()
+    void RaycastOn()
     {
-        string _targettag = "";
+        float _distance = 20.0f;
 
-        Vector2 look = transform.TransformDirection(Vector2.left);
+        Vector2 startPos = transform.position + new Vector3(-1, 0, 0);
+        // 레이캐스트의 방향은 무조건 앞으로!
+        Vector2 _dir = Vector2.left;
 
-        Debug.DrawRay(transform.position, -look * _distance, _color);
+        float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg;
 
-        RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0f, Vector2.right);
-        if(hitInfo.collider != null)
+        
+
+        RaycastHit2D hitInfo = Physics2D.BoxCast(
+            startPos, 
+            new Vector2(1, 1), 
+            0f,
+            _dir,
+            _distance
+            );
+
+        Debug.DrawRay(startPos, _dir * _distance, _color);
+
+        if (hitInfo.collider != null)
         {
             if (hitInfo.collider.tag == "Player")
             {
                 Debug.Log("Boss RayCast: "  + hitInfo.collider.name);
-                _targettag = hitInfo.collider.tag;
 
                 EffectManager.instance.SpawnEffect("Effect_Boss_Laser_Hit", hitInfo.collider.transform.position, new Vector3(0, 0, 0));
             }
+            //if(hitInfo.collider.tag != "Player")
+            //{
+            //    Debug.Log("wtf: " + hitInfo.collider.name);
+            //}
         }
-
-        return _targettag;
     }
 }

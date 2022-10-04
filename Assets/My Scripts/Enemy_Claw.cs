@@ -216,12 +216,12 @@ public class Enemy_Claw : MonoBehaviour
             }
         }
 
-        if (_state == 0 || _state == 1 || _state == 4)
-        {
-            transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Sin(_y) * movementRange, transform.localPosition.z);
+        //if (_state == 0 || _state == 1 || _state == 4)
+        //{
+        //    transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Sin(_y) * movementRange, transform.localPosition.z);
 
-            _y += movementSpeed * Time.deltaTime;
-        }
+        //    _y += movementSpeed * Time.deltaTime;
+        //}
     }
 
     void InitRotation()
@@ -235,10 +235,11 @@ public class Enemy_Claw : MonoBehaviour
         Vector3 _dir = _Player.transform.position - transform.position;
         // 플레이어를 바라보는 방향
         float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg;
-        //Vector3 _angle = new Vector3(-_dir.y, -_dir.x, -_dir.z);
 
 
-        // 회전
+        // 부드러운 회전
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_angle, Vector3.forward), Time.deltaTime * 1f);
+        // 즉각 회전
+        // _rigid.rotation = _angle;
     }
 }

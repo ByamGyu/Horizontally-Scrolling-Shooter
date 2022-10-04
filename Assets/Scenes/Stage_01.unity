@@ -200,6 +200,7 @@ MonoBehaviour:
   _distance: 20
   _color: {r: 1, g: 0, b: 0, a: 1}
   use: 1
+  _Player: {fileID: 0}
 --- !u!65 &145360915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -271,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145360913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.49, y: -2.96, z: 0}
+  m_LocalPosition: {x: 5.47, y: -2.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -750,11 +751,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6604066234876971918, guid: 71d384c53d3755c44bfb524f5236ac65, type: 3}
+      propertyPath: use
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7961563490828585880, guid: 71d384c53d3755c44bfb524f5236ac65, type: 3}
       propertyPath: m_Name
       value: Enemy_Claw
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6604066234876971918, guid: 71d384c53d3755c44bfb524f5236ac65, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71d384c53d3755c44bfb524f5236ac65, type: 3}
 --- !u!1 &842375885
 GameObject:
@@ -2009,7 +2015,7 @@ PrefabInstance:
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectLists.Array.data[11]
       value: 
-      objectReference: {fileID: 1036710331049782, guid: e431adb1c67ae0d4b84c62f1ebd4f46e, type: 3}
+      objectReference: {fileID: 4310405511705832925, guid: e431adb1c67ae0d4b84c62f1ebd4f46e, type: 3}
     - target: {fileID: 6850386849717330715, guid: 509773eb24a9e2b4682411c0030facf9, type: 3}
       propertyPath: _EffectLists.Array.data[12]
       value: 

@@ -21,6 +21,7 @@ public class Enemy_Claw : MonoBehaviour
     public Animation clench;
     public Animation attack;
     public Animation open;
+    public Animation charge;
     public Animation chargeattack;
 
     [SerializeField]
@@ -34,6 +35,10 @@ public class Enemy_Claw : MonoBehaviour
     [SerializeField]
     int _state;
     float _y;
+    [SerializeField]
+    float _chargetime = 0;
+    [SerializeField]
+    float _chargeattacktime = 0;
 
     public int frame;
 
@@ -54,7 +59,7 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 0) // Idle 상태
         {
-            RotationSlerpToTarget(_Player);
+            if(_Player != null) RotationSlerpToTarget(_Player);
 
             spriteRenderer.sprite = idle.sprites[frame];
 
@@ -184,14 +189,47 @@ public class Enemy_Claw : MonoBehaviour
                 if (frame >= open.sprites.Length - 1)
                 {
                     frame = 0;
-                    _state = 0;
+                    _state += 1;
                 }
             }
         }
 
-        if (_state == 5) // ChargeAttack 상태
+        if (_state == 5) // charge 상태
         {
-            RotationSlerpToTarget(_Player);
+            if (_chargetime <= 0.1) EffectManager.instance.SpawnEffect("Effect_Boss_Laser_Charge", transform.position, new Vector3(0, 0, 0), this.transform);
+
+            _chargetime += Time.deltaTime;
+            
+
+            if (_Player != null) RotationSlerpToTarget(_Player);
+
+            spriteRenderer.sprite = idle.sprites[frame];
+
+            _frameTime += Time.deltaTime;
+
+            if (_frameTime >= idle.frameTime)
+            {
+                _frameTime = 0;
+
+                frame += 1;
+
+                if (frame >= idle.sprites.Length - 1)
+                {
+                    frame = 0;
+
+                    if (_chargetime >= 4.0f)
+                    {
+                        _chargetime = 0;
+                        _rotations = 0;
+                        _state += 1;
+                    }
+                }
+            }
+        }
+
+        if (_state == 6) // ChargeAttack 상태
+        {
+            _chargeattacktime += Time.deltaTime;
 
             spriteRenderer.sprite = chargeattack.sprites[frame];
 
@@ -206,11 +244,12 @@ public class Enemy_Claw : MonoBehaviour
                 if (frame >= chargeattack.sprites.Length - 1)
                 {
                     frame = 0;
-                    _rotations += 1;
-                    if (_rotations >= rotations)
+
+                    if(_chargeattacktime >= 6.0f)
                     {
+                        _chargeattacktime = 0;
                         _rotations = 0;
-                        _state += 1;
+                        _state = 0;
                     }
                 }
             }

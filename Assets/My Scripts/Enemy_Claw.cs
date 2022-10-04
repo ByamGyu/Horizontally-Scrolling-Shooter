@@ -243,13 +243,12 @@ public class Enemy_Claw : MonoBehaviour
             {
                 _chargeattackeffecton = true;
 
-                Vector3 _dir = _Player.transform.position - transform.position;
                 // Enemy_Claw가 좀 특수한 상태라서 180도를 더해줘야 함
                 // 참고로 이펙트의 z축을 회전시켜야 됨
-                float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg + 180f;
-
-                                                                                            // 회전값                 // 스케일 값                                 
-                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, new Vector3(0, 0, _angle), new Vector3(1, 1, 1), this.transform);
+                // https://dydvn.tistory.com/28
+                Vector3 _myangle = transform.rotation.eulerAngles + new Vector3(0, 0, 180); // Enemy_Claw의 정확한 앞 방향
+                                                                                           // 회전값(월드좌표)  // 스케일 값                                 
+                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, _myangle, new Vector3(1, 1, 1), this.transform);                
             }
 
             _chargeattacktime += Time.deltaTime;
@@ -298,7 +297,7 @@ public class Enemy_Claw : MonoBehaviour
         Vector3 _dir = _Player.transform.position - transform.position;
         // 플레이어를 바라보는 방향
         float _angle = Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg;
-
+       // Debug.Log(_angle + 180f);
 
         // 부드러운 회전
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_angle, Vector3.forward), Time.deltaTime * 1f);

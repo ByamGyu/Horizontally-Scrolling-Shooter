@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2542228823333423951
+--- !u!1 &1190706467607287554
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2542228822679071216}
-  - component: {fileID: 2542228822679071231}
-  - component: {fileID: 2542228822679071230}
+  - component: {fileID: 1190706466919151037}
+  - component: {fileID: 1190706466919151026}
+  - component: {fileID: 1190706466919151027}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2542228822679071216
+--- !u!4 &1190706466919151037
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2542228823333423951}
+  m_GameObject: {fileID: 1190706467607287554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,34 +33,104 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2542228822679071231
+--- !u!114 &1190706466919151026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2542228823333423951}
+  m_GameObject: {fileID: 1190706467607287554}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb54662f11e66b343bb153625ed9928d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _AudioSource_BGM: {fileID: 2542228822679071230}
+  _AudioSource_BGM: {fileID: 1190706466919151027}
   _BGMNames:
   - Stage_01
+  - Stage_01_2
+  - Stage_01_Serpent
+  - Stage_01_Boss
+  - Stage_Clear
+  - GameOver
+  - Stage_02_Boss
+  - The House of the Dead Magician Theme
+  - MainMenu
   _BGMs:
   - {fileID: 8300000, guid: 9144503e40fefa04e8adf615d5bb26f7, type: 3}
+  - {fileID: 8300000, guid: 66258f9cb090ab941a5ea054638fa722, type: 3}
+  - {fileID: 8300000, guid: de73a8333726c2047a9a3d42c05b8ee0, type: 3}
+  - {fileID: 8300000, guid: d29dfffd1d7162e4b9a5bb5feb9cb0d3, type: 3}
+  - {fileID: 8300000, guid: b40c409d21c9bcf498d9d4bdedf51439, type: 3}
+  - {fileID: 8300000, guid: 6dc4be81296344087a45172d7ba5e06f, type: 3}
+  - {fileID: 8300000, guid: c2302d99885f7455c9d159baaef753c0, type: 3}
+  - {fileID: 8300000, guid: 6552307f1b354954d91bfdfc3bee032d, type: 3}
+  - {fileID: 8300000, guid: 2e03ea08721f4428bad8a4aca5b4d869, type: 3}
   _SoundEffectNames:
   - BlackHole
+  - Boss1_PunchAttack
+  - Boss_Defeat
+  - Boss_Weapon_ChargeShot1
+  - Boss_Weapon_Charging
+  - Enemy_Destroy(Loud)
+  - Enemy_Destroy(Small)
+  - Enemy_Serpent_Death
+  - Item_PowerUp
+  - Item_SpeedUp
+  - Item_UltGet
+  - Item_LifeUp
+  - Player_ChargeAttackBig
+  - Player_ChargeAttackSmall
+  - Player_Charged
+  - Player_ChargeFinish
+  - Player_Charging1_3sec
+  - Player_Charging2_4sec
+  - Player_GuideAttack
+  - Boss01_Death
+  - Serpent_StalkPlayer
+  - Shot_Block
+  - Teleport
+  - UI_Change
+  - UI_Select
+  - Warning_1sec
+  - Weapon_Hit1
+  - Weapon_Hit2
   _SoundEffects:
   - {fileID: 8300000, guid: 8b1e10a77d5beee438d6ba1aac3d197a, type: 3}
---- !u!82 &2542228822679071230
+  - {fileID: 8300000, guid: 92c8430da0a21a445becb0606da32d36, type: 3}
+  - {fileID: 8300000, guid: 208b6897da006af49bb0cd92cdc47963, type: 3}
+  - {fileID: 8300000, guid: 7639b2bd6b998384589fa0ebcc8c1d7b, type: 3}
+  - {fileID: 8300000, guid: 87626d2bf072c114889ce691df5d8161, type: 3}
+  - {fileID: 8300000, guid: 47a5bb66b123b8a4585bfc66b3fee917, type: 3}
+  - {fileID: 8300000, guid: 81f385c3388fbd743a829d8d29d1365e, type: 3}
+  - {fileID: 8300000, guid: dec9c1145bb84e840a62f41ff209cbd1, type: 3}
+  - {fileID: 8300000, guid: 834888fe3984785438f26221ac183241, type: 3}
+  - {fileID: 8300000, guid: bfbd0c6a4c858a9418880fe06531f77e, type: 3}
+  - {fileID: 8300000, guid: 0966aee43a560334cbc0c04880cd0867, type: 3}
+  - {fileID: 8300000, guid: 3514078eeb001e64c9141f966f1559e3, type: 3}
+  - {fileID: 8300000, guid: 6a5b412347c03f4468e50f208ca0f308, type: 3}
+  - {fileID: 8300000, guid: b743941bc2dc5d34b805f599f8eefcd7, type: 3}
+  - {fileID: 8300000, guid: ea3fde7ca62909a4c8f23c99b55e3c85, type: 3}
+  - {fileID: 8300000, guid: dd09d3725a586e74da7a972200600b6e, type: 3}
+  - {fileID: 8300000, guid: 1805fe08e706cfd4eb56a21772254fd9, type: 3}
+  - {fileID: 8300000, guid: a0f9782ccd46a4e4aa4eb906b969ff61, type: 3}
+  - {fileID: 8300000, guid: ab297b593498a6e47ba84de770477cbe, type: 3}
+  - {fileID: 8300000, guid: 0240301ef5c9df348a4b099bab48b0e9, type: 3}
+  - {fileID: 8300000, guid: b66525d5598314c48a89e3b2fe694e1a, type: 3}
+  - {fileID: 8300000, guid: 63a3cd28caa9d4649a7889e17d29a8e3, type: 3}
+  - {fileID: 8300000, guid: 4c73c5960282d62499c5ae4e04caa50b, type: 3}
+  - {fileID: 8300000, guid: 605c0c6c4cd88fa4c91c688c39f5484f, type: 3}
+  - {fileID: 8300000, guid: d6edc515476e71c449d829f4e38ef39e, type: 3}
+  - {fileID: 8300000, guid: 59e3907948bd4c042ac9dad0c6e04464, type: 3}
+  - {fileID: 8300000, guid: 56186aaaa92e90449a11143f8f5bc11b, type: 3}
+  - {fileID: 8300000, guid: b57ff4a7fa8ef8444b27eab4277fe924, type: 3}
+--- !u!82 &1190706466919151027
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2542228823333423951}
+  m_GameObject: {fileID: 1190706467607287554}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}

@@ -5154,3 +5154,841 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 989.868847 seconds.
+  path: Assets/My Prefabs/Player.prefab
+  artifactKey: Guid(56d2d9e6c85f42741a073d180924432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Player.prefab using Guid(56d2d9e6c85f42741a073d180924432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bb070b4e0e1d0a7b4ca82c4400cd61d') in 0.105466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.911165 seconds.
+  path: Assets/My Prefabs/Managers/GameManager.prefab
+  artifactKey: Guid(782d31f1eb2476e46aac4cce9888f70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/GameManager.prefab using Guid(782d31f1eb2476e46aac4cce9888f70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0662ad8bd0b1f02fb3077ea60d5388bf') in 0.018216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.313155 seconds.
+  path: Assets/My Prefabs/Managers/GameManager.prefab
+  artifactKey: Guid(782d31f1eb2476e46aac4cce9888f70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/GameManager.prefab using Guid(782d31f1eb2476e46aac4cce9888f70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9353b55f35e45f9c3a2da5b7a382ce1d') in 0.013732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.392438 seconds.
+  path: Assets/My Prefabs/Managers/SoundManager.prefab
+  artifactKey: Guid(6df1e0e95ad7a9842981355fe4097ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/SoundManager.prefab using Guid(6df1e0e95ad7a9842981355fe4097ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487c7ba1f7e4a534bc844a18fe735eb7') in 0.010263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.501517 seconds.
+  path: Assets/My Prefabs/Managers/EffectManager.prefab
+  artifactKey: Guid(509773eb24a9e2b4682411c0030facf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/EffectManager.prefab using Guid(509773eb24a9e2b4682411c0030facf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c09bd2f6b6d083d267c47e46178381') in 0.033763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.418538 seconds.
+  path: Assets/My Prefabs/Managers/Border.prefab
+  artifactKey: Guid(d73f53b44fccef24ea371d2ffa36e03f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/Border.prefab using Guid(d73f53b44fccef24ea371d2ffa36e03f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273fe0f3f896ddd33fe8cc980f31d984') in 0.006816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/My Prefabs/Managers/SpawnPosGroup.prefab
+  artifactKey: Guid(988a235a711a49044b8250656366ede3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/SpawnPosGroup.prefab using Guid(988a235a711a49044b8250656366ede3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85694d3074734c2531e1ab3034eb73d5') in 0.007685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 118.139525 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources
+  artifactKey: Guid(3196e38d2f57d7c42b9a53cd57da8efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources using Guid(3196e38d2f57d7c42b9a53cd57da8efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0810753c40f0c2280ce39f5682c23b') in 0.001188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.038211 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01
+  artifactKey: Guid(9d419ac4d683f6f48af2c0008089eaf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01 using Guid(9d419ac4d683f6f48af2c0008089eaf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad568b18cdf1a0817e362114b271946') in 0.001300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.450381 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Pyro
+  artifactKey: Guid(0af9880b84b0d7740a55d8087f5a7481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Pyro using Guid(0af9880b84b0d7740a55d8087f5a7481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '088d3f80ff1c0b318a25af0e4877c2b8') in 0.001198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.507872 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Prototyping
+  artifactKey: Guid(a082d6112cc2bea45bd43053697e701e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Prototyping using Guid(a082d6112cc2bea45bd43053697e701e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48792aa75abeccfcb3efe9febf26a8e6') in 0.001365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.243015 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs
+  artifactKey: Guid(6fb1b0111d95d434a9484e03d371f415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs using Guid(6fb1b0111d95d434a9484e03d371f415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8bb6a2c9c15223b268efd37a8667fae') in 0.001281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.716536 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies
+  artifactKey: Guid(8ba86ce7ebea2b64aa6ebdde1bc31469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies using Guid(8ba86ce7ebea2b64aa6ebdde1bc31469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6cb14978b823389bbe052a94721e49a') in 0.001209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.055379 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Atom.prefab
+  artifactKey: Guid(293bbcf8908747b488d554cd43d6ae1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Atom.prefab using Guid(293bbcf8908747b488d554cd43d6ae1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb9ad80edffe97c963d69b896ce97ef') in 0.012879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008625 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Mohican.prefab
+  artifactKey: Guid(681d1cac9198de142913587095018d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Mohican.prefab using Guid(681d1cac9198de142913587095018d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d550affd83a2ac96a791770e304ee88') in 0.024328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009264 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Ring.prefab
+  artifactKey: Guid(6a077502f05125b43a726e879cf167c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Ring.prefab using Guid(6a077502f05125b43a726e879cf167c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38459012e75b9386652c082f126ba612') in 0.014548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Pinchhead.prefab
+  artifactKey: Guid(5daa17a4b6b867d479be7351fe2def74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Pinchhead.prefab using Guid(5daa17a4b6b867d479be7351fe2def74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8b5336b2184432542fadafb1c318be5') in 0.019653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Star.prefab
+  artifactKey: Guid(396d177f56b59184694219abb4f2b3d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Star.prefab using Guid(396d177f56b59184694219abb4f2b3d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a001b779899f370f2b80e300142ff1d8') in 0.005596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Cone.prefab
+  artifactKey: Guid(945ff7e4715174645928a20d0cf77acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Cone.prefab using Guid(945ff7e4715174645928a20d0cf77acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '257a96f455d5343b406e1db03271ff88') in 0.013190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Starknife.prefab
+  artifactKey: Guid(2e709e3200b7b974aa143aec769f7e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Starknife.prefab using Guid(2e709e3200b7b974aa143aec769f7e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b640fe53f0b1e316a053d47da4f56fe0') in 0.016508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Powered Rock.prefab
+  artifactKey: Guid(a150450a130b8074b90611609c1e2b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Powered Rock.prefab using Guid(a150450a130b8074b90611609c1e2b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00038495fb664c0c7f7066fae3cf7450') in 0.022512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.764957 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Materials/Plasma.mat
+  artifactKey: Guid(10bb4e360a2ac43bead1bc27520289b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Materials/Plasma.mat using Guid(10bb4e360a2ac43bead1bc27520289b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c315d5f59d2ab6d53b213422447042d') in 0.017915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.034680 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies (Bosses)/Claw Boss.prefab
+  artifactKey: Guid(ffd3a2e85a5a3c24badf74c74b6e0f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies (Bosses)/Claw Boss.prefab using Guid(ffd3a2e85a5a3c24badf74c74b6e0f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '931c20d61a2fcc5a5647dcfd12005e0a') in 0.111991 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.189072 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players/Player (C64 Delta Style Topview).prefab
+  artifactKey: Guid(831f3f015cdcdc3428f46cefbce84246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players/Player (C64 Delta Style Topview).prefab using Guid(831f3f015cdcdc3428f46cefbce84246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6563844a61eac8832b1355aebe6f8f3') in 0.031571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.664992 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (3 Way Shooter).prefab
+  artifactKey: Guid(2c7bc1ac9bc257b49a932d695c3f9b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (3 Way Shooter).prefab using Guid(2c7bc1ac9bc257b49a932d695c3f9b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '775e582f6138319f0ef968b705f8683d') in 0.019728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Wrecking Ball).prefab
+  artifactKey: Guid(023a639488407c344af969b20df321aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Wrecking Ball).prefab using Guid(023a639488407c344af969b20df321aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f29469f57dcae1ccfcf2a734b298b7') in 0.021863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Shield).prefab
+  artifactKey: Guid(6162ed0bd5d07e4409c6810fe0fb6ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Shield).prefab using Guid(6162ed0bd5d07e4409c6810fe0fb6ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9034d0a7abdd7a9d95c0a4d541badc76') in 0.004929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.861060 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background
+  artifactKey: Guid(d75b44301d03c3c4fa7569e78512c74d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background using Guid(d75b44301d03c3c4fa7569e78512c74d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e39d4b267799f4456da1998bf8a156af') in 0.001193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.166846 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/blob.png
+  artifactKey: Guid(301852e94f093634f8704557f82952c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/blob.png using Guid(301852e94f093634f8704557f82952c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '356e8a2d20d7996bcf08f084dfd01ff8') in 0.122494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.594841 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/pinchhead.png
+  artifactKey: Guid(fbe3d88df34b25c4ca19636821ca374d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/pinchhead.png using Guid(fbe3d88df34b25c4ca19636821ca374d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15711cfc990f67f45fdfb10b5aa8f957') in 0.035463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.301279 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/powered_rock.png
+  artifactKey: Guid(8a94f0969d667334e8d20e0e1df4ef1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/powered_rock.png using Guid(8a94f0969d667334e8d20e0e1df4ef1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5005ed7c3a9da5f2b4ab95444beab98b') in 0.041796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.283714 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/satelite.png
+  artifactKey: Guid(f3cfdf6e281a5bf41886ea75bff88080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/satelite.png using Guid(f3cfdf6e281a5bf41886ea75bff88080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be306e188494cbf8a446a6427669ef78') in 0.040858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.050896 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/starknife.png
+  artifactKey: Guid(c13863b86219a8943bbf2f265b3dec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/starknife.png using Guid(c13863b86219a8943bbf2f265b3dec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5492fc798f478aaaa9637f199c13d84') in 0.034740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.621146 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/red spark.png
+  artifactKey: Guid(06603b8792ae605429c939805a794246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/red spark.png using Guid(06603b8792ae605429c939805a794246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e029581aa6794c2cbf1f04600c0cd3bb') in 0.013462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/serpent eye glow.png
+  artifactKey: Guid(d9be99d315b1748a9bd04199b1dcc35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/serpent eye glow.png using Guid(d9be99d315b1748a9bd04199b1dcc35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9eea58436660c85774a9f157bf061ae') in 0.011760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.203727 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Player/player ship topview.png
+  artifactKey: Guid(092962fd72c5c9141ac5623af0349dff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Player/player ship topview.png using Guid(092962fd72c5c9141ac5623af0349dff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4af516f973353e1d6f619ab0f1567075') in 0.037753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.559520 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/blue spark.png
+  artifactKey: Guid(f382af085f0305045b57b87f3e9199f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/blue spark.png using Guid(f382af085f0305045b57b87f3e9199f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ee3c2b6250cc004cdc9bd91b04775b0') in 0.014444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pulsating green bullet.png
+  artifactKey: Guid(8331fad3f2cda1c4682ef3466c0d0186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pulsating green bullet.png using Guid(8331fad3f2cda1c4682ef3466c0d0186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a4096e5d9d86d2a269194c6bb85fd79') in 0.014716 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008028 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.979 seconds
+Domain Reload Profiling:
+	ReloadAssembly (979ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (762ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (179ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (431ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (109ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.63 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6150 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (0.7 MB). Loaded Objects now: 7027.
+Memory consumption went from 244.8 MB to 244.2 MB.
+Total: 5.849800 ms (FindLiveObjects: 0.394400 ms CreateObjectMapping: 0.266500 ms MarkObjects: 4.909200 ms  DeleteObjects: 0.279200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 95.625315 seconds.
+  path: Assets/My Prefabs/Enemy/Enemy_Cone.prefab
+  artifactKey: Guid(8ee15a398225dc64aafebcccae609f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Enemy_Cone.prefab using Guid(8ee15a398225dc64aafebcccae609f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb3ac716e848f1ba880af015e603b46d') in 0.049118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/My Prefabs/Enemy/Enemy_Satelite.prefab
+  artifactKey: Guid(79980408de6a47942af3f56323eadf8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Enemy_Satelite.prefab using Guid(79980408de6a47942af3f56323eadf8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1a3cc2b989a24bfb5e13d7dc5d0fdf0') in 0.011620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 149.630495 seconds.
+  path: Assets/My Prefabs/Enemy/Enemy_Cone.prefab
+  artifactKey: Guid(8ee15a398225dc64aafebcccae609f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Enemy_Cone.prefab using Guid(8ee15a398225dc64aafebcccae609f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2bdc45598319ad0a6dc8a00c9fe763f') in 0.011434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 83.378603 seconds.
+  path: Assets/My Prefabs/Enemy/Enemy_Starknife.prefab
+  artifactKey: Guid(b83c95f48a7a2614981bf53f89c1a41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Enemy_Starknife.prefab using Guid(b83c95f48a7a2614981bf53f89c1a41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15a0765ea9b06c6cb40d45d5fcde715e') in 0.009344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.153019 seconds.
+  path: Assets/My Prefabs/Item_Shielded/Item_Shielded_GuidedAttack.prefab
+  artifactKey: Guid(b7e6510ac0945ec4d8ffc7d1ee20090a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Item_Shielded/Item_Shielded_GuidedAttack.prefab using Guid(b7e6510ac0945ec4d8ffc7d1ee20090a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8751c2be2aa602b5bb01ece81bdc167') in 0.014896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003522 seconds.
+  path: Assets/My Prefabs/Item_Shielded/Item_Shielded_Power.prefab
+  artifactKey: Guid(7f0b06c0c82f7c84b88eb23b664d8e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Item_Shielded/Item_Shielded_Power.prefab using Guid(7f0b06c0c82f7c84b88eb23b664d8e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a204f5cd4406d489bb5ec96d5d96ee2') in 0.016723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/My Prefabs/Item_Shielded/Item_Shielded_Ult.prefab
+  artifactKey: Guid(de95dea2afe393f4ab564e65fdc4ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Item_Shielded/Item_Shielded_Ult.prefab using Guid(de95dea2afe393f4ab564e65fdc4ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b05586500b7e10345b1ae4e9c9175df') in 0.015431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.328721 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw
+  artifactKey: Guid(6c41910136e4a424ba7eacc55417799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw using Guid(6c41910136e4a424ba7eacc55417799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'febc5237925dd3dd209e3378b7107877') in 0.001229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.705942 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0017.png
+  artifactKey: Guid(304d1ad0d4d4cb747888f3b30ba83031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0017.png using Guid(304d1ad0d4d4cb747888f3b30ba83031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28492ca2281ecf0f35f3f4ea0a20a1e9') in 0.023944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.239125 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0019.png
+  artifactKey: Guid(7e7d43ab15261eb48bdf5841982f83bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0019.png using Guid(7e7d43ab15261eb48bdf5841982f83bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f54ad1906beebbf99249495f0ca27ee') in 0.014251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0021.png
+  artifactKey: Guid(e979757acecb7c04687a80d0f77a57fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0021.png using Guid(e979757acecb7c04687a80d0f77a57fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a824509aca29a20daf952d797bbf97cf') in 0.014096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0023.png
+  artifactKey: Guid(7feff612334a96240b23476e135a397f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0023.png using Guid(7feff612334a96240b23476e135a397f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b4f337ac637d0c4b70a40833399bda') in 0.014533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015573 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0025.png
+  artifactKey: Guid(52f8e4addac86284aa8f61b74f0f74a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0025.png using Guid(52f8e4addac86284aa8f61b74f0f74a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c46a257672a796ab3b6f1f8b4e73ea2c') in 0.013669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.257697 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0027.png
+  artifactKey: Guid(50f54e025f45ba14aa6718e024ff0ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0027.png using Guid(50f54e025f45ba14aa6718e024ff0ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bae8532b9dbd9ac636324b98bb542642') in 0.013299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015392 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0031.png
+  artifactKey: Guid(199b0c6f05ac77b428d0a2e086803199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0031.png using Guid(199b0c6f05ac77b428d0a2e086803199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19678da5befc6dbe38b2e1d017f43774') in 0.012884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.209525 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0033.png
+  artifactKey: Guid(8fbfdebdbf0926846ae340846580c6ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0033.png using Guid(8fbfdebdbf0926846ae340846580c6ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e75a6db4937847837ea3a69bd21d7b38') in 0.013077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.019578 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0035.png
+  artifactKey: Guid(d6a00e41bc82ee946a07259e9e726516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0035.png using Guid(d6a00e41bc82ee946a07259e9e726516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '099d4c23b63d705b8d171571c81b834f') in 0.013083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005851 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0039.png
+  artifactKey: Guid(850e09fcdd6a80c4cbb0d8ee3ca47088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0039.png using Guid(850e09fcdd6a80c4cbb0d8ee3ca47088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac7e5ae62b99bff2699e5b42d174a2cc') in 0.014232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.197904 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0041.png
+  artifactKey: Guid(9a6fe20653702694eb297e134c114b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0041.png using Guid(9a6fe20653702694eb297e134c114b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e49569b0cf4176131fc3e265d54f796') in 0.012805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003878 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0043.png
+  artifactKey: Guid(d3f9dfdd975af84429cf1e28da5bef21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0043.png using Guid(d3f9dfdd975af84429cf1e28da5bef21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b3dfd37698fa14034b78b5ccb1c5a2') in 0.012410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0046.png
+  artifactKey: Guid(f081b262314b31544bae7e6fe33b275f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0046.png using Guid(f081b262314b31544bae7e6fe33b275f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f85942f9a0e88ac6075a7ddff4ffee01') in 0.012160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/boss0047.png
+  artifactKey: Guid(ba44accab050b7e44baac5c7a9faab63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/boss0047.png using Guid(ba44accab050b7e44baac5c7a9faab63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9efe5aae6afb6f533a836701ce215d38') in 0.012132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.184158 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Claw/Enemy_Claw.prefab
+  artifactKey: Guid(71d384c53d3755c44bfb524f5236ac65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Claw/Enemy_Claw.prefab using Guid(71d384c53d3755c44bfb524f5236ac65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2de70c80817e2754c55bb194fdad058') in 0.031717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.237354 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Serpent
+  artifactKey: Guid(3c0f1e9304991484aaddbaf915a8297a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Serpent using Guid(3c0f1e9304991484aaddbaf915a8297a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29e8f5b0bd8f44329d8f0eafc18de439') in 0.001211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.046285 seconds.
+  path: Assets/My Prefabs/Enemy/Boss_Serpent/Serpent Boss Test Original.prefab
+  artifactKey: Guid(d89831e6dc691b64f809ff59191db976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Enemy/Boss_Serpent/Serpent Boss Test Original.prefab using Guid(d89831e6dc691b64f809ff59191db976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c88d99ddb6d1ff668e7367c5e07c64') in 0.012410 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008040 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.037 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1038ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (839ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (258ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (428ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (106ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.01 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6150 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 65 unused Assets / (0.7 MB). Loaded Objects now: 7032.
+Memory consumption went from 244.9 MB to 244.2 MB.
+Total: 6.487500 ms (FindLiveObjects: 0.392300 ms CreateObjectMapping: 0.270400 ms MarkObjects: 5.541000 ms  DeleteObjects: 0.283100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 263.547269 seconds.
+  path: Assets/My Prefabs/Player.prefab
+  artifactKey: Guid(56d2d9e6c85f42741a073d180924432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Player.prefab using Guid(56d2d9e6c85f42741a073d180924432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12eea21c4adacc4ede0aef96e173387f') in 0.069380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 901.898677 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Boss_tmp.ogg
+  artifactKey: Guid(4b0d69d13cdc14e4e84077fac2f6c673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Boss_tmp.ogg using Guid(4b0d69d13cdc14e4e84077fac2f6c673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a22b2d6d0858a3ca2afd93d9dd479d73') in 0.027519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 76.691962 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Player_Charge_End.ogg
+  artifactKey: Guid(45924f4c69f8f3f4189d8f7ae4fc23f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Player_Charge_End.ogg using Guid(45924f4c69f8f3f4189d8f7ae4fc23f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d0cd792efea140bb80af82e619fa7cb') in 0.010153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 90.083901 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Player_Charged.ogg
+  artifactKey: Guid(ea3fde7ca62909a4c8f23c99b55e3c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Player_Charged.ogg using Guid(ea3fde7ca62909a4c8f23c99b55e3c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e0c342cb8bc3c956791c80466e1507') in 0.009898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.340932 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Player_ChargeFinish.ogg
+  artifactKey: Guid(dd09d3725a586e74da7a972200600b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Player_ChargeFinish.ogg using Guid(dd09d3725a586e74da7a972200600b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c4f46ca8a3faeb1bd945ff1e0014b7a') in 0.010095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.995988 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Player_Charging.ogg
+  artifactKey: Guid(1805fe08e706cfd4eb56a21772254fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Player_Charging.ogg using Guid(1805fe08e706cfd4eb56a21772254fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54adca9fd3973ca635f3645b0569ee9a') in 0.009462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 79.563768 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Player_GuideAttack.ogg
+  artifactKey: Guid(170305288f71a19499f850f7192aa820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Player_GuideAttack.ogg using Guid(170305288f71a19499f850f7192aa820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72d82d3609af3e383fd3303ace5d7ed1') in 0.010396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 81.773067 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds
+  artifactKey: Guid(3fcfa29085b9b8946972d37265b2a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds using Guid(3fcfa29085b9b8946972d37265b2a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e33ec1346f4a4f743066843986c8bf9') in 0.001336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.068471 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/ShootingSound
+  artifactKey: Guid(ed32bf00c9994074e958be071f5239bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/ShootingSound using Guid(ed32bf00c9994074e958be071f5239bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e726e9ee72ef7f0dc592064405387d06') in 0.001240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.054651 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/ShootingSound/electronic_02.wav
+  artifactKey: Guid(ab297b593498a6e47ba84de770477cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/ShootingSound/electronic_02.wav using Guid(ab297b593498a6e47ba84de770477cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ab70f936a6c4fc8be67b437e6f894f6') in 0.011946 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.247112 seconds.
+  path: Assets/My Resources/SoundEffect/Final/Player_GuideAttack.wav
+  artifactKey: Guid(ab297b593498a6e47ba84de770477cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Final/Player_GuideAttack.wav using Guid(ab297b593498a6e47ba84de770477cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b707551839c7223bdf2293fa1f374611') in 0.010002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.919285 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects
+  artifactKey: Guid(f4212e8451c12ee4c9ae893359718490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects using Guid(f4212e8451c12ee4c9ae893359718490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e85938d16490c1ea873d6285f20f167') in 0.001290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.590884 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi
+  artifactKey: Guid(e9cea6d4e5d6c144a9580cf9dcd7e7d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi using Guid(e9cea6d4e5d6c144a9580cf9dcd7e7d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8139134402cfb7b0438214952fd12741') in 0.001267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.058413 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/burnout.ogg
+  artifactKey: Guid(a4aa0de77c1c9574baeb520fd1410694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/burnout.ogg using Guid(a4aa0de77c1c9574baeb520fd1410694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4356697c5edf1a5445f7dc1e2dc09a3e') in 0.011168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001448 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/cutelaser.ogg
+  artifactKey: Guid(9dd0e65a4fbd16240ad5fb0e9442fd69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/cutelaser.ogg using Guid(9dd0e65a4fbd16240ad5fb0e9442fd69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d4e8991081ee57c3af1aec7ad70b68e') in 0.007569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/laserblast.ogg
+  artifactKey: Guid(6a5b412347c03f4468e50f208ca0f308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/laserblast.ogg using Guid(6a5b412347c03f4468e50f208ca0f308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f298bf307914c0c88b901e6803d3324') in 0.010646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/pooghrr.ogg
+  artifactKey: Guid(208b6897da006af49bb0cd92cdc47963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/pooghrr.ogg using Guid(208b6897da006af49bb0cd92cdc47963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f8d4376b4a4ab5b0c10c3c09ba105de') in 0.011098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/swoof.ogg
+  artifactKey: Guid(a376006d824863c4895ec3e8ce2d0f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/swoof.ogg using Guid(a376006d824863c4895ec3e8ce2d0f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6661da1db30a0da034831a4c6f73b861') in 0.010474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/fire.ogg
+  artifactKey: Guid(4c73c5960282d62499c5ae4e04caa50b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/fire.ogg using Guid(4c73c5960282d62499c5ae4e04caa50b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3491ab4c64c343e850362eb6c54ebe76') in 0.009977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/laservr.ogg
+  artifactKey: Guid(b743941bc2dc5d34b805f599f8eefcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/laservr.ogg using Guid(b743941bc2dc5d34b805f599f8eefcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cc7ce01e5f468de3740c7e4b4b3c86f') in 0.009825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.912334 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/timert.ogg
+  artifactKey: Guid(3ae87482b328f1f43b4be0cb98adbc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/timert.ogg using Guid(3ae87482b328f1f43b4be0cb98adbc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '820b351e11e78c5d0b94b741cb0794a3') in 0.009262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.372074 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/warning1.ogg
+  artifactKey: Guid(59e3907948bd4c042ac9dad0c6e04464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/warning1.ogg using Guid(59e3907948bd4c042ac9dad0c6e04464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d46977e1e9dd396e5facbefde6007e3') in 0.009956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.178654 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/whoosh.ogg
+  artifactKey: Guid(c5c8958ff9f576f40a916288051328bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/whoosh.ogg using Guid(c5c8958ff9f576f40a916288051328bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9c0aa6ec0643380214725dc8008cd3') in 0.010168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 104.444874 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Teleport.ogg
+  artifactKey: Guid(4c73c5960282d62499c5ae4e04caa50b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Teleport.ogg using Guid(4c73c5960282d62499c5ae4e04caa50b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a61eb11657132fcf92cb2843b50976bf') in 0.009980 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.247662 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Item_PowerUp.ogg
+  artifactKey: Guid(834888fe3984785438f26221ac183241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Item_PowerUp.ogg using Guid(834888fe3984785438f26221ac183241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54c623b2a81fcc096b87b1702d61e218') in 0.010329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.281322 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Player_ChargeAttack.ogg
+  artifactKey: Guid(6a5b412347c03f4468e50f208ca0f308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Player_ChargeAttack.ogg using Guid(6a5b412347c03f4468e50f208ca0f308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be24029cf61a0f01238620b8afe7d191') in 0.009219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.671518 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Player_ChargeAttackBig.ogg
+  artifactKey: Guid(6a5b412347c03f4468e50f208ca0f308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Player_ChargeAttackBig.ogg using Guid(6a5b412347c03f4468e50f208ca0f308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adbc6f61814f12738f925457accffee0') in 0.009939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.215799 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Player_ChargeAttackSmall.ogg
+  artifactKey: Guid(b743941bc2dc5d34b805f599f8eefcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Player_ChargeAttackSmall.ogg using Guid(b743941bc2dc5d34b805f599f8eefcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '314c680513c085ddbfcd0260b22d6b9f') in 0.008687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.425522 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Boss_Defeat.ogg
+  artifactKey: Guid(208b6897da006af49bb0cd92cdc47963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Boss_Defeat.ogg using Guid(208b6897da006af49bb0cd92cdc47963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0e0cf15b0c91e4e5ffc7b4179d954f6') in 0.009364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.931717 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Warning.ogg
+  artifactKey: Guid(59e3907948bd4c042ac9dad0c6e04464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Warning.ogg using Guid(59e3907948bd4c042ac9dad0c6e04464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a20ad536e69c669c4f52583d324a1ba8') in 0.009362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.971740 seconds.
+  path: Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Warning_1sec.ogg
+  artifactKey: Guid(59e3907948bd4c042ac9dad0c6e04464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/SoundEffect/Sounds/Sound Effects/Scifi/Warning_1sec.ogg using Guid(59e3907948bd4c042ac9dad0c6e04464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ca8af9c80de5f6afd30b4aea263e413') in 0.008671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.016463 seconds.
+  path: Assets/My Resources/BGM/Boss01.ogg
+  artifactKey: Guid(6552307f1b354954d91bfdfc3bee032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/Boss01.ogg using Guid(6552307f1b354954d91bfdfc3bee032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddfe84e32af9e668b1622587cb2189d1') in 0.008556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001021 seconds.
+  path: Assets/My Resources/BGM/Stage_01.ogg
+  artifactKey: Guid(9144503e40fefa04e8adf615d5bb26f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/Stage_01.ogg using Guid(9144503e40fefa04e8adf615d5bb26f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0ced944b8d1485d0101621bcfc7ba1') in 0.008413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/My Resources/BGM/Stage_Clear.ogg
+  artifactKey: Guid(b40c409d21c9bcf498d9d4bdedf51439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/Stage_Clear.ogg using Guid(b40c409d21c9bcf498d9d4bdedf51439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '900d95b6d4ca235cdf972a719bf12324') in 0.010164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/My Resources/BGM/GameOver.ogg
+  artifactKey: Guid(6dc4be81296344087a45172d7ba5e06f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/GameOver.ogg using Guid(6dc4be81296344087a45172d7ba5e06f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048d647fe855dd8b745a53db3290a774') in 0.007853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/My Resources/BGM/Stage_01_2.ogg
+  artifactKey: Guid(66258f9cb090ab941a5ea054638fa722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/Stage_01_2.ogg using Guid(66258f9cb090ab941a5ea054638fa722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28c44936104e0dfcf0893f54648b1649') in 0.007143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.127992 seconds.
+  path: Assets/My Resources/BGM/The House of the Dead Magician Theme.ogg
+  artifactKey: Guid(6552307f1b354954d91bfdfc3bee032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/The House of the Dead Magician Theme.ogg using Guid(6552307f1b354954d91bfdfc3bee032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83472f01b6a330f29239defcb06819d6') in 0.011388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 78.661311 seconds.
+  path: Assets/My Resources/BGM/Stage_02_Boss.ogg
+  artifactKey: Guid(c2302d99885f7455c9d159baaef753c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM/Stage_02_Boss.ogg using Guid(c2302d99885f7455c9d159baaef753c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1309c0b77dabd6817ae4455c359d3426') in 0.009274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 109.416433 seconds.
+  path: Assets/My Resources
+  artifactKey: Guid(c71274f656c8fb3429c76d7c84e2efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources using Guid(c71274f656c8fb3429c76d7c84e2efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9b398ff7615af3ad87f53e1492dd40') in 0.001242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.423794 seconds.
+  path: Assets/My Resources/Sound Resources
+  artifactKey: Guid(4b6b817a10b48af47bafdd903561c210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources using Guid(4b6b817a10b48af47bafdd903561c210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22a1b82b372b171c7b82f62bc86db8a2') in 0.001332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.611513 seconds.
+  path: Assets/My Resources/BGM
+  artifactKey: Guid(abf4ffc6177e64742a73f09aff09fcc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/BGM using Guid(abf4ffc6177e64742a73f09aff09fcc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae951719eaae03c04431172aa91f02c7') in 0.001225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.432977 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Boss1_PunchAttack.ogg
+  artifactKey: Guid(92c8430da0a21a445becb0606da32d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Boss1_PunchAttack.ogg using Guid(92c8430da0a21a445becb0606da32d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6f62bc3cfbea6d16b3d86e29e26e4cc') in 0.010612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 124.456738 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Weapon_Charge2.ogg
+  artifactKey: Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Weapon_Charge2.ogg using Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154f98a970e6bfd51a040ae6252d31f9') in 0.009612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.533663 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging1.ogg
+  artifactKey: Guid(1805fe08e706cfd4eb56a21772254fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging1.ogg using Guid(1805fe08e706cfd4eb56a21772254fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3601702a84e0520a663c2a092c299be') in 0.008768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.181038 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging2.ogg
+  artifactKey: Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging2.ogg using Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2124b5acab87b2b3a60fcbe82f05b683') in 0.008986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 76.367752 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charge3.ogg
+  artifactKey: Guid(14b19343ab22fbf4ca2099f5c2d2bbb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charge3.ogg using Guid(14b19343ab22fbf4ca2099f5c2d2bbb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b14d1903f24cbd4cb71812e47a8dd0') in 0.008437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.773889 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging.ogg
+  artifactKey: Guid(14b19343ab22fbf4ca2099f5c2d2bbb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging.ogg using Guid(14b19343ab22fbf4ca2099f5c2d2bbb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8194242a6fdc9d6bf24fc62d00a69f3b') in 0.009562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.774209 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Boss_Weapon_Charging.ogg
+  artifactKey: Guid(87626d2bf072c114889ce691df5d8161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Boss_Weapon_Charging.ogg using Guid(87626d2bf072c114889ce691df5d8161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969035d9d5931e90e34a9f2da741b721') in 0.009055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.474669 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_ChargeAttack_Beam.ogg
+  artifactKey: Guid(44ac782f797fda249a7764f54c3fa833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_ChargeAttack_Beam.ogg using Guid(44ac782f797fda249a7764f54c3fa833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f0d3396444c3cafe51e53e6472f5cbc') in 0.010801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 769.703805 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/SND.DAT_00112.ogg
+  artifactKey: Guid(3514078eeb001e64c9141f966f1559e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/SND.DAT_00112.ogg using Guid(3514078eeb001e64c9141f966f1559e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49eef4aaf70a2cd022da9d5500a5e05f') in 0.012625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.933916 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Item_LifeUp.ogg
+  artifactKey: Guid(3514078eeb001e64c9141f966f1559e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Item_LifeUp.ogg using Guid(3514078eeb001e64c9141f966f1559e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca8174a368a0606b8074311e627c20f0') in 0.011547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 126.683726 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging3_4sec.ogg
+  artifactKey: Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging3_4sec.ogg using Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f8dba253a91f281a33804e1d0e9bd4') in 0.009538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.571026 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging1_3sec.ogg
+  artifactKey: Guid(1805fe08e706cfd4eb56a21772254fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging1_3sec.ogg using Guid(1805fe08e706cfd4eb56a21772254fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8a5eea1b42c6d1dbc265cfe88f706a') in 0.010653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.367501 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging2_4sec.ogg
+  artifactKey: Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Player_Charging2_4sec.ogg using Guid(a0f9782ccd46a4e4aa4eb906b969ff61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e10bf5faff3e70385ad7ab0e16fde303') in 0.008905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.034188 seconds.
+  path: Assets/My Resources/Sound Resources/SoundEffect/Final/Boss01_Death.ogg
+  artifactKey: Guid(0240301ef5c9df348a4b099bab48b0e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Sound Resources/SoundEffect/Final/Boss01_Death.ogg using Guid(0240301ef5c9df348a4b099bab48b0e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4856fc9d31109a2bb11f3dc78a6298a5') in 0.010728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 249.017178 seconds.
+  path: Assets/My Prefabs/Player.prefab
+  artifactKey: Guid(56d2d9e6c85f42741a073d180924432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Player.prefab using Guid(56d2d9e6c85f42741a073d180924432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '622d6eea914ed6cf873d63869d07fdbc') in 0.026217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.916245 seconds.
+  path: Assets/My Prefabs/Managers/SoundManager.prefab
+  artifactKey: Guid(6df1e0e95ad7a9842981355fe4097ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/SoundManager.prefab using Guid(6df1e0e95ad7a9842981355fe4097ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '023296c55e063c503883e20664686d05') in 0.016718 seconds 

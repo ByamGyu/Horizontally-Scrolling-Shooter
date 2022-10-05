@@ -77,6 +77,12 @@ public class Enemy_Base : MonoBehaviour
             // 닿은 플레이어의 탄환 제거
             Destroy(collision.gameObject);
         }
+        else if(collision.gameObject.tag == "PlayerBullet_Charged")
+        {
+            // 닿은 플레이어의 탄환 정보(공격력)를 가져온다
+            Bullet_Base bullet = collision.gameObject.GetComponent<Bullet_Base>();
+            OnHit(bullet._damage);
+        }
         else if (collision.gameObject.tag == "Player")
         {
             // !!!!!플레이어가 먼저 사라지면서 null뜸

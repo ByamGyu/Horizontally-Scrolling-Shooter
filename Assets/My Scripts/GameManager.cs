@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public float _Spawn_Delay_Time_Cur;
     [SerializeReference]
     public GameObject _Player = null;
+    [SerializeField]
+    public bool _CanSpawnEnemy = true;
 
     // UI
     [SerializeReference]
@@ -26,9 +28,15 @@ public class GameManager : MonoBehaviour
     [SerializeReference]
     public GameObject _GameOverGroup;
 
+    // UI 차지 공격 바 관련
+    [SerializeReference]
+    public Slider _ChargeAttackBar;
+    [SerializeField]
+    public float _maxChargeTime = 0;
+
     private void FixedUpdate()
     {
-        // _Spawn_Delay_Time_Cur += Time.deltaTime;
+        if(_CanSpawnEnemy == true) _Spawn_Delay_Time_Cur += Time.deltaTime;
 
         if(_Spawn_Delay_Time_Cur > _Spawn_Delay_Time_Max)
         {
@@ -92,6 +100,13 @@ public class GameManager : MonoBehaviour
         {
             _lifeImage[i].color = new Color(1, 1, 1, 1); // 알파값을 1로 해서 보이게 한다
         }
+    }
+
+    public void UpdateChargeGuage(float curvalue, float maxvalue = 3.0f)
+    {
+        if (curvalue == 0) _ChargeAttackBar.value = 0;
+
+        _ChargeAttackBar.value = curvalue / maxvalue;
     }
 
     public void RespawnPlayerInvoke(float time)

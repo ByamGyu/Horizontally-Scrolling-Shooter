@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     float _invincibleTime = 2.5f;
     [SerializeField]
     bool _isHit = false;
+    
 
     // 플레이어 이동 판정
     [SerializeField]
@@ -44,6 +45,14 @@ public class PlayerController : MonoBehaviour
     bool _isTouchRight = false;
     [SerializeField]
     bool _isTouchLeft = false;
+
+    // 플레이어 차지 공격 관련
+    [SerializeField]
+    bool _isCharging = false;
+    [SerializeField]
+    float _maxChargeTime = 3.0f;
+    [SerializeField]
+    float _chargeTime = 0f;
 
     // 오브젝트 저장 변수
     [SerializeField]
@@ -71,8 +80,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         manager.UpdateLifeIcon(GetLife());
-
-
+        manager.UpdateChargeGuage(0);
     }
 
     void Update() // FixedUpdate()를 사용하면 입력이 씹히는 현상 발생
@@ -82,6 +90,9 @@ public class PlayerController : MonoBehaviour
 
         // 이동 입력
         Move();
+
+        // 충전(charge) 공격 관련
+        Calculate_ChargeAttackTime();
 
         // 기본 탄환 발사 관련
         Fire_DefaultBullet();
@@ -126,6 +137,64 @@ public class PlayerController : MonoBehaviour
         Vector3 NextPos = new Vector3(_height, _vertical, 0) * _speed * Time.deltaTime; // 이동하는 거리
 
         transform.position = CurPos + NextPos; // 다음 위치
+    }
+
+    void Calculate_ChargeAttackTime()
+    {
+        // ']'키에서 손을 떼면
+        if(Input.GetKeyUp(KeyCode.RightBracket) == true)
+        {
+            Fire_ChargeAttack(_chargeTime / _maxChargeTime);
+            _isCharging = false;
+            _chargeTime = 0;            
+            manager.UpdateChargeGuage(0);
+            return;
+        }
+
+        // 키가 눌리지 않았으면 사용되는 관련 변수들 초기화
+        if (!Input.GetKey(KeyCode.RightBracket))
+        {
+            _isCharging = false;
+            _chargeTime = 0;
+            return;
+        }
+
+        // ']'를 누르면 함수 실행
+        if (Input.GetKey(KeyCode.RightBracket) == true)
+        {
+            _isCharging = true;
+            _chargeTime += Time.deltaTime;
+            if (_chargeTime >= _maxChargeTime) _chargeTime = _maxChargeTime;
+        }
+
+        // 0.2초 보다 오래 눌렸고, _isCharging이 true면
+        if(_chargeTime >= 0.1 && _isCharging == true)
+        {
+            // 차지 공격 게이지 갱신
+            manager.UpdateChargeGuage(_chargeTime, _maxChargeTime);
+        }
+    }
+
+    void Fire_ChargeAttack(float percent)
+    {
+        if (percent < 0.1) return;
+
+        // 100% ~ 300%
+        float finalpercent = 1 + percent * 2;
+
+        // 차지 공격 객체 스폰
+        GameObject chargedbullet = Instantiate(_Bullet2, transform.position + Vector3.right * 1f, transform.rotation);
+        Rigidbody2D rigid = chargedbullet.GetComponent<Rigidbody2D>();
+
+        // 크기 조절 (2 ~ 6배 사이)
+        chargedbullet.transform.localScale = new Vector3(finalpercent, finalpercent, finalpercent) * 2;
+
+        // 데미지 조절 (10 ~ 30 사이)
+        Bullet_Base bulletinfo = chargedbullet.GetComponent<Bullet_Base>();
+        bulletinfo._damage = (int)(10 * (finalpercent));
+
+        // 속도는 percent 매개변수에 따라서 1 ~ 3배 사이
+        rigid.AddForce((Vector2.right * 10) * (finalpercent), ForceMode2D.Impulse);
     }
 
     void Fire_DefaultBullet()
@@ -189,12 +258,6 @@ public class PlayerController : MonoBehaviour
             case 5: // 테스트 용도                
                 break;
         }
-    }
-
-    void Fire_ChargeAttack()
-    {
-        // 누르는 시간에 비례해서 스케일을 키우는 방식으로
-        // 누르는 시간에 비례해서 데미지도 증가
     }
 
     void Fire_Ult()

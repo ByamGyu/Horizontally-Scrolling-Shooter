@@ -12,6 +12,7 @@ TagManager:
   - Item_Shielded
   - Item
   - Enemy_Boss
+  - PlayerBullet_Charged
   layers:
   - Default
   - TransparentFX

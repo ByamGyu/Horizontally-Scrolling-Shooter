@@ -464,3 +464,85 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 191794.268798 seconds.
+  path: Assets/My Prefabs/Managers/BorderBullet.prefab
+  artifactKey: Guid(4080a5cd3bb094140a5fccac87b17357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Prefabs/Managers/BorderBullet.prefab using Guid(4080a5cd3bb094140a5fccac87b17357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b98fc2177a3d09212f4b337aa7754061') in 0.049723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 127.178092 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Blob.prefab
+  artifactKey: Guid(fa8191a3bf019144aaabff9561356638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Blob.prefab using Guid(fa8191a3bf019144aaabff9561356638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc458a459ad815b445dd1efc0cbd4d4') in 0.069484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Slicer.prefab
+  artifactKey: Guid(04684959fc51e0848b0693338f4daa7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Slicer.prefab using Guid(04684959fc51e0848b0693338f4daa7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ee8247a70ff20c9022c0f806d35beae') in 0.014725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Sphere.prefab
+  artifactKey: Guid(565445c83cdc90d4d959b8bb658faaf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Sphere.prefab using Guid(565445c83cdc90d4d959b8bb658faaf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '623dc5c20ce8efa4f5036e56b730bbf8') in 0.021170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Gunner.prefab
+  artifactKey: Guid(74108431e3da70a409f93dae36a4abcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Gunner.prefab using Guid(74108431e3da70a409f93dae36a4abcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '396fb7e1765937b7717cf47188acf14d') in 0.019897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Satelite.prefab
+  artifactKey: Guid(a760866ca7e3af04980bd833dcee889e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Enemies/Satelite.prefab using Guid(a760866ca7e3af04980bd833dcee889e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a00a1b4ea0e6ab1e6aa5f2685b66fc') in 0.013772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.879096 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Laser).prefab
+  artifactKey: Guid(abd8e472a682c9748b85c0f4b62d6ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Laser).prefab using Guid(abd8e472a682c9748b85c0f4b62d6ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b9b6bb60e6913db7147a7a1f6f72c2') in 0.022080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Phaser).prefab
+  artifactKey: Guid(ebd02f09c8a80f94eba4ef046941b254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Prefabs/Players (Pickups)/Pickup (Phaser).prefab using Guid(ebd02f09c8a80f94eba4ef046941b254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c36448453a9c23e4604c3f45406d32') in 0.015922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.046444 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/mohican.png
+  artifactKey: Guid(15d8b3f241d2fb04a9cf1f23d1fb47e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Enemies/mohican.png using Guid(15d8b3f241d2fb04a9cf1f23d1fb47e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b24635e94da9e940d6642feddaaefa83') in 0.102672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.053790 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/rock thrust 2.png
+  artifactKey: Guid(ecbb36d680f12a54d8dce002f3d78f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/rock thrust 2.png using Guid(ecbb36d680f12a54d8dce002f3d78f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26205dba5fc95195651cde4a398313a9') in 0.010862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/slicer thrust.png
+  artifactKey: Guid(559c1a0aff7289943806eeb1e95f3268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/slicer thrust.png using Guid(559c1a0aff7289943806eeb1e95f3268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a204cd4cc4fbf966e754430c327105bc') in 0.013262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.809168 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pink thrust.png
+  artifactKey: Guid(013027c1ac8b84db8ac612ae8cd81d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/pink thrust.png using Guid(013027c1ac8b84db8ac612ae8cd81d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25574efbe436f319625613c63b4092e7') in 0.011709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/red bullet.png
+  artifactKey: Guid(09bad09927c8e474f83912cdd9329ac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/FX/red bullet.png using Guid(09bad09927c8e474f83912cdd9329ac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb226ee3e39c1c298a4db3b1d090061d') in 0.012904 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

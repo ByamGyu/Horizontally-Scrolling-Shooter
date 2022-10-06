@@ -79,7 +79,7 @@ public class Object_Blackhole : MonoBehaviour
 
     void PlaySound()
     {
-        SoundManager.instance.PlaySoundEffect("BlackHole");
+        SoundManager.instance.PlaySoundEffectOneShot("BlackHole");
     }
 
     void stopthis(float time)

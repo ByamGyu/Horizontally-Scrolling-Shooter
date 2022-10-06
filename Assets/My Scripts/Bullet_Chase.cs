@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet_Chase : Bullet_Base
 {
     [SerializeField]
-    GameObject _target;
+    GameObject _target = null;
     [SerializeField]
     bool _nomoresearch = false; // 타겟을 찾은 적이 있으면 더이상 탐색하지 못하게 하는 변수
     [SerializeField]
@@ -21,21 +21,37 @@ public class Bullet_Chase : Bullet_Base
         _rigid = GetComponent<Rigidbody2D>();
 
         // 처음 발사할 때 특정 방향으로 이동시킴 (PlayerController에서 하는 걸로)
-        //_rigid.velocity = Vector2.right * _speed_cur;
     }
 
     private void FixedUpdate()
     {
-        SearchTarget();
+        if(_target == null) SearchTarget();
 
+        // 타겟이 있으면 쫓아간다.
         if (_target != null) ChaseTarget();
     }
 
     void SearchTarget()
     {
-        if (_target != null) _nomoresearch = true;
+        // 타겟이 있으면 더이상 타겟을 찾지 않는다.
+        if (_target != null)
+        {
+            _nomoresearch = true;
+            return;
+        }
 
-        if (_nomoresearch == false) _target = GameObject.FindGameObjectWithTag("Enemy");
+        if (_target == null && _nomoresearch == false)
+        {
+            // FindGameObjectWithTag 했는데 결과가 없으면 null이 됨 주의!
+
+            // 만약 일반 적과 보스가 섞여있으면 보스 우선순위로
+            _target = GameObject.FindGameObjectWithTag("Enemy");
+
+            if(_target == null)
+            {
+                _target = GameObject.FindGameObjectWithTag("Enemy_Boss");
+            }
+        }
     }
 
     void ChaseTarget()
@@ -62,12 +78,4 @@ public class Bullet_Chase : Bullet_Base
     }
 
     void SimpleMoveRight() { _rigid.velocity = Vector2.right * _speed_cur; }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            // 이 객체 파괴를 제외한 나머지 연산들
-        }
-    }
 }

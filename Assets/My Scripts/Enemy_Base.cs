@@ -62,6 +62,12 @@ public class Enemy_Base : MonoBehaviour
             if(RandomInt == 0) SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Small)", 0.5f);
             else if(RandomInt == 1) SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Loud)", 0.5f);
 
+            int RandomInt2 = Random.Range(0, 4);
+            if(RandomInt2 == 0) EffectManager.instance.SpawnEffect("Effect_Explosion_Redspark", transform.position, Vector3.one);
+            else if(RandomInt2 == 1) EffectManager.instance.SpawnEffect("Effect_Explosion_Orangespark", transform.position, Vector3.one);
+            else if(RandomInt2 == 2) EffectManager.instance.SpawnEffect("Effect_Explosion_Greenspark", transform.position, Vector3.one);
+            else if(RandomInt2 == 3) EffectManager.instance.SpawnEffect("Effect_Explosion_Purplespark", transform.position, Vector3.one);
+
             Destroy(gameObject);
         }
     }
@@ -77,6 +83,15 @@ public class Enemy_Base : MonoBehaviour
             // 닿은 플레이어의 탄환 정보(공격력)를 가져온다
             Bullet_Base bullet = collision.gameObject.GetComponent<Bullet_Base>();
             OnHit(bullet._damage);
+
+            if(collision.gameObject.name == "Player Bullet Default(Clone)")
+            {
+                EffectManager.instance.SpawnEffect("Effect_PlayerBullet_Hit03_2", transform.position, Vector3.one);
+            }
+            else if(collision.gameObject.name == "Player Bullet Waveform(Clone)")
+            {
+                EffectManager.instance.SpawnEffect("Effect_PlayerBullet_Hit03_1", transform.position, Vector3.one);
+            }
 
             // 닿은 플레이어의 탄환 제거
             Destroy(collision.gameObject);

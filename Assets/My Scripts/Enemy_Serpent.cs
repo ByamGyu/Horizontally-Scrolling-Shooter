@@ -124,6 +124,7 @@ public class Enemy_Serpent : MonoBehaviour
     private void Start()
     {
         SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.75f);
+        SoundManager.instance.PlayBGM("Stage_01_Serpent", 1.0f, true);
     }
 
     void Update()
@@ -173,6 +174,7 @@ public class Enemy_Serpent : MonoBehaviour
             playerinfo.AddScore(_score);
 
             SoundManager.instance.PlaySoundEffectOneShot("Enemy_Serpent_Death", 0.75f);
+            SoundManager.instance.PlayBGM("Stage_01_2", 0.75f, true);
 
             // 모든 몸체에서 이펙트 스폰
             GameObject[] _bodyparts = GameObject.FindGameObjectsWithTag("Enemy_Boss");

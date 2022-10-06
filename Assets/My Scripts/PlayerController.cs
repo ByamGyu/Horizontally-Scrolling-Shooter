@@ -387,11 +387,15 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-        //else if (collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Item_Shielded")
         else // 이동제한 경계선이 아닌 모든 처리
         {
             // 무적상태면 return;
             if (_invincibleTime > 0) return;
+
+            if(collision.gameObject.tag == "PlayerBullet")
+            {
+                return;
+            }
 
             // 한번에 여러번 맞는 현상 방지
             if (_isHit == true) return;
@@ -435,8 +439,7 @@ public class PlayerController : MonoBehaviour
         SetGuideAttack(false);
         SetChargeAttack(false);
 
-        // 이펙트 스폰
-        // PlayEffect(string _effectname, Vector3 _pos, Vector3 _transform, Transform _parent = null)
+        SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Small)", 0.75f);
         EffectManager.instance.SpawnEffect("Effect_Explosion_Orangespark", transform.position, new Vector3(0, 0, 0));
     }
 

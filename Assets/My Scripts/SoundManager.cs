@@ -125,7 +125,7 @@ public class SoundManager : MonoBehaviour
     }
 
     // 브금 재생 함수(사운드 매니저에 있는 재생기 변수를 사용)
-    public void PlayBGM(string name, float volume)
+    public void PlayBGM(string name, float volume, bool _loop = true)
     {
         if (_DicBGMStorage.ContainsKey(name))
         {
@@ -135,7 +135,7 @@ public class SoundManager : MonoBehaviour
             }
 
             _AudioSource_BGM.clip = _DicBGMStorage[name];
-            _AudioSource_BGM.loop = true;
+            _AudioSource_BGM.loop = _loop;
             _AudioSource_BGM.volume = volume;
             _AudioSource_BGM.Play();
         }

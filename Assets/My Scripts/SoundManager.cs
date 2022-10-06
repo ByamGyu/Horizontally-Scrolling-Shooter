@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
 
     public AudioSource _AudioSource_BGM; // 브금 재생기
-    public AudioSource _AudioSource_SoundEffect; // 효과음 재생기(중첩 못함, 대신 끊을 수 있음)
+    public AudioSource _AudioSource_SoundEffect; // 효과음 재생기
 
     public string[] _BGMNames; // 브금 이름들 저장
     public AudioClip[] _BGMs; // 브금들 저장
@@ -24,6 +24,16 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
+        // 오디오 소스(재생기) 객체를 만들고 사운드 매니저 자식으로 달아주기
+        GameObject gotmp1 = new GameObject("AudioSource: BGM");
+        _AudioSource_BGM = gotmp1.AddComponent<AudioSource>();
+        gotmp1.transform.parent = this.transform;
+
+        // 오디오 소스(재생기) 객체를 만들고 사운드 매니저 자식으로 달아주기
+        GameObject gotmp2 = new GameObject("AudioSource: SoundEffect");
+        _AudioSource_SoundEffect = gotmp2.AddComponent<AudioSource>();
+        gotmp2.transform.parent = this.transform;
+
         if (instance == null) // 사운드매니저가 없으면 새로 만들기
         {
             instance = this;
@@ -74,13 +84,13 @@ public class SoundManager : MonoBehaviour
 
     // 효과음 재생 함수(오디오 소스를 그때 그때 만들고 파괴)
     // 중첩을 허용함(대신 끊을 수 없음)
-    public void PlaySoundEffectOneShot(string name)
+    public void PlaySoundEffectOneShot(string name, float _volume = 1.0f)
     {
         if(_DicSoundEffectStorage.ContainsKey(name))
         {
             GameObject go = new GameObject("SoundObject: " + name);
-            AudioSource audiosource = go.AddComponent<AudioSource>();
-            audiosource.PlayOneShot(_DicSoundEffectStorage[name]);
+            AudioSource audiosource = go.AddComponent<AudioSource>();            
+            audiosource.PlayOneShot(_DicSoundEffectStorage[name], _volume);
 
             Destroy(go, _DicSoundEffectStorage[name].length);
         }
@@ -95,9 +105,12 @@ public class SoundManager : MonoBehaviour
     {
         if (_DicSoundEffectStorage.ContainsKey(name))
         {
-            if(_AudioSource_SoundEffect.isPlaying == true)
+            if (_AudioSource_SoundEffect.isPlaying)
             {
-                _AudioSource_SoundEffect.Stop();
+                // 동일한 효과음이 재생중이면 return
+                if (_AudioSource_SoundEffect.clip.name == name) return;
+                // 다른 효과음이면 기존 효과음을 멈춤
+                else _AudioSource_SoundEffect.Stop();
             }
 
             _AudioSource_SoundEffect.clip = _DicSoundEffectStorage[name];
@@ -130,6 +143,11 @@ public class SoundManager : MonoBehaviour
         {
             Debug.Log("BGM: " + name + "is not exist.");
         }
+    }
+
+    public void StopSoundEffectAudioSource()
+    {
+        if (_AudioSource_SoundEffect.isPlaying == true) _AudioSource_SoundEffect.Stop();
     }
 
     public void StopBGM()

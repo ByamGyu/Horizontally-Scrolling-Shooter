@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float _GuideAttack_Delay_Cur = 0.0f;
     [SerializeField]
-    float _GuideAttack_Delay_Max = 1.0f;
+    float _GuideAttack_Delay_Max = 2.0f;
     [SerializeField]
     int _life = 3;
     [SerializeField]
@@ -53,6 +53,10 @@ public class PlayerController : MonoBehaviour
     float _maxChargeTime = 3.0f;
     [SerializeField]
     float _chargeTime = 0f;
+    
+    // 플레이어 차지 공격 효과음 재생, 끊기를 위한 변수
+    bool _soundeffectchargefinishisplay = false;
+    bool _soundeffectchargedisplay = false;
 
     // 오브젝트 저장 변수
     [SerializeField]
@@ -159,11 +163,33 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        // ']'를 누르면 함수 실행
+        // ']'를 누르면 함수 실행 (충전)
         if (Input.GetKey(KeyCode.RightBracket) == true)
         {
             _isCharging = true;
             _chargeTime += Time.deltaTime;
+
+
+            if(_chargeTime / _maxChargeTime >= 1.0f)
+            {
+                if(_soundeffectchargefinishisplay == false)
+                {
+                    SoundManager.instance.PlaySoundEffectbyAudioSource("Player_ChargeFinish", true, 0.75f);
+                    _soundeffectchargefinishisplay = true;
+                }
+
+                if(_soundeffectchargedisplay == false)
+                {
+                    SoundManager.instance.PlaySoundEffectbyAudioSource("Player_Charged", true, 0.75f);
+                    _soundeffectchargedisplay = true;
+                }
+            }
+            else if(_chargeTime / _maxChargeTime < 1.0f && _chargeTime >= 0.1f)
+            {
+                //Player_Charging1_3sec
+                SoundManager.instance.PlaySoundEffectbyAudioSource("Player_Charging1_3sec", true, 0.75f);
+            }
+
             if (_chargeTime >= _maxChargeTime) _chargeTime = _maxChargeTime;
         }
 
@@ -195,6 +221,21 @@ public class PlayerController : MonoBehaviour
 
         // 속도는 percent 매개변수에 따라서 1 ~ 3배 사이
         rigid.AddForce((Vector2.right * 10) * (finalpercent), ForceMode2D.Impulse);
+
+        // 차지 공격 효과음은 오디오 소스로 재생중임, 멈춰줌
+        SoundManager.instance.StopSoundEffectAudioSource();
+
+        if (percent <= 0.33 && percent > 0.1)
+        {            
+            SoundManager.instance.PlaySoundEffectOneShot("Player_ChargeAttackSmall", 0.75f);
+        }
+        else if(percent <= 1f && percent >0.33)
+        {
+            SoundManager.instance.PlaySoundEffectOneShot("Player_ChargeAttackBig", 0.75f);
+        }
+
+        _soundeffectchargefinishisplay = false;
+        _soundeffectchargedisplay = false;
     }
 
     void Fire_DefaultBullet()
@@ -257,7 +298,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case 5: // 테스트 용도                
                 break;
-        }
+        }        
     }
 
     void Fire_Ult()
@@ -297,6 +338,8 @@ public class PlayerController : MonoBehaviour
 
         rigidTop.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
         rigidBottom.AddForce(Vector2.down * 10, ForceMode2D.Impulse);
+
+        SoundManager.instance.PlaySoundEffectOneShot("Player_GuideAttack", 0.33f);
 
         _GuideAttack_Delay_Cur = 0.0f;
     }

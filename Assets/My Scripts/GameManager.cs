@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeReference]
     public Image[] _lifeImage;
     [SerializeReference]
+    public Image[] _UltImage;
+    [SerializeReference]
     public GameObject _GameOverGroup;
 
     // UI 차지 공격 바 관련
@@ -99,6 +101,19 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < life; i++)
         {
             _lifeImage[i].color = new Color(1, 1, 1, 1); // 알파값을 1로 해서 보이게 한다
+        }
+    }
+
+    public void UpdateUltIcon(int tmp)
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            _UltImage[i].color = new Color(1, 1, 1, 0);
+        }
+
+        for(int i = 0; i < tmp; i++)
+        {
+            _UltImage[i].color = new Color(1, 1, 1, 1);
         }
     }
 

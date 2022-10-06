@@ -55,6 +55,10 @@ public class Enemy_Serpent : MonoBehaviour
     [SerializeField]
     Vector3 _targetPosition;
 
+    // 효과음 관련
+    bool _SE_StalkPlayer = false;
+
+
     // 몸통 구성 게임오브젝트들
     [SerializeField]
     List<GameObject> _bodyParts = new List<GameObject>();
@@ -116,7 +120,11 @@ public class Enemy_Serpent : MonoBehaviour
             //Destroy(bodySettings.prefab);
         }
     }
-    
+
+    private void Start()
+    {
+        SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.75f);
+    }
 
     void Update()
     {
@@ -138,6 +146,20 @@ public class Enemy_Serpent : MonoBehaviour
             if (tagetPlayer && _player) _targetPosition = _player.transform.position;
             else _targetPosition = _RandomPosition();
         }
+
+
+        if (_SE_StalkPlayer == false)
+        {
+            _SE_StalkPlayer = true;
+            StartCoroutine(PlayStalkPlayerSoundEffect());
+        }
+    }
+
+    IEnumerator PlayStalkPlayerSoundEffect()
+    {
+        yield return new WaitForSeconds(4.0f);
+        SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.75f);
+        _SE_StalkPlayer = false;
     }
 
     void OnHit(int damage) // 피격 판정
@@ -149,6 +171,22 @@ public class Enemy_Serpent : MonoBehaviour
             _player = GameObject.FindGameObjectWithTag("Player");
             PlayerController playerinfo = _player.GetComponent<PlayerController>();
             playerinfo.AddScore(_score);
+
+            SoundManager.instance.PlaySoundEffectOneShot("Enemy_Serpent_Death", 0.75f);
+
+            // 모든 몸체에서 이펙트 스폰
+            GameObject[] _bodyparts = GameObject.FindGameObjectsWithTag("Enemy_Boss");
+            for(int i = 0; i < _bodyparts.Length; i++)
+            {
+                EffectManager.instance.SpawnEffect(
+                    "Effect_Explosion_Orangespark", 
+                    _bodyparts[i].transform.position,
+                    new Vector3(
+                        _bodyparts[i].transform.rotation.x,
+                        _bodyparts[i].transform.rotation.y,
+                        _bodyparts[i].transform.rotation.z
+                    ));
+            }
 
             Destroy(gameObject);
         }
@@ -168,6 +206,12 @@ public class Enemy_Serpent : MonoBehaviour
 
             // 닿은 플레이어의 탄환 제거
             Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.tag == "PlayerBullet_Charged")
+        {
+            // 닿은 플레이어의 탄환 정보(공격력)를 가져온다
+            Bullet_Base bullet = collision.gameObject.GetComponent<Bullet_Base>();
+            OnHit(bullet._damage);
         }
     }
 

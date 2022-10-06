@@ -12,6 +12,8 @@ public class Item_Power : Item_Base
             playerinfo.SetPower(1);
             playerinfo.AddScore(_score);
 
+            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.75f);
+
             Destroy(gameObject);
         }
     }

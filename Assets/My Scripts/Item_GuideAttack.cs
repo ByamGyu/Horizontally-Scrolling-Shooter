@@ -12,6 +12,8 @@ public class Item_GuideAttack : Item_Base
             playerinfo.SetGuideAttack(true);
             playerinfo.AddScore(_score);
 
+            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.75f);
+
             Destroy(gameObject);
         }
     }

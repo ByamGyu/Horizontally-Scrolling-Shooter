@@ -58,6 +58,10 @@ public class Enemy_Base : MonoBehaviour
             PlayerController playerinfo = _Player.GetComponent<PlayerController>();
             playerinfo.AddScore(_score);
 
+            int RandomInt = Random.Range(0, 2);
+            if(RandomInt == 0) SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Small)", 0.5f);
+            else if(RandomInt == 1) SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Loud)", 0.5f);
+
             Destroy(gameObject);
         }
     }

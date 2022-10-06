@@ -55,8 +55,11 @@ public class PlayerController : MonoBehaviour
     float _chargeTime = 0f;
     
     // 플레이어 차지 공격 효과음 재생, 끊기를 위한 변수
-    bool _soundeffectchargefinishisplay = false;
     bool _soundeffectchargedisplay = false;
+
+    // 플레이어 차지 공격 이펙트 재생, 끊기를 위한 변수
+    bool _effectChargeisplay = false;
+    GameObject _effecttmp;
 
     // 오브젝트 저장 변수
     [SerializeField]
@@ -84,6 +87,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         manager.UpdateLifeIcon(GetLife());
+        manager.UpdateUltIcon(GetUlt());
         manager.UpdateChargeGuage(0);
     }
 
@@ -143,6 +147,8 @@ public class PlayerController : MonoBehaviour
         transform.position = CurPos + NextPos; // 다음 위치
     }
 
+
+    
     void Calculate_ChargeAttackTime()
     {
         // ']'키에서 손을 떼면
@@ -150,6 +156,10 @@ public class PlayerController : MonoBehaviour
         {
             Fire_ChargeAttack(_chargeTime / _maxChargeTime);
             _isCharging = false;
+            _effectChargeisplay = false;
+
+            if (_effecttmp != null) Destroy(_effecttmp);
+
             _chargeTime = 0;            
             manager.UpdateChargeGuage(0);
             return;
@@ -172,14 +182,9 @@ public class PlayerController : MonoBehaviour
 
             if(_chargeTime / _maxChargeTime >= 1.0f)
             {
-                if(_soundeffectchargefinishisplay == false)
-                {
-                    SoundManager.instance.PlaySoundEffectbyAudioSource("Player_ChargeFinish", true, 0.75f);
-                    _soundeffectchargefinishisplay = true;
-                }
-
                 if(_soundeffectchargedisplay == false)
                 {
+                    SoundManager.instance.PlaySoundEffectOneShot("Player_ChargeFinish", 0.75f);
                     SoundManager.instance.PlaySoundEffectbyAudioSource("Player_Charged", true, 0.75f);
                     _soundeffectchargedisplay = true;
                 }
@@ -193,11 +198,22 @@ public class PlayerController : MonoBehaviour
             if (_chargeTime >= _maxChargeTime) _chargeTime = _maxChargeTime;
         }
 
-        // 0.2초 보다 오래 눌렸고, _isCharging이 true면
+        // 0.1초 보다 오래 눌렸고, _isCharging이 true면
         if(_chargeTime >= 0.1 && _isCharging == true)
         {
             // 차지 공격 게이지 갱신
             manager.UpdateChargeGuage(_chargeTime, _maxChargeTime);
+
+            if(_effectChargeisplay == false)
+            {
+                _effectChargeisplay = true;
+
+                _effecttmp = EffectManager.instance.GetEffect
+                    ("Effect_Player_Charge",
+                    transform.position + Vector3.right * 0.5f,
+                    new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z),
+                    this.transform);
+            }            
         }
     }
 
@@ -234,7 +250,6 @@ public class PlayerController : MonoBehaviour
             SoundManager.instance.PlaySoundEffectOneShot("Player_ChargeAttackBig", 0.75f);
         }
 
-        _soundeffectchargefinishisplay = false;
         _soundeffectchargedisplay = false;
     }
 
@@ -312,6 +327,7 @@ public class PlayerController : MonoBehaviour
         GameObject Ult = Instantiate(_Ult, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(90f, 0, 0f)));
 
         SetUlt(-1);
+        manager.UpdateUltIcon(GetUlt());
     }
 
     void GuideAttack_Delay()
@@ -491,6 +507,8 @@ public class PlayerController : MonoBehaviour
 
         if (_ult >= 3) _ult = 3;
         else if (_ult <= 0) _ult = 0;
+
+        manager.UpdateLifeIcon(GetUlt());
     }
 
     public void SetGuideAttack(bool tmp)
@@ -508,4 +526,8 @@ public class PlayerController : MonoBehaviour
         return _chargeattack;
     }
 
+    public int GetUlt()
+    {
+        return _ult;
+    }
 }

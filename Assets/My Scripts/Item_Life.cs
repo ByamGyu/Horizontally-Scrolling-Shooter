@@ -12,6 +12,8 @@ public class Item_Life : Item_Base
             playerinfo.SetLife(1); // 라이프 추가
             playerinfo.AddScore(_score); // 점수 추가
 
+            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.75f);
+
             Destroy(gameObject);
         }
     }

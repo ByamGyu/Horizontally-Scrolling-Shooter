@@ -894,7 +894,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cannon_12: 9061200631852324579
+      cannon_14: -8639202751848890109
       cannon_8: 774122604357141990
       cannon_20: -6849164926624285401
       cannon_5: -3961763161979780459
@@ -923,8 +923,8 @@ TextureImporter:
       cannon_21: 5881964959355197371
       cannon_0: -5333349321414413341
       cannon_18: 7651788460947424960
-      cannon_14: -8639202751848890109
       cannon_9: -7273542467667170795
+      cannon_12: 9061200631852324579
       cannon_4: 3772007743143295250
   spritePackingTag: 
   pSDRemoveMatte: 0

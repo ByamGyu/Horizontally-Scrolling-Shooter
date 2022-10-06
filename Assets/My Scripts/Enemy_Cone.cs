@@ -29,6 +29,7 @@ public class Enemy_Cone : Enemy_Base
     {
         _rigid.velocity = Vector2.left * _speed;
     }
+
     public override void SimpleMoveUp()
     {
         _rigid.velocity = Vector2.up * _speed * (0.5f);

@@ -12,6 +12,8 @@ public class Item_Speed : Item_Base
             playerinfo.SetSpeed(1.25f);
             playerinfo.AddScore(_score);
 
+            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.75f);
+
             Destroy(gameObject);
         }
     }

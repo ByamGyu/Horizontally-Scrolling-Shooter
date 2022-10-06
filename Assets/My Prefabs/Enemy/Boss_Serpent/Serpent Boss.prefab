@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c03a7111e7995e4885e040c0cbed506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 5
+  _life: 100
   _score: 2500
   _rigid: {fileID: 0}
   _player: {fileID: 0}

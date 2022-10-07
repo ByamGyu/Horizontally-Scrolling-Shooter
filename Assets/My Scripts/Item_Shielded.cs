@@ -18,7 +18,6 @@ public class Item_Shielded : MonoBehaviour
     public int _score = 50;
     
 
-
     private void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
@@ -34,7 +33,7 @@ public class Item_Shielded : MonoBehaviour
             Bullet_Base bulletinfo = collision.gameObject.GetComponent<Bullet_Base>();
             _life -= bulletinfo._damage;
 
-            Destroy(collision.gameObject); // ÅºÈ¯ Á¦°Å
+            collision.gameObject.SetActive(false); ; // ÅºÈ¯ Á¦°Å
 
             if(_life <= 0)
             {
@@ -63,6 +62,6 @@ public class Item_Shielded : MonoBehaviour
         GameObject SpawnItem = Instantiate(_spawnItem, transform.position, transform.rotation);
 
         // °´Ã¼ ÆÄ±«
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

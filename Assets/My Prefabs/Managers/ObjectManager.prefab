@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1638174118281149029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638174118281149034}
+  - component: {fileID: 1638174118281149035}
+  m_Layer: 0
+  m_Name: ObjectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638174118281149034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638174118281149029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638174118281149035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638174118281149029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0897ee4aa35b1a408fbe391286d5ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab_Enemy_Cone: {fileID: 5938416252446286910, guid: 8ee15a398225dc64aafebcccae609f12, type: 3}
+  Prefab_Enemy_Ring: {fileID: 5089265047572772494, guid: baa70f74b5f60314ea5522921c9cab9a, type: 3}
+  Prefab_Enemy_Satellite: {fileID: 8052048388823854436, guid: 79980408de6a47942af3f56323eadf8a, type: 3}
+  Prefab_Enemy_Starknife: {fileID: 2796436489418051499, guid: b83c95f48a7a2614981bf53f89c1a41a, type: 3}
+  Prefab_Item_Power: {fileID: 1627669084677104156, guid: 7f0b06c0c82f7c84b88eb23b664d8e6d, type: 3}
+  Prefab_Item_Life: {fileID: 2419221460058910907, guid: f63898c760fb90f47a15eddd22868847, type: 3}
+  Prefab_Item_Speed: {fileID: 4118842837073403617, guid: d274ca813c248fa44a998ff698d5b4b9, type: 3}
+  Prefab_Item_Ult: {fileID: 7112416534463713784, guid: de95dea2afe393f4ab564e65fdc4ed54, type: 3}
+  Prefab_Item_GuideAttack: {fileID: 1487904346525724082, guid: b7e6510ac0945ec4d8ffc7d1ee20090a, type: 3}
+  Prefab_Bullet_Player_Default: {fileID: 893751303732812840, guid: a97827742c9375645b20839412b3729c, type: 3}
+  Prefab_Bullet_Player_MaxPower: {fileID: 8121836157209830083, guid: 7dd31c27110c70e4e944685557a3a08c, type: 3}
+  Prefab_Bullet_Player_Charge: {fileID: 4347097522269706951, guid: a9e566952dace6547ab8f0f32de0299d, type: 3}
+  Prefab_Bullet_Player_Guide: {fileID: 4516288852333960921, guid: d501c80111eef2b4689719801ef17698, type: 3}
+  Prefab_Bullet_Enemy_Blue: {fileID: 3480909200592439645, guid: 5920c851c00a7e445ab0aaf67a36ff32, type: 3}
+  Prefab_Bullet_Enemy_Green: {fileID: 4844583600547209502, guid: b41da5ff34c662b4699eb3f234f6ea89, type: 3}
+  Prefab_Bullet_Enemy_Orange: {fileID: 7183522887647324722, guid: f119dfc4b8ea00846a707469b1efde2d, type: 3}
+  Prefab_Bullet_Enemy_Red_Big: {fileID: 858683098706647979, guid: d57e1d05bb3ba5b469652a64a78691c7, type: 3}

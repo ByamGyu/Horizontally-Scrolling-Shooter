@@ -8,10 +8,7 @@ public class Enemy_SerpentBodyPartsCollisionSetting : MonoBehaviour
     {        
         if(collision.gameObject.tag == "PlayerBullet")
         {
-            // 탄환 튕기는 소리 재생 추가 필요
-
-
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

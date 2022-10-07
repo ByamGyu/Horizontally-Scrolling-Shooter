@@ -377,7 +377,7 @@ public class Enemy_Claw : MonoBehaviour
             }
 
             // 닿은 플레이어의 탄환 제거
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "PlayerBullet_Charged")
         {
@@ -385,7 +385,5 @@ public class Enemy_Claw : MonoBehaviour
             Bullet_Base bullet = collision.gameObject.GetComponent<Bullet_Base>();
             OnHit(bullet._damage);
         }
-
-        
     }
 }

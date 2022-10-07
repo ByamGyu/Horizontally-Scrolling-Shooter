@@ -415,12 +415,12 @@ public class PlayerController : MonoBehaviour
             else if (collision.gameObject.tag == "EnemyBullet")
             {
                 // Àû ÅºÈ¯°ú Ãæµ¹ÀÌ¸é Àû ÅºÈ¯ ÆÄ±«
-                Destroy(collision.gameObject);
+                gameObject.SetActive(false);
             }
             else if(collision.gameObject.tag == "Item_Shielded")
             {
                 // Item_Shielded¿Í Ãæµ¹ÇÏ¸é Item_Shielded ÆÄ±«
-                Destroy(collision.gameObject);
+                gameObject.SetActive(false);
             }
 
             SetLife(-1);
@@ -428,6 +428,7 @@ public class PlayerController : MonoBehaviour
 
             manager.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);
+
         }
     }
 

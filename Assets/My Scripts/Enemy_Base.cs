@@ -68,7 +68,7 @@ public class Enemy_Base : MonoBehaviour
             else if(RandomInt2 == 2) EffectManager.instance.SpawnEffect("Effect_Explosion_Greenspark", transform.position, Vector3.one);
             else if(RandomInt2 == 3) EffectManager.instance.SpawnEffect("Effect_Explosion_Purplespark", transform.position, Vector3.one);
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -76,7 +76,7 @@ public class Enemy_Base : MonoBehaviour
     {
         if (collision.gameObject.tag == "BorderBullet") // 경계선에서 사라짐
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "PlayerBullet") // 플레이어 기체 공격에 피격
         {
@@ -94,7 +94,7 @@ public class Enemy_Base : MonoBehaviour
             }
 
             // 닿은 플레이어의 탄환 제거
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
         else if(collision.gameObject.tag == "PlayerBullet_Charged")
         {
@@ -108,7 +108,7 @@ public class Enemy_Base : MonoBehaviour
             //PlayerController playerinfo = _Player.GetComponent<PlayerController>();
             //playerinfo.AddScore(_score);
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

@@ -112,7 +112,7 @@ public class Enemy_Serpent : MonoBehaviour
             serpentBody.transform.position = transform.position;
         }
 
-        // ???
+        // æ»æ∏
         if (bodySettings.prefab.scene.rootCount > 0)
         {
             bodySettings.prefab.SetActive(false);
@@ -207,7 +207,7 @@ public class Enemy_Serpent : MonoBehaviour
             OnHit(bullet._damage);
 
             // ¥Í¿∫ «√∑π¿ÃæÓ¿« ≈∫»Ø ¡¶∞≈
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
         else if(collision.gameObject.tag == "PlayerBullet_Charged")
         {

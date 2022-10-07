@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    public GameObject[] _EnemyObjects;
+    public string[] _EnemyObjects;
     [SerializeField]
     public Transform[] _SpawnPos;
     [SerializeField]
@@ -33,8 +33,20 @@ public class GameManager : MonoBehaviour
     // UI 차지 공격 바 관련
     [SerializeReference]
     public Slider _ChargeAttackBar;
-    [SerializeField]
-    public float _maxChargeTime = 0;
+
+    // 오브젝트 매니저(오브젝트 풀)
+    public ObjectManager objectManager;
+
+
+    private void Awake()
+    {
+        _EnemyObjects = new string[] {
+            "Enemy_Cone",
+            "Enemy_Ring",
+            "Enemy_Satellite",
+            "Enemy_Starknife"
+        };
+    }
 
     private void FixedUpdate()
     {
@@ -57,12 +69,13 @@ public class GameManager : MonoBehaviour
         // 0 = cone, 1 = ring, 2 = satelite, 3 = starknife
         int randomEnemy = Random.Range(0, 4); // 적 기체 4가지
         int randomPos = Random.Range(0, 9); // 스폰 위치 8가지
-                
 
         if(randomPos == 0 || randomPos == 1 || randomPos == 2 || randomPos == 3 || randomPos == 4)
         {
             // 스프라이트가 우측을 바라보게 만들어져 있어서 플레이어 방향으로 회전시켜줘야 함.
-            GameObject enemy = Instantiate(_EnemyObjects[randomEnemy], _SpawnPos[randomPos].position, Quaternion.Euler(0.0f, 180.0f, 0.0f));
+            GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+            enemy.transform.position = _SpawnPos[randomPos].position;
+            enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
             Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
             enemyInfo.SimpleMoveLeft();
@@ -71,7 +84,9 @@ public class GameManager : MonoBehaviour
         {
             if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
             {
-                GameObject enemy = Instantiate(_EnemyObjects[randomEnemy], _SpawnPos[randomPos].position, Quaternion.Euler(0.0f, 180.0f, 0.0f));
+                GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                enemy.transform.position = _SpawnPos[randomPos].position;
+                enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
                 
                 Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
                 enemyInfo.SimpleMoveUp();
@@ -81,7 +96,9 @@ public class GameManager : MonoBehaviour
         {
             if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
             {
-                GameObject enemy = Instantiate(_EnemyObjects[randomEnemy], _SpawnPos[randomPos].position, Quaternion.Euler(0.0f, 180.0f, 0.0f));
+                GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                enemy.transform.position = _SpawnPos[randomPos].position;
+                enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
                 
                 Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
                 enemyInfo.SimpleMoveDown();

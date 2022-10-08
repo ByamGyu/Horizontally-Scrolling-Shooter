@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
             enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
             Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
+            enemyInfo.objectmanager = objectManager;
             enemyInfo.SimpleMoveLeft();
         }
         else if (randomPos == 5 || randomPos == 6) // 아래 오른쪽, 아래 왼쪽
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
                 enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
                 
                 Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
+                enemyInfo.objectmanager = objectManager;
                 enemyInfo.SimpleMoveUp();
             }
         }
@@ -101,6 +103,7 @@ public class GameManager : MonoBehaviour
                 enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
                 
                 Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
+                enemyInfo.objectmanager = objectManager;
                 enemyInfo.SimpleMoveDown();
             }
         }

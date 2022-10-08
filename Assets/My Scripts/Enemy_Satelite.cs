@@ -11,11 +11,6 @@ public class Enemy_Satelite : Enemy_Base
     float _Bullet_Shot_Delay_Max = 5.0f;
 
 
-    // 오브젝트 저장 변수
-    [SerializeField]
-    public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
-
-
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
@@ -42,8 +37,11 @@ public class Enemy_Satelite : Enemy_Base
 
         // 플레이어와의 거리를 계산
         Vector3 _distance = (_Player.transform.position - transform.position).normalized;
+                
+        GameObject bullet1 = objectmanager.MakeObj("Bullet_Enemy_Orange");
+        bullet1.transform.position = transform.position + Vector3.left * 0.5f;
+        bullet1.transform.rotation = transform.rotation;
 
-        GameObject bullet1 = Instantiate(_Bullet1, transform.position + Vector3.left * 0.5f, transform.rotation);
         Rigidbody2D rigid1 = bullet1.GetComponent<Rigidbody2D>();
         rigid1.AddForce(_distance * 2, ForceMode2D.Impulse);
 

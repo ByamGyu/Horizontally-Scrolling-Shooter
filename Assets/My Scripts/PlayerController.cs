@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // 게임 매니저 저장
-    public GameManager manager;
+    public GameManager gamemanager;
 
     // 플레이어 능력치
     [SerializeField]
@@ -83,12 +83,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Dictionary<string, AudioClip> _SoundEffects;
 
+    // 오브젝트 매니저(오브젝트 풀링)
+    public ObjectManager objectmanager;
+
 
     void Start()
     {
-        manager.UpdateLifeIcon(GetLife());
-        manager.UpdateUltIcon(GetUlt());
-        manager.UpdateChargeGuage(0);
+        gamemanager.UpdateLifeIcon(GetLife());
+        gamemanager.UpdateUltIcon(GetUlt());
+        gamemanager.UpdateChargeGuage(0);
     }
 
     void Update() // FixedUpdate()를 사용하면 입력이 씹히는 현상 발생
@@ -161,7 +164,7 @@ public class PlayerController : MonoBehaviour
             if (_effecttmp != null) Destroy(_effecttmp);
 
             _chargeTime = 0;            
-            manager.UpdateChargeGuage(0);
+            gamemanager.UpdateChargeGuage(0);
             return;
         }
 
@@ -202,7 +205,7 @@ public class PlayerController : MonoBehaviour
         if(_chargeTime >= 0.1 && _isCharging == true)
         {
             // 차지 공격 게이지 갱신
-            manager.UpdateChargeGuage(_chargeTime, _maxChargeTime);
+            gamemanager.UpdateChargeGuage(_chargeTime, _maxChargeTime);
 
             if(_effectChargeisplay == false)
             {
@@ -225,7 +228,9 @@ public class PlayerController : MonoBehaviour
         float finalpercent = 1 + percent * 2;
 
         // 차지 공격 객체 스폰
-        GameObject chargedbullet = Instantiate(_Bullet2, transform.position + Vector3.right * 1f, transform.rotation);
+        GameObject chargedbullet = objectmanager.MakeObj("Bullet_Player_Charge");
+        chargedbullet.transform.position = transform.position + Vector3.right * 1f;
+        chargedbullet.transform.rotation = transform.rotation;
         Rigidbody2D rigid = chargedbullet.GetComponent<Rigidbody2D>();
 
         // 크기 조절 (2 ~ 6배 사이)
@@ -242,7 +247,7 @@ public class PlayerController : MonoBehaviour
         SoundManager.instance.StopSoundEffectAudioSource();
 
         if (percent <= 0.33 && percent > 0.1)
-        {            
+        {
             SoundManager.instance.PlaySoundEffectOneShot("Player_ChargeAttackSmall", 0.75f);
         }
         else if(percent <= 1f && percent >0.33)
@@ -265,7 +270,10 @@ public class PlayerController : MonoBehaviour
         {
             case 1: // 파워레벨 1
                 // 프리팹(_Bullet1)을 오브젝트로 생성, 생성 위치, 생성 방향
-                GameObject bulletMid1 = Instantiate(_Bullet1, transform.position + Vector3.right * 0.5f, transform.rotation);
+                // _Bullet1, transform.position + Vector3.right * 0.5f, transform.rotation
+                GameObject bulletMid1 = objectmanager.MakeObj("Bullet_Player_Default");
+                bulletMid1.transform.position = transform.position + Vector3.right * 0.5f;
+                bulletMid1.transform.rotation = transform.rotation;
 
                 // 탄환에 힘을 가해 움직이게 한다.
                 Rigidbody2D rigid1 = bulletMid1.GetComponent<Rigidbody2D>();
@@ -276,8 +284,12 @@ public class PlayerController : MonoBehaviour
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
             case 2: // 파워레벨 2
-                GameObject bulletTop2 = Instantiate(_Bullet1, transform.position + Vector3.up * 0.15f + Vector3.right * 0.5f, transform.rotation);
-                GameObject bulletDown2 = Instantiate(_Bullet1, transform.position + Vector3.down * 0.15f + Vector3.right * 0.5f, transform.rotation);
+                GameObject bulletTop2 = objectmanager.MakeObj("Bullet_Player_Default");
+                bulletTop2.transform.position = transform.position + Vector3.up * 0.15f + Vector3.right * 0.5f;
+                bulletTop2.transform.rotation = transform.rotation;
+                GameObject bulletDown2 = objectmanager.MakeObj("Bullet_Player_Default");
+                bulletDown2.transform.position = transform.position + Vector3.down * 0.15f + Vector3.right * 0.5f;
+                bulletDown2.transform.rotation = transform.rotation;
 
                 Rigidbody2D rigidTop2 = bulletTop2.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidBottom2 = bulletDown2.GetComponent<Rigidbody2D>();
@@ -288,9 +300,15 @@ public class PlayerController : MonoBehaviour
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
             case 3: // 파워레벨 3
-                GameObject bulletTop3 = Instantiate(_Bullet1, transform.position + Vector3.up * 0.25f + Vector3.right * 0.5f, transform.rotation);
-                GameObject bulletMid3 = Instantiate(_Bullet1, transform.position + Vector3.right * 0.75f, transform.rotation);
-                GameObject bulletBottom3 = Instantiate(_Bullet1, transform.position + Vector3.down * 0.25f + Vector3.right * 0.5f, transform.rotation);
+                GameObject bulletTop3 = objectmanager.MakeObj("Bullet_Player_Default");
+                bulletTop3.transform.position = transform.position + Vector3.up * 0.25f + Vector3.right * 0.5f;
+                bulletTop3.transform.rotation = transform.rotation;
+                GameObject bulletMid3 = objectmanager.MakeObj("Bullet_Player_Default");
+                bulletMid3.transform.position = transform.position + Vector3.right * 0.75f;
+                bulletMid3.transform.rotation = transform.rotation;
+                GameObject bulletBottom3 = objectmanager.MakeObj("Bullet_Player_Default");
+                bulletBottom3.transform.position = transform.position + Vector3.down * 0.25f + Vector3.right * 0.5f;
+                bulletBottom3.transform.rotation = transform.rotation;
 
                 Rigidbody2D rigidTop3 = bulletTop3.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidMid3 = bulletMid3.GetComponent<Rigidbody2D>();
@@ -303,8 +321,11 @@ public class PlayerController : MonoBehaviour
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
             case 4: // 파워레벨 4
-                GameObject bulletMid4 = Instantiate(_Bullet5, transform.position + Vector3.right * 0.5f, transform.rotation);
-                
+                // _Bullet5, transform.position + Vector3.right * 0.5f, transform.rotation
+                GameObject bulletMid4 = objectmanager.MakeObj("Bullet_Player_MaxPower");
+                bulletMid4.transform.position = transform.position + Vector3.right * 0.5f;
+                bulletMid4.transform.rotation = transform.rotation;
+
                 Rigidbody2D rigidMid1 = bulletMid4.GetComponent<Rigidbody2D>();
 
                 rigidMid1.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
@@ -327,7 +348,7 @@ public class PlayerController : MonoBehaviour
         GameObject Ult = Instantiate(_Ult, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(90f, 0, 0f)));
 
         SetUlt(-1);
-        manager.UpdateUltIcon(GetUlt());
+        gamemanager.UpdateUltIcon(GetUlt());
     }
 
     void GuideAttack_Delay()
@@ -426,7 +447,7 @@ public class PlayerController : MonoBehaviour
             SetLife(-1);
             Dead();
 
-            manager.RespawnPlayerInvoke(2.0f);
+            gamemanager.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);
 
         }
@@ -474,13 +495,13 @@ public class PlayerController : MonoBehaviour
         {
             _life = -1;
 
-            manager.GameOver();
+            gamemanager.GameOver();
         }
 
         // 최대 체력은 3
         if (_life >= 3) _life = 3;
 
-        manager.UpdateLifeIcon(GetLife());
+        gamemanager.UpdateLifeIcon(GetLife());
     }
 
     public int GetLife() { return _life; }
@@ -512,7 +533,7 @@ public class PlayerController : MonoBehaviour
         if (_ult >= 3) _ult = 3;
         else if (_ult <= 0) _ult = 0;
 
-        manager.UpdateLifeIcon(GetUlt());
+        gamemanager.UpdateLifeIcon(GetUlt());
     }
 
     public void SetGuideAttack(bool tmp)

@@ -15,9 +15,10 @@ public class Enemy_Base : MonoBehaviour
     [SerializeReference]
     public GameObject _Player = null;
 
-    // 효과음 파일
-    [SerializeField]
-    public AudioClip[] _Sounds;
+
+    // 오브젝트 매니저(오브젝트 풀링)
+    // 프리팹 형태일 경우 직접 줄 수 없고, 코드를 통해서(게임 매니저에서) 줘야함
+    public ObjectManager objectmanager;
 
 
     private void Awake()
@@ -36,17 +37,6 @@ public class Enemy_Base : MonoBehaviour
     public virtual void SimpleMoveUp() { } // 각자의 스크립트에서 구현하도록 함
     public virtual void SimpleMoveDown() { } // 각자의 스크립트에서 구현하도록 함
 
-    void PlaySound(string Name)
-    {
-        string tmp;
-
-        for(int i = 0; i < _Sounds.Length; i++)
-        {
-            if (_Sounds[i].name == Name) tmp = _Sounds[i].name;
-        }
-
-        // SoundManager.instance.PlaySound(tmp);
-    }
 
     void OnHit(int damage) // 피격 판정
     {

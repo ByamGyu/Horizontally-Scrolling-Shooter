@@ -10,9 +10,6 @@ public class Enemy_Ring : Enemy_Base
     [SerializeField]
     float _Bullet_Shot_Delay_Max = 3.5f;
 
-    // 오브젝트 저장 변수
-    [SerializeField]
-    public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
 
     void Start()
     {
@@ -46,9 +43,15 @@ public class Enemy_Ring : Enemy_Base
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
-        GameObject bulletmid = Instantiate(_Bullet1, transform.position + Vector3.left * 0.5f, transform.rotation);
-        GameObject bullettop = Instantiate(_Bullet1, transform.position + Vector3.up * 0.5f, transform.rotation);
-        GameObject bulletbottom = Instantiate(_Bullet1, transform.position + Vector3.down * 0.5f, transform.rotation);
+        GameObject bulletmid = objectmanager.MakeObj("Bullet_Enemy_Green");
+        bulletmid.transform.position = transform.position + Vector3.left * 0.5f;
+        bulletmid.transform.rotation = transform.rotation;
+        GameObject bullettop = objectmanager.MakeObj("Bullet_Enemy_Green");
+        bullettop.transform.position = transform.position + Vector3.up * 0.5f;
+        bullettop.transform.rotation = transform.rotation;
+        GameObject bulletbottom = objectmanager.MakeObj("Bullet_Enemy_Green");
+        bulletbottom.transform.position = transform.position + Vector3.down * 0.5f;
+        bulletbottom.transform.rotation = transform.rotation;
         Rigidbody2D rigid1 = bulletmid.GetComponent<Rigidbody2D>();
         Rigidbody2D rigid2 = bullettop.GetComponent<Rigidbody2D>();
         Rigidbody2D rigid3 = bulletbottom.GetComponent<Rigidbody2D>();

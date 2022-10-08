@@ -9,10 +9,7 @@ public class Enemy_Cone : Enemy_Base
     float _Bullet_Shot_Delay_Cur = 0.0f;
     [SerializeField]
     float _Bullet_Shot_Delay_Max = 2.5f;
-
-    // 오브젝트 저장 변수
-    [SerializeField]
-    public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
+    
 
     void Start()
     {
@@ -45,7 +42,10 @@ public class Enemy_Cone : Enemy_Base
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
-        GameObject bullet1 = Instantiate(_Bullet1, transform.position + Vector3.left * 0.5f, transform.rotation);
+        GameObject bullet1 = objectmanager.MakeObj("Bullet_Enemy_Blue");
+        bullet1.transform.position = transform.position + Vector3.left * 0.5f;
+        bullet1.transform.rotation = transform.rotation;
+
         Rigidbody2D rigid1 = bullet1.GetComponent<Rigidbody2D>();
         rigid1.AddForce(Vector2.left * 5, ForceMode2D.Impulse);
 

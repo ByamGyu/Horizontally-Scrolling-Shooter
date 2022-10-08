@@ -310,7 +310,7 @@ public class Enemy_Claw : MonoBehaviour
         {
             transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Sin(_y) * movementRange, transform.localPosition.z);
 
-            _y += movementSpeed * Time.deltaTime;
+            _y += (movementSpeed * Time.deltaTime) * 1.5f;
         }
     }
 

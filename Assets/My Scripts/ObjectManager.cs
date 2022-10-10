@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
+    public ObjectManager instance;
+
     public GameObject Prefab_Enemy_Cone;
     public GameObject Prefab_Enemy_Ring;
     public GameObject Prefab_Enemy_Satellite;
@@ -23,6 +25,7 @@ public class ObjectManager : MonoBehaviour
     public GameObject Prefab_Bullet_Enemy_Blue;
     public GameObject Prefab_Bullet_Enemy_Green;
     public GameObject Prefab_Bullet_Enemy_Orange;
+    public GameObject Prefab_Bullet_Enemy_Red;
     public GameObject Prefab_Bullet_Enemy_Red_Big;
 
     GameObject[] Enemy_Cone;
@@ -45,6 +48,7 @@ public class ObjectManager : MonoBehaviour
     GameObject[] Bullet_Enemy_Blue;
     GameObject[] Bullet_Enemy_Green;
     GameObject[] Bullet_Enemy_Orange;
+    GameObject[] Bullet_Enemy_Red;
     GameObject[] Bullet_Enemy_Red_Big;
 
     // 풀에서 꺼내는데 사용되는 배열
@@ -72,9 +76,17 @@ public class ObjectManager : MonoBehaviour
         Bullet_Enemy_Blue = new GameObject[100];
         Bullet_Enemy_Green = new GameObject[100];
         Bullet_Enemy_Orange = new GameObject[100];
+        Bullet_Enemy_Red = new GameObject[300];
         Bullet_Enemy_Red_Big = new GameObject[100];
 
         Generate();
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else Destroy(gameObject);
     }
 
     void Generate()
@@ -179,6 +191,12 @@ public class ObjectManager : MonoBehaviour
             Bullet_Enemy_Orange[i].SetActive(false);
         }
 
+        for(int i = 0; i < Bullet_Enemy_Red.Length; i++)
+        {
+            Bullet_Enemy_Red[i] = Instantiate(Prefab_Bullet_Enemy_Red);
+            Bullet_Enemy_Red[i].SetActive(false);
+        }
+
         for (int i = 0; i < Bullet_Enemy_Red_Big.Length; i++)
         {
             Bullet_Enemy_Red_Big[i] = Instantiate(Prefab_Bullet_Enemy_Red_Big);
@@ -240,6 +258,9 @@ public class ObjectManager : MonoBehaviour
                 break;
             case "Bullet_Enemy_Red_Big":
                 targetPool = Bullet_Enemy_Red_Big;
+                break;
+            case "Bullet_Enemy_Red":
+                targetPool = Bullet_Enemy_Red;
                 break;
         }
 

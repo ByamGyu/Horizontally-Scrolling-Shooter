@@ -69,7 +69,7 @@ public class Enemy_Claw : MonoBehaviour
     void Start()
     {
         // 시작하면서 전용 BGM 재생
-        SoundManager.instance.PlayBGM("Stage_01_Boss", 0.5f);
+        SoundManager.instance.PlayBGM("Stage_01_Boss", 0.33f);
     }
 
     void Update()
@@ -131,7 +131,7 @@ public class Enemy_Claw : MonoBehaviour
 
             if(_SE_Punch == false)
             {
-                SoundManager.instance.PlaySoundEffectOneShot("Boss1_PunchAttack", 1.0f);
+                SoundManager.instance.PlaySoundEffectOneShot("Boss1_PunchAttack", 0.5f);
                 _SE_Punch = true;
             }
             
@@ -229,7 +229,7 @@ public class Enemy_Claw : MonoBehaviour
                 _chargeeffecton = true;
                 // Enemy_Claw의 원본 x 스케일이 -1이라서 x 스케일 값에 -1을 넣어줘야 함
                 EffectManager.instance.SpawnEffect("Effect_Boss_Laser_Charge", transform.position, new Vector3(0, 0, 0), new Vector3(-1, 1, 1), this.transform);
-                SoundManager.instance.PlaySoundEffectOneShot("Boss_Weapon_Charging", 1.0f);
+                SoundManager.instance.PlaySoundEffectOneShot("Boss_Weapon_Charging", 0.33f);
             }
 
             _chargetime += Time.deltaTime;
@@ -275,8 +275,8 @@ public class Enemy_Claw : MonoBehaviour
                 // https://dydvn.tistory.com/28
                 Vector3 _myangle = transform.rotation.eulerAngles + new Vector3(0, 0, 180); // Enemy_Claw의 정확한 앞 방향
                                                                                            // 회전값(월드좌표)  // 스케일 값                                 
-                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, _myangle, new Vector3(1, 1, 1), this.transform);
-                SoundManager.instance.PlaySoundEffectOneShot("Boss_Weapon_ChargeShot1", 1.0f);
+                EffectManager.instance.SpawnEffect("Effect_Boss_Laser", transform.position, _myangle, new Vector3(1.15f, 1, 1), this.transform);
+                SoundManager.instance.PlaySoundEffectOneShot("Boss_Weapon_ChargeShot1", 0.5f);
             }
 
             _chargeattacktime += Time.deltaTime;

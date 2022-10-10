@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     [SerializeField]
     public string[] _EnemyObjects;
     [SerializeField]
@@ -19,6 +21,11 @@ public class GameManager : MonoBehaviour
     public GameObject _Player = null;
     [SerializeField]
     public bool _CanSpawnEnemy = true;
+
+    // Test
+    [SerializeField]
+    Define.GameMode _gamemode = Define.GameMode.Campaign;
+
 
     // UI
     [SerializeReference]
@@ -44,8 +51,19 @@ public class GameManager : MonoBehaviour
             "Enemy_Cone",
             "Enemy_Ring",
             "Enemy_Satellite",
-            "Enemy_Starknife"
+            "Enemy_Starknife",
+            "Enemy_Claw",
+            "Enemy_Serpent",
+            "Item_Shield",
+
         };
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else Destroy(gameObject);
     }
 
     private void FixedUpdate()

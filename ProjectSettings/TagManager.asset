@@ -13,6 +13,7 @@ TagManager:
   - Item
   - Enemy_Boss
   - PlayerBullet_Charged
+  - Invincible
   layers:
   - Default
   - TransparentFX

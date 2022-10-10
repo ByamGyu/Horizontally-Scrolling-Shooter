@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Define
 {
-    
+    [SerializeField]
+    public enum GameMode
+    {
+        Campaign,
+        Infinite,
+        UI
+    }
 }

@@ -11,8 +11,6 @@ public class Bullet_ScaleChange : MonoBehaviour
     {
         _size = (Mathf.Sin(_y) * 0.25f) + 1;
 
-        Debug.Log(_size);
-
         ChangeScaleSin(_size);
 
         _y += (1 * Time.deltaTime);

@@ -105,6 +105,10 @@ namespace Playniax.Pyro.Framework
         // spriteRenderer AlphaEffects is using.
         SpriteRenderer spriteRenderer;
 
+        public GameObject _mainBody;
+        float _mainBodyLifePercent;
+
+
         void Awake()
         {
             if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
@@ -116,6 +120,7 @@ namespace Playniax.Pyro.Framework
                     var color = spriteRenderer.color;
 
                     color.a = Random.Range(pingPongSettings.min, pingPongSettings.max);
+                                        
 
                     if (color.a < pingPongSettings.min)
                     {
@@ -143,6 +148,17 @@ namespace Playniax.Pyro.Framework
 
         }
 
+        private void Start()
+        {
+            _mainBody = GameObject.FindGameObjectWithTag("Enemy_Boss");
+
+            if (_mainBody == null)
+            {
+                Debug.Log("_mainBody: null");
+                return;
+            }
+        }
+
         void Update()
         {
             if (mode == Mode.PingPong)
@@ -157,6 +173,9 @@ namespace Playniax.Pyro.Framework
             {
                 _UpdateFadeIn();
             }
+            
+            // 내가 만든 코드
+            _UpdateEyeColor();
         }
 
         void _UpdateFadeIn()
@@ -203,6 +222,7 @@ namespace Playniax.Pyro.Framework
 
             color.a += pingPongSettings.speed * Time.deltaTime;
 
+
             if (color.a < pingPongSettings.min)
             {
                 color.a = pingPongSettings.min;
@@ -216,6 +236,23 @@ namespace Playniax.Pyro.Framework
 
                 pingPongSettings.speed = -Mathf.Abs(pingPongSettings.speed);
             }
+
+            spriteRenderer.color = color;
+        }
+
+        // 내가 만든 코드
+        void _UpdateEyeColor()
+        {
+            var color = spriteRenderer.color;
+
+            float percent = (float)_mainBody.GetComponent<Enemy_Serpent>()._life / (float)_mainBody.GetComponent<Enemy_Serpent>()._maxLife;
+            float newred = 1;
+            float newgreen = 255 * percent / 100;
+            float newblue = 255 * percent / 100;
+
+            color.r = newred;
+            color.g = newgreen;
+            color.b = newblue;
 
             spriteRenderer.color = color;
         }

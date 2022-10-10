@@ -10,6 +10,7 @@ public class Boss_Serpent_BulletSpawner : MonoBehaviour
     public float _Bullet_Shot_Delay_Cur;
     public float _Bullet_Shot_Delay_Max;
 
+
     private void Awake()
     {
         _Bullet_Shot_Delay_Max = 4f;
@@ -45,11 +46,11 @@ public class Boss_Serpent_BulletSpawner : MonoBehaviour
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
         GameObject bullettop = _objectmanager.MakeObj("Bullet_Enemy_Green");
-        bullettop.transform.position = transform.position + transform.right * 1f;
+        bullettop.transform.position = transform.position + transform.up * 1f;
         bullettop.transform.rotation = transform.rotation;
         bullettop.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         GameObject bulletbottom = _objectmanager.MakeObj("Bullet_Enemy_Green");
-        bulletbottom.transform.position = transform.position + (transform.right * 1f * (-1));
+        bulletbottom.transform.position = transform.position + (transform.up * 1f * (-1));
         bulletbottom.transform.rotation = transform.rotation;
         bulletbottom.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         Rigidbody2D rigid1 = bullettop.GetComponent<Rigidbody2D>();

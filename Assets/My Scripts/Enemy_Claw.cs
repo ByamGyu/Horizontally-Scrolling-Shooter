@@ -13,7 +13,11 @@ public class Enemy_Claw : MonoBehaviour
 
     // 능력치
     [SerializeField]
-    int _life = 200;
+    int _life = 500;
+    [SerializeField]
+    int _maxlife = 500;
+    [SerializeField]
+    float _lifepercent = 1f;
     [SerializeField]
     int _score = 5000;
 
@@ -42,7 +46,7 @@ public class Enemy_Claw : MonoBehaviour
     int _rotations;
     float _speed;
     [SerializeField]
-    int _state;
+    public int _state;
     float _y;
 
     // charge 공격 관련
@@ -57,6 +61,8 @@ public class Enemy_Claw : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public Boss_Claw_BulletSpawner _bulletspawner;
+
     void Awake()
     {
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
@@ -70,15 +76,38 @@ public class Enemy_Claw : MonoBehaviour
     {
         // 시작하면서 전용 BGM 재생
         SoundManager.instance.PlayBGM("Stage_01_Boss", 0.33f);
+
+        _life = _maxlife;
+
+        _bulletspawner = this.GetComponent<Boss_Claw_BulletSpawner>();
     }
 
     void Update()
     {
         _Player = GameObject.FindGameObjectWithTag("Player");
+        _lifepercent = (float)_life / (float)_maxlife;
 
         if (_state == 0) // Idle 상태
         {
-            if(_Player != null) RotationSlerpToTarget(_Player);
+            if (_Player != null) RotationSlerpToTarget(_Player);
+
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireBigBullet = true;
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireBigBullet = true;
+                _bulletspawner._CanFireArc = true;
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireBigBullet = true;
+                _bulletspawner._CanFireArc2Way = true;
+            }
 
             spriteRenderer.sprite = idle.sprites[frame];
 
@@ -105,11 +134,23 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 1) // 오므라들기
         {
-            //InitRotation();
-
             spriteRenderer.sprite = clench.sprites[frame];
 
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+
             _frameTime += Time.deltaTime;
+
 
             if (_frameTime >= clench.frameTime)
             {
@@ -129,7 +170,20 @@ public class Enemy_Claw : MonoBehaviour
         {
             InitRotation();
 
-            if(_SE_Punch == false)
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+
+            if (_SE_Punch == false)
             {
                 SoundManager.instance.PlaySoundEffectOneShot("Boss1_PunchAttack", 0.5f);
                 _SE_Punch = true;
@@ -168,6 +222,19 @@ public class Enemy_Claw : MonoBehaviour
         {
             InitRotation();
 
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+
             if (transform.localPosition.x <= 0)
             {
                 transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
@@ -202,7 +269,19 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 4) // 다시 펴지기 상태
         {
-            //InitRotation();
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+
 
             spriteRenderer.sprite = open.sprites[frame];
 
@@ -224,6 +303,21 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 5) // charge 상태
         {
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireMultiRandomshotToPlayer = true;
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireMultiRandomshotToPlayer = true;
+            }
+
             if (_chargeeffecton == false)
             {
                 _chargeeffecton = true;
@@ -264,6 +358,21 @@ public class Enemy_Claw : MonoBehaviour
 
         if (_state == 6) // ChargeAttack 상태
         {
+            if (_lifepercent <= 1.0f && _lifepercent > 0.66f)
+            {
+                _bulletspawner.TurnOffAllFire();
+            }
+            if (_lifepercent <= 0.66f && _lifepercent > 0.33f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireCircle = true;
+            }
+            if (_lifepercent <= 0.33f && _lifepercent > 0f)
+            {
+                _bulletspawner.TurnOffAllFire();
+                _bulletspawner._CanFireCircle = true;
+            }
+
             if (_Player != null) RotationSlerpToTarget(_Player);
 
             if (_chargeattackeffecton == false)

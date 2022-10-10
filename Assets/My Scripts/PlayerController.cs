@@ -460,6 +460,7 @@ public class PlayerController : MonoBehaviour
         SetPower(-1);
         SetGuideAttack(false);
         SetChargeAttack(false);
+        _chargeTime = 0f;
 
         SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Small)", 0.75f);
         EffectManager.instance.SpawnEffect("Effect_Explosion_Orangespark", transform.position, new Vector3(0, 0, 0));

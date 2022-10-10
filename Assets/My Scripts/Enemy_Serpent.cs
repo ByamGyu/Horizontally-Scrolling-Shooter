@@ -5,7 +5,9 @@ using UnityEngine;
 public class Enemy_Serpent : MonoBehaviour
 {
     [SerializeField]
-    public float _life = 250;
+    public int _maxLife = 250;
+    [SerializeField]
+    public int _life = 250;
     [SerializeField]
     public int _score = 2500;
     [SerializeField]
@@ -66,6 +68,8 @@ public class Enemy_Serpent : MonoBehaviour
 
     void Awake()
     {
+        _life = _maxLife;
+
         _rigid = GetComponent<Rigidbody2D>();
 
         // 카메라를 기준으로 이동 범위(bounds 변수) 잡기

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss_BulletSpawner : MonoBehaviour
+public class Boss_Claw_BulletSpawner : MonoBehaviour
 {
-    public string _mode;
+    public string _mode = "";
 
     public GameObject _Player = null;
 
@@ -65,9 +65,15 @@ public class Boss_BulletSpawner : MonoBehaviour
         {
             FireArc2Way(0.1f);
         }
-        if(_mode == "")
+        if (_mode == "FireCircle")
         {
-
+            // 보통 50개, 어려움 75개, 정말 어려움 100개
+            // 
+            FireCircle(75); 
+        }
+        if (_mode == "")
+        {
+            return;
         }
     }
 
@@ -170,8 +176,26 @@ public class Boss_BulletSpawner : MonoBehaviour
         _Bullet_Shot_Delay_Cur = 0.0f;
     }
 
-    void FireCircle()
+    void FireCircle(int _cnt)
     {
+        _mode = "FireCircle";
+        _Bullet_Shot_Delay_Max = 3.0f; // 탄환 스폰 시간
 
+        // 총알 생성 딜레이 시간 판별
+        if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
+
+        for (int i = 0; i < _cnt; i++)
+        {
+            GameObject bullet = _objectmanager.MakeObj("Bullet_Enemy_Red");
+            bullet.transform.position = transform.position + Vector3.left * 0.5f;
+            bullet.transform.rotation = transform.rotation;
+            bullet.transform.localScale = new Vector3(2f, 2f, 2f);
+
+            Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
+            Vector2 _dir = new Vector2(Mathf.Sin(Mathf.PI * 2 * i / _cnt), Mathf.Cos(Mathf.PI * 2 * i / _cnt));
+            rigid.AddForce(_dir.normalized * 2, ForceMode2D.Impulse);
+        }
+
+        _Bullet_Shot_Delay_Cur = 0.0f;
     }
 }

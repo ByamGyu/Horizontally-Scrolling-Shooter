@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Serpent : MonoBehaviour
 {
     [SerializeField]
-    public float _life = 100;
+    public float _life = 250;
     [SerializeField]
     public int _score = 2500;
     [SerializeField]
@@ -123,8 +123,8 @@ public class Enemy_Serpent : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.75f);
-        SoundManager.instance.PlayBGM("Stage_01_Serpent", 1.0f, true);
+        SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.5f);
+        SoundManager.instance.PlayBGM("Stage_01_Serpent", 0.33f, true);
     }
 
     void Update()

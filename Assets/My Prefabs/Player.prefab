@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754793b92a234b84c8d29dc01e70e36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  gamemanager: {fileID: 0}
   _speed: 5
   _Bullet_Shot_Delay_Cur: 0
   _Bullet_Shot_Delay_Max: 0.15
@@ -214,6 +214,7 @@ MonoBehaviour:
   _Bullet6: {fileID: 4516288852333960921, guid: d501c80111eef2b4689719801ef17698, type: 3}
   _Bullet7: {fileID: 0}
   _Ult: {fileID: 333155886699396360, guid: fb8ecadc93c70f44e82090593d79a0c2, type: 3}
+  objectmanager: {fileID: 0}
 --- !u!61 &5344317257926371375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -238,7 +239,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.45, y: 0.45}
   m_EdgeRadius: 0
 --- !u!50 &5344317257926371374
 Rigidbody2D:

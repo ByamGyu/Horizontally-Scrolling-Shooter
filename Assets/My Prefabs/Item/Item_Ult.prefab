@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3318830175941756351}
   m_Layer: 0
   m_Name: Item_Ult
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d4e2003832b5d4d889973904e51ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigid: {fileID: 0}
+  _speed: 1
+  _score: 50
 --- !u!50 &6365543259661479584
 Rigidbody2D:
   serializedVersion: 4
@@ -180,3 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d4e2003832b5d4d889973904e51ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigid: {fileID: 0}
+  _speed: 1
+  _score: 50

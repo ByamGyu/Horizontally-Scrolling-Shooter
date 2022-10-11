@@ -9,6 +9,7 @@ public class Define
     {
         Campaign,
         Infinite,
-        UI
+        UI,
+        None,
     }
 }

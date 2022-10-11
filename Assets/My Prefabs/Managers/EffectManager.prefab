@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8832713703726662853
+--- !u!1 &8914333287481954543
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8832713703726662855}
-  - component: {fileID: 8832713703726662852}
+  - component: {fileID: 1697828504343644544}
+  - component: {fileID: 3532402118049982949}
   m_Layer: 0
   m_Name: EffectManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8832713703726662855
+--- !u!4 &1697828504343644544
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8832713703726662853}
+  m_GameObject: {fileID: 8914333287481954543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8832713703726662852
+--- !u!114 &3532402118049982949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8832713703726662853}
+  m_GameObject: {fileID: 8914333287481954543}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e38295f0756b90479278609ee9497df, type: 3}
@@ -47,7 +47,8 @@ MonoBehaviour:
   _EffectNames:
   - Effect_PlayerBullet_Hit01
   - Effect_PlayerBullet_Hit02
-  - Effect_PlayerBullet_Hit03
+  - Effect_PlayerBullet_Hit03_1
+  - Effect_PlayerBullet_Hit03_2
   - Effect_PlayerBullet_Hit04
   - Effect_PlayerBullet_Hit05
   - Effect_PlayerBullet_Hit06
@@ -64,6 +65,7 @@ MonoBehaviour:
   - {fileID: 7607424608030398489, guid: d15e8a09cf370cc4c8e616a55f639760, type: 3}
   - {fileID: 6362662320982798599, guid: 23134b4debf00234ba2321b061f4a73f, type: 3}
   - {fileID: 5395809482970300447, guid: c14a9a82c113827418a3a6d5e1a8e05c, type: 3}
+  - {fileID: 5395809482970300447, guid: 8297ec46f74331543a41a265466bbf9a, type: 3}
   - {fileID: 6763240955610486423, guid: f919c4f6ef879b74190478841cb6a581, type: 3}
   - {fileID: 3971272377291815333, guid: 7f2e2ef761f3fc540ab290bd5d0f094a, type: 3}
   - {fileID: 7514941582572089924, guid: f34e8a4054e21bb49a729b7e8d3f1572, type: 3}

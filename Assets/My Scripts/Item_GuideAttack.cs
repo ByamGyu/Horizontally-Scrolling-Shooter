@@ -12,11 +12,9 @@ public class Item_GuideAttack : Item_Base
             playerinfo.SetGuideAttack(true);
             playerinfo.AddScore(_score);
 
-            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.75f);
+            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.33f);
 
-            // 쉴드 상태가 아닌 아이템은 일단 파괴하는 걸로
-            Destroy(gameObject);
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

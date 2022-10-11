@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7112416534463713788}
   m_Layer: 0
   m_Name: Item_Shielded_Ult
-  m_TagString: Untagged
+  m_TagString: Item_Shielded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,10 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 3
-  _spawnItem: {fileID: 5991064274058270930, guid: 296f958aa070d4c43adc2bb01a65bc8b, type: 3}
   _rigid: {fileID: 0}
   _speed: 1
   _score: 50
+  _objectmanager: {fileID: 0}
 --- !u!95 &7112416534463713790
 Animator:
   serializedVersion: 4

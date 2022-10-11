@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2634292314559981192
+--- !u!1 &7289978634672068955
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2634292315756696682}
-  - component: {fileID: 2634292315756696683}
+  - component: {fileID: 7289978634672068952}
+  - component: {fileID: 7289978634026279852}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2634292315756696682
+--- !u!4 &7289978634672068952
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2634292314559981192}
+  m_GameObject: {fileID: 7289978634672068955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,23 +32,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2634292315756696683
+--- !u!114 &7289978634026279852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2634292314559981192}
+  m_GameObject: {fileID: 7289978634672068955}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 083b5672df8eb8543974734c2e5a47ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _EnemyObjects:
-  - {fileID: 5938416252446286910, guid: 8ee15a398225dc64aafebcccae609f12, type: 3}
-  - {fileID: 5089265047572772494, guid: baa70f74b5f60314ea5522921c9cab9a, type: 3}
-  - {fileID: 8052048388823854436, guid: 79980408de6a47942af3f56323eadf8a, type: 3}
-  - {fileID: 2796436489418051499, guid: b83c95f48a7a2614981bf53f89c1a41a, type: 3}
+  - 
+  - 
+  - 
+  - 
   _SpawnPos:
   - {fileID: 0}
   - {fileID: 0}
@@ -59,15 +59,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  _Spawn_Delay_Time_Max: 2
+  - {fileID: 0}
+  _Spawn_Delay_Time_Next: 0
   _Spawn_Delay_Time_Cur: 0
   _Player: {fileID: 0}
-  _CanSpawnEnemy: 0
+  _CanSpawnEnemy: 1
+  _gamemode: 0
   _scoreText: {fileID: 0}
   _lifeImage:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  _UltImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _GameOverGroup: {fileID: 0}
   _ChargeAttackBar: {fileID: 0}
-  _maxChargeTime: 0
+  objectManager: {fileID: 0}
+  _spawnIndex: 0
+  enemyname: 

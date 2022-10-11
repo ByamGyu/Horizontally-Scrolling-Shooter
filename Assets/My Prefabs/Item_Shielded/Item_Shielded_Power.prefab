@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1627669084677104147}
   m_Layer: 0
   m_Name: Item_Shielded_Power
-  m_TagString: Untagged
+  m_TagString: Item_Shielded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 3
-  _spawnItem: {fileID: 1342389100369245350, guid: a404b9b38e1a7cd49a100b547457fae7, type: 3}
   _rigid: {fileID: 0}
   _speed: 1
   _score: 50
+  _objectmanager: {fileID: 0}

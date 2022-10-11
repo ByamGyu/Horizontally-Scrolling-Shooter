@@ -367,11 +367,18 @@ public class PlayerController : MonoBehaviour
         if (_GuideAttack_Delay_Cur < _GuideAttack_Delay_Max) return;
 
         // 유도탄 프리팹 스폰하는 방식으로
-        GameObject chasebulletTop = Instantiate(_Bullet6, transform.position + Vector3.up * 0.5f, Quaternion.Euler(new Vector3(0, 0, 90f)));
-        GameObject chasebulletDown = Instantiate(_Bullet6, transform.position + Vector3.down * 0.5f, Quaternion.Euler(new Vector3(0, 0, -90f)));
+        GameObject chasebulletTop = objectmanager.MakeObj("Bullet_Player_Guide");
+        GameObject chasebulletBottom = objectmanager.MakeObj("Bullet_Player_Guide");
+        chasebulletTop.transform.position = transform.position + Vector3.up * 0.5f;
+        chasebulletTop.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90f));
+        chasebulletBottom.transform.position = transform.position + Vector3.down * 0.5f;
+        chasebulletBottom.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90f));
+
+        //GameObject chasebulletTop = Instantiate(_Bullet6, transform.position + Vector3.up * 0.5f, Quaternion.Euler(new Vector3(0, 0, 90f)));
+        //GameObject chasebulletDown = Instantiate(_Bullet6, transform.position + Vector3.down * 0.5f, Quaternion.Euler(new Vector3(0, 0, -90f)));
 
         Rigidbody2D rigidTop = chasebulletTop.GetComponent<Rigidbody2D>();
-        Rigidbody2D rigidBottom = chasebulletDown.GetComponent<Rigidbody2D>();
+        Rigidbody2D rigidBottom = chasebulletBottom.GetComponent<Rigidbody2D>();
 
         rigidTop.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
         rigidBottom.AddForce(Vector2.down * 10, ForceMode2D.Impulse);
@@ -443,13 +450,17 @@ public class PlayerController : MonoBehaviour
                 // Item_Shielded와 충돌하면 Item_Shielded 파괴
                 gameObject.SetActive(false);
             }
+            else if(collision.gameObject.tag == "Item")
+            {
+                collision.gameObject.SetActive(false);
+                return;
+            }
 
             SetLife(-1);
             Dead();
 
             gamemanager.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);
-
         }
     }
 

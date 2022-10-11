@@ -9,13 +9,13 @@ public class Item_Shielded : MonoBehaviour
     [SerializeField]
     public int _life = 3;
     [SerializeField]
-    GameObject _spawnItem;
-    [SerializeField]
     Rigidbody2D _rigid;
     [SerializeField]
     public float _speed = 1.0f;
     [SerializeField]
     public int _score = 50;
+
+    public ObjectManager objectmanager;
     
 
     private void Start()
@@ -37,11 +37,30 @@ public class Item_Shielded : MonoBehaviour
 
             if(_life <= 0)
             {
+                _life = 0;
+
+                ItemspawnAndDestroy();
+            }
+        }
+        if (collision.gameObject.tag == "PlayerBullet_Charged") // 탄환에 맞으면
+        {
+            // 플레이어의 탄환 공격력을 가져와 계산한다.
+            Bullet_Base bulletinfo = collision.gameObject.GetComponent<Bullet_Base>();
+            _life -= bulletinfo._damage;
+
+            collision.gameObject.SetActive(false); ; // 탄환 제거
+
+            if (_life <= 0)
+            {
+                _life = 0;
+
                 ItemspawnAndDestroy();
             }
         }
         else if(collision.gameObject.tag == "Player") // 플레이어 기체와 충돌하면
         {
+            _life = 0;
+
             ItemspawnAndDestroy();
         }
     }
@@ -58,10 +77,35 @@ public class Item_Shielded : MonoBehaviour
         PlayerController playerinfo = _Player.GetComponent<PlayerController>();
         playerinfo.AddScore(_score);
 
-        // 아이템 스폰
-        GameObject SpawnItem = Instantiate(_spawnItem, transform.position, transform.rotation);
+        Debug.Log(this.name);
 
-        // 객체 파괴
+        if(this.name == "Item_Shielded_Life(Clone)")
+        {
+            GameObject SpawnItem = objectmanager.MakeObj("Item_Life");
+            SpawnItem.transform.position = transform.position;
+        }
+        else if(this.name == "Item_Shielded_Power(Clone)")
+        {
+            GameObject SpawnItem = objectmanager.MakeObj("Item_Power");            
+            SpawnItem.transform.position = transform.position;
+            
+        }
+        else if(this.name == "Item_Shielded_Speed(Clone)")
+        {
+            GameObject SpawnItem = objectmanager.MakeObj("Item_Speed");
+            SpawnItem.transform.position = transform.position;
+        }
+        else if(this.name == "Item_Shielded_Ult(Clone)")
+        {
+            GameObject SpawnItem = objectmanager.MakeObj("Item_Ult");
+            SpawnItem.transform.position = transform.position;
+        }
+        else if(this.name == "Item_Shielded_GuidedAttack(Clone)")
+        {
+            GameObject SpawnItem = objectmanager.MakeObj("Item_GuideAttack");
+            SpawnItem.transform.position = transform.position;
+        }
+
         gameObject.SetActive(false);
     }
 }

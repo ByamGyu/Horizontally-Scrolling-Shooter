@@ -121,10 +121,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 3
-  _spawnItem: {fileID: 8436541725060907509, guid: 7350b7a6d9fd15c47b2dd029a8417e09, type: 3}
   _rigid: {fileID: 0}
   _speed: 1
   _score: 50
+  _objectmanager: {fileID: 0}
 --- !u!50 &2419221460058910908
 Rigidbody2D:
   serializedVersion: 4

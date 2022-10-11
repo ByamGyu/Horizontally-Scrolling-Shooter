@@ -10,6 +10,14 @@ public class ObjectManager : MonoBehaviour
     public GameObject Prefab_Enemy_Ring;
     public GameObject Prefab_Enemy_Satellite;
     public GameObject Prefab_Enemy_Starknife;
+    public GameObject Prefab_Enemy_Serpent;
+    public GameObject Prefab_Enemy_Claw;
+
+    public GameObject Prefab_Item_Shileded_Power;
+    public GameObject Prefab_Item_Shileded_Life;
+    public GameObject Prefab_Item_Shileded_Speed;
+    public GameObject Prefab_Item_Shileded_Ult;
+    public GameObject Prefab_Item_Shileded_GuideAttack;
 
     public GameObject Prefab_Item_Power;
     public GameObject Prefab_Item_Life;
@@ -32,8 +40,16 @@ public class ObjectManager : MonoBehaviour
     GameObject[] Enemy_Ring;
     GameObject[] Enemy_Satellite;
     GameObject[] Enemy_Starknife;
+    GameObject[] Enemy_Serpent;
+    GameObject[] Enemy_Claw;
 
     // 아이템 오브젝트(쉴드 상태로)
+    GameObject[] Item_Shielded_Power;
+    GameObject[] Item_Shielded_Life;
+    GameObject[] Item_Shielded_Speed;
+    GameObject[] Item_Shielded_Ult;
+    GameObject[] Item_Shielded_GuideAttack;
+
     GameObject[] Item_Power;
     GameObject[] Item_Life;
     GameObject[] Item_Speed;
@@ -61,6 +77,14 @@ public class ObjectManager : MonoBehaviour
         Enemy_Ring = new GameObject[30];
         Enemy_Satellite = new GameObject[30];
         Enemy_Starknife = new GameObject[30];
+        Enemy_Serpent = new GameObject[2];
+        Enemy_Claw = new GameObject[2];
+
+        Item_Shielded_Power = new GameObject[5];
+        Item_Shielded_Life = new GameObject[5];
+        Item_Shielded_Speed = new GameObject[5];
+        Item_Shielded_Ult = new GameObject[5];
+        Item_Shielded_GuideAttack = new GameObject[5];
 
         Item_Power = new GameObject[5];
         Item_Life = new GameObject[5];
@@ -71,7 +95,7 @@ public class ObjectManager : MonoBehaviour
         Bullet_Player_Default = new GameObject[200];
         Bullet_Player_MaxPower = new GameObject[50];
         Bullet_Player_Charge = new GameObject[10];
-        Bullet_Player_Guide = new GameObject[10];
+        Bullet_Player_Guide = new GameObject[20];
 
         Bullet_Enemy_Blue = new GameObject[100];
         Bullet_Enemy_Green = new GameObject[100];
@@ -114,6 +138,49 @@ public class ObjectManager : MonoBehaviour
         {
             Enemy_Starknife[i] = Instantiate(Prefab_Enemy_Starknife);
             Enemy_Starknife[i].SetActive(false);
+        }
+
+        for (int i = 0; i < Enemy_Serpent.Length; i++)
+        {
+            Enemy_Serpent[i] = Instantiate(Prefab_Enemy_Serpent);
+            Enemy_Serpent[i].SetActive(false);
+        }
+
+        for (int i = 0; i < Enemy_Claw.Length; i++)
+        {
+            Enemy_Claw[i] = Instantiate(Prefab_Enemy_Claw);
+            Enemy_Claw[i].SetActive(false);
+        }
+
+        // Item_Shielded
+        for (int i = 0; i < Item_Shielded_Power.Length; i++)
+        {
+            Item_Shielded_Power[i] = Instantiate(Prefab_Item_Shileded_Power);
+            Item_Shielded_Power[i].SetActive(false);
+        }
+
+        for (int i = 0; i < Item_Shielded_Life.Length; i++)
+        {
+            Item_Shielded_Life[i] = Instantiate(Prefab_Item_Shileded_Life);
+            Item_Shielded_Life[i].SetActive(false);
+        }
+
+        for (int i = 0; i < Item_Shielded_Speed.Length; i++)
+        {
+            Item_Shielded_Speed[i] = Instantiate(Prefab_Item_Shileded_Speed);
+            Item_Shielded_Speed[i].SetActive(false);
+        }
+
+        for (int i = 0; i < Item_Shielded_Ult.Length; i++)
+        {
+            Item_Shielded_Ult[i] = Instantiate(Prefab_Item_Shileded_Ult);
+            Item_Shielded_Ult[i].SetActive(false);
+        }
+
+        for (int i = 0; i < Item_Shielded_GuideAttack.Length; i++)
+        {
+            Item_Shielded_GuideAttack[i] = Instantiate(Prefab_Item_Shileded_GuideAttack);
+            Item_Shielded_GuideAttack[i].SetActive(false);
         }
 
         // Item
@@ -220,6 +287,27 @@ public class ObjectManager : MonoBehaviour
             case "Enemy_Starknife":
                 targetPool = Enemy_Starknife;
                 break;
+            case "Enemy_Serpent":
+                targetPool = Enemy_Serpent;
+                break;
+            case "Enemy_Claw":
+                targetPool = Enemy_Claw;
+                break;
+            case "Item_Shielded_Power":
+                targetPool = Item_Shielded_Power;
+                break;
+            case "Item_Shielded_Life":
+                targetPool = Item_Shielded_Life;
+                break;
+            case "Item_Shielded_Speed":
+                targetPool = Item_Shielded_Speed;
+                break;
+            case "Item_Shielded_Ult":
+                targetPool = Item_Shielded_Ult;
+                break;
+            case "Item_Shielded_GuideAttack":
+                targetPool = Item_Shielded_GuideAttack;
+                break;
             case "Item_Power":
                 targetPool = Item_Power;
                 break;
@@ -262,7 +350,12 @@ public class ObjectManager : MonoBehaviour
             case "Bullet_Enemy_Red":
                 targetPool = Bullet_Enemy_Red;
                 break;
+            default:
+                Debug.Log("ObjectManager.MakeObj's switch-case is wrong");
+                break;
         }
+
+        if (targetPool == null) return null;
 
         for(int i = 0; i < targetPool.Length; i++)
         {

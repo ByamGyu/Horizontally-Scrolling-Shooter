@@ -169,7 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e613a5b96b058f46bc7abd0eb417802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 500
+  _life: 750
+  _maxlife: 750
+  _lifepercent: 1
   _score: 5000
   rotations: 5
   movementRange: 2
@@ -261,6 +263,7 @@ MonoBehaviour:
   _chargeattacktime: 0
   frame: 0
   spriteRenderer: {fileID: 0}
+  _bulletspawner: {fileID: 0}
 --- !u!114 &1429089449298311315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,8 +276,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d84d9a1cf2070b4dbc3efef2e651124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mode: 
   _Player: {fileID: 0}
+  _mainbodyinfo: {fileID: 0}
   _objectmanager: {fileID: 0}
-  _Bullet_Shot_Delay_Cur: 0
-  _Bullet_Shot_Delay_Max: 0
+  _CanFireBigBullet: 0
+  _CanFireMultiRandomshotToPlayer: 0
+  _CanFireArc: 0
+  _CanFireArc2Way: 0
+  _CanFireCircle: 0
+  _Bullet_Shot_Delay_FireBigBullet_Cur: 0
+  _Bullet_Shot_Delay_FireBigBullet_Max: 0
+  _Bullet_Shot_Delay_FireMultiRandomshotToPlayer_Cur: 0
+  _Bullet_Shot_Delay_FireMultiRandomshotToPlayer_Max: 0
+  _Bullet_Shot_Delay_FireArc_Cur: 0
+  _Bullet_Shot_Delay_FireArc_Max: 0
+  _Bullet_Shot_Delay_FireArc2Way_Cur: 0
+  _Bullet_Shot_Delay_FireArc2Way_Max: 0
+  _Bullet_Shot_Delay_FireCircle_Cur: 0
+  _Bullet_Shot_Delay_FireCircle_Max: 0

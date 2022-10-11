@@ -19,7 +19,6 @@ public class Bullet_Chase : Bullet_Base
     private void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
-
         // 처음 발사할 때 특정 방향으로 이동시킴 (PlayerController에서 하는 걸로)
     }
 

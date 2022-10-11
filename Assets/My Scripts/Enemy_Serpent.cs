@@ -15,10 +15,6 @@ public class Enemy_Serpent : MonoBehaviour
     [SerializeField]
     GameObject _player;
 
-    // 효과음 파일
-    [SerializeField]
-    public AudioClip[] _Sounds;
-
 
     // 몸통 설정
     [System.Serializable]
@@ -192,9 +188,12 @@ public class Enemy_Serpent : MonoBehaviour
                         _bodyparts[i].transform.rotation.y,
                         _bodyparts[i].transform.rotation.z
                     ));
+
+                // 몸통 복사본 제거
+                OnDestroy();
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -287,4 +286,8 @@ public class Enemy_Serpent : MonoBehaviour
             if (_bodyParts[i]) _bodyParts[i].SetActive(true);
         }
     }
+
+    void SimpleMoveLeft() { }
+    void SimpleMoveUp() { }
+    void SimpleMoveDown() { }
 }

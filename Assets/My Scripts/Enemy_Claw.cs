@@ -13,9 +13,9 @@ public class Enemy_Claw : MonoBehaviour
 
     // 능력치
     [SerializeField]
-    int _life = 500;
+    int _life = 750;
     [SerializeField]
-    int _maxlife = 500;
+    int _maxlife = 750;
     [SerializeField]
     float _lifepercent = 1f;
     [SerializeField]
@@ -460,7 +460,7 @@ public class Enemy_Claw : MonoBehaviour
             // 죽으면 스테이지 클리어 BGM이 재생 (모드에 따라서 다르게 할 필요 있음)
             SoundManager.instance.PlayBGM("Stage_Clear", 1.0f, false);
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -495,4 +495,8 @@ public class Enemy_Claw : MonoBehaviour
             OnHit(bullet._damage);
         }
     }
+
+    void SimpleMoveLeft() { }
+    void SimpleMoveUp() { }
+    void SimpleMoveDown() { }
 }

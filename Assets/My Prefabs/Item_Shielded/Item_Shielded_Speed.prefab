@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4118842837073403616}
   m_Layer: 0
   m_Name: Item_Shielded_Speed
-  m_TagString: Untagged
+  m_TagString: Item_Shielded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,10 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 3
-  _spawnItem: {fileID: 3253459259573498828, guid: c59bba2d1fad0e54ba54e6bc60f225a5, type: 3}
   _rigid: {fileID: 0}
   _speed: 1
   _score: 50
+  _objectmanager: {fileID: 0}
 --- !u!95 &4118842837073403618
 Animator:
   serializedVersion: 4

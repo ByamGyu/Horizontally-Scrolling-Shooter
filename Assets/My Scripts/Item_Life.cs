@@ -12,11 +12,9 @@ public class Item_Life : Item_Base
             playerinfo.SetLife(1); // 라이프 추가
             playerinfo.AddScore(_score); // 점수 추가
 
-            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.75f);
+            SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.33f);
 
-            // 쉴드 상태가 아닌 아이템은 일단 파괴하는 걸로
-            Destroy(gameObject);
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

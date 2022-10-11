@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class GameManager : MonoBehaviour
     // 오브젝트 매니저(오브젝트 풀)
     public ObjectManager objectManager;
 
+    // 적 기체 txt 파일로 스폰하는데 사용됨
+    public List<Spawn> _spawnList;
+    public int _spawnIndex;
+    public bool _spawnEnd;
+
 
     private void Awake()
     {
@@ -58,12 +64,41 @@ public class GameManager : MonoBehaviour
 
         };
 
+        _spawnList = new List<Spawn>();
+
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this);
         }
         else Destroy(gameObject);
+    }
+
+    void ReadSpawnFile()
+    {
+        // 초기화
+        _spawnList.Clear();
+        _spawnIndex = 0;
+        _spawnEnd = false;
+
+        // 스폰 txt파일 읽기 (7:45)
+        TextAsset textFile = Resources.Load("") as TextAsset;
+        StringReader stringReader = new StringReader(textFile.text);
+
+        while(stringReader != null)
+        {
+            string line = stringReader.ReadLine();
+            if (line == null) break;
+
+            // 파일에서 한 줄씩 읽는다.
+            Spawn spawnData = new Spawn();
+            spawnData.delay = float.Parse(line.Split(',')[0]); // Parse는 형변환과 비슷
+            spawnData.type = line.Split(',')[1];
+            spawnData.point = int.Parse(line.Split(',')[2]);
+            _spawnList.Add(spawnData);
+        }
+
+        stringReader.Close(); // 파일을 다 읽었으면 꼭 닫아줘야한다.
     }
 
     private void FixedUpdate()

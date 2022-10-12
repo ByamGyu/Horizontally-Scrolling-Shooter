@@ -205,6 +205,7 @@ public class GameManager : MonoBehaviour
         int randomEnemy = Random.Range(0, 4); // 적 기체 4가지
         int randomPos = Random.Range(0, 9); // 스폰 위치 8가지
 
+        // 오른쪽에서 시작
         if (randomPos == 0 || randomPos == 1 || randomPos == 2 || randomPos == 3 || randomPos == 4)
         {
             GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
@@ -214,7 +215,24 @@ public class GameManager : MonoBehaviour
 
             Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
             enemyInfo.objectmanager = objectManager;
-            enemyInfo.SimpleMoveLeft();
+
+            if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+            {
+                Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                cone.SimpleMoveLeft();
+            }
+            else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+            {
+                Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                ring._CanMoveSin = true;
+                ring._CanMoveCos = true;
+                ring._CanMoveLeft = true;
+            }
+            else if(_EnemyObjects[randomEnemy] == "Enemy_Satelite")
+            {
+                Enemy_Satelite satelite = enemy.GetComponent<Enemy_Satelite>();
+                satelite.SimpleMoveLeft();
+            }
         }
         else if (randomPos == 5 || randomPos == 6) // 아래 오른쪽, 아래 왼쪽
         {
@@ -226,7 +244,19 @@ public class GameManager : MonoBehaviour
 
                 Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
                 enemyInfo.objectmanager = objectManager;
-                enemyInfo.SimpleMoveUp();
+
+
+                if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+                {
+                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                    cone.SimpleMoveUp();
+                }
+                else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+                {
+                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                    ring._CanMoveCos = true;
+                    ring._CanMoveUp = true;
+                }
             }
         }
         else if (randomPos == 7 || randomPos == 8) // 위 오른쪽, 위 왼쪽
@@ -239,7 +269,19 @@ public class GameManager : MonoBehaviour
 
                 Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
                 enemyInfo.objectmanager = objectManager;
-                enemyInfo.SimpleMoveDown();
+
+
+                if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+                {
+                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                    cone.SimpleMoveDown();
+                }
+                else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+                {
+                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                    ring._CanMoveCos = true;
+                    ring._CanMoveDown = true;
+                }
             }
         }
     }
@@ -320,9 +362,53 @@ public class GameManager : MonoBehaviour
             Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
             enemyInfo.objectmanager = objectManager;
 
-            if(_spawnList[_spawnIndex].type == "Enemy_Cone")
+            // 오른쪽에서 출현
+            if(enemyPoint >= 0 && enemyPoint <= 4)
             {
-                
+                if(_spawnList[_spawnIndex].type == "Enemy_Cone")
+                {
+                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                    cone.SimpleMoveLeft();
+                }
+                else if(_spawnList[_spawnIndex].type == "Enemy_Ring")
+                {
+                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                    ring._CanMoveSin = true;
+                    ring._CanMoveCos = true;
+                    ring._CanMoveLeft = true;
+                }
+            }
+
+            // 아래에서 출현
+            if(enemyPoint == 5 || enemyPoint == 6)
+            {
+                if (_spawnList[_spawnIndex].type == "Enemy_Cone")
+                {
+                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                    cone.SimpleMoveUp();
+                }
+                else if (_spawnList[_spawnIndex].type == "Enemy_Ring")
+                {
+                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                    ring._CanMoveCos = true;
+                    ring._CanMoveUp = true;
+                }
+            }
+
+            // 위에서 시작
+            if (enemyPoint == 7 || enemyPoint == 8)
+            {
+                if (_spawnList[_spawnIndex].type == "Enemy_Cone")
+                {
+                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                    cone.SimpleMoveDown();
+                }
+                else if (_spawnList[_spawnIndex].type == "Enemy_Ring")
+                {
+                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                    ring._CanMoveCos = true;
+                    ring._CanMoveDown = true;
+                }
             }
         }
         else if(

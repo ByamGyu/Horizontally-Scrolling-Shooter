@@ -1,4 +1,9 @@
+1,Enemy_Cone,0
+1,Enemy_Cone,1
 1,Enemy_Cone,2
-1,Enemy_Ring,3
-1,Enemy_Satellite,4
-1,Enemy_Starknife,5
+1,Enemy_Cone,3
+1,Enemy_Cone,4
+1,Enemy_Cone,5
+1,Enemy_Cone,6
+1,Enemy_Cone,7
+1,Enemy_Cone,8

@@ -1273,3 +1273,73 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 192.680357 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno
+  artifactKey: Guid(f3668206d09d546979b0a61db38b78f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno using Guid(f3668206d09d546979b0a61db38b78f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec55fc24dbd2a670fdda310dd5390a1') in 0.009985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.042981 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_bottom_end_left.png
+  artifactKey: Guid(fbc00311ec75246c2a588d73d55c876e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_bottom_end_left.png using Guid(fbc00311ec75246c2a588d73d55c876e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e8efb6bc47bdd10a94dd15fe8c836c') in 0.071199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_tile.png
+  artifactKey: Guid(7a36295f4a0a348ee85fe15b4e5f43f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_tile.png using Guid(7a36295f4a0a348ee85fe15b4e5f43f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8eb38db2667860fea5d4e253fa0b636') in 0.015590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_tile2.png
+  artifactKey: Guid(d00222258312c4f748aedb3621fe38f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_tile2.png using Guid(d00222258312c4f748aedb3621fe38f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f52ba32eac72ed42353e5a8b0e6dae8f') in 0.013958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_single.png
+  artifactKey: Guid(3d1b2a8fb2a9143caaffb5bea2f23c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_single.png using Guid(3d1b2a8fb2a9143caaffb5bea2f23c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd045cb6ac640b8b37ddcc4850480df47') in 0.013629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_end_right.png
+  artifactKey: Guid(31d72edf6dffa411ea26ba51d7cebdd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/fore_top_end_right.png using Guid(31d72edf6dffa411ea26ba51d7cebdd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '202e09b6928419e092dcca0404b479a3') in 0.013591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/metal wall.png
+  artifactKey: Guid(7d67c6d216ad343a6a0bfcfc181e19eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Techno/metal wall.png using Guid(7d67c6d216ad343a6a0bfcfc181e19eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fb8f4731ae23f54ab8fa30a76e2440b') in 0.032060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.968249 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Rocky/back_rocks03.png
+  artifactKey: Guid(3da4ba0dcbd374bf8844f9ce7be8b26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Rocky/back_rocks03.png using Guid(3da4ba0dcbd374bf8844f9ce7be8b26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad47b229c021ddbbab64b50a985b9ccc') in 0.029540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.656599 seconds.
+  path: Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Crystal/fore_bottom_end_right.png
+  artifactKey: Guid(c9d56ce2e3d364c1da7c0385665909fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/(Playniax)Shooting Art Resources/Space Shooter Art Pack 01/Textures/Background/Crystal/fore_bottom_end_right.png using Guid(c9d56ce2e3d364c1da7c0385665909fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fca5257af26c034477a3c3ab02a4742') in 0.015079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.926795 seconds.
+  path: Assets/My Resources/Background/Techno/fore_bottom_single.png
+  artifactKey: Guid(f845f05196ef47b40bb1b4fa0c83e357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Techno/fore_bottom_single.png using Guid(f845f05196ef47b40bb1b4fa0c83e357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d9b69d542d0548c98a09e557638faf') in 0.013018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/My Resources/Background/Techno/planet.png
+  artifactKey: Guid(ad3c6eafc87b5ee4c83482087e5f37f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Techno/planet.png using Guid(ad3c6eafc87b5ee4c83482087e5f37f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a7e51d66f5a7b3ac674798da65bd6a') in 0.024448 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

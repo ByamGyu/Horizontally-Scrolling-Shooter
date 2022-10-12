@@ -1,0 +1,259 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.8f1 (b30333d56e81) revision 11731763'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ko' Physical Memory: 65450 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+G:\Unity Editor\2021.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker9
+-projectPath
+G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
+-logFile
+Logs/AssetImportWorker9.log
+-srvPort
+2868
+Successfully changed project path to: G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
+G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 119.69 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.8f1 (b30333d56e81)
+[Subsystems] Discovering subsystems at path G:/Unity Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/Git_Horizontally Scrolling Shooter Repository/Horizontally-Scrolling-Shooter/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6600 XT (ID=0x73ff)
+    Vendor:   ATI
+    VRAM:     8147 MB
+    Driver:   30.0.15021.11005
+Initialize mono
+Mono path[0] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'G:/Unity Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: G:/Unity Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003135 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 102.54 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.522 seconds
+Domain Reload Profiling:
+	ReloadAssembly (523ms)
+		BeginReloadAssembly (71ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (381ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (72ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (252ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (45ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (103ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (71ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009705 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image G:\Git_Horizontally Scrolling Shooter Repository\Horizontally-Scrolling-Shooter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 103.88 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  1.231 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1232ms)
+		BeginReloadAssembly (199ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (119ms)
+		EndReloadAssembly (952ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (196ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (588ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (104ms)
+				BeforeProcessingInitializeOnLoad (107ms)
+				ProcessInitializeOnLoadAttributes (249ms)
+				ProcessInitializeOnLoadMethodAttributes (110ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.33 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6283 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (0.7 MB). Loaded Objects now: 6718.
+Memory consumption went from 250.0 MB to 249.3 MB.
+Total: 6.438600 ms (FindLiveObjects: 0.414100 ms CreateObjectMapping: 0.143300 ms MarkObjects: 5.612600 ms  DeleteObjects: 0.268000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 97245.353152 seconds.
+  path: Assets/My Resources/Background/Techno/fore_bottom_tile2.png
+  artifactKey: Guid(929b5bedf10a0b94fbac1a21f68b0dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Techno/fore_bottom_tile2.png using Guid(929b5bedf10a0b94fbac1a21f68b0dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3631508e1246e3383d55865752c526b9') in 0.115571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 286.131460 seconds.
+  path: Assets/My Resources/Background/Rocky/back_rocks04.png
+  artifactKey: Guid(255e2dab5f0d63b44a5c40a2f90b8925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/back_rocks04.png using Guid(255e2dab5f0d63b44a5c40a2f90b8925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c58814b2d021d356786d4bd3a73dfb') in 0.034102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010875 seconds.
+  path: Assets/My Resources/Background/Rocky/fore_bot_end_left.png
+  artifactKey: Guid(8a48574041ec44f41b821f0a3d9837ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/fore_bot_end_left.png using Guid(8a48574041ec44f41b821f0a3d9837ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26c39428db7c6647bde3376eb3af5d42') in 0.011229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/My Resources/Background/Rocky/planet.png
+  artifactKey: Guid(f3553c406a84ef4409e4787a2b0506aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/planet.png using Guid(f3553c406a84ef4409e4787a2b0506aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57efab5ac1da7e6e5c0305237d0e195b') in 0.029015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/My Resources/Background/Rocky/fore_top_end_right.png
+  artifactKey: Guid(8453fe3c80e15744ab07e7c262f65160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/fore_top_end_right.png using Guid(8453fe3c80e15744ab07e7c262f65160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c37a768edd6608532a7bd51c25e7c2d') in 0.010443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/My Resources/Background/Rocky/fore_bot_end_right.png
+  artifactKey: Guid(047565a6a9bb9bc45874ff353841cfea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/fore_bot_end_right.png using Guid(047565a6a9bb9bc45874ff353841cfea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0952c3314ab0400af4a38225a92ab311') in 0.010937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/My Resources/Background/Rocky/fore_bot_main01.png
+  artifactKey: Guid(58a4115b40e1bab42bf7ecc28404c84a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/fore_bot_main01.png using Guid(58a4115b40e1bab42bf7ecc28404c84a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb792679f6e66977fc5a2639470f2dcf') in 0.011955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.421144 seconds.
+  path: Assets/My Resources/Background/Rocky/back_rocks02.png
+  artifactKey: Guid(68997e6ede8e43b4faa7ec53bce4cdba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Rocky/back_rocks02.png using Guid(68997e6ede8e43b4faa7ec53bce4cdba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c10e161843076751b51b9553da33fd8a') in 0.021645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.640799 seconds.
+  path: Assets/My Resources/Background/Crystal/fore_bottom_end_left.png
+  artifactKey: Guid(d9b8c2d19782985489f2edf3d2fc915b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Crystal/fore_bottom_end_left.png using Guid(d9b8c2d19782985489f2edf3d2fc915b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d627dabc3d949f1b570c5d7e07cc42') in 0.011343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/My Resources/Background/Crystal/fore_bottom_end_right.png
+  artifactKey: Guid(0cc4b4080c05ea44fb63b6b60f6e9e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Crystal/fore_bottom_end_right.png using Guid(0cc4b4080c05ea44fb63b6b60f6e9e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55c3c22953605dcc0f292d6b88f4487f') in 0.011105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/My Resources/Background/Crystal/fore_top_tile.png
+  artifactKey: Guid(e6dd0cdd18dd3214eb40e1753bb67f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Crystal/fore_top_tile.png using Guid(e6dd0cdd18dd3214eb40e1753bb67f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfeb6355b2b0f5aed13f34e22dbcfa04') in 0.010929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/My Resources/Background/Crystal/fore_top_end_right.png
+  artifactKey: Guid(2f5bbb6aeae277e4c8e985862155e05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Crystal/fore_top_end_right.png using Guid(2f5bbb6aeae277e4c8e985862155e05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f072a222f7d2fcb9e88dea15160759') in 0.011866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/My Resources/Background/Crystal/fore_bottom_single.png
+  artifactKey: Guid(63cf3f7076ea5d6499921fe2f03a1c9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Crystal/fore_bottom_single.png using Guid(63cf3f7076ea5d6499921fe2f03a1c9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d63b6e16d0684523557132473c8b0a') in 0.011597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/My Resources/Background/Crystal/fore_bottom_tile.png
+  artifactKey: Guid(e955031734aca4143b71b0e6721d8bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Resources/Background/Crystal/fore_bottom_tile.png using Guid(e955031734aca4143b71b0e6721d8bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efa890eae80f51ec6e9dfc4d2c23a53') in 0.010959 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

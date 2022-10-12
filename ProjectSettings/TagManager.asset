@@ -16,6 +16,7 @@ TagManager:
   - Invincible
   - ObjectManager
   - GameManager
+  - Background
   layers:
   - Default
   - TransparentFX

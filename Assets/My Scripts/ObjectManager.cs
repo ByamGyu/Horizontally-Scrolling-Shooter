@@ -36,6 +36,9 @@ public class ObjectManager : MonoBehaviour
     public GameObject Prefab_Bullet_Enemy_Red;
     public GameObject Prefab_Bullet_Enemy_Red_Big;
 
+    // 워프(포탈) 프리팹
+    public GameObject Prefab_Warp;
+
     GameObject[] Enemy_Cone;
     GameObject[] Enemy_Ring;
     GameObject[] Enemy_Satellite;
@@ -66,6 +69,9 @@ public class ObjectManager : MonoBehaviour
     GameObject[] Bullet_Enemy_Orange;
     GameObject[] Bullet_Enemy_Red;
     GameObject[] Bullet_Enemy_Red_Big;
+
+    // 워프(포탈)
+    GameObject[] Warp;
 
     // 풀에서 꺼내는데 사용되는 배열
     GameObject[] targetPool;
@@ -102,6 +108,8 @@ public class ObjectManager : MonoBehaviour
         Bullet_Enemy_Orange = new GameObject[100];
         Bullet_Enemy_Red = new GameObject[300];
         Bullet_Enemy_Red_Big = new GameObject[100];
+
+        Warp = new GameObject[1];
 
         Generate();
 
@@ -269,6 +277,12 @@ public class ObjectManager : MonoBehaviour
             Bullet_Enemy_Red_Big[i] = Instantiate(Prefab_Bullet_Enemy_Red_Big);
             Bullet_Enemy_Red_Big[i].SetActive(false);
         }
+
+        for(int i = 0; i < Warp.Length; i++)
+        {
+            Warp[i] = Instantiate(Prefab_Warp);
+            Warp[i].SetActive(false);
+        }
     }
     
     public GameObject MakeObj(string name)
@@ -349,6 +363,9 @@ public class ObjectManager : MonoBehaviour
                 break;
             case "Bullet_Enemy_Red":
                 targetPool = Bullet_Enemy_Red;
+                break;
+            case "Warp":
+                targetPool = Warp;
                 break;
             default:
                 Debug.Log("ObjectManager.MakeObj's switch-case is wrong");

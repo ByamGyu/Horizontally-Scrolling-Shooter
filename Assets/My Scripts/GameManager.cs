@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     // 게임모드 설정
     [SerializeField]
-    Define.GameMode _gamemode = Define.GameMode.Campaign;
+    public Define.GameMode _gamemode = Define.GameMode.Campaign;
 
     // UI
     [SerializeReference]
@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
             "Item_Shielded_Speed", //8
             "Item_Shielded_Ult", //9
             "Item_Shielded_GuideAttack", //10
+            "Warp", // 11
         };
 
         _spawnList = new List<Spawn>();
@@ -224,18 +225,25 @@ public class GameManager : MonoBehaviour
             case "Item_Shielded_GuideAttack":
                 enemyIndex = 10;
                 break;
+            case "Warp":
+                enemyIndex = 11;
+                break;
             default:
                 Debug.Log("swtich-case is wrong");
                 break;
         }
 
-        // 16:41 // 스폰 위치 (0 ~ 8) 8가지
+        // 16:41 // 스폰 위치 (0 ~ 9) 9가지 (0부터 시작하니 -1 잊지말자)
         int enemyPoint = _spawnList[_spawnIndex].point;
+        Debug.Log("Spawn Pos: " + enemyPoint);
 
+        // 해당 오브젝트 스폰
         GameObject enemy = objectManager.MakeObj(_EnemyObjects[enemyIndex]);
+        // 스폰한 오브젝트 위치 설정
         enemy.transform.position = _SpawnPos[enemyPoint].position;
 
-        // 몬스터 종류별로 회전값
+
+        // 몬스터 종류별로 회전값 및 오브젝트 매니저 전달
         if(_spawnList[_spawnIndex].type == "Enemy_Claw" || _spawnList[_spawnIndex].type == "Enemy_Serpent")
         {
             // 없음
@@ -262,6 +270,11 @@ public class GameManager : MonoBehaviour
         {
             Item_Shielded enemyInfo = enemy.GetComponent<Item_Shielded>();
             enemyInfo.objectmanager = objectManager;
+        }
+        else if(_spawnList[_spawnIndex].type == "Warp")
+        {
+            Warp enemyInfo = enemy.GetComponent<Warp>();
+            enemyInfo.objectManager = objectManager;
         }
 
         

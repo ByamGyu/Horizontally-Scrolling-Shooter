@@ -27,6 +27,8 @@ public class Enemy_Claw : MonoBehaviour
     public int punchingRange = 17;
     public float punchingPower = 15;
 
+    // 애니메이션 스프라이트
+    public Animation sleep;
     public Animation idle;
     public Animation clench;
     public Animation attack;
@@ -36,6 +38,8 @@ public class Enemy_Claw : MonoBehaviour
 
     [SerializeField]
     GameObject _Player = null;
+    [SerializeField]
+    GameManager _gm;
 
     // 돌진 공격 관련
     bool _SE_Punch = false;
@@ -57,6 +61,11 @@ public class Enemy_Claw : MonoBehaviour
     float _chargeattacktime = 0;
     bool _chargeattackeffecton = false;
 
+    // sleep 상태 관련
+    int repeattime = 2;
+    int currepeat = 0;
+
+
     public int frame;
 
     public SpriteRenderer spriteRenderer;
@@ -74,8 +83,8 @@ public class Enemy_Claw : MonoBehaviour
 
     void Start()
     {
-        // 시작하면서 전용 BGM 재생
-        SoundManager.instance.PlayBGM("Stage_01_Boss", 0.33f);
+        GameObject tmp = GameObject.FindGameObjectWithTag("GameManager");
+        _gm = tmp.GetComponent<GameManager>();
 
         _life = _maxlife;
 
@@ -86,6 +95,38 @@ public class Enemy_Claw : MonoBehaviour
     {
         _Player = GameObject.FindGameObjectWithTag("Player");
         _lifepercent = (float)_life / (float)_maxlife;
+        
+
+        if(_state == -1) // sleep(등장) 상태
+        {
+            spriteRenderer.sprite = sleep.sprites[frame];
+
+            _frameTime += Time.deltaTime;
+
+            if (_frameTime >= sleep.frameTime)
+            {
+                _frameTime = 0;
+
+                frame += 1;
+
+                if (frame >= sleep.sprites.Length - 1)
+                {
+                    if(currepeat >= repeattime)
+                    {
+                        frame = 0;
+                        _state = 4; // 펴지기 상태로 변경
+
+                        // 브금 재생
+                        SoundManager.instance.PlayBGM("Stage_01_Boss", 0.33f);
+                    }
+                    else
+                    {
+                        currepeat++;
+                        frame = 0;
+                    }
+                }
+            }
+        }
 
         if (_state == 0) // Idle 상태
         {
@@ -452,15 +493,25 @@ public class Enemy_Claw : MonoBehaviour
             PlayerController playerinfo = _Player.GetComponent<PlayerController>();
             playerinfo.AddScore(_score);
 
-            SoundManager.instance.PlaySoundEffectOneShot("Boss01_Death", 1.50f);
+            SoundManager.instance.PlaySoundEffectOneShot("Boss01_Death", 1.0f);
             SoundManager.instance.PlaySoundEffectOneShot("Boss_Defeat", 1.0f);
             EffectManager.instance.SpawnEffect("Effect_Explosion_Cyberspark", transform.position, Vector3.zero, new Vector3(5.0f, 5.0f, 5.0f));
             EffectManager.instance.SpawnEffect("Effect_Explosion_Redspark", transform.position, Vector3.zero, new Vector3(5.0f, 5.0f, 5.0f));
 
             // 죽으면 스테이지 클리어 BGM이 재생 (모드에 따라서 다르게 할 필요 있음)
-            SoundManager.instance.PlayBGM("Stage_Clear", 1.0f, false);
+            if(_gm == null || _gm._gamemode == Define.GameMode.Campaign)
+            {
+                SoundManager.instance.PlayBGM("Stage_Clear", 0.75f, false);
 
-            gameObject.SetActive(false);
+                gameObject.SetActive(false);
+            }
+            else if(_gm._gamemode == Define.GameMode.Infinite)
+            {
+                SoundManager.instance.PlayBGM("Stage_01_2", 0.75f, true);
+
+                gameObject.SetActive(false);
+            }
+            
         }
     }
 

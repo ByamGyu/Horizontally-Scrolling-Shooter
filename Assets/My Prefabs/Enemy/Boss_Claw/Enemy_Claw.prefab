@@ -178,6 +178,22 @@ MonoBehaviour:
   movementSpeed: 1
   punchingRange: 17
   punchingPower: 15
+  sleep:
+    sprites:
+    - {fileID: 21300000, guid: 5a46fe23d9adfec45b416241a6ff529e, type: 3}
+    - {fileID: 21300000, guid: 199b0c6f05ac77b428d0a2e086803199, type: 3}
+    - {fileID: 21300000, guid: ceaae163c13631c4fba189e5cb18d8d8, type: 3}
+    - {fileID: 21300000, guid: 8fbfdebdbf0926846ae340846580c6ec, type: 3}
+    - {fileID: 21300000, guid: 46bc3498f2d64bc47ba7984da5bbf166, type: 3}
+    - {fileID: 21300000, guid: d6a00e41bc82ee946a07259e9e726516, type: 3}
+    - {fileID: 21300000, guid: ee6e275d3c56e34499e7f76b304fe285, type: 3}
+    - {fileID: 21300000, guid: da2c18fe7f78f8d4fbcecf80059647e3, type: 3}
+    - {fileID: 21300000, guid: 22ae3bf2a392f634687c16ffe9a3d08a, type: 3}
+    - {fileID: 21300000, guid: 850e09fcdd6a80c4cbb0d8ee3ca47088, type: 3}
+    - {fileID: 21300000, guid: e26f700010ea251439f5f59c15425b56, type: 3}
+    - {fileID: 21300000, guid: 9a6fe20653702694eb297e134c114b33, type: 3}
+    - {fileID: 21300000, guid: f52e37b35a3df014f87197c1eeac63a2, type: 3}
+    frameTime: 0.1
   idle:
     sprites:
     - {fileID: 21300000, guid: 1477a62faac674d48ad76232f8df923c, type: 3}
@@ -258,7 +274,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 2a9185175ba9dad48ae4a2b6acfcdd86, type: 3}
     frameTime: 0.125
   _Player: {fileID: 0}
-  _state: 5
+  _state: -1
   _chargetime: 0
   _chargeattacktime: 0
   frame: 0

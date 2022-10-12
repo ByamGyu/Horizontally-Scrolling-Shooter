@@ -1078,6 +1078,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 417641450}
     - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: _gamemode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _scoreText
       value: 
       objectReference: {fileID: 7036525957537035887}
@@ -1087,7 +1091,7 @@ PrefabInstance:
       objectReference: {fileID: 968330281}
     - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _CanSpawnEnemy
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _GameOverGroup
@@ -1209,6 +1213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7289978634672068955, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: m_TagString
+      value: GameManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
 --- !u!1001 &8885209023928832458
@@ -1266,5 +1274,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8885209024625647075, guid: e9f28a4ddc1113d439ee33f19b36920b, type: 3}
+      propertyPath: Prefab_Warp
+      value: 
+      objectReference: {fileID: 527464165522272652, guid: edeb3e04b84435c4c893afcf0bfe1f53, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f28a4ddc1113d439ee33f19b36920b, type: 3}

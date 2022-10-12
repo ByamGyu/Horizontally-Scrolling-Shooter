@@ -36,6 +36,14 @@ public class ObjectManager : MonoBehaviour
     public GameObject Prefab_Bullet_Enemy_Red;
     public GameObject Prefab_Bullet_Enemy_Red_Big;
 
+    public GameObject Prefab_Obstacle_Bottom1;
+    public GameObject Prefab_Obstacle_Bottom2;
+    public GameObject Prefab_Obstacle_Bottom_Tile;
+    public GameObject Prefab_Obstacle_Top1;
+    public GameObject Prefab_Obstacle_Top2;
+    public GameObject Prefab_Obstacle_Top_Tile;
+    public GameObject Prefab_Obstacle_Metal_Wall;
+
     // ¿öÇÁ(Æ÷Å») ÇÁ¸®ÆÕ
     public GameObject Prefab_Warp;
 
@@ -69,6 +77,14 @@ public class ObjectManager : MonoBehaviour
     GameObject[] Bullet_Enemy_Orange;
     GameObject[] Bullet_Enemy_Red;
     GameObject[] Bullet_Enemy_Red_Big;
+
+    GameObject[] Obstacle_Bottom1;
+    GameObject[] Obstacle_Bottom2;
+    GameObject[] Obstacle_Bottom_Tile;
+    GameObject[] Obstacle_Top1;
+    GameObject[] Obstacle_Top2;
+    GameObject[] Obstacle_Top_Tile;
+    GameObject[] Obstacle_Metal_Wall;
 
     // ¿öÇÁ(Æ÷Å»)
     GameObject[] Warp;
@@ -108,6 +124,14 @@ public class ObjectManager : MonoBehaviour
         Bullet_Enemy_Orange = new GameObject[100];
         Bullet_Enemy_Red = new GameObject[300];
         Bullet_Enemy_Red_Big = new GameObject[100];
+
+        Obstacle_Bottom1 = new GameObject[10];
+        Obstacle_Bottom2 = new GameObject[10];
+        Obstacle_Bottom_Tile = new GameObject[10];
+        Obstacle_Top1 = new GameObject[10];
+        Obstacle_Top2 = new GameObject[10];
+        Obstacle_Top_Tile = new GameObject[10];
+        Obstacle_Metal_Wall = new GameObject[10];
 
         Warp = new GameObject[1];
 
@@ -278,7 +302,45 @@ public class ObjectManager : MonoBehaviour
             Bullet_Enemy_Red_Big[i].SetActive(false);
         }
 
-        for(int i = 0; i < Warp.Length; i++)
+        // Àå¾Ö¹°
+        for(int i = 0; i < Obstacle_Bottom1.Length; i++)
+        {
+            Obstacle_Bottom1[i] = Instantiate(Prefab_Obstacle_Bottom1);
+            Obstacle_Bottom1[i].SetActive(false);
+        }
+        for (int i = 0; i < Obstacle_Bottom2.Length; i++)
+        {
+            Obstacle_Bottom2[i] = Instantiate(Prefab_Obstacle_Bottom2);
+            Obstacle_Bottom2[i].SetActive(false);
+        }
+        for (int i = 0; i < Obstacle_Bottom_Tile.Length; i++)
+        {
+            Obstacle_Bottom_Tile[i] = Instantiate(Prefab_Obstacle_Bottom_Tile);
+            Obstacle_Bottom_Tile[i].SetActive(false);
+        }
+        for (int i = 0; i < Obstacle_Top1.Length; i++)
+        {
+            Obstacle_Top1[i] = Instantiate(Prefab_Obstacle_Top1);
+            Obstacle_Top1[i].SetActive(false);
+        }
+        for (int i = 0; i < Obstacle_Top2.Length; i++)
+        {
+            Obstacle_Top2[i] = Instantiate(Prefab_Obstacle_Top2);
+            Obstacle_Top2[i].SetActive(false);
+        }
+        for (int i = 0; i < Obstacle_Top_Tile.Length; i++)
+        {
+            Obstacle_Top_Tile[i] = Instantiate(Prefab_Obstacle_Top_Tile);
+            Obstacle_Top_Tile[i].SetActive(false);
+        }
+        for (int i = 0; i < Obstacle_Metal_Wall.Length; i++)
+        {
+            Obstacle_Metal_Wall[i] = Instantiate(Prefab_Obstacle_Metal_Wall);
+            Obstacle_Metal_Wall[i].SetActive(false);
+        }
+
+        // Warp
+        for (int i = 0; i < Warp.Length; i++)
         {
             Warp[i] = Instantiate(Prefab_Warp);
             Warp[i].SetActive(false);
@@ -366,6 +428,27 @@ public class ObjectManager : MonoBehaviour
                 break;
             case "Warp":
                 targetPool = Warp;
+                break;
+            case "Obstacle_Bottom1":
+                targetPool = Obstacle_Bottom1;
+                break;
+            case "Obstacle_Bottom2":
+                targetPool = Obstacle_Bottom2;
+                break;
+            case "Obstacle_Bottom_Tile":
+                targetPool = Obstacle_Bottom_Tile;
+                break;
+            case "Obstacle_Top1":
+                targetPool = Obstacle_Top1;
+                break;
+            case "Obstacle_Top2":
+                targetPool = Obstacle_Top2;
+                break;
+            case "Obstacle_Top_Tile":
+                targetPool = Obstacle_Top_Tile;
+                break;
+            case "Obstacle_Metal_Wall":
+                targetPool = Obstacle_Metal_Wall;
                 break;
             default:
                 Debug.Log("ObjectManager.MakeObj's switch-case is wrong");

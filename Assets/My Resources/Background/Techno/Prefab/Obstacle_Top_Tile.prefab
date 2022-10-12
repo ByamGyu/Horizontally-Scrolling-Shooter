@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2609360754569684370}
   - component: {fileID: 2609360754569684369}
-  - component: {fileID: 2609360754569684380}
   - component: {fileID: 2609360754569684371}
   m_Layer: 0
   m_Name: fore_top_tile2
@@ -86,27 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2609360754569684380
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2609360754569684368}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &2609360754569684371
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +143,7 @@ GameObject:
   - component: {fileID: 2609360754596393558}
   - component: {fileID: 2609360754596393557}
   m_Layer: 0
-  m_Name: fore_top_tile
+  m_Name: Obstacle_Top_Tile
   m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,8 +157,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2609360754596393578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15, y: 3.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2609360754569684370}
@@ -323,7 +301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2609360755108585921}
   - component: {fileID: 2609360755108585932}
-  - component: {fileID: 2609360755108585923}
   - component: {fileID: 2609360755108585922}
   m_Layer: 0
   m_Name: fore_top_end_left
@@ -399,27 +376,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2609360755108585923
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2609360755108585920}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &2609360755108585922
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -467,7 +423,6 @@ GameObject:
   - component: {fileID: 780391813858298422}
   - component: {fileID: 8793726558133321124}
   - component: {fileID: 837650224629756175}
-  - component: {fileID: 4834539692056146087}
   m_Layer: 0
   m_Name: fore_top_end_right
   m_TagString: Untagged
@@ -581,24 +536,3 @@ PolygonCollider2D:
       - {x: -0.38, y: 0.14999999}
       - {x: -0.34, y: 0.19999999}
       - {x: -0.19, y: 0.19999999}
---- !u!50 &4834539692056146087
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8744349763020715908}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

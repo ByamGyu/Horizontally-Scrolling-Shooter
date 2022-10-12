@@ -1,0 +1,7 @@
+2,Obstacle_Bottom1, 5
+2,Obstacle_Top1, 1
+2,Obstacle_Bottom2, 5
+2,Obstacle_Top2, 1
+2,Obstacle_Bottom_Tile, 5
+2,Obstacle_Top_Tile, 1
+2,Obstacle_Metal_Wall,9

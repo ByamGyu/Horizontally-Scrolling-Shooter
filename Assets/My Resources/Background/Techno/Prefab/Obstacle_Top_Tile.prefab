@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 2609360754596393579}
   - component: {fileID: 2609360754596393558}
   - component: {fileID: 2609360754596393557}
+  - component: {fileID: 8819182032141831235}
   m_Layer: 0
   m_Name: Obstacle_Top_Tile
   m_TagString: Background
@@ -291,6 +292,18 @@ PolygonCollider2D:
       - {x: 0.84, y: -0.38}
       - {x: 0.89, y: -0.29}
       - {x: 0.96999997, y: -0.29}
+--- !u!114 &8819182032141831235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609360754596393578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd4354584721a14c9a4cbfde9c9c7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2609360755108585920
 GameObject:
   m_ObjectHideFlags: 0

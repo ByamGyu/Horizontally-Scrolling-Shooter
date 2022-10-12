@@ -94,10 +94,6 @@ public class Enemy_Base : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
-            // !!!!!플레이어가 먼저 사라지면서 null뜸
-            //PlayerController playerinfo = _Player.GetComponent<PlayerController>();
-            //playerinfo.AddScore(_score);
-
             gameObject.SetActive(false);
         }
     }

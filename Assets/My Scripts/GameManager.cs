@@ -294,7 +294,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        // 16:41 // 스폰 위치 (0 ~ 9) 9가지 (0부터 시작하니 -1 잊지말자)
+        // 스폰 위치 (0 ~ 9) 9가지 (0부터 시작하니 -1 잊지말자)
         int enemyPoint = _spawnList[_spawnIndex].point;
 
         // 해당 오브젝트 스폰
@@ -319,6 +319,11 @@ public class GameManager : MonoBehaviour
 
             Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
             enemyInfo.objectmanager = objectManager;
+
+            if(_spawnList[_spawnIndex].type == "Enemy_Cone")
+            {
+                
+            }
         }
         else if(
             _spawnList[_spawnIndex].type == "Item_Shielded_Power" ||

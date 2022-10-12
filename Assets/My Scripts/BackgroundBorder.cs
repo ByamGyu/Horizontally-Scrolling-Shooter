@@ -10,9 +10,5 @@ public class BackgroundBorder : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
         }
-        if(collision.gameObject.tag == "EnemyBullet")
-        {
-            collision.gameObject.SetActive(false);
-        }
     }
 }

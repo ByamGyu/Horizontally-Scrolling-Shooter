@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8894574539338119026}
   - component: {fileID: 8894574539338119029}
   - component: {fileID: 8894574539338119030}
+  - component: {fileID: -4582958637964741265}
   m_Layer: 0
   m_Name: Obstacle_Bottom1
   m_TagString: Background
@@ -146,6 +147,18 @@ PolygonCollider2D:
       - {x: -0.45, y: -0.64}
       - {x: 0.64, y: -0.64}
       - {x: 0.64, y: -0.089999996}
+--- !u!114 &-4582958637964741265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8894574539338119025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd4354584721a14c9a4cbfde9c9c7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8894574541116641566
 GameObject:
   m_ObjectHideFlags: 0

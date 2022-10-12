@@ -9,32 +9,72 @@ public class Enemy_Ring : Enemy_Base
     float _Bullet_Shot_Delay_Cur = 0.0f;
     [SerializeField]
     float _Bullet_Shot_Delay_Max = 3.5f;
+    [SerializeField]
+    float _y = 1;
+
+    [SerializeField]
+    float _movementScale = 1f;
+
+    float _startxpos;
+    float _startypos;
+
+    public bool _CanMoveSin = false;
+    public bool _CanMoveCos = false;
+    public bool _CanMoveLeft = false;
+    public bool _CanMoveUp = false;
+    public bool _CanMoveDown = false;
 
 
     void Start()
     {
+        _startxpos = transform.position.x;
+        _startypos = transform.position.y;
         _rigid = GetComponent<Rigidbody2D>();
     }
 
-    protected override void Update()
+    private void FixedUpdate()
     {
         Fire_Bullet();
         Bullet_Delay();
+
+        _y += Time.deltaTime;
+
+        if (_CanMoveSin == true) MoveSin();
+        if (_CanMoveCos == true) MoveCos();
+
+        if (_CanMoveLeft == true) SimpleMoveLeft();
+        if (_CanMoveUp == true) SimpleMoveUp();
+        if (_CanMoveDown == true) SimpleMoveDown();
     }
 
     public override void SimpleMoveLeft()
     {
-        _rigid.velocity = Vector2.left * _speed;
+        // 60프레임(FixedUpdate)에 맞춤
+        transform.position += new Vector3(-0.017f * _speed, 0, 0);
     }
 
     public override void SimpleMoveUp()
     {
-        _rigid.velocity = Vector2.up * _speed * (0.5f);
+        // 60프레임(FixedUpdate)에 맞춤
+        transform.position += new Vector3(0, 0.017f * _speed, 0);
     }
 
     public override void SimpleMoveDown()
     {
-        _rigid.velocity = Vector2.up * _speed * (-0.5f);
+        // 60프레임(FixedUpdate)에 맞춤
+        transform.position += new Vector3(0, -0.017f * _speed, 0);
+    }
+    
+    public void MoveSin()
+    {
+        // 60프레임(FixedUpdate)에 맞춤
+        transform.localPosition += new Vector3(0, Mathf.Sin(_y) * 0.017f * _movementScale, 0);
+    }
+
+    public void MoveCos()
+    {
+        // 60프레임(FixedUpdate)에 맞춤
+        transform.localPosition += new Vector3(Mathf.Cos(_y) * 0.017f * _movementScale, 0, 0);
     }
 
 

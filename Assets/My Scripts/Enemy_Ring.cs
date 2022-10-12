@@ -56,13 +56,13 @@ public class Enemy_Ring : Enemy_Base
     public override void SimpleMoveUp()
     {
         // 60프레임(FixedUpdate)에 맞춤
-        transform.position += new Vector3(0, 0.017f * _speed, 0);
+        transform.position += new Vector3(0, 0.017f * _speed * 0.5f, 0);
     }
 
     public override void SimpleMoveDown()
     {
         // 60프레임(FixedUpdate)에 맞춤
-        transform.position += new Vector3(0, -0.017f * _speed, 0);
+        transform.position += new Vector3(0, -0.017f * _speed * 0.5f, 0);
     }
     
     public void MoveSin()

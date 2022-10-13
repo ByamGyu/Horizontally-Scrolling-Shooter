@@ -28,6 +28,17 @@ public class GameManager : MonoBehaviour
     public bool _CanSpawnEnemy = true;
     [SerializeField]
     public bool _CanSpawnObstacle = true;
+    [SerializeField]
+    public int _Enemy_Cnt;
+    [SerializeField]
+    public bool _CanBossSpawn = false;
+    [SerializeField]
+    public int _BossSpawnTurn = 0;
+    [SerializeField]
+    public bool _WarningSound = false;
+    [SerializeField]
+    public int _WarningSoundCnt = 0;
+
 
     // 게임모드 설정
     [SerializeField]
@@ -188,6 +199,7 @@ public class GameManager : MonoBehaviour
         {
             SpawnEnemy_CampaignMode();
         }
+        // 캠페인 모드 장애물 생성
         if (_gamemode == Define.GameMode.Campaign && _CanSpawnObstacle == true)
         {
             SpawnObstacle_CampaignMode();
@@ -201,89 +213,153 @@ public class GameManager : MonoBehaviour
 
     void SpawnEnemy_InfiniteMode()
     {
-        // 0 = cone, 1 = ring, 2 = satelite, 3 = starknife
-        int randomEnemy = Random.Range(0, 4); // 적 기체 4가지
-        int randomPos = Random.Range(0, 9); // 스폰 위치 8가지
+        // 무한모드 종료 UI 호출 필요
+        if (_Enemy_Cnt >= 1001) return;
 
-        // 오른쪽에서 시작
-        if (randomPos == 0 || randomPos == 1 || randomPos == 2 || randomPos == 3 || randomPos == 4)
+        if(_CanSpawnEnemy == true)
         {
-            GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
-            enemy.transform.position = _SpawnPos[randomPos].position;
-            // 스프라이트가 우측을 바라보게 만들어져 있어서 플레이어 방향으로 회전시켜줘야 함.
-            enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
-
-            Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-            enemyInfo.objectmanager = objectManager;
-
-            if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+            // 일반 기체 50기 잡을 때 마다 보스 스폰
+            if (_Enemy_Cnt % 50 == 0 && _CanBossSpawn == false)
             {
-                Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
-                cone.SimpleMoveLeft();
+                _CanBossSpawn = true;
+                _BossSpawnTurn++;
             }
-            else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+
+            if (_CanBossSpawn == true)
             {
-                Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
-                ring._CanMoveSin = true;
-                ring._CanMoveCos = true;
-                ring._CanMoveLeft = true;
+                if (_Enemy_Cnt % 50 == 0 && _BossSpawnTurn % 2 == 1) // 보스 serpent 스폰
+                {
+                    // 10초 후에 스폰
+                    Invoke("InifiniteModeSerpentSpawnInvoke", 10f);
+
+                    _CanSpawnEnemy = false;
+                    _CanBossSpawn = false;
+                    return;
+                }
+                else if (_Enemy_Cnt >= 50 && _BossSpawnTurn % 2 == 0) // 보스 Claw 스폰
+                {
+                    if(_WarningSound == false)
+                    {
+                        InvokeRepeating("InfiniteModeWarningSoundInvoke", 0, 1f);
+
+                        if(_WarningSoundCnt >= 2)
+                        {
+                            CancelInvoke("InfiniteModeWarningSoundInvoke");
+                            _WarningSoundCnt = 0;
+                            _WarningSound = true;
+                        }
+                        
+                        return;
+                    }
+                    
+                    // 대략 몇 초 후에 워프 스폰
+                    GameObject enemy = objectManager.MakeObj(_EnemyObjects[11]);
+                    Warp tmp_warp = enemy.GetComponent<Warp>();
+                    tmp_warp.objectManager = objectManager;
+
+                    _CanSpawnEnemy = false;
+                    _CanBossSpawn = false;
+                    return;
+                }
             }
-            else if(_EnemyObjects[randomEnemy] == "Enemy_Satelite")
+            else if (_CanBossSpawn == false && _Enemy_Cnt % 50 != 0)
             {
-                Enemy_Satelite satelite = enemy.GetComponent<Enemy_Satelite>();
-                satelite.SimpleMoveLeft();
+                // 0 = cone, 1 = ring, 2 = satelite, 3 = starknife
+                int randomEnemy = Random.Range(0, 4); // 적 기체 4가지
+                int randomPos = Random.Range(0, 9); // 스폰 위치 8가지
+
+                // 오른쪽에서 시작
+                if (randomPos == 0 || randomPos == 1 || randomPos == 2 || randomPos == 3 || randomPos == 4)
+                {
+                    GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                    enemy.transform.position = _SpawnPos[randomPos].position;
+                    // 스프라이트가 우측을 바라보게 만들어져 있어서 플레이어 방향으로 회전시켜줘야 함.
+                    enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+
+                    SetEnemyCnt(1);
+                    Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
+                    enemyInfo.objectmanager = objectManager;
+                    enemyInfo._gamemanager = instance;
+
+                    if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+                    {
+                        Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                        cone.SimpleMoveLeft();
+                    }
+                    else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+                    {
+                        Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                        ring._CanMoveSin = true;
+                        ring._CanMoveCos = true;
+                        ring._CanMoveLeft = true;
+                    }
+                    else if (_EnemyObjects[randomEnemy] == "Enemy_Satelite")
+                    {
+                        Enemy_Satelite satelite = enemy.GetComponent<Enemy_Satelite>();
+                    }
+                }
+                else if (randomPos == 5 || randomPos == 6) // 아래 오른쪽, 아래 왼쪽
+                {
+                    if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
+                    {
+                        GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                        enemy.transform.position = _SpawnPos[randomPos].position;
+                        enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+
+                        SetEnemyCnt(1);
+                        Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
+                        enemyInfo.objectmanager = objectManager;
+                        enemyInfo._gamemanager = instance;
+
+
+                        if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+                        {
+                            Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                            cone.SimpleMoveUp();
+                        }
+                        else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+                        {
+                            Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                            ring._CanMoveCos = true;
+                            ring._CanMoveUp = true;
+                        }
+                    }
+                }
+                else if (randomPos == 7 || randomPos == 8) // 위 오른쪽, 위 왼쪽
+                {
+                    if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
+                    {
+                        GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                        enemy.transform.position = _SpawnPos[randomPos].position;
+                        enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+
+                        SetEnemyCnt(1);
+                        Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
+                        enemyInfo.objectmanager = objectManager;
+                        enemyInfo._gamemanager = instance;
+
+
+                        if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
+                        {
+                            Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
+                            cone.SimpleMoveDown();
+                        }
+                        else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
+                        {
+                            Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
+                            ring._CanMoveCos = true;
+                            ring._CanMoveDown = true;
+                        }
+                    }
+                }
             }
         }
-        else if (randomPos == 5 || randomPos == 6) // 아래 오른쪽, 아래 왼쪽
+        else if(_CanSpawnEnemy == false)
         {
-            if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
-            {
-                GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
-                enemy.transform.position = _SpawnPos[randomPos].position;
-                enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
-                Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-                enemyInfo.objectmanager = objectManager;
-
-
-                if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
-                {
-                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
-                    cone.SimpleMoveUp();
-                }
-                else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
-                {
-                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
-                    ring._CanMoveCos = true;
-                    ring._CanMoveUp = true;
-                }
-            }
         }
-        else if (randomPos == 7 || randomPos == 8) // 위 오른쪽, 위 왼쪽
-        {
-            if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
-            {
-                GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
-                enemy.transform.position = _SpawnPos[randomPos].position;
-                enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
-                Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-                enemyInfo.objectmanager = objectManager;
-
-
-                if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
-                {
-                    Enemy_Cone cone = enemy.GetComponent<Enemy_Cone>();
-                    cone.SimpleMoveDown();
-                }
-                else if (_EnemyObjects[randomEnemy] == "Enemy_Ring")
-                {
-                    Enemy_Ring ring = enemy.GetComponent<Enemy_Ring>();
-                    ring._CanMoveCos = true;
-                    ring._CanMoveDown = true;
-                }
-            }
-        }
+        
     }
 
     void SpawnEnemy_CampaignMode()
@@ -627,5 +703,28 @@ public class GameManager : MonoBehaviour
     public void GameQuit()
     {
         Application.Quit();
+    }
+
+    public void SetEnemyCnt(int tmp)
+    {
+        _Enemy_Cnt += tmp;
+
+        if (_Enemy_Cnt <= 0) _Enemy_Cnt = 0;
+    }
+
+    void InifiniteModeSerpentSpawnInvoke()
+    {
+        GameObject enemy = objectManager.MakeObj(_EnemyObjects[5]);
+        enemy.transform.position = _SpawnPos[2].position;
+
+        Enemy_Serpent enemyInfo = enemy.GetComponent<Enemy_Serpent>();
+        enemyInfo.objectmanager = objectManager;
+        enemyInfo._gamemanager = instance;
+    }
+
+    void InfiniteModeWarningSoundInvoke()
+    {
+        SoundManager.instance.PlaySoundEffectOneShot("Warning_1sec", 0.5f);
+        _WarningSoundCnt++;
     }
 }

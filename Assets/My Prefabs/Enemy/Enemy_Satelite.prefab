@@ -169,9 +169,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.5
   _life: 10
+  _MaxLife: 10
   _score: 300
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
+  _gamemanager: {fileID: 0}
+  objectmanager: {fileID: 0}
   _Bullet_Shot_Delay_Cur: 0
   _Bullet_Shot_Delay_Max: 2
-  _Bullet1: {fileID: 7183522887647324722, guid: f119dfc4b8ea00846a707469b1efde2d, type: 3}

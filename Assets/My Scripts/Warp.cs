@@ -6,9 +6,10 @@ public class Warp : MonoBehaviour
 {
     public Vector3 _Origin_Scale;
     public Vector3 _Change_Scale;
-    public float _Time;
+    public float _Time;    
     public float _EndTime;
-    public bool _isSpawnEnd;
+    public bool _isSoundPlay = false;
+
 
     public ObjectManager objectManager;
 
@@ -20,13 +21,19 @@ public class Warp : MonoBehaviour
 
     void Start()
     {
-        SoundManager.instance.StopBGM();
-        SoundManager.instance.PlaySoundEffectOneShot("Teleport", 0.75f);
+        
     }
 
     void Update()
     {
         _Time += Time.deltaTime;
+
+        if(_isSoundPlay == false)
+        {
+            _isSoundPlay = true;
+            SoundManager.instance.StopBGM();
+            SoundManager.instance.PlaySoundEffectOneShot("Teleport", 0.75f);
+        }
 
         if(_Time >= 0 && _Time < 0.1f)
         {
@@ -69,12 +76,12 @@ public class Warp : MonoBehaviour
             transform.localScale = _Change_Scale;
         }
 
-        if(_Time >= _EndTime && _isSpawnEnd == false)
+        if(_Time >= _EndTime)
         {
             GameObject go = objectManager.MakeObj("Enemy_Claw");
             go.transform.position = transform.position;
-            
-            _isSpawnEnd = true;
+
+            Init();
             gameObject.SetActive(false);
         }
     }
@@ -82,6 +89,6 @@ public class Warp : MonoBehaviour
     void Init()
     {
         _Time = 0;
-        _isSpawnEnd = false;
+        _isSoundPlay = false;
     }
 }

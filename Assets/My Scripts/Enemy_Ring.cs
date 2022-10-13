@@ -108,4 +108,15 @@ public class Enemy_Ring : Enemy_Base
 
         _Bullet_Shot_Delay_Cur += Time.deltaTime;
     }
+
+    public override void Init()
+    {
+        _life = _MaxLife;
+        _Bullet_Shot_Delay_Cur = 0;
+        _CanMoveSin = false;
+        _CanMoveCos = false;
+        _CanMoveLeft = false;
+        _CanMoveUp = false;
+        _CanMoveDown = false;
+    }
 }

@@ -99,8 +99,8 @@ public class ObjectManager : MonoBehaviour
         Enemy_Ring = new GameObject[30];
         Enemy_Satellite = new GameObject[30];
         Enemy_Starknife = new GameObject[30];
-        Enemy_Serpent = new GameObject[2];
-        Enemy_Claw = new GameObject[2];
+        Enemy_Serpent = new GameObject[20];
+        Enemy_Claw = new GameObject[20];
 
         Item_Shielded_Power = new GameObject[5];
         Item_Shielded_Life = new GameObject[5];
@@ -133,7 +133,7 @@ public class ObjectManager : MonoBehaviour
         Obstacle_Top_Tile = new GameObject[10];
         Obstacle_Metal_Wall = new GameObject[10];
 
-        Warp = new GameObject[1];
+        Warp = new GameObject[20];
 
         Generate();
 

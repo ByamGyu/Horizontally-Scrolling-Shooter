@@ -40,6 +40,7 @@ public class Enemy_Claw : MonoBehaviour
     GameObject _Player = null;
     [SerializeField]
     GameManager _gm;
+    [SerializeField]
 
     // 돌진 공격 관련
     bool _SE_Punch = false;
@@ -65,6 +66,8 @@ public class Enemy_Claw : MonoBehaviour
     int repeattime = 2;
     int currepeat = 0;
 
+    
+
 
     public int frame;
 
@@ -83,6 +86,8 @@ public class Enemy_Claw : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("claw Start");
+
         GameObject tmp = GameObject.FindGameObjectWithTag("GameManager");
         _gm = tmp.GetComponent<GameManager>();
 
@@ -498,6 +503,14 @@ public class Enemy_Claw : MonoBehaviour
             EffectManager.instance.SpawnEffect("Effect_Explosion_Cyberspark", transform.position, Vector3.zero, new Vector3(5.0f, 5.0f, 5.0f));
             EffectManager.instance.SpawnEffect("Effect_Explosion_Redspark", transform.position, Vector3.zero, new Vector3(5.0f, 5.0f, 5.0f));
 
+            if (_gm != null)
+            {
+                _gm.SetEnemyCnt(1);
+                _gm._CanBossSpawn = false;
+                _gm._CanSpawnEnemy = true;
+                _gm._WarningSound = false;
+            }
+
             // 죽으면 스테이지 클리어 BGM이 재생 (모드에 따라서 다르게 할 필요 있음)
             if(_gm == null || _gm._gamemode == Define.GameMode.Campaign)
             {
@@ -509,10 +522,20 @@ public class Enemy_Claw : MonoBehaviour
             {
                 SoundManager.instance.PlayBGM("Stage_01_2", 0.75f, true);
 
-                gameObject.SetActive(false);
+                Init();
+                transform.parent.gameObject.SetActive(false);                
             }
             
         }
+    }
+
+    void Init()
+    {
+        Debug.Log("Claw Init");
+
+        _life = _maxlife;
+        _lifepercent = 1f;
+        _state = -1;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

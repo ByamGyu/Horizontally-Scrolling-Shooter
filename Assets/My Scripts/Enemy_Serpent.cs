@@ -14,6 +14,10 @@ public class Enemy_Serpent : MonoBehaviour
     public Rigidbody2D _rigid;
     [SerializeField]
     GameObject _player;
+    [SerializeField]
+    public GameManager _gamemanager = null;
+    [SerializeField]
+    public ObjectManager objectmanager = null;
 
 
     // 몸통 설정
@@ -64,61 +68,7 @@ public class Enemy_Serpent : MonoBehaviour
 
     void Awake()
     {
-        _life = _maxLife;
-
-        _rigid = GetComponent<Rigidbody2D>();
-
-        // 카메라를 기준으로 이동 범위(bounds 변수) 잡기
-        //if (Camera.main.orthographic && bounds == Vector2.zero) bounds = CameraHelpers.OrthographicBounds(Camera.main).extents * autoboundsMultiplier;
-
-        // 시작 위치 잡기(위 코드가 작동해야 작동함)
-        // if (startPosition != StartPosition.Fixed) _SetStartPosition();
-        if(startPosition == StartPosition.Fixed)
-        {
-            _SetStartPosition();
-        }
-
-        GameObject clone = default;
-
-        Transform leader = transform;
-        float space = bodySettings.space;
-
-        // bodySettings.count 만큼 몸통 프리팹 복사 붙여넣기
-        for (int i = 0; i < bodySettings.count; i++)
-        {
-            clone = Instantiate(bodySettings.prefab);
-
-            _bodyParts.Add(clone);
-
-            Enemy_SerpentBody serpentBody = clone.AddComponent<Enemy_SerpentBody>();
-            serpentBody.head = leader;
-            serpentBody.distanceToHead = space;
-            serpentBody.transform.position = transform.position;
-
-            leader = clone.transform;
-            space = bodySettings.space;
-        }
-
-        // 꼬리가 있으면 꼬리 달아주기
-        if (tail)
-        {
-            _bodyParts.Add(tail); // Gameobject tail 변수 달아주기
-
-            if (tail.transform.parent == transform) tail.transform.SetParent(null);
-
-            Enemy_SerpentBody serpentBody = tail.AddComponent<Enemy_SerpentBody>();
-            serpentBody.head = clone.transform;
-            serpentBody.distanceToHead = tailSpace;
-            serpentBody.transform.position = transform.position;
-        }
-
-        // 안씀
-        if (bodySettings.prefab.scene.rootCount > 0)
-        {
-            bodySettings.prefab.SetActive(false);
-
-            //Destroy(bodySettings.prefab);
-        }
+        Init();   
     }
 
     private void Start()
@@ -173,6 +123,13 @@ public class Enemy_Serpent : MonoBehaviour
             PlayerController playerinfo = _player.GetComponent<PlayerController>();
             playerinfo.AddScore(_score);
 
+            if (_gamemanager != null)
+            {
+                _gamemanager.SetEnemyCnt(1);
+                _gamemanager._CanBossSpawn = false;
+                _gamemanager._CanSpawnEnemy = true;
+            }
+
             SoundManager.instance.PlaySoundEffectOneShot("Enemy_Serpent_Death", 0.75f);
             SoundManager.instance.PlayBGM("Stage_01_2", 0.75f, true);
 
@@ -193,6 +150,7 @@ public class Enemy_Serpent : MonoBehaviour
                 OnDestroy();
             }
 
+            Init();
             gameObject.SetActive(false);
         }
     }
@@ -226,7 +184,6 @@ public class Enemy_Serpent : MonoBehaviour
 
         //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // ???
         //if (spriteRenderer) size = spriteRenderer.bounds.size;
 
         //Vector3 position = _RandomPosition();
@@ -262,6 +219,63 @@ public class Enemy_Serpent : MonoBehaviour
     }
 
     public int GetScore() { return _score; }
+
+    void Init()
+    {
+        _life = _maxLife;
+
+        _rigid = GetComponent<Rigidbody2D>();
+
+        // 카메라를 기준으로 이동 범위(bounds 변수) 잡기
+        //if (Camera.main.orthographic && bounds == Vector2.zero) bounds = CameraHelpers.OrthographicBounds(Camera.main).extents * autoboundsMultiplier;
+
+        // 시작 위치 잡기(위 코드가 작동해야 작동함)
+        // if (startPosition != StartPosition.Fixed) _SetStartPosition();
+        if (startPosition == StartPosition.Fixed)
+        {
+            _SetStartPosition();
+        }
+
+        GameObject clone = default;
+
+        Transform leader = transform;
+        float space = bodySettings.space;
+
+        // bodySettings.count 만큼 몸통 프리팹 복사 붙여넣기
+        for (int i = 0; i < bodySettings.count; i++)
+        {
+            clone = Instantiate(bodySettings.prefab);
+
+            _bodyParts.Add(clone);
+
+            Enemy_SerpentBody serpentBody = clone.AddComponent<Enemy_SerpentBody>();
+            serpentBody.head = leader;
+            serpentBody.distanceToHead = space;
+            serpentBody.transform.position = transform.position;
+
+            leader = clone.transform;
+            space = bodySettings.space;
+        }
+
+        // 꼬리가 있으면 꼬리 달아주기
+        if (tail)
+        {
+            _bodyParts.Add(tail); // Gameobject tail 변수 달아주기
+
+            if (tail.transform.parent == transform) tail.transform.SetParent(null);
+
+            Enemy_SerpentBody serpentBody = tail.AddComponent<Enemy_SerpentBody>();
+            serpentBody.head = clone.transform;
+            serpentBody.distanceToHead = tailSpace;
+            serpentBody.transform.position = transform.position;
+        }
+
+
+        if (bodySettings.prefab.scene.rootCount > 0)
+        {
+            bodySettings.prefab.SetActive(false);
+        }
+    }
 
     void OnDestroy()
     {

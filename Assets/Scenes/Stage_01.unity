@@ -1094,6 +1094,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: _Enemy_Cnt
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _scoreText
       value: 
       objectReference: {fileID: 7036525957537035887}
@@ -1101,6 +1105,10 @@ PrefabInstance:
       propertyPath: objectManager
       value: 
       objectReference: {fileID: 968330281}
+    - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: _BossSpawnTurn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289978634026279852, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _CanSpawnEnemy
       value: 1

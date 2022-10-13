@@ -14,13 +14,13 @@ public class Enemy_Satelite : Enemy_Base
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
-        SimpleMoveLeft();
     }
 
     protected override void Update()
     {
         Fire_Bullet();
         Bullet_Delay();
+        SimpleMoveLeft();
     }
 
     public override void SimpleMoveLeft()
@@ -53,5 +53,11 @@ public class Enemy_Satelite : Enemy_Base
         if (_Bullet_Shot_Delay_Cur > 10) return;
 
         _Bullet_Shot_Delay_Cur += Time.deltaTime;
+    }
+
+    public override void Init()
+    {
+        _life = _MaxLife;
+        _Bullet_Shot_Delay_Cur = 0;
     }
 }

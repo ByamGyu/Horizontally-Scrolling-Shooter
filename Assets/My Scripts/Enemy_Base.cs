@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Enemy_Base : MonoBehaviour
 {
-    [SerializeReference]
+    [SerializeField]
     public float _speed;
-    [SerializeReference]
+    [SerializeField]
     public float _life;
-    [SerializeReference]
+    [SerializeField]
+    public float _MaxLife;
+    [SerializeField]
     public int _score = 100;
-    [SerializeReference]
+    [SerializeField]
     public Rigidbody2D _rigid;
-    [SerializeReference]
+    [SerializeField]
     public GameObject _Player = null;
+
+    [SerializeField]
+    public GameManager _gamemanager = null;
 
 
     // 오브젝트 매니저(오브젝트 풀링)
@@ -58,6 +63,8 @@ public class Enemy_Base : MonoBehaviour
             else if(RandomInt2 == 2) EffectManager.instance.SpawnEffect("Effect_Explosion_Greenspark", transform.position, Vector3.one);
             else if(RandomInt2 == 3) EffectManager.instance.SpawnEffect("Effect_Explosion_Purplespark", transform.position, Vector3.one);
 
+
+            Init();
             gameObject.SetActive(false);
         }
     }
@@ -94,9 +101,15 @@ public class Enemy_Base : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
+            Init();
             gameObject.SetActive(false);
         }
     }
 
     public int GetScore() { return _score; }
+
+    public virtual void Init()
+    {
+        
+    }
 }

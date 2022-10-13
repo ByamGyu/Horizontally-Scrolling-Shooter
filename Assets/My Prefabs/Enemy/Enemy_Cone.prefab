@@ -254,10 +254,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2.5
   _life: 5
+  _MaxLife: 5
   _score: 100
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
-  _Sounds: []
+  _gamemanager: {fileID: 0}
+  objectmanager: {fileID: 0}
   _Bullet_Shot_Delay_Cur: 0
   _Bullet_Shot_Delay_Max: 2.5
-  objectmanager: {fileID: 0}

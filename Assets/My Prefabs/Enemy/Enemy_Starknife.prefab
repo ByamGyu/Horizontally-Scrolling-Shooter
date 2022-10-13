@@ -254,7 +254,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _life: 3
+  _MaxLife: 3
   _score: 200
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
-  _Sounds: []
+  _gamemanager: {fileID: 0}
+  objectmanager: {fileID: 0}

@@ -58,4 +58,10 @@ public class Enemy_Cone : Enemy_Base
 
         _Bullet_Shot_Delay_Cur += Time.deltaTime;
     }
+
+    public override void Init()
+    {
+        _life = _MaxLife;
+        _Bullet_Shot_Delay_Cur = 0;
+    }
 }

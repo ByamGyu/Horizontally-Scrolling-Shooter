@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public bool _CanSpawnObstacle = true;
     [SerializeField]
+    public bool _CanSpawnItemShielded = true;
+    [SerializeField]
     public int _Enemy_Cnt;
     [SerializeField]
     public bool _CanBossSpawn = false;
@@ -225,6 +227,12 @@ public class GameManager : MonoBehaviour
                 _BossSpawnTurn++;
             }
 
+            if(_CanSpawnItemShielded == true && _Enemy_Cnt % 25 == 0)
+            {
+                SpawnRandomShieldedItemRandomLocation();
+                _CanSpawnItemShielded = false;
+            }
+
             if (_CanBossSpawn == true)
             {
                 if (_Enemy_Cnt % 50 == 0 && _BossSpawnTurn % 2 == 1) // 보스 serpent 스폰
@@ -358,8 +366,6 @@ public class GameManager : MonoBehaviour
         {
 
         }
-
-        
     }
 
     void SpawnEnemy_CampaignMode()
@@ -503,8 +509,6 @@ public class GameManager : MonoBehaviour
             Warp enemyInfo = enemy.GetComponent<Warp>();
             enemyInfo.objectManager = objectManager;
         }
-
-        
 
         //if (enemyPoint == 0 || enemyPoint == 1 || enemyPoint == 2 || enemyPoint == 3 || enemyPoint == 4)
         //{
@@ -726,5 +730,18 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.instance.PlaySoundEffectOneShot("Warning_1sec", 0.5f);
         _WarningSoundCnt++;
+    }
+
+    void SpawnRandomShieldedItemRandomLocation()
+    {
+        int tmp = Random.Range(6, 11);
+
+        GameObject go = objectManager.MakeObj(_EnemyObjects[tmp]);
+        Item_Shielded Item = go.GetComponent<Item_Shielded>();
+        Item.objectmanager = objectManager;
+        Item.gamemanager = instance;
+
+        int tmp2 = Random.Range(1, 4);
+        Item.transform.position = _SpawnPos[tmp2].position;
     }
 }

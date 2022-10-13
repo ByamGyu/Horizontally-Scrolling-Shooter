@@ -545,7 +545,7 @@ public class PlayerController : MonoBehaviour
         if (_ult >= 3) _ult = 3;
         else if (_ult <= 0) _ult = 0;
 
-        gamemanager.UpdateLifeIcon(GetUlt());
+        gamemanager.UpdateUltIcon(GetUlt());
     }
 
     public void SetGuideAttack(bool tmp)

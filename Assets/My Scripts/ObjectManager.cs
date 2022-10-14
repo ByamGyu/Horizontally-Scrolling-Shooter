@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    public ObjectManager instance;
+    public static ObjectManager instance;
 
     public GameObject Prefab_Enemy_Cone;
     public GameObject Prefab_Enemy_Ring;
@@ -142,7 +142,10 @@ public class ObjectManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
-        else Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Generate()
@@ -151,36 +154,42 @@ public class ObjectManager : MonoBehaviour
         for(int i = 0; i < Enemy_Cone.Length; i++)
         {
             Enemy_Cone[i] = Instantiate(Prefab_Enemy_Cone);
+            DontDestroyOnLoad(Enemy_Cone[i]);
             Enemy_Cone[i].SetActive(false);
         }
 
         for(int i = 0; i < Enemy_Ring.Length; i++)
         {
             Enemy_Ring[i] = Instantiate(Prefab_Enemy_Ring);
+            DontDestroyOnLoad(Enemy_Ring[i]);
             Enemy_Ring[i].SetActive(false);
         }
 
         for (int i = 0; i < Enemy_Satellite.Length; i++)
         {
             Enemy_Satellite[i] = Instantiate(Prefab_Enemy_Satellite);
+            DontDestroyOnLoad(Enemy_Satellite[i]);
             Enemy_Satellite[i].SetActive(false);
         }
 
         for (int i = 0; i < Enemy_Starknife.Length; i++)
         {
             Enemy_Starknife[i] = Instantiate(Prefab_Enemy_Starknife);
+            DontDestroyOnLoad(Enemy_Starknife[i]);
             Enemy_Starknife[i].SetActive(false);
         }
 
         for (int i = 0; i < Enemy_Serpent.Length; i++)
         {
             Enemy_Serpent[i] = Instantiate(Prefab_Enemy_Serpent);
+            DontDestroyOnLoad(Enemy_Serpent[i]);
             Enemy_Serpent[i].SetActive(false);
         }
 
         for (int i = 0; i < Enemy_Claw.Length; i++)
         {
             Enemy_Claw[i] = Instantiate(Prefab_Enemy_Claw);
+            DontDestroyOnLoad(Enemy_Claw[i]);
             Enemy_Claw[i].SetActive(false);
         }
 
@@ -188,30 +197,35 @@ public class ObjectManager : MonoBehaviour
         for (int i = 0; i < Item_Shielded_Power.Length; i++)
         {
             Item_Shielded_Power[i] = Instantiate(Prefab_Item_Shileded_Power);
+            DontDestroyOnLoad(Item_Shielded_Power[i]);
             Item_Shielded_Power[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Shielded_Life.Length; i++)
         {
             Item_Shielded_Life[i] = Instantiate(Prefab_Item_Shileded_Life);
+            DontDestroyOnLoad(Item_Shielded_Life[i]);
             Item_Shielded_Life[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Shielded_Speed.Length; i++)
         {
             Item_Shielded_Speed[i] = Instantiate(Prefab_Item_Shileded_Speed);
+            DontDestroyOnLoad(Item_Shielded_Speed[i]);
             Item_Shielded_Speed[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Shielded_Ult.Length; i++)
         {
             Item_Shielded_Ult[i] = Instantiate(Prefab_Item_Shileded_Ult);
+            DontDestroyOnLoad(Item_Shielded_Ult[i]);
             Item_Shielded_Ult[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Shielded_GuideAttack.Length; i++)
         {
             Item_Shielded_GuideAttack[i] = Instantiate(Prefab_Item_Shileded_GuideAttack);
+            DontDestroyOnLoad(Item_Shielded_GuideAttack[i]);
             Item_Shielded_GuideAttack[i].SetActive(false);
         }
 
@@ -219,30 +233,35 @@ public class ObjectManager : MonoBehaviour
         for (int i = 0; i < Item_Power.Length; i++)
         {
             Item_Power[i] = Instantiate(Prefab_Item_Power);
+            DontDestroyOnLoad(Item_Power[i]);
             Item_Power[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Life.Length; i++)
         {
             Item_Life[i] = Instantiate(Prefab_Item_Life);
+            DontDestroyOnLoad(Item_Life[i]);
             Item_Life[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Speed.Length; i++)
         {
             Item_Speed[i] = Instantiate(Prefab_Item_Speed);
+            DontDestroyOnLoad(Item_Speed[i]);
             Item_Speed[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_Ult.Length; i++)
         {
             Item_Ult[i] = Instantiate(Prefab_Item_Ult);
+            DontDestroyOnLoad(Item_Ult[i]);
             Item_Ult[i].SetActive(false);
         }
 
         for (int i = 0; i < Item_GuideAttack.Length; i++)
         {
             Item_GuideAttack[i] = Instantiate(Prefab_Item_GuideAttack);
+            DontDestroyOnLoad(Item_GuideAttack[i]);
             Item_GuideAttack[i].SetActive(false);
         }
 
@@ -250,24 +269,28 @@ public class ObjectManager : MonoBehaviour
         for (int i = 0; i < Bullet_Player_Default.Length; i++)
         {
             Bullet_Player_Default[i] = Instantiate(Prefab_Bullet_Player_Default);
+            DontDestroyOnLoad(Bullet_Player_Default[i]);
             Bullet_Player_Default[i].SetActive(false);
         }
 
         for (int i = 0; i < Bullet_Player_MaxPower.Length; i++)
         {
             Bullet_Player_MaxPower[i] = Instantiate(Prefab_Bullet_Player_MaxPower);
+            DontDestroyOnLoad(Bullet_Player_MaxPower[i]);
             Bullet_Player_MaxPower[i].SetActive(false);
         }
 
         for (int i = 0; i < Bullet_Player_Charge.Length; i++)
         {
             Bullet_Player_Charge[i] = Instantiate(Prefab_Bullet_Player_Charge);
+            DontDestroyOnLoad(Bullet_Player_Charge[i]);
             Bullet_Player_Charge[i].SetActive(false);
         }
 
         for (int i = 0; i < Bullet_Player_Guide.Length; i++)
         {
             Bullet_Player_Guide[i] = Instantiate(Prefab_Bullet_Player_Guide);
+            DontDestroyOnLoad(Bullet_Player_Guide[i]);
             Bullet_Player_Guide[i].SetActive(false);
         }
 
@@ -275,30 +298,35 @@ public class ObjectManager : MonoBehaviour
         for (int i = 0; i < Bullet_Enemy_Blue.Length; i++)
         {
             Bullet_Enemy_Blue[i] = Instantiate(Prefab_Bullet_Enemy_Blue);
+            DontDestroyOnLoad(Bullet_Enemy_Blue[i]);
             Bullet_Enemy_Blue[i].SetActive(false);
         }
 
         for (int i = 0; i < Bullet_Enemy_Green.Length; i++)
         {
             Bullet_Enemy_Green[i] = Instantiate(Prefab_Bullet_Enemy_Green);
+            DontDestroyOnLoad(Bullet_Enemy_Green[i]);
             Bullet_Enemy_Green[i].SetActive(false);
         }
 
         for (int i = 0; i < Bullet_Enemy_Orange.Length; i++)
         {
             Bullet_Enemy_Orange[i] = Instantiate(Prefab_Bullet_Enemy_Orange);
+            DontDestroyOnLoad(Bullet_Enemy_Orange[i]);
             Bullet_Enemy_Orange[i].SetActive(false);
         }
 
         for(int i = 0; i < Bullet_Enemy_Red.Length; i++)
         {
             Bullet_Enemy_Red[i] = Instantiate(Prefab_Bullet_Enemy_Red);
+            DontDestroyOnLoad(Bullet_Enemy_Red[i]);
             Bullet_Enemy_Red[i].SetActive(false);
         }
 
         for (int i = 0; i < Bullet_Enemy_Red_Big.Length; i++)
         {
             Bullet_Enemy_Red_Big[i] = Instantiate(Prefab_Bullet_Enemy_Red_Big);
+            DontDestroyOnLoad(Bullet_Enemy_Red_Big[i]);
             Bullet_Enemy_Red_Big[i].SetActive(false);
         }
 
@@ -306,36 +334,43 @@ public class ObjectManager : MonoBehaviour
         for(int i = 0; i < Obstacle_Bottom1.Length; i++)
         {
             Obstacle_Bottom1[i] = Instantiate(Prefab_Obstacle_Bottom1);
+            DontDestroyOnLoad(Obstacle_Bottom1[i]);
             Obstacle_Bottom1[i].SetActive(false);
         }
         for (int i = 0; i < Obstacle_Bottom2.Length; i++)
         {
             Obstacle_Bottom2[i] = Instantiate(Prefab_Obstacle_Bottom2);
+            DontDestroyOnLoad(Obstacle_Bottom2[i]);
             Obstacle_Bottom2[i].SetActive(false);
         }
         for (int i = 0; i < Obstacle_Bottom_Tile.Length; i++)
         {
             Obstacle_Bottom_Tile[i] = Instantiate(Prefab_Obstacle_Bottom_Tile);
+            DontDestroyOnLoad(Obstacle_Bottom_Tile[i]);
             Obstacle_Bottom_Tile[i].SetActive(false);
         }
         for (int i = 0; i < Obstacle_Top1.Length; i++)
         {
             Obstacle_Top1[i] = Instantiate(Prefab_Obstacle_Top1);
+            DontDestroyOnLoad(Obstacle_Top1[i]);
             Obstacle_Top1[i].SetActive(false);
         }
         for (int i = 0; i < Obstacle_Top2.Length; i++)
         {
             Obstacle_Top2[i] = Instantiate(Prefab_Obstacle_Top2);
+            DontDestroyOnLoad(Obstacle_Top2[i]);
             Obstacle_Top2[i].SetActive(false);
         }
         for (int i = 0; i < Obstacle_Top_Tile.Length; i++)
         {
             Obstacle_Top_Tile[i] = Instantiate(Prefab_Obstacle_Top_Tile);
+            DontDestroyOnLoad(Obstacle_Top_Tile[i]);
             Obstacle_Top_Tile[i].SetActive(false);
         }
         for (int i = 0; i < Obstacle_Metal_Wall.Length; i++)
         {
             Obstacle_Metal_Wall[i] = Instantiate(Prefab_Obstacle_Metal_Wall);
+            DontDestroyOnLoad(Obstacle_Metal_Wall[i]);
             Obstacle_Metal_Wall[i].SetActive(false);
         }
 
@@ -343,6 +378,7 @@ public class ObjectManager : MonoBehaviour
         for (int i = 0; i < Warp.Length; i++)
         {
             Warp[i] = Instantiate(Prefab_Warp);
+            DontDestroyOnLoad(Warp[i]);
             Warp[i].SetActive(false);
         }
     }

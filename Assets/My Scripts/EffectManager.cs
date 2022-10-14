@@ -27,7 +27,6 @@ public class EffectManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
-        else Destroy(gameObject);
 
         InitDictionary();
     }

@@ -40,11 +40,12 @@ public class GameManager : MonoBehaviour
     public bool _WarningSound = false;
     [SerializeField]
     public int _WarningSoundCnt = 0;
+    public int _PlayerScore = 0;
 
 
     // 게임모드 설정
     [SerializeField]
-    public Define.GameMode _gamemode = Define.GameMode.Campaign;
+    public Define.GameMode _gamemode = Define.GameMode.None;
 
     // UI
     [SerializeReference]
@@ -120,9 +121,14 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
-        //else Destroy(gameObject);
+
+        _Spawn_Delay_Time_Cur = 0;
+        _Spawn_Delay_Time_Obstacle_Cur = 0;
+        _BossSpawnTurn = 0;
+        _WarningSoundCnt = 0;
+        _PlayerScore = 0;
     }
 
     void ReadSpawnFile()
@@ -191,6 +197,8 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_gamemode == Define.GameMode.UI || _gamemode == Define.GameMode.None) return;
+
         _Spawn_Delay_Time_Cur += Time.deltaTime;
         _Spawn_Delay_Time_Obstacle_Cur += Time.deltaTime;
 
@@ -228,7 +236,16 @@ public class GameManager : MonoBehaviour
         {
             PlayerController playerinfo = _Player.GetComponent<PlayerController>();
             _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
+            _PlayerScore = playerinfo.GetScore();
         }
+    }
+
+    public void SetGameMode(Define.GameMode mode)
+    {
+        if (mode == Define.GameMode.Campaign) _gamemode = Define.GameMode.Campaign;
+        else if (mode == Define.GameMode.Infinite) _gamemode = Define.GameMode.Infinite;
+        else if (mode == Define.GameMode.UI) _gamemode = Define.GameMode.UI;
+        else if (mode == Define.GameMode.None) _gamemode = Define.GameMode.None;
     }
 
     void SpawnEnemy_InfiniteMode()

@@ -79,7 +79,6 @@ public class Enemy_Serpent : MonoBehaviour
 
     void Update()
     {
-        // 플레이어를 향하는 위치
         Vector3 direction = _targetPosition - transform.position;
 
         // 플레이어를 향하는 각도
@@ -147,7 +146,8 @@ public class Enemy_Serpent : MonoBehaviour
                     ));
 
                 // 몸통 복사본 제거
-                OnDestroy();
+                // OnDestroy();
+                OnDisable();
             }
 
             Init();
@@ -249,6 +249,7 @@ public class Enemy_Serpent : MonoBehaviour
             _bodyParts.Add(clone);
 
             Enemy_SerpentBody serpentBody = clone.AddComponent<Enemy_SerpentBody>();
+            DontDestroyOnLoad(serpentBody); // 오브젝트 풀링 전용
             serpentBody.head = leader;
             serpentBody.distanceToHead = space;
             serpentBody.transform.position = transform.position;
@@ -265,6 +266,7 @@ public class Enemy_Serpent : MonoBehaviour
             if (tail.transform.parent == transform) tail.transform.SetParent(null);
 
             Enemy_SerpentBody serpentBody = tail.AddComponent<Enemy_SerpentBody>();
+            DontDestroyOnLoad(serpentBody); // 오브젝트 풀링 전용
             serpentBody.head = clone.transform;
             serpentBody.distanceToHead = tailSpace;
             serpentBody.transform.position = transform.position;

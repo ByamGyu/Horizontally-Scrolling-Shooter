@@ -93,10 +93,16 @@ public class PlayerController : MonoBehaviour
         gamemanager = GameObject.Find("GameManager").GetComponent<GameManager>();
         objectmanager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
 
-        // UI들 초기화
-        gamemanager.UpdateLifeIcon(GetLife());
-        gamemanager.UpdateUltIcon(GetUlt());
-        gamemanager.UpdateChargeGuage(0);
+
+        if (gamemanager != null)
+        {
+            // UI들 초기화
+            gamemanager.UpdateLifeIcon(GetLife());
+            gamemanager.UpdateUltIcon(GetUlt());
+            gamemanager.UpdateChargeGuage(0);
+        }
+        else Debug.Log("PlayerController's gamemanager is Null!");
+        
     }
 
     void Update() // FixedUpdate()를 사용하면 입력이 씹히는 현상 발생

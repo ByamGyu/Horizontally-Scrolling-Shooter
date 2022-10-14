@@ -765,6 +765,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 417641450}
     - target: {fileID: 4337602499880639489, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: _Enemy_Cnt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337602499880639489, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _scoreText
       value: 
       objectReference: {fileID: 7036525957537035887}

@@ -42,7 +42,6 @@ public class SoundManager : MonoBehaviour
             // 유니티에서 제공하는 씬 매니저 클래스(OnSceneLoaded는 작성한 함수)
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        else Destroy(gameObject); // 있으면 기존걸 파괴?
 
 
         InitDictionary(); // 배열들 내부 정보를 딕셔너리 형태로 정리
@@ -77,7 +76,11 @@ public class SoundManager : MonoBehaviour
     {
         string tmp_name = arg0.name;
 
-        Debug.Log(tmp_name);
+        // 무한모드 전용 배경음악이 없으면 이 조건문 유지
+        if (arg0.name == "InfiniteMode")
+        {
+            tmp_name = "Stage_01";
+        }
 
         PlayBGM(tmp_name, 0.5f);
     }

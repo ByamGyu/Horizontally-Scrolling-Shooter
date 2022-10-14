@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7289978634672068955
+--- !u!1 &7789931752374005021
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7289978634672068952}
-  - component: {fileID: 7289978634026279852}
+  - component: {fileID: 3088065018767216330}
+  - component: {fileID: 4337602499880639489}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7289978634672068952
+--- !u!4 &3088065018767216330
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7289978634672068955}
+  m_GameObject: {fileID: 7789931752374005021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,19 +32,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7289978634026279852
+--- !u!114 &4337602499880639489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7289978634672068955}
+  m_GameObject: {fileID: 7789931752374005021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 083b5672df8eb8543974734c2e5a47ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _EnemyObjects:
+  - 
+  - 
+  - 
+  - 
+  _ObstacleObjects:
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -62,9 +70,18 @@ MonoBehaviour:
   - {fileID: 0}
   _Spawn_Delay_Time_Next: 0
   _Spawn_Delay_Time_Cur: 0
+  _Spawn_Delay_Time_Obstacle_Next: 0
+  _Spawn_Delay_Time_Obstacle_Cur: 0
   _Player: {fileID: 0}
   _CanSpawnEnemy: 1
-  _gamemode: 0
+  _CanSpawnObstacle: 0
+  _CanSpawnItemShielded: 1
+  _Enemy_Cnt: 24
+  _CanBossSpawn: 0
+  _BossSpawnTurn: 0
+  _WarningSound: 0
+  _WarningSoundCnt: 0
+  _gamemode: 1
   _scoreText: {fileID: 0}
   _lifeImage:
   - {fileID: 0}
@@ -78,4 +95,4 @@ MonoBehaviour:
   _ChargeAttackBar: {fileID: 0}
   objectManager: {fileID: 0}
   _spawnIndex: 0
-  enemyname: 
+  _spawnIndex_obstacle: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8747337521601648588
+--- !u!1 &6750754949712442491
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8322244364732868536}
-  - component: {fileID: 8885209024625647075}
+  - component: {fileID: 4158015901358400151}
+  - component: {fileID: 4854113511830920021}
   m_Layer: 0
   m_Name: ObjectManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8322244364732868536
+--- !u!4 &4158015901358400151
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8747337521601648588}
+  m_GameObject: {fileID: 6750754949712442491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8885209024625647075
+--- !u!114 &4854113511830920021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8747337521601648588}
+  m_GameObject: {fileID: 6750754949712442491}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0897ee4aa35b1a408fbe391286d5ef4, type: 3}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
   Prefab_Enemy_Cone: {fileID: 6525469570624029054, guid: 8ee15a398225dc64aafebcccae609f12, type: 3}
-  Prefab_Enemy_Ring: {fileID: 5089265047572772494, guid: baa70f74b5f60314ea5522921c9cab9a, type: 3}
+  Prefab_Enemy_Ring: {fileID: 4426418683301035424, guid: baa70f74b5f60314ea5522921c9cab9a, type: 3}
   Prefab_Enemy_Satellite: {fileID: 8052048388823854436, guid: 79980408de6a47942af3f56323eadf8a, type: 3}
   Prefab_Enemy_Starknife: {fileID: 2796436489418051499, guid: b83c95f48a7a2614981bf53f89c1a41a, type: 3}
   Prefab_Enemy_Serpent: {fileID: 3154458029255982246, guid: 606ed223c9cb7d74c950cba3d815c16f, type: 3}
@@ -70,3 +70,11 @@ MonoBehaviour:
   Prefab_Bullet_Enemy_Orange: {fileID: 7183522887647324722, guid: f119dfc4b8ea00846a707469b1efde2d, type: 3}
   Prefab_Bullet_Enemy_Red: {fileID: 7183522887647324722, guid: ec97e9beef950ba41a3ea1975dc75d23, type: 3}
   Prefab_Bullet_Enemy_Red_Big: {fileID: 858683098706647979, guid: d57e1d05bb3ba5b469652a64a78691c7, type: 3}
+  Prefab_Obstacle_Bottom1: {fileID: 8894574539338119025, guid: 79fbcc0f66228b3478faa0030954dff4, type: 3}
+  Prefab_Obstacle_Bottom2: {fileID: 5914352500125050361, guid: acceea0c3ba85694ba538f76879e81e5, type: 3}
+  Prefab_Obstacle_Bottom_Tile: {fileID: 1186486384925994588, guid: ed5c4a2ecbc33204ebd718ff20ead3bf, type: 3}
+  Prefab_Obstacle_Top1: {fileID: 7053279495288834366, guid: e1162d86b6b9b2e4f9efbbd77ee7dd48, type: 3}
+  Prefab_Obstacle_Top2: {fileID: 1852817879371418717, guid: ec428f63898c99a4a83b61c3f1c3a9b1, type: 3}
+  Prefab_Obstacle_Top_Tile: {fileID: 2609360754596393578, guid: d6ac2d48df2ac2b4f84bbef6ba870b66, type: 3}
+  Prefab_Obstacle_Metal_Wall: {fileID: 5416054352159470915, guid: 1ef5dfcf239c29046b1eabdcaf7d750d, type: 3}
+  Prefab_Warp: {fileID: 527464165522272652, guid: edeb3e04b84435c4c893afcf0bfe1f53, type: 3}

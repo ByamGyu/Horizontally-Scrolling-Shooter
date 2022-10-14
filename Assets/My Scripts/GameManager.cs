@@ -102,12 +102,27 @@ public class GameManager : MonoBehaviour
         _spawnList_obstacle = new List<Spawn>();
         ReadSpawnObstacleFile();
 
+        Init();
+    }
+
+    private void Start()
+    {
+        // 어떤 오브젝트가 보다 먼저 만들어졌는데 만약 게임 매니저를 참고해야 하는 상황일 경우
+        // 다시 Init()을 실행시켜서 확실히 한다.
+        Init();
+
+        _Player = GameObject.Find("Player");
+        objectManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
+    }
+
+    void Init()
+    {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this);
         }
-        else Destroy(gameObject);
+        //else Destroy(gameObject);
     }
 
     void ReadSpawnFile()
@@ -209,8 +224,11 @@ public class GameManager : MonoBehaviour
 
 
         // 점수 갱신
-        PlayerController playerinfo = _Player.GetComponent<PlayerController>();
-        _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
+        if(_Player != null)
+        {
+            PlayerController playerinfo = _Player.GetComponent<PlayerController>();
+            _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
+        }
     }
 
     void SpawnEnemy_InfiniteMode()
@@ -227,7 +245,7 @@ public class GameManager : MonoBehaviour
                 _BossSpawnTurn++;
             }
 
-            if(_CanSpawnItemShielded == true && _Enemy_Cnt % 25 == 0)
+            if(_CanSpawnItemShielded == true && _Enemy_Cnt % 10 == 0)
             {
                 SpawnRandomShieldedItemRandomLocation();
                 _CanSpawnItemShielded = false;

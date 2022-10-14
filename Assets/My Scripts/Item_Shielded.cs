@@ -54,8 +54,6 @@ public class Item_Shielded : MonoBehaviour
             Bullet_Base bulletinfo = collision.gameObject.GetComponent<Bullet_Base>();
             _life -= bulletinfo._damage;
 
-            collision.gameObject.SetActive(false); ; // ÅºÈ¯ Á¦°Å
-
             if (_life <= 0)
             {
                 _life = 0;

@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     // 게임 매니저 저장
     public GameManager gamemanager;
+    // 오브젝트 매니저(오브젝트 풀링)
+    public ObjectManager objectmanager;
+
 
     // 플레이어 능력치
     [SerializeField]
@@ -62,33 +65,35 @@ public class PlayerController : MonoBehaviour
     GameObject _effecttmp;
 
     // 오브젝트 저장 변수
-    [SerializeField]
-    public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
-    [SerializeField]
-    public GameObject _Bullet2;
-    [SerializeField]
-    public GameObject _Bullet3;
-    [SerializeField]
-    public GameObject _Bullet4;
-    [SerializeField]
-    public GameObject _Bullet5;
-    [SerializeField]
-    public GameObject _Bullet6;
-    [SerializeField]
-    public GameObject _Bullet7;
+    //[SerializeField]
+    //public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
+    //[SerializeField]
+    //public GameObject _Bullet2;
+    //[SerializeField]
+    //public GameObject _Bullet3;
+    //[SerializeField]
+    //public GameObject _Bullet4;
+    //[SerializeField]
+    //public GameObject _Bullet5;
+    //[SerializeField]
+    //public GameObject _Bullet6;
+    //[SerializeField]
+    //public GameObject _Bullet7;
     [SerializeField]
     public GameObject _Ult;
 
     // 효과음 변수
-    [SerializeField]
-    public Dictionary<string, AudioClip> _SoundEffects;
-
-    // 오브젝트 매니저(오브젝트 풀링)
-    public ObjectManager objectmanager;
+    //[SerializeField]
+    //public Dictionary<string, AudioClip> _SoundEffects;
 
 
+    
     void Start()
     {
+        gamemanager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        objectmanager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
+
+        // UI들 초기화
         gamemanager.UpdateLifeIcon(GetLife());
         gamemanager.UpdateUltIcon(GetUlt());
         gamemanager.UpdateChargeGuage(0);
@@ -115,6 +120,16 @@ public class PlayerController : MonoBehaviour
 
         // 궁극기 관련
         Fire_Ult();
+    }
+
+    void OpenMenuUI()
+    {
+
+    }
+
+    void CloseMenuUI()
+    {
+
     }
 
     void CalculateInvincible()
@@ -270,14 +285,12 @@ public class PlayerController : MonoBehaviour
         {
             case 1: // 파워레벨 1
                 // 프리팹(_Bullet1)을 오브젝트로 생성, 생성 위치, 생성 방향
-                // _Bullet1, transform.position + Vector3.right * 0.5f, transform.rotation
                 GameObject bulletMid1 = objectmanager.MakeObj("Bullet_Player_Default");
                 bulletMid1.transform.position = transform.position + Vector3.right * 0.5f;
                 bulletMid1.transform.rotation = transform.rotation;
 
                 // 탄환에 힘을 가해 움직이게 한다.
                 Rigidbody2D rigid1 = bulletMid1.GetComponent<Rigidbody2D>();
-
                 rigid1.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
 
                 // 총알 생성 딜레이 시간 초기화
@@ -346,6 +359,7 @@ public class PlayerController : MonoBehaviour
 
         // 프리팹(_Bullet1)을 오브젝트로 생성, 생성 위치, 생성 방향
         GameObject Ult = Instantiate(_Ult, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(90f, 0, 0f)));
+        
 
         SetUlt(-1);
         gamemanager.UpdateUltIcon(GetUlt());

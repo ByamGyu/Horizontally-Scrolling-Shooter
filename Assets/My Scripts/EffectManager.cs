@@ -27,6 +27,11 @@ public class EffectManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
+        else
+        {
+            Debug.Log("이펙트매니저가 2개 이상 존재함!");
+            Destroy(gameObject);
+        }
 
         InitDictionary();
     }

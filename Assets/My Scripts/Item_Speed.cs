@@ -9,7 +9,7 @@ public class Item_Speed : Item_Base
         if (collision.gameObject.tag == "Player")
         {
             PlayerController playerinfo = collision.gameObject.GetComponent<PlayerController>();
-            playerinfo.SetSpeed(1.25f);
+            playerinfo.SetSpeed(1.5f);
             playerinfo.AddScore(_score);
 
             SoundManager.instance.PlaySoundEffectOneShot("Item_UltGet", 0.33f);

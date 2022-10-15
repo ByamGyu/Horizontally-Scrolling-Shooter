@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
     public Image[] _UltImage;
     [SerializeReference]
     public GameObject _GameOverGroup;
+    [SerializeField]
+    public GameObject _EscMenuGroup;
 
     // UI 차지 공격 바 관련
     [SerializeReference]
@@ -103,6 +105,17 @@ public class GameManager : MonoBehaviour
         _spawnList_obstacle = new List<Spawn>();
         ReadSpawnObstacleFile();
 
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Debug.Log("게임 매니저가 2개 이상 존재함!");
+            //Destroy(gameObject);
+        }
+
         Init();
     }
 
@@ -116,19 +129,14 @@ public class GameManager : MonoBehaviour
         objectManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
     }
 
-    void Init()
+    public void Init()
     {
-        if (instance == null)
-        {
-            instance = this;
-            //DontDestroyOnLoad(this);
-        }
-
         _Spawn_Delay_Time_Cur = 0;
         _Spawn_Delay_Time_Obstacle_Cur = 0;
         _BossSpawnTurn = 0;
         _WarningSoundCnt = 0;
         _PlayerScore = 0;
+        _Enemy_Cnt = 1;
     }
 
     void ReadSpawnFile()
@@ -195,9 +203,21 @@ public class GameManager : MonoBehaviour
         _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[0].delay;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (_gamemode == Define.GameMode.UI || _gamemode == Define.GameMode.None) return;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (_gamemode == Define.GameMode.Campaign || _gamemode == Define.GameMode.Infinite)
+            {
+                if (_EscMenuGroup.activeSelf == false)
+                {
+                    _EscMenuGroup.SetActive(true);
+                    Time.timeScale = 0f;
+                }
+            }
+        }
 
         _Spawn_Delay_Time_Cur += Time.deltaTime;
         _Spawn_Delay_Time_Obstacle_Cur += Time.deltaTime;
@@ -250,8 +270,11 @@ public class GameManager : MonoBehaviour
 
     void SpawnEnemy_InfiniteMode()
     {
-        // 무한모드 종료 UI 호출 필요
-        if (_Enemy_Cnt >= 1001) return;
+        // 무한모드 종료, UI 호출 필요
+        if (_Enemy_Cnt >= 1001)
+        {
+            return;
+        }
 
         if(_CanSpawnEnemy == true)
         {
@@ -676,7 +699,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateLifeIcon(int life)
     {
-        // 라이프 아이콘 이미지 상태 초기화
         for (int i = 0; i < 3; i++)
         {
             _lifeImage[i].color = new Color(1, 1, 1, 0); // 알파값을 0으로 해서 안보이게 한다
@@ -729,13 +751,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0f;
         _GameOverGroup.SetActive(true);
-
-        // EditorApplication.isPaused = true; // 게임 일시 정지
     }
 
     public void GameRetry()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0); // 씬 번호(파일 -> 빌드 설정 -> 빌드의 씬에서 확인 가능)
     }
 

@@ -554,8 +554,8 @@ public class PlayerController : MonoBehaviour
     {
         _speed += tmp;
 
-        if (_speed >= 7.5f) _speed = 7.5f;
-        else if (_speed <= 2.5f) _speed = 2.5f;
+        if (_speed >= 8f) _speed = 8f;
+        else if (_speed <= 3.5f) _speed = 3.5f;
     }
 
     public void SetUlt(int tmp)

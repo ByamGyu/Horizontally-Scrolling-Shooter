@@ -42,6 +42,11 @@ public class SoundManager : MonoBehaviour
             // 유니티에서 제공하는 씬 매니저 클래스(OnSceneLoaded는 작성한 함수)
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
+        else
+        {
+            Debug.Log("사운드매니저가 2개 이상 존재함!");
+            Destroy(gameObject);
+        }
 
 
         InitDictionary(); // 배열들 내부 정보를 딕셔너리 형태로 정리

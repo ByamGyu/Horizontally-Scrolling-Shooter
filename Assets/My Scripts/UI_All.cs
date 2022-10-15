@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UI_All : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class UI_All : MonoBehaviour
     public SoundManager _soundmanager;
     public GameManager _gamemanager;
     public ObjectManager _objectmanager;
+    public Text _scoretext;
 
     public Define.GameMode _previousgamemode = Define.GameMode.None;
+
 
     private void Start()
     {
@@ -50,6 +53,14 @@ public class UI_All : MonoBehaviour
             _gamemanager = go2.GetComponent<GameManager>();
         }
         else Debug.Log("UI_All's GameManager is null");
+    }
+
+    public void SetScoreText()
+    {
+        if(_scoretext != null && _gamemanager != null)
+        {
+            _scoretext.text = string.Format("Score: " + "{0:n0}", _gamemanager._PlayerScore);
+        }
     }
 
     public void OnClickExit()

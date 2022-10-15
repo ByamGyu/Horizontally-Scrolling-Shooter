@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public float _Spawn_Delay_Time_Obstacle_Next;
     [SerializeField]
     public float _Spawn_Delay_Time_Obstacle_Cur;
-    [SerializeReference]
+    [SerializeField]
     public GameObject _Player = null;
     [SerializeField]
     public bool _CanSpawnEnemy = true;
@@ -48,19 +48,25 @@ public class GameManager : MonoBehaviour
     public Define.GameMode _gamemode = Define.GameMode.None;
 
     // UI
-    [SerializeReference]
+    [SerializeField]
     public Text _scoreText;
-    [SerializeReference]
+    [SerializeField]
+    public Text _GameClearScoreText;
+    [SerializeField]
     public Image[] _lifeImage;
-    [SerializeReference]
+    [SerializeField]
     public Image[] _UltImage;
-    [SerializeReference]
+    [SerializeField]
+    public GameObject _CanvasGroup;
+    [SerializeField]
     public GameObject _GameOverGroup;
     [SerializeField]
     public GameObject _EscMenuGroup;
+    [SerializeField]
+    public GameObject _StageClearGroup;
 
     // UI 차지 공격 바 관련
-    [SerializeReference]
+    [SerializeField]
     public Slider _ChargeAttackBar;
 
     // 오브젝트 매니저(오브젝트 풀)
@@ -171,7 +177,11 @@ public class GameManager : MonoBehaviour
         stringReader.Close(); // 파일을 다 읽었으면 꼭 닫아줘야한다.
 
         // 첫 번째 스폰 딜레이 적용
-        _Spawn_Delay_Time_Next = _spawnList[0].delay;
+
+        if(_spawnList.Count != 0)
+        {
+            _Spawn_Delay_Time_Next = _spawnList[0].delay;
+        }
     }
 
     void ReadSpawnObstacleFile()
@@ -198,9 +208,12 @@ public class GameManager : MonoBehaviour
             _spawnList_obstacle.Add(spawnData);
         }
 
-        stringReader.Close();
+        stringReader.Close();        
 
-        _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[0].delay;
+        if(_spawnList_obstacle.Count != 0)
+        {
+            _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[0].delay;
+        }
     }
 
     private void Update()
@@ -255,8 +268,8 @@ public class GameManager : MonoBehaviour
         if(_Player != null)
         {
             PlayerController playerinfo = _Player.GetComponent<PlayerController>();
-            _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
             _PlayerScore = playerinfo.GetScore();
+            _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
         }
     }
 
@@ -273,6 +286,22 @@ public class GameManager : MonoBehaviour
         // 무한모드 종료, UI 호출 필요
         if (_Enemy_Cnt >= 1001)
         {
+            _gamemode = Define.GameMode.UI;
+
+            Time.timeScale = 0f;            
+            _StageClearGroup.SetActive(true);
+
+            // 점수 갱신
+            PlayerController playerinfo = _Player.GetComponent<PlayerController>();
+            _PlayerScore = playerinfo.GetScore();
+
+            // ui에 점수 적용
+            _GameClearScoreText.text = string.Format("Total Score: " + "{0:n0}", _PlayerScore);
+
+            _CanvasGroup.SetActive(false);
+
+            SoundManager.instance.PlayBGM("Stage_Clear", 0.75f, true);
+
             return;
         }
 
@@ -428,6 +457,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnEnemy_CampaignMode()
     {
+        if (_spawnList.Count == 0) return;
         if (_CanSpawnEnemy == false) return;
         if (_Spawn_Delay_Time_Cur < _Spawn_Delay_Time_Next) return;
 
@@ -479,13 +509,10 @@ public class GameManager : MonoBehaviour
         // 스폰 위치 (0 ~ 9) 9가지 (0부터 시작하니 -1 잊지말자)
         int enemyPoint = _spawnList[_spawnIndex].point;
 
-        // 해당 오브젝트 스폰
         GameObject enemy = objectManager.MakeObj(_EnemyObjects[enemyIndex]);
-        // 스폰한 오브젝트 위치 설정
         enemy.transform.position = _SpawnPos[enemyPoint].position;
 
 
-        // 몬스터 종류별로 회전값 및 오브젝트 매니저 전달
         if(_spawnList[_spawnIndex].type == "Enemy_Claw" || _spawnList[_spawnIndex].type == "Enemy_Serpent")
         {
             // 없음
@@ -535,7 +562,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            // 위에서 시작
+            // 위에서 출현
             if (enemyPoint == 7 || enemyPoint == 8)
             {
                 if (_spawnList[_spawnIndex].type == "Enemy_Cone")
@@ -623,6 +650,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnObstacle_CampaignMode()
     {
+        if (_spawnList_obstacle.Count == 0) return;
         if (_CanSpawnObstacle == false) return;
         if (_Spawn_Delay_Time_Obstacle_Cur < _Spawn_Delay_Time_Obstacle_Next) return;
 
@@ -693,8 +721,24 @@ public class GameManager : MonoBehaviour
         }
 
         // 다음 스폰시간 갱신
-        _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[_spawnIndex].delay;
+        _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[_spawnIndex].delay; // index out of range 문제 있음
         _Spawn_Delay_Time_Obstacle_Cur = 0f;
+
+        //// 스폰 순서 다음줄로
+        //_spawnIndex++;
+
+        //// 모든 스폰이 다 끝났으면 멈춤
+        //if (_spawnIndex >= _spawnList.Count)
+        //{
+        //    _CanSpawnEnemy = false;
+        //    return;
+        //}
+
+        //// 다음 스폰시간 갱신
+        //_Spawn_Delay_Time_Next = _spawnList[_spawnIndex].delay;
+        //_Spawn_Delay_Time_Cur = 0f;
+
+
     }
 
     public void UpdateLifeIcon(int life)

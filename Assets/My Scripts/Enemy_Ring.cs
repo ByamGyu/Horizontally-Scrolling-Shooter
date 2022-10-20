@@ -18,6 +18,7 @@ public class Enemy_Ring : Enemy_Base
     float _startxpos;
     float _startypos;
 
+    // public으로 열어두기
     public bool _CanMoveSin = false;
     public bool _CanMoveCos = false;
     public bool _CanMoveLeft = false;

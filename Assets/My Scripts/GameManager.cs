@@ -22,23 +22,14 @@ public class GameManager : MonoBehaviour
     private float _Spawn_Delay_Time_Obstacle_Next;
     [SerializeField]
     private float _Spawn_Delay_Time_Obstacle_Cur;
-    [SerializeField]
     public GameObject _Player = null;
-    [SerializeField]
     public bool _CanSpawnEnemy = true;
-    [SerializeField]
     public bool _CanSpawnObstacle = true;
-    [SerializeField]
     public bool _CanSpawnItemShielded = true;
-    [SerializeField]
     public int _Enemy_Cnt;
-    [SerializeField]
     public bool _CanBossSpawn = false;
-    [SerializeField]
     public int _BossSpawnTurn = 0;
-    [SerializeField]
     public bool _WarningSound = false;
-    [SerializeField]
     public int _WarningSoundCnt = 0;
     public int _PlayerScore = 0;
 
@@ -68,9 +59,6 @@ public class GameManager : MonoBehaviour
     // UI 차지 공격 바 관련
     [SerializeField]
     public Slider _ChargeAttackBar;
-
-    // 오브젝트 매니저(오브젝트 풀)
-    public ObjectManager objectManager;
 
     // 적 기체 txt 파일로 스폰하는데 사용됨
     public List<Spawn> _spawnList;
@@ -135,7 +123,6 @@ public class GameManager : MonoBehaviour
         Init();
 
         _Player = GameObject.Find("Player");
-        objectManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
     }
 
     public void Init()
@@ -357,9 +344,8 @@ public class GameManager : MonoBehaviour
                     }
                     
 
-                    GameObject enemy = objectManager.MakeObj(_EnemyObjects[11]);
+                    GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[11]);
                     Warp tmp_warp = enemy.GetComponent<Warp>();
-                    tmp_warp.objectManager = objectManager;
 
                     _CanSpawnEnemy = false;
                     _CanBossSpawn = false;
@@ -375,7 +361,7 @@ public class GameManager : MonoBehaviour
                 // 오른쪽에서 시작
                 if (randomPos == 0 || randomPos == 1 || randomPos == 2 || randomPos == 3 || randomPos == 4)
                 {
-                    GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                    GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[randomEnemy]);
                     enemy.transform.position = _SpawnPos[randomPos].position;
                     // 스프라이트가 우측을 바라보게 만들어져 있어서 플레이어 방향으로 회전시켜줘야 함.
                     enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
@@ -404,7 +390,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
                     {
-                        GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                        GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[randomEnemy]);
                         enemy.transform.position = _SpawnPos[randomPos].position;
                         enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
@@ -429,7 +415,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (randomEnemy == 0 || randomEnemy == 1) // cone, ring
                     {
-                        GameObject enemy = objectManager.MakeObj(_EnemyObjects[randomEnemy]);
+                        GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[randomEnemy]);
                         enemy.transform.position = _SpawnPos[randomPos].position;
                         enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
@@ -512,7 +498,7 @@ public class GameManager : MonoBehaviour
         // 스폰 위치 (0 ~ 9) 9가지 (0부터 시작하니 -1 잊지말자)
         int enemyPoint = _spawnList[_spawnIndex].point;
 
-        GameObject enemy = objectManager.MakeObj(_EnemyObjects[enemyIndex]);
+        GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[enemyIndex]);
         enemy.transform.position = _SpawnPos[enemyPoint].position;
 
 
@@ -593,46 +579,7 @@ public class GameManager : MonoBehaviour
         else if(_spawnList[_spawnIndex].type == "Warp")
         {
             Warp enemyInfo = enemy.GetComponent<Warp>();
-            enemyInfo.objectManager = objectManager;
         }
-
-        //if (enemyPoint == 0 || enemyPoint == 1 || enemyPoint == 2 || enemyPoint == 3 || enemyPoint == 4)
-        //{
-        //    GameObject enemy = objectManager.MakeObj(_EnemyObjects[enemyIndex]);
-        //    enemy.transform.position = _SpawnPos[enemyPoint].position;
-        //    // 스프라이트가 우측을 바라보게 만들어져 있어서 플레이어 방향으로 회전시켜줘야 함.
-        //    enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
-
-        //    Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-        //    enemyInfo.objectmanager = objectManager;
-        //    enemyInfo.SimpleMoveLeft();
-        //}
-        //else if (enemyPoint == 5 || enemyPoint == 6) // 아래 오른쪽, 아래 왼쪽
-        //{
-        //    if (enemyIndex == 0 || enemyIndex == 1) // cone, ring
-        //    {
-        //        GameObject enemy = objectManager.MakeObj(_EnemyObjects[enemyIndex]);
-        //        enemy.transform.position = _SpawnPos[enemyPoint].position;
-        //        enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
-
-        //        Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-        //        enemyInfo.objectmanager = objectManager;
-        //        enemyInfo.SimpleMoveUp();
-        //    }
-        //}
-        //else if (enemyPoint == 7 || enemyPoint == 8) // 위 오른쪽, 위 왼쪽
-        //{
-        //    if (enemyIndex == 0 || enemyIndex == 1) // cone, ring
-        //    {
-        //        GameObject enemy = objectManager.MakeObj(_EnemyObjects[enemyIndex]);
-        //        enemy.transform.position = _SpawnPos[enemyPoint].position;
-        //        enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
-
-        //        Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-        //        enemyInfo.objectmanager = objectManager;
-        //        enemyInfo.SimpleMoveDown();
-        //    }
-        //}
 
         // 스폰 순서 다음줄로
         _spawnIndex++;
@@ -690,7 +637,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Spawn Pos: " + SpawnPoint);
 
         // 해당 오브젝트 스폰
-        GameObject obstacle = objectManager.MakeObj(_ObstacleObjects[obstacleIndex]);
+        GameObject obstacle = ObjectManager.instance.MakeObj(_ObstacleObjects[obstacleIndex]);
         
         // 배경 오브젝트의 위치는 해당 프리팹의 위치 수치를 통해서 조절함
         //obstacle.transform.position = _SpawnPos[SpawnPoint].position;
@@ -724,22 +671,6 @@ public class GameManager : MonoBehaviour
         // 다음 스폰시간 갱신
         _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[_spawnIndex_obstacle].delay; // index out of range 문제 있음
         _Spawn_Delay_Time_Obstacle_Cur = 0f;
-
-        //// 스폰 순서 다음줄로
-        //_spawnIndex++;
-
-        //// 모든 스폰이 다 끝났으면 멈춤
-        //if (_spawnIndex >= _spawnList.Count)
-        //{
-        //    _CanSpawnEnemy = false;
-        //    return;
-        //}
-
-        //// 다음 스폰시간 갱신
-        //_Spawn_Delay_Time_Next = _spawnList[_spawnIndex].delay;
-        //_Spawn_Delay_Time_Cur = 0f;
-
-
     }
 
     public void UpdateLifeIcon(int life)
@@ -820,12 +751,10 @@ public class GameManager : MonoBehaviour
 
     void InifiniteModeSerpentSpawnInvoke()
     {
-        GameObject enemy = objectManager.MakeObj(_EnemyObjects[5]);
+        GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[5]);
         enemy.transform.position = _SpawnPos[2].position;
 
         Enemy_Serpent enemyInfo = enemy.GetComponent<Enemy_Serpent>();
-        enemyInfo.objectmanager = objectManager;
-        enemyInfo._gamemanager = instance;
     }
 
     void InfiniteModeWarningSoundInvoke()
@@ -838,7 +767,7 @@ public class GameManager : MonoBehaviour
     {
         int tmp = Random.Range(6, 11);
 
-        GameObject go = objectManager.MakeObj(_EnemyObjects[tmp]);
+        GameObject go = ObjectManager.instance.MakeObj(_EnemyObjects[tmp]);
         Item_Shielded Item = go.GetComponent<Item_Shielded>();
 
         int tmp2 = Random.Range(1, 4);

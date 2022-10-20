@@ -245,7 +245,7 @@ namespace Playniax.Pyro.Framework
         {
             var color = spriteRenderer.color;
 
-            float percent = (float)_mainBody.GetComponent<Enemy_Serpent>()._life / (float)_mainBody.GetComponent<Enemy_Serpent>()._maxLife;
+            float percent = (float)_mainBody.GetComponent<Enemy_Serpent>().GetLife() / (float)_mainBody.GetComponent<Enemy_Serpent>().GetMaxLife();
             float newred = 1;
             float newgreen = 255 * percent / 100;
             float newblue = 255 * percent / 100;

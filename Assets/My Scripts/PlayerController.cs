@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // 게임 매니저 저장
-    public GameManager gamemanager;
-    // 오브젝트 매니저(오브젝트 풀링)
-    public ObjectManager objectmanager;
-
-
     // 플레이어 능력치
     [SerializeField]
     float _speed = 5.0f; // 이동 속도 변수
@@ -49,7 +43,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     bool _isTouchLeft = false;
 
-    // 플레이어 차지 공격 관련
+    // 플레이어 차지 공격 관련 (public으로 열여둬야함)
     [SerializeField]
     bool _isCharging = false;
     [SerializeField]
@@ -67,39 +61,18 @@ public class PlayerController : MonoBehaviour
     // 오브젝트 저장 변수
     //[SerializeField]
     //public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
-    //[SerializeField]
-    //public GameObject _Bullet2;
-    //[SerializeField]
-    //public GameObject _Bullet3;
-    //[SerializeField]
-    //public GameObject _Bullet4;
-    //[SerializeField]
-    //public GameObject _Bullet5;
-    //[SerializeField]
-    //public GameObject _Bullet6;
-    //[SerializeField]
-    //public GameObject _Bullet7;
-    [SerializeField]
+
     public GameObject _Ult;
-
-    // 효과음 변수
-    //[SerializeField]
-    //public Dictionary<string, AudioClip> _SoundEffects;
-
 
     
     void Start()
     {
-        gamemanager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        objectmanager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
-
-
-        if (gamemanager != null)
+        if (GameManager.instance != null)
         {
             // UI들 초기화
-            gamemanager.UpdateLifeIcon(GetLife());
-            gamemanager.UpdateUltIcon(GetUlt());
-            gamemanager.UpdateChargeGuage(0);
+            GameManager.instance.UpdateLifeIcon(GetLife());
+            GameManager.instance.UpdateUltIcon(GetUlt());
+            GameManager.instance.UpdateChargeGuage(0);
         }
         else Debug.Log("PlayerController's gamemanager is Null!");
         
@@ -184,8 +157,8 @@ public class PlayerController : MonoBehaviour
 
             if (_effecttmp != null) Destroy(_effecttmp);
 
-            _chargeTime = 0;            
-            gamemanager.UpdateChargeGuage(0);
+            _chargeTime = 0;
+            GameManager.instance.UpdateChargeGuage(0);
             return;
         }
 
@@ -226,7 +199,7 @@ public class PlayerController : MonoBehaviour
         if(_chargeTime >= 0.1 && _isCharging == true)
         {
             // 차지 공격 게이지 갱신
-            gamemanager.UpdateChargeGuage(_chargeTime, _maxChargeTime);
+            GameManager.instance.UpdateChargeGuage(GetChargeTime(), GetMaxChargeTime());
 
             if(_effectChargeisplay == false)
             {
@@ -249,7 +222,7 @@ public class PlayerController : MonoBehaviour
         float finalpercent = 1 + percent * 2;
 
         // 차지 공격 객체 스폰
-        GameObject chargedbullet = objectmanager.MakeObj("Bullet_Player_Charge");
+        GameObject chargedbullet = ObjectManager.instance.MakeObj("Bullet_Player_Charge");
         chargedbullet.transform.position = transform.position + Vector3.right * 1f;
         chargedbullet.transform.rotation = transform.rotation;
         Rigidbody2D rigid = chargedbullet.GetComponent<Rigidbody2D>();
@@ -291,7 +264,7 @@ public class PlayerController : MonoBehaviour
         {
             case 1: // 파워레벨 1
                 // 프리팹(_Bullet1)을 오브젝트로 생성, 생성 위치, 생성 방향
-                GameObject bulletMid1 = objectmanager.MakeObj("Bullet_Player_Default");
+                GameObject bulletMid1 = ObjectManager.instance.MakeObj("Bullet_Player_Default");
                 bulletMid1.transform.position = transform.position + Vector3.right * 0.5f;
                 bulletMid1.transform.rotation = transform.rotation;
 
@@ -303,10 +276,10 @@ public class PlayerController : MonoBehaviour
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
             case 2: // 파워레벨 2
-                GameObject bulletTop2 = objectmanager.MakeObj("Bullet_Player_Default");
+                GameObject bulletTop2 = ObjectManager.instance.MakeObj("Bullet_Player_Default");
                 bulletTop2.transform.position = transform.position + Vector3.up * 0.15f + Vector3.right * 0.5f;
                 bulletTop2.transform.rotation = transform.rotation;
-                GameObject bulletDown2 = objectmanager.MakeObj("Bullet_Player_Default");
+                GameObject bulletDown2 = ObjectManager.instance.MakeObj("Bullet_Player_Default");
                 bulletDown2.transform.position = transform.position + Vector3.down * 0.15f + Vector3.right * 0.5f;
                 bulletDown2.transform.rotation = transform.rotation;
 
@@ -319,13 +292,13 @@ public class PlayerController : MonoBehaviour
                 _Bullet_Shot_Delay_Cur = 0.0f;
                 break;
             case 3: // 파워레벨 3
-                GameObject bulletTop3 = objectmanager.MakeObj("Bullet_Player_Default");
+                GameObject bulletTop3 = ObjectManager.instance.MakeObj("Bullet_Player_Default");
                 bulletTop3.transform.position = transform.position + Vector3.up * 0.25f + Vector3.right * 0.5f;
                 bulletTop3.transform.rotation = transform.rotation;
-                GameObject bulletMid3 = objectmanager.MakeObj("Bullet_Player_Default");
+                GameObject bulletMid3 = ObjectManager.instance.MakeObj("Bullet_Player_Default");
                 bulletMid3.transform.position = transform.position + Vector3.right * 0.75f;
                 bulletMid3.transform.rotation = transform.rotation;
-                GameObject bulletBottom3 = objectmanager.MakeObj("Bullet_Player_Default");
+                GameObject bulletBottom3 = ObjectManager.instance.MakeObj("Bullet_Player_Default");
                 bulletBottom3.transform.position = transform.position + Vector3.down * 0.25f + Vector3.right * 0.5f;
                 bulletBottom3.transform.rotation = transform.rotation;
 
@@ -341,7 +314,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case 4: // 파워레벨 4
                 // _Bullet5, transform.position + Vector3.right * 0.5f, transform.rotation
-                GameObject bulletMid4 = objectmanager.MakeObj("Bullet_Player_MaxPower");
+                GameObject bulletMid4 = ObjectManager.instance.MakeObj("Bullet_Player_MaxPower");
                 bulletMid4.transform.position = transform.position + Vector3.right * 0.5f;
                 bulletMid4.transform.rotation = transform.rotation;
 
@@ -368,7 +341,7 @@ public class PlayerController : MonoBehaviour
         
 
         SetUlt(-1);
-        gamemanager.UpdateUltIcon(GetUlt());
+        GameManager.instance.UpdateUltIcon(GetUlt());
     }
 
     void GuideAttack_Delay()
@@ -387,8 +360,8 @@ public class PlayerController : MonoBehaviour
         if (_GuideAttack_Delay_Cur < _GuideAttack_Delay_Max) return;
 
         // 유도탄 프리팹 스폰하는 방식으로
-        GameObject chasebulletTop = objectmanager.MakeObj("Bullet_Player_Guide");
-        GameObject chasebulletBottom = objectmanager.MakeObj("Bullet_Player_Guide");
+        GameObject chasebulletTop = ObjectManager.instance.MakeObj("Bullet_Player_Guide");
+        GameObject chasebulletBottom = ObjectManager.instance.MakeObj("Bullet_Player_Guide");
         chasebulletTop.transform.position = transform.position + Vector3.up * 0.5f;
         chasebulletTop.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90f));
         chasebulletBottom.transform.position = transform.position + Vector3.down * 0.5f;
@@ -479,7 +452,7 @@ public class PlayerController : MonoBehaviour
             SetLife(-1);
             Dead();
 
-            gamemanager.RespawnPlayerInvoke(2.0f);
+            GameManager.instance.RespawnPlayerInvoke(2.0f);
             gameObject.SetActive(false);
         }
     }
@@ -527,13 +500,13 @@ public class PlayerController : MonoBehaviour
         {
             _life = -1;
 
-            gamemanager.GameOver();
+            GameManager.instance.GameOver();
         }
 
         // 최대 체력은 3
         if (_life >= 3) _life = 3;
 
-        gamemanager.UpdateLifeIcon(GetLife());
+        GameManager.instance.UpdateLifeIcon(GetLife());
     }
 
     public int GetLife() { return _life; }
@@ -565,7 +538,7 @@ public class PlayerController : MonoBehaviour
         if (_ult >= 3) _ult = 3;
         else if (_ult <= 0) _ult = 0;
 
-        gamemanager.UpdateUltIcon(GetUlt());
+        GameManager.instance.UpdateUltIcon(GetUlt());
     }
 
     public void SetGuideAttack(bool tmp)
@@ -586,5 +559,15 @@ public class PlayerController : MonoBehaviour
     public int GetUlt()
     {
         return _ult;
+    }
+
+    public float GetChargeTime()
+    {
+        return _chargeTime;
+    }
+
+    public float GetMaxChargeTime()
+    {
+        return _maxChargeTime;
     }
 }

@@ -11,9 +11,6 @@ public class Warp : MonoBehaviour
     public bool _isSoundPlay = false;
 
 
-    public ObjectManager objectManager;
-
-
     private void Awake()
     {
         Init();
@@ -78,7 +75,7 @@ public class Warp : MonoBehaviour
 
         if(_Time >= _EndTime)
         {
-            GameObject go = objectManager.MakeObj("Enemy_Claw");
+            GameObject go = ObjectManager.instance.MakeObj("Enemy_Claw");
             go.transform.position = transform.position;
 
             Init();

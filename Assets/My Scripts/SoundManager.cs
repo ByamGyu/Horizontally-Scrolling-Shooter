@@ -22,7 +22,7 @@ public class SoundManager : MonoBehaviour
     public Dictionary<string, AudioClip> _DicSoundEffectStorage = new Dictionary<string, AudioClip>();
 
 
-    private void Awake()
+    void Awake()
     {
         // 오디오 소스(재생기) 객체를 만들고 사운드 매니저 자식으로 달아주기
         GameObject gotmp1 = new GameObject("AudioSource: BGM");

@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4930386879781889941, guid: 933f383c73976434aa3b390fa8a389ee, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4930386879781889941, guid: 933f383c73976434aa3b390fa8a389ee, type: 3}
       propertyPath: m_AnchorMax.x
@@ -324,7 +324,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &631982296
 GameObject:
@@ -439,7 +439,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &657509919 stripped
 MonoBehaviour:
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7905900961950248562, guid: 63946364efc89744382092d2932947c4, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7905900961950248562, guid: 63946364efc89744382092d2932947c4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -782,7 +782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1884053306 stripped
 Transform:
@@ -1551,6 +1551,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 693017390}
     - target: {fileID: 4337602499880639489, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: _CanSpawnEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337602499880639489, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _GameOverGroup
       value: 
       objectReference: {fileID: 7036525957537035883}
@@ -1570,6 +1574,10 @@ PrefabInstance:
       propertyPath: _GameClearScoreText
       value: 
       objectReference: {fileID: 360446945}
+    - target: {fileID: 4337602499880639489, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: _CanSpawnItemShielded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4337602499880639489, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: _SpawnPos.Array.data[0]
       value: 
@@ -1793,6 +1801,10 @@ PrefabInstance:
     - target: {fileID: 7289978634672068955, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
       propertyPath: m_TagString
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789931752374005021, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782d31f1eb2476e46aac4cce9888f70e, type: 3}

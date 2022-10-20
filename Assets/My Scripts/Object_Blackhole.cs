@@ -69,10 +69,9 @@ public class Object_Blackhole : MonoBehaviour
             }
         }
 
-        // 적 탄환
+        // 적 탄환들 처리
         foreach (GameObject bullet in _enemiesbullet)
         {
-            // 탄환을 이동시키면 이동되는 탄환에 의해서 플레이어 기체가 폭발하는 경우가 있어서 파괴로 바꿈
             bullet.SetActive(false);
         }
     }

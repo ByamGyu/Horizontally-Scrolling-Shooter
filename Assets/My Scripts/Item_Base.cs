@@ -5,8 +5,10 @@ using UnityEngine;
 public class Item_Base : MonoBehaviour
 {
     Rigidbody2D _rigid;
-    public float _speed = 1.0f;
-    public int _score = 50;
+    [SerializeField]
+    protected float _speed = 1.0f;
+    [SerializeField]
+    protected int _score = 50;
 
     private void Start()
     {

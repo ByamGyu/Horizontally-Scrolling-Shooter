@@ -5,19 +5,15 @@ using UnityEngine;
 public class Enemy_Serpent : MonoBehaviour
 {
     [SerializeField]
-    public int _maxLife = 250;
+    int _maxLife = 250;
     [SerializeField]
-    public int _life = 250;
+    int _life = 250;
     [SerializeField]
     public int _score = 2500;
     [SerializeField]
-    public Rigidbody2D _rigid;
+    Rigidbody2D _rigid;
     [SerializeField]
     GameObject _player;
-    [SerializeField]
-    public GameManager _gamemanager = null;
-    [SerializeField]
-    public ObjectManager objectmanager = null;
 
 
     // ¸öÅë ¼³Á¤
@@ -76,12 +72,9 @@ public class Enemy_Serpent : MonoBehaviour
         SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.5f);
         SoundManager.instance.PlayBGM("Stage_01_Serpent", 0.33f, true);
 
-        GameObject tmp = GameObject.FindGameObjectWithTag("GameManager");
-        if(tmp != null) _gamemanager = tmp.GetComponent<GameManager>();
-
-        if (_gamemanager != null)
+        if (GameManager.instance != null)
         {
-            _gamemanager._isBossSpawn = true;
+            GameManager.instance._isBossSpawn = true;
         }
     }
 
@@ -130,11 +123,11 @@ public class Enemy_Serpent : MonoBehaviour
             PlayerController playerinfo = _player.GetComponent<PlayerController>();
             playerinfo.AddScore(_score);
 
-            if (_gamemanager != null)
+            if (GameManager.instance != null)
             {
-                _gamemanager.SetEnemyCnt(1);
-                _gamemanager._CanBossSpawn = false;
-                _gamemanager._CanSpawnEnemy = true;
+                GameManager.instance.SetEnemyCnt(1);
+                GameManager.instance._CanBossSpawn = false;
+                GameManager.instance._CanSpawnEnemy = true;
             }
 
             SoundManager.instance.PlaySoundEffectOneShot("Enemy_Serpent_Death", 0.75f);
@@ -158,7 +151,7 @@ public class Enemy_Serpent : MonoBehaviour
                 OnDisable();
             }
 
-            _gamemanager._isBossSpawn = false;
+            GameManager.instance._isBossSpawn = false;
             Init();
             gameObject.SetActive(false);
         }
@@ -315,4 +308,14 @@ public class Enemy_Serpent : MonoBehaviour
     void SimpleMoveLeft() { }
     void SimpleMoveUp() { }
     void SimpleMoveDown() { }
+
+    public int GetMaxLife()
+    {
+        return _maxLife;
+    }
+
+    public int GetLife()
+    {
+        return _life;
+    }
 }

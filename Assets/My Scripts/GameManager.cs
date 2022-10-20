@@ -382,8 +382,6 @@ public class GameManager : MonoBehaviour
 
                     SetEnemyCnt(1);
                     Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-                    enemyInfo.objectmanager = objectManager;
-                    enemyInfo._gamemanager = instance;
 
                     if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
                     {
@@ -412,8 +410,6 @@ public class GameManager : MonoBehaviour
 
                         SetEnemyCnt(1);
                         Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-                        enemyInfo.objectmanager = objectManager;
-                        enemyInfo._gamemanager = instance;
 
 
                         if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
@@ -439,8 +435,6 @@ public class GameManager : MonoBehaviour
 
                         SetEnemyCnt(1);
                         Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-                        enemyInfo.objectmanager = objectManager;
-                        enemyInfo._gamemanager = instance;
 
 
                         if (_EnemyObjects[randomEnemy] == "Enemy_Cone")
@@ -536,7 +530,6 @@ public class GameManager : MonoBehaviour
             enemy.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
             Enemy_Base enemyInfo = enemy.GetComponent<Enemy_Base>();
-            enemyInfo.objectmanager = objectManager;
 
             // 오른쪽에서 출현
             if(enemyPoint >= 0 && enemyPoint <= 4)
@@ -596,7 +589,6 @@ public class GameManager : MonoBehaviour
             )
         {
             Item_Shielded enemyInfo = enemy.GetComponent<Item_Shielded>();
-            enemyInfo.objectmanager = objectManager;
         }
         else if(_spawnList[_spawnIndex].type == "Warp")
         {
@@ -848,8 +840,6 @@ public class GameManager : MonoBehaviour
 
         GameObject go = objectManager.MakeObj(_EnemyObjects[tmp]);
         Item_Shielded Item = go.GetComponent<Item_Shielded>();
-        Item.objectmanager = objectManager;
-        Item.gamemanager = instance;
 
         int tmp2 = Random.Range(1, 4);
         Item.transform.position = _SpawnPos[tmp2].position;

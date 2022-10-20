@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bullet_Base : MonoBehaviour
 {
-    [SerializeField]
+    // public으로 열어두기
     public int _damage = 1;
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "BorderBullet")
         {

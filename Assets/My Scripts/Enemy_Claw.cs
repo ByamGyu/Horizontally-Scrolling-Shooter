@@ -21,26 +21,30 @@ public class Enemy_Claw : MonoBehaviour
     [SerializeField]
     int _score = 5000;
 
-    public int rotations = 5;
-    public float movementRange = 1;
-    public float movementSpeed = 1;
-    public int punchingRange = 17;
-    public float punchingPower = 15;
+    private int rotations = 5;
+    private float movementRange = 1;
+    private float movementSpeed = 1;
+    private int punchingRange = 17;
+    private float punchingPower = 15;
 
     // 애니메이션 스프라이트
-    public Animation sleep;
-    public Animation idle;
-    public Animation clench;
-    public Animation attack;
-    public Animation open;
-    public Animation charge;
-    public Animation chargeattack;
+    [SerializeField]
+    private Animation sleep;
+    [SerializeField]
+    private Animation idle;
+    [SerializeField]
+    private Animation clench;
+    [SerializeField]
+    private Animation attack;
+    [SerializeField]
+    private Animation open;
+    [SerializeField]
+    private Animation charge;
+    [SerializeField]
+    private Animation chargeattack;
 
     [SerializeField]
     GameObject _Player = null;
-    [SerializeField]
-    GameManager _gm;
-    [SerializeField]
 
     // 돌진 공격 관련
     bool _SE_Punch = false;
@@ -50,7 +54,6 @@ public class Enemy_Claw : MonoBehaviour
     float _frameTime;
     int _rotations;
     float _speed;
-    [SerializeField]
     public int _state;
     float _y;
 
@@ -68,12 +71,13 @@ public class Enemy_Claw : MonoBehaviour
 
     
 
+    [SerializeField]
+    private int frame;
 
-    public int frame;
+    [SerializeField]
+    SpriteRenderer spriteRenderer;
 
-    public SpriteRenderer spriteRenderer;
-
-    public Boss_Claw_BulletSpawner _bulletspawner;
+    Boss_Claw_BulletSpawner _bulletspawner;
 
     void Awake()
     {
@@ -86,18 +90,13 @@ public class Enemy_Claw : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("claw Start");
-
-        GameObject tmp = GameObject.FindGameObjectWithTag("GameManager");
-        _gm = tmp.GetComponent<GameManager>();
-
         _life = _maxlife;
 
         _bulletspawner = this.GetComponent<Boss_Claw_BulletSpawner>();
 
-        if(_gm != null)
+        if(GameManager.instance != null)
         {
-            _gm._isBossSpawn = true;
+            GameManager.instance._isBossSpawn = true;
         }
     }
 
@@ -508,17 +507,17 @@ public class Enemy_Claw : MonoBehaviour
             EffectManager.instance.SpawnEffect("Effect_Explosion_Cyberspark", transform.position, Vector3.zero, new Vector3(5.0f, 5.0f, 5.0f));
             EffectManager.instance.SpawnEffect("Effect_Explosion_Redspark", transform.position, Vector3.zero, new Vector3(5.0f, 5.0f, 5.0f));
 
-            if (_gm != null)
+            if (GameManager.instance != null)
             {
-                _gm.SetEnemyCnt(1);
-                _gm._CanBossSpawn = false;
-                _gm._CanSpawnEnemy = true;
-                _gm._WarningSound = false;
-                _gm._isBossSpawn = false;
+                GameManager.instance.SetEnemyCnt(1);
+                GameManager.instance._CanBossSpawn = false;
+                GameManager.instance._CanSpawnEnemy = true;
+                GameManager.instance._WarningSound = false;
+                GameManager.instance._isBossSpawn = false;
             }
 
             // 죽으면 스테이지 클리어 BGM이 재생 (모드에 따라서 다르게 할 필요 있음)
-            if(_gm._gamemode == Define.GameMode.Campaign)
+            if(GameManager.instance._gamemode == Define.GameMode.Campaign)
             {
                 SoundManager.instance.PlayBGM("Stage_Clear", 0.75f, false);
 
@@ -527,7 +526,7 @@ public class Enemy_Claw : MonoBehaviour
                 // 게임 완료 UI 띄우기 (Stage_Clear_Canvas)
                 // 게임 일시 정지
             }
-            else if(_gm._gamemode == Define.GameMode.Infinite)
+            else if(GameManager.instance._gamemode == Define.GameMode.Infinite)
             {
                 SoundManager.instance.PlayBGM("Stage_01_2", 0.75f, true);
 

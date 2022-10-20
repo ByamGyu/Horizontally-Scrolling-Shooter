@@ -784,6 +784,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1884053306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6351934089159336993, guid: 9036fccec5f7bfa4bbfa6b044715cfae, type: 3}
+  m_PrefabInstance: {fileID: 7447785241906899513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1932414607 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7905900961755727316, guid: 63946364efc89744382092d2932947c4, type: 3}
@@ -1806,6 +1811,10 @@ PrefabInstance:
       propertyPath: _speed
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7447785241949618398, guid: 9036fccec5f7bfa4bbfa6b044715cfae, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1884053306}
     - target: {fileID: 7447785241949618399, guid: 9036fccec5f7bfa4bbfa6b044715cfae, type: 3}
       propertyPath: m_RootOrder
       value: 11

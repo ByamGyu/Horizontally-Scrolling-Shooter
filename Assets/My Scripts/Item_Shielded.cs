@@ -6,20 +6,12 @@ public class Item_Shielded : MonoBehaviour
 {
     // 스폰할 아이템을 들고있다가 파괴되면 해당 아이템을 스폰하고 사라진다.
 
-    [SerializeField]
     public int _life = 3;
-    [SerializeField]
     public int _lifeMax = 3;
-    [SerializeField]
     Rigidbody2D _rigid;
-    [SerializeField]
     public float _speed = 1.0f;
-    [SerializeField]
     public int _score = 50;
-
-    public GameManager gamemanager = null;
-    public ObjectManager objectmanager = null;
-    
+        
 
     private void Start()
     {
@@ -87,7 +79,7 @@ public class Item_Shielded : MonoBehaviour
 
         Debug.Log(this.name);
 
-        if (objectmanager == null)
+        if (ObjectManager.instance == null)
         {
             Debug.Log("Item_Shielded's objectmanager is null!");
             return;
@@ -95,32 +87,32 @@ public class Item_Shielded : MonoBehaviour
 
         if(this.name == "Item_Shielded_Life(Clone)")
         {
-            GameObject SpawnItem = objectmanager.MakeObj("Item_Life");
+            GameObject SpawnItem = ObjectManager.instance.MakeObj("Item_Life");
             SpawnItem.transform.position = transform.position;
         }
         else if(this.name == "Item_Shielded_Power(Clone)")
         {
-            GameObject SpawnItem = objectmanager.MakeObj("Item_Power");            
+            GameObject SpawnItem = ObjectManager.instance.MakeObj("Item_Power");            
             SpawnItem.transform.position = transform.position;
             
         }
         else if(this.name == "Item_Shielded_Speed(Clone)")
         {
-            GameObject SpawnItem = objectmanager.MakeObj("Item_Speed");
+            GameObject SpawnItem = ObjectManager.instance.MakeObj("Item_Speed");
             SpawnItem.transform.position = transform.position;
         }
         else if(this.name == "Item_Shielded_Ult(Clone)")
         {
-            GameObject SpawnItem = objectmanager.MakeObj("Item_Ult");
+            GameObject SpawnItem = ObjectManager.instance.MakeObj("Item_Ult");
             SpawnItem.transform.position = transform.position;
         }
         else if(this.name == "Item_Shielded_GuidedAttack(Clone)")
         {
-            GameObject SpawnItem = objectmanager.MakeObj("Item_GuideAttack");
+            GameObject SpawnItem = ObjectManager.instance.MakeObj("Item_GuideAttack");
             SpawnItem.transform.position = transform.position;
         }
 
-        if(gamemanager != null) gamemanager._CanSpawnItemShielded = true;
+        if (GameManager.instance == null) GameManager.instance._CanSpawnItemShielded = true;
         Init();
         
         

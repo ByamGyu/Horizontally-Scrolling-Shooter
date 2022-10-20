@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Item_Base : MonoBehaviour
 {
-    [SerializeField]
     Rigidbody2D _rigid;
-    [SerializeField]
     public float _speed = 1.0f;
-    [SerializeField]
     public int _score = 50;
 
     private void Start()

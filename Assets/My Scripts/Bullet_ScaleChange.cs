@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Bullet_ScaleChange : MonoBehaviour
 {
-    public float _y;
-    public float _size;
+    private float _y;
+    private float _size;
 
-    private void Update()
+    void Update()
     {
         _size = (Mathf.Sin(_y) * 0.25f) + 1;
 

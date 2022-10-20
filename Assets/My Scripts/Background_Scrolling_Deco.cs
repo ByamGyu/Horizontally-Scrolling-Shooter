@@ -4,30 +4,43 @@ using UnityEngine;
 
 public class Background_Scrolling_Deco : MonoBehaviour
 {
-    public float _speed;
-    public int curIndex = 0; // 배열의 현재 인덱스
-    public int endIndex; // 배열의 마지막 인덱스
+    [SerializeField]
+    private float _speed;
+    //private int curIndex = 0; // 배열의 현재 인덱스
+    [SerializeField]
+    private int endIndex; // 배열의 마지막 인덱스
 
-    public float rightPosX; // 배경의 시작 x 좌표
-    public float leftPosX; // 배경의 끝 x 좌표
+    [SerializeField]
+    private float rightPosX; // 배경의 시작 x 좌표
+    [SerializeField]
+    private float leftPosX; // 배경의 끝 x 좌표
 
-    public Transform[] sprites; // 스프라이트 여러개를 갖고있는 하나의 그룹이 원소로 들어간다.
+    [SerializeField]
+    public Transform[] sprites;
 
 
-    private void Awake()
+    void Awake()
     {
 
     }
 
     void Start()
     {
-        endIndex = sprites.Length - 1;        
+        Init();
     }
 
     void Update()
     {
         Move();
         Scrolling();
+    }
+
+    void Init()
+    {
+        _speed = 0.25f;
+        rightPosX = 30; // 시작하는 x좌표 위치
+        leftPosX = -15; // 끝나는 x좌표 위치
+        endIndex = sprites.Length - 1;
     }
 
     void Move()

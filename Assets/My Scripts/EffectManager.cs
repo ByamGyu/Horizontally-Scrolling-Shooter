@@ -5,7 +5,6 @@ using UnityEngine;
 public class EffectManager : MonoBehaviour
 {
     // 스프라이트 렌더러를 이용한 이펙트를 제어하는 매니저
-    // 일반 이펙트(파티클 시스템?)도 해야할듯
 
     public static EffectManager instance;
 
@@ -17,7 +16,7 @@ public class EffectManager : MonoBehaviour
     // return 전용 변수
     GameObject _effecttmp;
 
-    public Dictionary<string, GameObject> _DicEffectStorage = new Dictionary<string, GameObject>();
+    Dictionary<string, GameObject> _DicEffectStorage = new Dictionary<string, GameObject>();
 
 
     private void Awake()
@@ -39,6 +38,7 @@ public class EffectManager : MonoBehaviour
     void InitDictionary()
     {
         // 꼭 이 함수 실행시켜!
+        // 딕셔너리 자료구조에 채워 넣어 초기화 하는 함수
 
         if (_DicEffectStorage.Count != 0) _DicEffectStorage.Clear();
 

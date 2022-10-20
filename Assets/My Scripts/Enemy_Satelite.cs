@@ -38,7 +38,8 @@ public class Enemy_Satelite : Enemy_Base
         // 플레이어와의 거리를 계산
         Vector3 _distance = (_Player.transform.position - transform.position).normalized;
                 
-        GameObject bullet1 = objectmanager.MakeObj("Bullet_Enemy_Orange");
+        
+        GameObject bullet1 = ObjectManager.instance.MakeObj("Bullet_Enemy_Orange");
         bullet1.transform.position = transform.position + Vector3.left * 0.5f;
         bullet1.transform.rotation = transform.rotation;
 

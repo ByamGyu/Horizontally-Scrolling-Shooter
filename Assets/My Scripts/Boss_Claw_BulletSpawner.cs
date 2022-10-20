@@ -7,9 +7,6 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
     public GameObject _Player = null;
     public GameObject _mainbodyinfo = null;
 
-    // enemyInfo.objectmanager = objectManager;
-    public ObjectManager _objectmanager;
-
     public bool _CanFireBigBullet = false;
     public bool _CanFireMultiRandomshotToPlayer = false;
     public bool _CanFireArc = false;
@@ -30,17 +27,17 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
     float _tmp = 1; // 탄막에 변화를 주는 변수
 
 
-    private void Awake()
+    void Awake()
     {
 
     }
 
-    private void Start()
+    void Start()
     {
         _Player = GameObject.FindGameObjectWithTag("Player");
 
-        _objectmanager = GameManager.instance.objectManager;
-        if (_objectmanager == null)
+        
+        if (ObjectManager.instance == null)
         {
             Debug.Log("ObjectManager is Null");
         }
@@ -48,9 +45,9 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
         InitAll();
     }
 
-    private void Update()
+    void Update()
     {
-        if (_objectmanager == null) return;
+        if (ObjectManager.instance == null) return;
 
         Bullet_Delay();
 
@@ -119,7 +116,7 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_FireBigBullet_Cur < _Bullet_Shot_Delay_FireBigBullet_Max) return;
 
-        GameObject bullet = _objectmanager.MakeObj("Bullet_Enemy_Red_Big");
+        GameObject bullet = ObjectManager.instance.MakeObj("Bullet_Enemy_Red_Big");
         bullet.transform.position = transform.position + Vector3.left * 0.5f;
         bullet.transform.rotation = transform.rotation;
 
@@ -140,7 +137,7 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
 
         for (int i = 0; i < _cnt; i++)
         {
-            GameObject bullet = _objectmanager.MakeObj("Bullet_Enemy_Red");
+            GameObject bullet = ObjectManager.instance.MakeObj("Bullet_Enemy_Red");
             bullet.transform.position = transform.position + Vector3.left * 0.5f;
             bullet.transform.rotation = transform.rotation;
             bullet.transform.localScale = new Vector3(2f, 2f, 2f);
@@ -163,7 +160,7 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_FireArc_Cur < _Bullet_Shot_Delay_FireArc_Max) return;
 
-        GameObject bullet = _objectmanager.MakeObj("Bullet_Enemy_Red");
+        GameObject bullet = ObjectManager.instance.MakeObj("Bullet_Enemy_Red");
         bullet.transform.position = transform.position + Vector3.left * 0.5f;
         bullet.transform.rotation = transform.rotation;
         bullet.transform.localScale = new Vector3(2f, 2f, 2f);
@@ -184,7 +181,7 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_FireArc2Way_Cur < _Bullet_Shot_Delay_FireArc2Way_Max) return;
 
-        GameObject bullet1 = _objectmanager.MakeObj("Bullet_Enemy_Red");
+        GameObject bullet1 = ObjectManager.instance.MakeObj("Bullet_Enemy_Red");
         bullet1.transform.position = transform.position + Vector3.left * 0.5f;
         bullet1.transform.rotation = transform.rotation;
         bullet1.transform.localScale = new Vector3(2f, 2f, 2f);
@@ -192,7 +189,7 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
         Vector2 _dir = new Vector2(-1, Mathf.Sin(Mathf.PI * 7.5f * _tmp / 100));
         rigid1.AddForce(_dir.normalized * 5, ForceMode2D.Impulse);
 
-        GameObject bullet2 = _objectmanager.MakeObj("Bullet_Enemy_Red");
+        GameObject bullet2 = ObjectManager.instance.MakeObj("Bullet_Enemy_Red");
         bullet2.transform.position = transform.position + Vector3.left * 0.5f;
         bullet2.transform.rotation = transform.rotation;
         bullet2.transform.localScale = new Vector3(2f, 2f, 2f);
@@ -214,7 +211,7 @@ public class Boss_Claw_BulletSpawner : MonoBehaviour
 
         for (int i = 0; i < _cnt; i++)
         {
-            GameObject bullet = _objectmanager.MakeObj("Bullet_Enemy_Red");
+            GameObject bullet = ObjectManager.instance.MakeObj("Bullet_Enemy_Red");
             bullet.transform.position = transform.position + Vector3.left * 0.5f;
             bullet.transform.rotation = transform.rotation;
             bullet.transform.localScale = new Vector3(2f, 2f, 2f);

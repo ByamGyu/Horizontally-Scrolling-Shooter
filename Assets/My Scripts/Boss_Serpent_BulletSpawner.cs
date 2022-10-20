@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class Boss_Serpent_BulletSpawner : MonoBehaviour
 {
-    // enemyInfo.objectmanager = objectManager;
-    public ObjectManager _objectmanager;
-
-    public float _Bullet_Shot_Delay_Cur;
-    public float _Bullet_Shot_Delay_Max;
+    private float _Bullet_Shot_Delay_Cur;
+    private float _Bullet_Shot_Delay_Max;
 
 
-    private void Awake()
+    void Awake()
     {
         _Bullet_Shot_Delay_Max = 4f;
     }
 
-    private void Start()
+    void Start()
     {
-        _objectmanager = GameManager.instance.objectManager;
-        if (_objectmanager == null)
+        if (ObjectManager.instance == null)
         {
             Debug.Log("ObjectManager is Null");
         }
     }
 
-    private void Update()
+    void Update()
     {
-        if (_objectmanager == null) return;
+        if (ObjectManager.instance == null) return;
 
         Bullet_Delay();
         Fire();
@@ -45,11 +41,11 @@ public class Boss_Serpent_BulletSpawner : MonoBehaviour
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
-        GameObject bullettop = _objectmanager.MakeObj("Bullet_Enemy_Green");
+        GameObject bullettop = ObjectManager.instance.MakeObj("Bullet_Enemy_Green");
         bullettop.transform.position = transform.position + transform.up * 1f;
         bullettop.transform.rotation = transform.rotation;
         bullettop.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
-        GameObject bulletbottom = _objectmanager.MakeObj("Bullet_Enemy_Green");
+        GameObject bulletbottom = ObjectManager.instance.MakeObj("Bullet_Enemy_Green");
         bulletbottom.transform.position = transform.position + (transform.up * 1f * (-1));
         bulletbottom.transform.rotation = transform.rotation;
         bulletbottom.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);

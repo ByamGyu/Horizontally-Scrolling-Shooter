@@ -7,6 +7,8 @@ public class Enemy_Starknife : Enemy_Base
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
+
+        _Player = GameObject.Find("Player");
     }
 
     protected override void Update()
@@ -14,6 +16,7 @@ public class Enemy_Starknife : Enemy_Base
         if (_Player == null) return;
         else Stalk_Player(_Player);
     }
+    
 
     public override void SimpleMoveLeft() { _rigid.velocity = Vector2.left * _speed; }
 

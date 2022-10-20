@@ -5,11 +5,11 @@ using UnityEngine;
 public class Bullet_Chase : Bullet_Base
 {
     [SerializeField]
-    GameObject _target = null;
+    private GameObject _target = null;
     [SerializeField]
-    float _speed_cur = 5.0f;
+    private float _speed_cur = 5.0f;
     [SerializeField]
-    float _speed_max = 10.0f;
+    private float _speed_max = 10.0f;
 
     Rigidbody2D _rigid;
     

@@ -42,7 +42,7 @@ public class Enemy_Cone : Enemy_Base
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
-        GameObject bullet1 = objectmanager.MakeObj("Bullet_Enemy_Blue");
+        GameObject bullet1 = ObjectManager.instance.MakeObj("Bullet_Enemy_Blue");
         bullet1.transform.position = transform.position + Vector3.left * 0.5f;
         bullet1.transform.rotation = transform.rotation;
 

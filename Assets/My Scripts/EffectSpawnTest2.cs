@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EffectSpawnTest2 : MonoBehaviour
 {
+    // 테스트 전용 스크립트
+
     [SerializeField]
     GameObject _Player = null;
 

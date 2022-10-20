@@ -83,13 +83,13 @@ public class Enemy_Ring : Enemy_Base
         // 총알 생성 딜레이 시간 판별
         if (_Bullet_Shot_Delay_Cur < _Bullet_Shot_Delay_Max) return;
 
-        GameObject bulletmid = objectmanager.MakeObj("Bullet_Enemy_Green");
+        GameObject bulletmid = ObjectManager.instance.MakeObj("Bullet_Enemy_Green");
         bulletmid.transform.position = transform.position + Vector3.left * 0.5f;
         bulletmid.transform.rotation = transform.rotation;
-        GameObject bullettop = objectmanager.MakeObj("Bullet_Enemy_Green");
+        GameObject bullettop = ObjectManager.instance.MakeObj("Bullet_Enemy_Green");
         bullettop.transform.position = transform.position + Vector3.up * 0.5f;
         bullettop.transform.rotation = transform.rotation;
-        GameObject bulletbottom = objectmanager.MakeObj("Bullet_Enemy_Green");
+        GameObject bulletbottom = ObjectManager.instance.MakeObj("Bullet_Enemy_Green");
         bulletbottom.transform.position = transform.position + Vector3.down * 0.5f;
         bulletbottom.transform.rotation = transform.rotation;
         Rigidbody2D rigid1 = bulletmid.GetComponent<Rigidbody2D>();

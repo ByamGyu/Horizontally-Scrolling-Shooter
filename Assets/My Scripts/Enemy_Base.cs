@@ -5,25 +5,16 @@ using UnityEngine;
 public class Enemy_Base : MonoBehaviour
 {
     [SerializeField]
-    public float _speed;
+    protected float _speed;
     [SerializeField]
-    public float _life;
+    protected float _life;
     [SerializeField]
-    public float _MaxLife;
-    [SerializeField]
+    protected float _MaxLife;
     public int _score = 100;
     [SerializeField]
-    public Rigidbody2D _rigid;
+    protected Rigidbody2D _rigid;
     [SerializeField]
-    public GameObject _Player = null;
-
-    [SerializeField]
-    public GameManager _gamemanager = null;
-
-
-    // 오브젝트 매니저(오브젝트 풀링)
-    // 프리팹 형태일 경우 직접 줄 수 없고, 코드를 통해서(게임 매니저에서) 줘야함
-    public ObjectManager objectmanager;
+    protected GameObject _Player = null;
 
 
     private void Awake()
@@ -69,7 +60,7 @@ public class Enemy_Base : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) // 트리거
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "BorderBullet") // 경계선에서 사라짐
         {

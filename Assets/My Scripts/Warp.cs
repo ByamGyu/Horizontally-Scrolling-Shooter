@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Warp : MonoBehaviour
 {
-    public Vector3 _Origin_Scale;
-    public Vector3 _Change_Scale;
-    public float _Time;    
-    public float _EndTime;
-    public bool _isSoundPlay = false;
+    [SerializeField]
+    Vector3 _Origin_Scale;
+    [SerializeField]
+    Vector3 _Change_Scale;
+    [SerializeField]
+    float _Time;
+    [SerializeField]
+    float _EndTime;
+    [SerializeField]
+    bool _isSoundPlay = false;
 
 
     private void Awake()

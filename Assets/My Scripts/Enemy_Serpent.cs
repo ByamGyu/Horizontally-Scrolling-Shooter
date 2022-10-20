@@ -75,6 +75,14 @@ public class Enemy_Serpent : MonoBehaviour
     {
         SoundManager.instance.PlaySoundEffectOneShot("Serpent_StalkPlayer", 0.5f);
         SoundManager.instance.PlayBGM("Stage_01_Serpent", 0.33f, true);
+
+        GameObject tmp = GameObject.FindGameObjectWithTag("GameManager");
+        if(tmp != null) _gamemanager = tmp.GetComponent<GameManager>();
+
+        if (_gamemanager != null)
+        {
+            _gamemanager._isBossSpawn = true;
+        }
     }
 
     void Update()
@@ -150,6 +158,7 @@ public class Enemy_Serpent : MonoBehaviour
                 OnDisable();
             }
 
+            _gamemanager._isBossSpawn = false;
             Init();
             gameObject.SetActive(false);
         }

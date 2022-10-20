@@ -1,7 +1,15 @@
-1,Obstacle_Bottom1, 5
-1,Obstacle_Top1, 1
-1,Obstacle_Bottom2, 5
-1,Obstacle_Top2, 1
-1,Obstacle_Bottom_Tile, 5
-1,Obstacle_Top_Tile, 1
-1,Obstacle_Metal_Wall,9
+95,Obstacle_Bottom1,9
+3,Obstacle_Top1,9
+3,Obstacle_Bottom2,9
+3,Obstacle_Top_Tile,9
+0,Obstacle_Bottom_Tile,9
+5,Obstacle_Top_Tile,9
+0,Obstacle_Bottom_Tile,9
+10,Obstacle_Top2,9
+13,Obstacle_Top2,9
+0,Obstacle_Bottom2,9
+5,Obstacle_Top_Tile,9
+0,Obstacle_Bottom_Tile,9
+4,Obstacle_Metal_Wall,9
+10,Obstacle_Top_Tile,9
+5,Obstacle_Bottom_Tile,9

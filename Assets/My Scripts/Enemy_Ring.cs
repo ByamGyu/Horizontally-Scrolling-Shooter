@@ -113,6 +113,8 @@ public class Enemy_Ring : Enemy_Base
     {
         _life = _MaxLife;
         _Bullet_Shot_Delay_Cur = 0;
+        _y = 0;
+        this.transform.position = new Vector3(0, 0, 0);
         _CanMoveSin = false;
         _CanMoveCos = false;
         _CanMoveLeft = false;

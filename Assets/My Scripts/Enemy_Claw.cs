@@ -94,6 +94,11 @@ public class Enemy_Claw : MonoBehaviour
         _life = _maxlife;
 
         _bulletspawner = this.GetComponent<Boss_Claw_BulletSpawner>();
+
+        if(_gm != null)
+        {
+            _gm._isBossSpawn = true;
+        }
     }
 
     void Update()
@@ -509,14 +514,18 @@ public class Enemy_Claw : MonoBehaviour
                 _gm._CanBossSpawn = false;
                 _gm._CanSpawnEnemy = true;
                 _gm._WarningSound = false;
+                _gm._isBossSpawn = false;
             }
 
             // 죽으면 스테이지 클리어 BGM이 재생 (모드에 따라서 다르게 할 필요 있음)
-            if(_gm == null || _gm._gamemode == Define.GameMode.Campaign)
+            if(_gm._gamemode == Define.GameMode.Campaign)
             {
                 SoundManager.instance.PlayBGM("Stage_Clear", 0.75f, false);
 
                 gameObject.SetActive(false);
+
+                // 게임 완료 UI 띄우기 (Stage_Clear_Canvas)
+                // 게임 일시 정지
             }
             else if(_gm._gamemode == Define.GameMode.Infinite)
             {

@@ -78,6 +78,9 @@ public class GameManager : MonoBehaviour
     public int _spawnIndex; // _spawnList 인덱스 번호
     public int _spawnIndex_obstacle; //_spawnList_obstacle 인덱스 번호
 
+    [SerializeField]
+    public bool _isBossSpawn = false;
+
 
     private void Awake()
     {
@@ -232,10 +235,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if(_isBossSpawn == true) // 보스가 스폰된 상태면 보스가 죽을 때 까지 다음 스폰을 멈춘다.
+        {
+            _Spawn_Delay_Time_Cur = 0;
+            return;
+        }
+
         _Spawn_Delay_Time_Cur += Time.deltaTime;
         _Spawn_Delay_Time_Obstacle_Cur += Time.deltaTime;
 
-        if (_Spawn_Delay_Time_Cur >= 10) _Spawn_Delay_Time_Cur = 10;
+        if (_Spawn_Delay_Time_Cur >= 20) _Spawn_Delay_Time_Cur = 20;
         if (_Spawn_Delay_Time_Obstacle_Cur >= 120) _Spawn_Delay_Time_Obstacle_Cur = 120;
 
 
@@ -695,7 +704,7 @@ public class GameManager : MonoBehaviour
         //obstacle.transform.position = _SpawnPos[SpawnPoint].position;
         Rigidbody2D rigid = obstacle.GetComponent<Rigidbody2D>();
         //rigid.velocity = Vector2.left * 0.5f;
-        rigid.velocity = Vector2.left * 10f;
+        rigid.velocity = Vector2.left * 1f;
 
 
         // 몬스터 종류별로 회전값 및 오브젝트 매니저 전달
@@ -721,7 +730,7 @@ public class GameManager : MonoBehaviour
         }
 
         // 다음 스폰시간 갱신
-        _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[_spawnIndex].delay; // index out of range 문제 있음
+        _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[_spawnIndex_obstacle].delay; // index out of range 문제 있음
         _Spawn_Delay_Time_Obstacle_Cur = 0f;
 
         //// 스폰 순서 다음줄로

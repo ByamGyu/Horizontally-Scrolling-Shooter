@@ -33,7 +33,11 @@ public class Item_Shielded : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "PlayerBullet") // 탄환에 맞으면
+        if (collision.gameObject.tag == "BorderBullet") // 경계선에서 사라짐
+        {
+            gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "PlayerBullet") // 탄환에 맞으면
         {
             // 플레이어의 탄환 공격력을 가져와 계산한다.
             Bullet_Base bulletinfo = collision.gameObject.GetComponent<Bullet_Base>();

@@ -9,19 +9,19 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField]
-    public string[] _EnemyObjects;
+    private string[] _EnemyObjects;
     [SerializeField]
-    public string[] _ObstacleObjects;
+    private string[] _ObstacleObjects;
     [SerializeField]
-    public Transform[] _SpawnPos;
+    private Transform[] _SpawnPos;
     [SerializeField]
-    public float _Spawn_Delay_Time_Next;
+    private float _Spawn_Delay_Time_Next;
     [SerializeField]
-    public float _Spawn_Delay_Time_Cur;
+    private float _Spawn_Delay_Time_Cur;
     [SerializeField]
-    public float _Spawn_Delay_Time_Obstacle_Next;
+    private float _Spawn_Delay_Time_Obstacle_Next;
     [SerializeField]
-    public float _Spawn_Delay_Time_Obstacle_Cur;
+    private float _Spawn_Delay_Time_Obstacle_Cur;
     [SerializeField]
     public GameObject _Player = null;
     [SerializeField]
@@ -356,7 +356,7 @@ public class GameManager : MonoBehaviour
                         return;
                     }
                     
-                    // 대략 몇 초 후에 워프 스폰
+
                     GameObject enemy = objectManager.MakeObj(_EnemyObjects[11]);
                     Warp tmp_warp = enemy.GetComponent<Warp>();
                     tmp_warp.objectManager = objectManager;

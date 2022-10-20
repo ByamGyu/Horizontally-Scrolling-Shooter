@@ -81,8 +81,10 @@ MonoBehaviour:
   _BossSpawnTurn: 0
   _WarningSound: 0
   _WarningSoundCnt: 0
+  _PlayerScore: 0
   _gamemode: 1
   _scoreText: {fileID: 0}
+  _GameClearScoreText: {fileID: 0}
   _lifeImage:
   - {fileID: 0}
   - {fileID: 0}
@@ -91,8 +93,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  _CanvasGroup: {fileID: 0}
   _GameOverGroup: {fileID: 0}
+  _EscMenuGroup: {fileID: 0}
+  _StageClearGroup: {fileID: 0}
   _ChargeAttackBar: {fileID: 0}
   objectManager: {fileID: 0}
   _spawnIndex: 0
   _spawnIndex_obstacle: 0
+  _isBossSpawn: 0

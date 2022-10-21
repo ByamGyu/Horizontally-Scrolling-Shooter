@@ -258,7 +258,5 @@ MonoBehaviour:
   _score: 100
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
-  _gamemanager: {fileID: 0}
-  objectmanager: {fileID: 0}
   _Bullet_Shot_Delay_Cur: 0
-  _Bullet_Shot_Delay_Max: 3.5
+  _Bullet_Shot_Delay_Max: 3

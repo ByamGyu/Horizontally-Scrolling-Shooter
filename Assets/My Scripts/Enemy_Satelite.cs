@@ -8,12 +8,14 @@ public class Enemy_Satelite : Enemy_Base
     [SerializeField]
     float _Bullet_Shot_Delay_Cur = 0.0f;
     [SerializeField]
-    float _Bullet_Shot_Delay_Max = 10.0f;
+    float _Bullet_Shot_Delay_Max = 5f;
 
 
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
+
+        _Player = GameObject.Find("Player");
     }
 
     protected override void Update()

@@ -278,9 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51719318a8138db4788d54f69cec1f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectmanager: {fileID: 0}
-  _Bullet_Shot_Delay_Cur: 0
-  _Bullet_Shot_Delay_Max: 0
 --- !u!1 &3154458028407251886
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,12 +574,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c03a7111e7995e4885e040c0cbed506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 250
-  _life: 250
+  _maxLife: 500
+  _life: 500
   _score: 2500
   _rigid: {fileID: 0}
   _player: {fileID: 0}
-  _Sounds: []
   startPosition: 4
   tagetPlayer: 1
   rotationSpeed: 3

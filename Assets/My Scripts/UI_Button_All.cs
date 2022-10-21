@@ -147,7 +147,7 @@ public class UI_Button_All : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        Debug.Log("버튼에 마우스 올라감!");
+        //Debug.Log("버튼에 마우스 올라감!");
         SoundManager.instance.PlaySoundEffectOneShot("UI_Change", 0.5f);
     }
 }

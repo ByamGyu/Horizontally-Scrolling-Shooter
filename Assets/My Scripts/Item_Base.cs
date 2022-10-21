@@ -10,15 +10,19 @@ public class Item_Base : MonoBehaviour
     [SerializeField]
     protected int _score = 50;
 
-    private void Start()
+    void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
+    }
 
+    void FixedUpdate()
+    {
         SimpleMoveLeft();
     }
 
     void SimpleMoveLeft()
     {
-        _rigid.velocity = Vector2.left * _speed;
+        //_rigid.velocity = Vector2.left * _speed;
+        transform.position += new Vector3(0.017f * _speed * (-1), 0, 0);
     }
 }

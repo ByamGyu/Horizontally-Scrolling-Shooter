@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
 
 
     // 게임모드 설정
-    [SerializeField]
     public Define.GameMode _gamemode = Define.GameMode.None;
 
 
@@ -183,7 +182,7 @@ public class GameManager : MonoBehaviour
             _spawnList_obstacle.Add(spawnData);
         }
 
-        stringReader.Close();        
+        stringReader.Close();
 
         if(_spawnList_obstacle.Count != 0)
         {
@@ -692,7 +691,56 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         UIManager.instance.Init();
         UIManager.instance.SetActiveGameOverGroup(true);
+        //RecordScoretxtFile();
     }
+
+    //public void RecordScoretxtFile()
+    //{
+    //    // 모드에 맞게 txt파일을 생성해서 점수를 저장
+    //    if (_gamemode == Define.GameMode.Campaign)
+    //    {
+    //        string path = "Assets/Resources/CampaignModeHighScore";
+    //        StreamWriter sw = new StreamWriter(path + ".txt"); ;
+
+    //        // 파일이 없으면 생성
+    //        if (File.Exists(path) == false)
+    //        {
+    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
+    //            sw.Flush();
+    //            sw.Close();
+    //            return;
+    //        }
+    //        else // 파일이 있으면 기존 파일을 삭제하고 새롭게 기록함
+    //        {
+    //            System.IO.File.Delete(path + ".txt");
+    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
+    //            sw.Flush();
+    //            sw.Close();
+    //            return;
+    //        }
+    //    }
+    //    else if (_gamemode == Define.GameMode.Infinite)
+    //    {
+    //        string path = "Assets/Resources/InfiniteModeHighScore";
+    //        StreamWriter sw = new StreamWriter(path + ".txt"); ;
+
+    //        if (File.Exists(path) == false)
+    //        {
+    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
+    //            sw.Flush();
+    //            sw.Close();
+    //            return;
+    //        }
+    //        else
+    //        {
+    //            System.IO.File.Delete(path + ".txt");
+    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
+    //            sw.Flush();
+    //            sw.Close();
+    //            return;
+    //        }
+    //    }
+    //}
 
     public void SetEnemyCnt(int tmp)
     {
@@ -702,19 +750,19 @@ public class GameManager : MonoBehaviour
         if (_Enemy_Cnt <= 0) _Enemy_Cnt = 0;
     }
 
-    //void InifiniteModeSerpentSpawnInvoke()
-    //{
-    //    GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[5]);
-    //    enemy.transform.position = _SpawnPos[2].position;
+    void InifiniteModeSerpentSpawnInvoke()
+    {
+        GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[5]);
+        enemy.transform.position = _SpawnPos[2].position;
 
-    //    Enemy_Serpent enemyInfo = enemy.GetComponent<Enemy_Serpent>();
-    //}
+        Enemy_Serpent enemyInfo = enemy.GetComponent<Enemy_Serpent>();
+    }
 
-    //void InfiniteModeWarningSoundInvoke()
-    //{
-    //    SoundManager.instance.PlaySoundEffectOneShot("Warning_1sec", 0.5f);
-    //    _WarningSoundCnt++;
-    //}
+    void InfiniteModeWarningSoundInvoke()
+    {
+        SoundManager.instance.PlaySoundEffectOneShot("Warning_1sec", 0.5f);
+        _WarningSoundCnt++;
+    }
 
     void SpawnRandomShieldedItemRandomLocation()
     {

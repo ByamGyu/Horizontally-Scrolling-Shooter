@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy_Serpent : MonoBehaviour
 {
     [SerializeField]
-    int _maxLife = 250;
+    int _maxLife = 500;
     [SerializeField]
-    int _life = 250;
+    int _life = 500;
     [SerializeField]
     public int _score = 2500;
     [SerializeField]

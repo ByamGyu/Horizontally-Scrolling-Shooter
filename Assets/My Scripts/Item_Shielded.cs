@@ -18,7 +18,7 @@ public class Item_Shielded : MonoBehaviour
         _rigid = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         SimpleMoveLeft();
     }
@@ -77,11 +77,8 @@ public class Item_Shielded : MonoBehaviour
         PlayerController playerinfo = _Player.GetComponent<PlayerController>();
         playerinfo.AddScore(_score);
 
-        Debug.Log(this.name);
-
         if (ObjectManager.instance == null)
         {
-            Debug.Log("Item_Shielded's objectmanager is null!");
             return;
         }
 
@@ -93,8 +90,7 @@ public class Item_Shielded : MonoBehaviour
         else if(this.name == "Item_Shielded_Power(Clone)")
         {
             GameObject SpawnItem = ObjectManager.instance.MakeObj("Item_Power");            
-            SpawnItem.transform.position = transform.position;
-            
+            SpawnItem.transform.position = transform.position;            
         }
         else if(this.name == "Item_Shielded_Speed(Clone)")
         {

@@ -13,9 +13,9 @@ public class Enemy_Claw : MonoBehaviour
 
     // 능력치
     [SerializeField]
-    int _life = 750;
+    int _life = 1500;
     [SerializeField]
-    int _maxlife = 750;
+    int _maxlife = 1500;
     [SerializeField]
     float _lifepercent = 1f;
     [SerializeField]
@@ -524,7 +524,9 @@ public class Enemy_Claw : MonoBehaviour
                 gameObject.SetActive(false);
 
                 // 게임 완료 UI 띄우기 (Stage_Clear_Canvas)
-                // 게임 일시 정지
+                UIManager.instance.Init();
+                UIManager.instance.SetActiveStageClearGroup(true);
+                Time.timeScale = 0f;
             }
             else if(GameManager.instance._gamemode == Define.GameMode.Infinite)
             {

@@ -17,11 +17,14 @@ public class Enemy_Base : MonoBehaviour
     protected GameObject _Player = null;
 
 
-    private void Awake()
+    void Awake()
     {
-        _Player = GameObject.FindGameObjectWithTag("Player");
-
         _rigid = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        _Player = GameObject.Find("Player");
     }
 
     protected virtual void Update()

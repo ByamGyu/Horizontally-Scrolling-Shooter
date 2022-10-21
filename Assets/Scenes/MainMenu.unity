@@ -1640,6 +1640,14 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4351613123003723154, guid: cf66c2158e93e774ea01e36c4be093e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickRetry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351613123003723154, guid: cf66c2158e93e774ea01e36c4be093e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI_Button_All, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4824995934617745465, guid: cf66c2158e93e774ea01e36c4be093e8, type: 3}
       propertyPath: m_Name
       value: GameOver_Canvas

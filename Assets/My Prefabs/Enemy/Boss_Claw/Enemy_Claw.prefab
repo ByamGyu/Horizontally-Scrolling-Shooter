@@ -169,15 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e613a5b96b058f46bc7abd0eb417802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 750
-  _maxlife: 750
+  _life: 1500
+  _maxlife: 1500
   _lifepercent: 1
   _score: 5000
-  rotations: 5
-  movementRange: 2
-  movementSpeed: 1
-  punchingRange: 17
-  punchingPower: 15
   sleep:
     sprites:
     - {fileID: 21300000, guid: 5a46fe23d9adfec45b416241a6ff529e, type: 3}
@@ -279,7 +274,6 @@ MonoBehaviour:
   _chargeattacktime: 0
   frame: 0
   spriteRenderer: {fileID: 0}
-  _bulletspawner: {fileID: 0}
 --- !u!114 &1429089449298311315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Player: {fileID: 0}
   _mainbodyinfo: {fileID: 0}
-  _objectmanager: {fileID: 0}
   _CanFireBigBullet: 0
   _CanFireMultiRandomshotToPlayer: 0
   _CanFireArc: 0

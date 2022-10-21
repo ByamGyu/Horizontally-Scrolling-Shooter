@@ -690,6 +690,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0f;
+        UIManager.instance.Init();
         UIManager.instance.SetActiveGameOverGroup(true);
     }
 
@@ -697,22 +698,23 @@ public class GameManager : MonoBehaviour
     {
         _Enemy_Cnt += tmp;
 
+        // 이럴 일은 없지만...
         if (_Enemy_Cnt <= 0) _Enemy_Cnt = 0;
     }
 
-    void InifiniteModeSerpentSpawnInvoke()
-    {
-        GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[5]);
-        enemy.transform.position = _SpawnPos[2].position;
+    //void InifiniteModeSerpentSpawnInvoke()
+    //{
+    //    GameObject enemy = ObjectManager.instance.MakeObj(_EnemyObjects[5]);
+    //    enemy.transform.position = _SpawnPos[2].position;
 
-        Enemy_Serpent enemyInfo = enemy.GetComponent<Enemy_Serpent>();
-    }
+    //    Enemy_Serpent enemyInfo = enemy.GetComponent<Enemy_Serpent>();
+    //}
 
-    void InfiniteModeWarningSoundInvoke()
-    {
-        SoundManager.instance.PlaySoundEffectOneShot("Warning_1sec", 0.5f);
-        _WarningSoundCnt++;
-    }
+    //void InfiniteModeWarningSoundInvoke()
+    //{
+    //    SoundManager.instance.PlaySoundEffectOneShot("Warning_1sec", 0.5f);
+    //    _WarningSoundCnt++;
+    //}
 
     void SpawnRandomShieldedItemRandomLocation()
     {

@@ -39,6 +39,7 @@ public class Enemy_Ring : Enemy_Base
         Bullet_Delay();
 
         _y += Time.deltaTime;
+        if (_y >= 1000) _y = 0;
 
         if (_CanMoveSin == true) MoveSin();
         if (_CanMoveCos == true) MoveCos();

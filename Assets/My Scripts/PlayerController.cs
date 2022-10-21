@@ -63,6 +63,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject _Ult;
 
+    // 무적시간 스프라이트 알파값 조절에 쓰이는 변수
+    private float _y;
+
     
     void Start()
     {
@@ -79,6 +82,9 @@ public class PlayerController : MonoBehaviour
 
     void Update() // FixedUpdate()를 사용하면 입력이 씹히는 현상 발생
     {
+        _y += Time.deltaTime * 10;
+        if (_y >= 1000) _y = 0;
+
         // 무적 시간
         CalculateInvincible();
 
@@ -115,10 +121,16 @@ public class PlayerController : MonoBehaviour
         if (_invincibleTime <= 0) // 무적시간이 없으면
         {
             _invincibleTime = 0.0f;
+
+            SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+            renderer.color = new Color(1, 1, 1, 1);
         }
         else // 무적시간이 남아있으면
         {
             _invincibleTime -= Time.deltaTime;
+
+            SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+            renderer.color = new Color(1, 1, 1, (Mathf.Sin(_y) + 1) / 2);
         }
     }
 

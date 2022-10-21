@@ -6,11 +6,7 @@ using UnityEngine.UI;
 
 public class UI_Button_All : MonoBehaviour
 {
-    // public GameObject Instance;
-
-    public Text _scoretext;
-
-    // public Define.GameMode _previousgamemode = Define.GameMode.None;
+    //public Text _scoretext;
 
 
     private void Start()
@@ -20,15 +16,6 @@ public class UI_Button_All : MonoBehaviour
 
     private void Update()
     {
-        
-    }
-
-    public void SetScoreText()
-    {
-        if(_scoretext != null)
-        {
-            GameManager.instance._scoreText.text = string.Format("Score: " + "{0:n0}", GameManager.instance._PlayerScore);
-        }
         
     }
 
@@ -50,7 +37,6 @@ public class UI_Button_All : MonoBehaviour
 
     public void OpenEscMenu()
     {
-        //_previousgamemode = GameManager.instance._gamemode;
         GameManager.instance._gamemode = Define.GameMode.UI;
 
         UIManager.instance.Init();
@@ -61,10 +47,10 @@ public class UI_Button_All : MonoBehaviour
 
     public void CloseEscMenu()
     {
-        //GameManager.instance._gamemode = _previousgamemode;
-
         UIManager.instance.Init();
         UIManager.instance.SetActiveSceneUIGroup(true);
+
+        SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
         Time.timeScale = 1f;
     }
@@ -86,12 +72,12 @@ public class UI_Button_All : MonoBehaviour
         ObjectManager.instance.AllObjectSetActiveFalse();
 
         UIManager.instance.Init();
-        
-        Time.timeScale = 1f;
 
         SceneManager.LoadScene("Stage_01");
 
         UIManager.instance.SetActiveSceneUIGroup(true);
+
+        Time.timeScale = 1f;
     }    
 
     public void OnClickStartInfiniteMode()
@@ -104,33 +90,30 @@ public class UI_Button_All : MonoBehaviour
         {
             GameManager.instance._gamemode = Define.GameMode.Infinite;
             GameManager.instance.Init();
-        }
-        
+        }        
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
         ObjectManager.instance.AllObjectSetActiveFalse();
 
         UIManager.instance.Init();
-        
-        Time.timeScale = 1f;
 
         SceneManager.LoadScene("InfiniteMode");
 
         UIManager.instance.SetActiveSceneUIGroup(true);
+
+        Time.timeScale = 1f;
     }
 
     public void OnClickRetry()
     {
-        //_previousgamemode = GameManager.instance._gamemode;
         GameManager.instance.Init();
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
         ObjectManager.instance.AllObjectSetActiveFalse();
 
-        UIManager.instance.Init();
-        
+        UIManager.instance.Init();        
 
         Time.timeScale = 1f;
 
@@ -164,6 +147,7 @@ public class UI_Button_All : MonoBehaviour
 
     public void OnMouseEnter()
     {
+        Debug.Log("버튼에 마우스 올라감!");
         SoundManager.instance.PlaySoundEffectOneShot("UI_Change", 0.5f);
     }
 }

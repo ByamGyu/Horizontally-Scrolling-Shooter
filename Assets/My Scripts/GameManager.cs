@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+
     [SerializeField]
     private string[] _EnemyObjects;
     [SerializeField]
@@ -38,18 +39,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public Define.GameMode _gamemode = Define.GameMode.None;
 
-    // UI
-    public Text _scoreText;
-    public Text _GameClearScoreText;
-    public Image[] _lifeImage;
-    public Image[] _UltImage;
-    public GameObject _CanvasGroup;
-    public GameObject _GameOverGroup;
-    public GameObject _EscMenuGroup;
-    public GameObject _StageClearGroup;
 
     // UI 차지 공격 바 관련
     public Slider _ChargeAttackBar;
+
 
     // 적 기체 txt 파일로 스폰하는데 사용됨
     public List<Spawn> _spawnList;
@@ -57,10 +50,12 @@ public class GameManager : MonoBehaviour
     public int _spawnIndex; // _spawnList 인덱스 번호
     public int _spawnIndex_obstacle; //_spawnList_obstacle 인덱스 번호
 
+
     public bool _isBossSpawn = false;
 
 
-    private void Awake()
+    private
+        void Awake()
     {
         _EnemyObjects = new string[] {
             "Enemy_Cone", // 0
@@ -204,9 +199,10 @@ public class GameManager : MonoBehaviour
         {
             if (_gamemode == Define.GameMode.Campaign || _gamemode == Define.GameMode.Infinite)
             {
-                if (_EscMenuGroup.activeSelf == false)
+                if (UIManager.instance.GetEscMenuActiveSelf() == false)
                 {
-                    _EscMenuGroup.SetActive(true);
+                    UIManager.instance.Init();
+                    UIManager.instance._EscMenuGroup.SetActive(true);
                     Time.timeScale = 0f;
                 }
             }
@@ -255,7 +251,9 @@ public class GameManager : MonoBehaviour
         {
             PlayerController playerinfo = _Player.GetComponent<PlayerController>();
             _PlayerScore = playerinfo.GetScore();
-            _scoreText.text = string.Format("Score: " + "{0:n0}", playerinfo.GetScore());
+            GameInstance.instance.SetPlayerScore(_PlayerScore);
+
+            UIManager.instance.UpdateScoreText(playerinfo.GetScore());
         }
     }
 
@@ -275,16 +273,17 @@ public class GameManager : MonoBehaviour
             _gamemode = Define.GameMode.UI;
 
             Time.timeScale = 0f;            
-            _StageClearGroup.SetActive(true);
+            UIManager.instance.SetActiveStageClearGroup(true);
 
             // 점수 갱신
             PlayerController playerinfo = _Player.GetComponent<PlayerController>();
             _PlayerScore = playerinfo.GetScore();
+            GameInstance.instance.SetPlayerScore(_PlayerScore);
 
             // ui에 점수 적용
-            _GameClearScoreText.text = string.Format("Total Score: " + "{0:n0}", _PlayerScore);
+            UIManager.instance._scoretext.text = string.Format("Total Score: " + "{0:n0}", _PlayerScore);
 
-            _CanvasGroup.SetActive(false);
+            UIManager.instance.SetActiveSceneUIGroup(false);
 
             SoundManager.instance.PlayBGM("Stage_Clear", 0.75f, true);
 
@@ -663,33 +662,6 @@ public class GameManager : MonoBehaviour
         _Spawn_Delay_Time_Obstacle_Cur = 0f;
     }
 
-    public void UpdateLifeIcon(int life)
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            _lifeImage[i].color = new Color(1, 1, 1, 0); // 알파값을 0으로 해서 안보이게 한다
-        }
-
-        // 라이프 아이콘 이미지 상태 반영
-        for (int i = 0; i < life; i++)
-        {
-            _lifeImage[i].color = new Color(1, 1, 1, 1); // 알파값을 1로 해서 보이게 한다
-        }
-    }
-
-    public void UpdateUltIcon(int tmp)
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            _UltImage[i].color = new Color(1, 1, 1, 0);
-        }
-
-        for (int i = 0; i < tmp; i++)
-        {
-            _UltImage[i].color = new Color(1, 1, 1, 1);
-        }
-    }
-
     public void UpdateChargeGuage(float curvalue, float maxvalue = 3.0f)
     {
         if (curvalue == 0) _ChargeAttackBar.value = 0;
@@ -718,18 +690,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0f;
-        _GameOverGroup.SetActive(true);
-    }
-
-    public void GameRetry()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0); // 씬 번호(파일 -> 빌드 설정 -> 빌드의 씬에서 확인 가능)
-    }
-
-    public void GameQuit()
-    {
-        Application.Quit();
+        UIManager.instance.SetActiveGameOverGroup(true);
     }
 
     public void SetEnemyCnt(int tmp)

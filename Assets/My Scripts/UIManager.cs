@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public Text _scoretext;
+    public Text _stageclearscoretext;
     public Image[] _lifeImage;
     public Image[] _UltImage;
     public Slider _ChargeAttackBar;
@@ -82,7 +83,14 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScoreText(int tmp)
     {
+        _scoretext.text = string.Format("Score: " + "{0:n0}", tmp);
 
+        UpdateStageClearScoreText(tmp);
+    }
+
+    public void UpdateStageClearScoreText(int tmp)
+    {
+        _stageclearscoretext.text = string.Format("Final Score: " + "{0:n0}", tmp);
     }
 
     public void UpdateLifeIcon(int life)
@@ -112,6 +120,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void UpdateChargeGuage(float curvalue, float maxvalue = 3.0f)
+    {
+        if (curvalue <= 0) _ChargeAttackBar.value = 0;
+
+        _ChargeAttackBar.value = curvalue / maxvalue;
+    }
+
     public void SetActiveMainMenuGroup(bool active)
     {
         _MainMenuGroup.SetActive(active);
@@ -135,5 +150,10 @@ public class UIManager : MonoBehaviour
     public void SetActiveStageClearGroup(bool active)
     {
         _StageClearGroup.SetActive(active);
+    }
+
+    public bool GetEscMenuActiveSelf()
+    {
+        return _EscMenuGroup.activeSelf;
     }
 }

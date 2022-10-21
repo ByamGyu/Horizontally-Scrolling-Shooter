@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     bool _chargeattack = false;
     [SerializeField]
     int _ult = 3;
-    [SerializeField]
+    [SerializeField] // 플레이어 점수를 1차로 저장. (2차는 게임 인스턴스와 게임 매니저에)
     int _score = 0;
     [SerializeField]
     float _invincibleTime = 2.5f;
@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
     GameObject _effecttmp;
 
     // 오브젝트 저장 변수
-    //[SerializeField]
     //public GameObject _Bullet1; // 필요한 오브젝트를 붙일 수 있다. (카메라, 물체 등등)
 
     public GameObject _Ult;
@@ -70,9 +69,9 @@ public class PlayerController : MonoBehaviour
         if (GameManager.instance != null)
         {
             // UI들 초기화
-            GameManager.instance.UpdateLifeIcon(GetLife());
-            GameManager.instance.UpdateUltIcon(GetUlt());
-            GameManager.instance.UpdateChargeGuage(0);
+            UIManager.instance.UpdateLifeIcon(GetLife());
+            UIManager.instance.UpdateUltIcon(GetUlt());
+            UIManager.instance.UpdateChargeGuage(0);
         }
         else Debug.Log("PlayerController's gamemanager is Null!");
         
@@ -158,7 +157,7 @@ public class PlayerController : MonoBehaviour
             if (_effecttmp != null) Destroy(_effecttmp);
 
             _chargeTime = 0;
-            GameManager.instance.UpdateChargeGuage(0);
+            UIManager.instance.UpdateChargeGuage(0);
             return;
         }
 
@@ -199,8 +198,8 @@ public class PlayerController : MonoBehaviour
         if(_chargeTime >= 0.1 && _isCharging == true)
         {
             // 차지 공격 게이지 갱신
-            GameManager.instance.UpdateChargeGuage(GetChargeTime(), GetMaxChargeTime());
-
+            UIManager.instance.UpdateChargeGuage(GetChargeTime(), GetMaxChargeTime());
+            
             if(_effectChargeisplay == false)
             {
                 _effectChargeisplay = true;
@@ -341,7 +340,7 @@ public class PlayerController : MonoBehaviour
         
 
         SetUlt(-1);
-        GameManager.instance.UpdateUltIcon(GetUlt());
+        UIManager.instance.UpdateUltIcon(GetUlt());
     }
 
     void GuideAttack_Delay()
@@ -366,9 +365,6 @@ public class PlayerController : MonoBehaviour
         chasebulletTop.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90f));
         chasebulletBottom.transform.position = transform.position + Vector3.down * 0.5f;
         chasebulletBottom.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90f));
-
-        //GameObject chasebulletTop = Instantiate(_Bullet6, transform.position + Vector3.up * 0.5f, Quaternion.Euler(new Vector3(0, 0, 90f)));
-        //GameObject chasebulletDown = Instantiate(_Bullet6, transform.position + Vector3.down * 0.5f, Quaternion.Euler(new Vector3(0, 0, -90f)));
 
         Rigidbody2D rigidTop = chasebulletTop.GetComponent<Rigidbody2D>();
         Rigidbody2D rigidBottom = chasebulletBottom.GetComponent<Rigidbody2D>();
@@ -506,7 +502,7 @@ public class PlayerController : MonoBehaviour
         // 최대 체력은 3
         if (_life >= 3) _life = 3;
 
-        GameManager.instance.UpdateLifeIcon(GetLife());
+        UIManager.instance.UpdateLifeIcon(GetLife());
     }
 
     public int GetLife() { return _life; }
@@ -538,7 +534,7 @@ public class PlayerController : MonoBehaviour
         if (_ult >= 3) _ult = 3;
         else if (_ult <= 0) _ult = 0;
 
-        GameManager.instance.UpdateUltIcon(GetUlt());
+        UIManager.instance.UpdateUltIcon(GetUlt());
     }
 
     public void SetGuideAttack(bool tmp)

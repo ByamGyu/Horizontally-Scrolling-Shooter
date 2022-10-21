@@ -8,6 +8,8 @@ public class GameInstance : MonoBehaviour
 
     [SerializeField]
     private int _playerscore;
+    [SerializeField]
+    private int _1stScore;
 
 
     void Awake()
@@ -39,5 +41,26 @@ public class GameInstance : MonoBehaviour
     void Init()
     {
         _playerscore = 0;
+        _1stScore = 0;
+    }
+
+    void CalculHighScore()
+    {
+        if(_playerscore >= _1stScore)
+        {
+            _1stScore = _playerscore;
+        }
+    }
+
+    public void SetPlayerScore(int tmp)
+    {
+        _playerscore = tmp;
+
+        CalculHighScore();
+    }
+
+    public int GetPlayerScore()
+    {
+        return _playerscore;
     }
 }

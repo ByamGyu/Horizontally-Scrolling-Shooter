@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Text _scoretext;
     public Image[] _lifeImage;
     public Image[] _UltImage;
+    public Slider _ChargeAttackBar;
 
     // Canvas들
     public GameObject _MainMenuGroup;
@@ -18,10 +20,12 @@ public class UIManager : MonoBehaviour
     public GameObject _EscMenuGroup;
     public GameObject _StageClearGroup;
 
+    private Scene _CurScene;
+
 
     void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this);
@@ -31,22 +35,49 @@ public class UIManager : MonoBehaviour
             Debug.Log("UIManager가 2개 이상 존재함!");
             Destroy(gameObject);
         }
+
+        Init();
     }
 
     void Start()
     {
-        // 메인메뉴에서 시작함
-        SetActiveMainMenuGroup(true);
+        OpenSceneStartUI();
+    }
+
+
+    void Update()
+    {
+
+    }
+
+    public void Init()
+    {
+        SetActiveMainMenuGroup(false);
         SetActiveSceneUIGroup(false);
         SetActiveGameOverGroup(false);
         SetActiveEscMenuGroup(false);
         SetActiveStageClearGroup(false);
     }
 
-
-    void Update()
+    public void OpenSceneStartUI()
     {
-        
+        // 현재 씬 이름 가져오기
+        _CurScene = SceneManager.GetActiveScene();
+
+        Init();
+
+        if (_CurScene.name == "MainMenu")
+        {
+            SetActiveMainMenuGroup(true);
+        }
+        else if (_CurScene.name == "Stage_01")
+        {
+            SetActiveSceneUIGroup(true);
+        }
+        else if (_CurScene.name == "InfiniteMode")
+        {
+            SetActiveSceneUIGroup(true);
+        }
     }
 
     public void UpdateScoreText(int tmp)
@@ -54,14 +85,31 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void UpdateLifeIcon(int tmp)
+    public void UpdateLifeIcon(int life)
     {
+        for (int i = 0; i < 3; i++)
+        {
+            _lifeImage[i].color = new Color(1, 1, 1, 0); // 알파값을 0으로 해서 안보이게 한다
+        }
 
+        // 라이프 아이콘 이미지 상태 반영
+        for (int i = 0; i < life; i++)
+        {
+            _lifeImage[i].color = new Color(1, 1, 1, 1); // 알파값을 1로 해서 보이게 한다
+        }
     }
 
     public void UpdateUltIcon(int tmp)
     {
+        for (int i = 0; i < 3; i++)
+        {
+            _UltImage[i].color = new Color(1, 1, 1, 0);
+        }
 
+        for (int i = 0; i < tmp; i++)
+        {
+            _UltImage[i].color = new Color(1, 1, 1, 1);
+        }
     }
 
     public void SetActiveMainMenuGroup(bool active)

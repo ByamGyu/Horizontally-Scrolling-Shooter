@@ -39,25 +39,16 @@ public class GameManager : MonoBehaviour
     public Define.GameMode _gamemode = Define.GameMode.None;
 
     // UI
-    [SerializeField]
     public Text _scoreText;
-    [SerializeField]
     public Text _GameClearScoreText;
-    [SerializeField]
     public Image[] _lifeImage;
-    [SerializeField]
     public Image[] _UltImage;
-    [SerializeField]
     public GameObject _CanvasGroup;
-    [SerializeField]
     public GameObject _GameOverGroup;
-    [SerializeField]
     public GameObject _EscMenuGroup;
-    [SerializeField]
     public GameObject _StageClearGroup;
 
     // UI 차지 공격 바 관련
-    [SerializeField]
     public Slider _ChargeAttackBar;
 
     // 적 기체 txt 파일로 스폰하는데 사용됨
@@ -66,7 +57,6 @@ public class GameManager : MonoBehaviour
     public int _spawnIndex; // _spawnList 인덱스 번호
     public int _spawnIndex_obstacle; //_spawnList_obstacle 인덱스 번호
 
-    [SerializeField]
     public bool _isBossSpawn = false;
 
 

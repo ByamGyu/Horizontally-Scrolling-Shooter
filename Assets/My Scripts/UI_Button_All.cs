@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class UI_Button_All : MonoBehaviour
 {
-    public GameObject Instance;
+    // public GameObject Instance;
 
     public Text _scoretext;
 
-    public Define.GameMode _previousgamemode = Define.GameMode.None;
+    // public Define.GameMode _previousgamemode = Define.GameMode.None;
 
 
     private void Start()
@@ -42,32 +42,31 @@ public class UI_Button_All : MonoBehaviour
     {
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
-        Time.timeScale = 1f;
+        UIManager.instance.Init();
+        UIManager.instance.SetActiveSceneUIGroup(true);
 
-        if (Instance != null) Instance.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void OpenEscMenu()
     {
-        _previousgamemode = GameManager.instance._gamemode;
+        //_previousgamemode = GameManager.instance._gamemode;
         GameManager.instance._gamemode = Define.GameMode.UI;
 
-        if (Instance != null)
-        {
-            Instance.SetActive(true);
-            Time.timeScale = 0f;
-        }        
+        UIManager.instance.Init();
+        UIManager.instance.SetActiveEscMenuGroup(true);
+
+        Time.timeScale = 0f;
     }
 
     public void CloseEscMenu()
     {
-        GameManager.instance._gamemode = _previousgamemode;
+        //GameManager.instance._gamemode = _previousgamemode;
 
-        if (Instance != null)
-        {
-            Instance.SetActive(false);
-            Time.timeScale = 1f;
-        }
+        UIManager.instance.Init();
+        UIManager.instance.SetActiveSceneUIGroup(true);
+
+        Time.timeScale = 1f;
     }
 
     public void OnClickStartCampaignMode()
@@ -86,9 +85,13 @@ public class UI_Button_All : MonoBehaviour
 
         ObjectManager.instance.AllObjectSetActiveFalse();
 
+        UIManager.instance.Init();
+        
         Time.timeScale = 1f;
 
         SceneManager.LoadScene("Stage_01");
+
+        UIManager.instance.SetActiveSceneUIGroup(true);
     }    
 
     public void OnClickStartInfiniteMode()
@@ -108,30 +111,39 @@ public class UI_Button_All : MonoBehaviour
 
         ObjectManager.instance.AllObjectSetActiveFalse();
 
+        UIManager.instance.Init();
+        
         Time.timeScale = 1f;
+
         SceneManager.LoadScene("InfiniteMode");
+
+        UIManager.instance.SetActiveSceneUIGroup(true);
     }
 
     public void OnClickRetry()
     {
-        _previousgamemode = GameManager.instance._gamemode;
+        //_previousgamemode = GameManager.instance._gamemode;
         GameManager.instance.Init();
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
         ObjectManager.instance.AllObjectSetActiveFalse();
 
+        UIManager.instance.Init();
+        
+
         Time.timeScale = 1f;
 
-        if(_previousgamemode == Define.GameMode.Campaign)
+        if(SceneManager.GetActiveScene().name == "Stage_01")
         {
             SceneManager.LoadScene("Stage_01");
         }
-        else if(_previousgamemode == Define.GameMode.Infinite)
+        else if(SceneManager.GetActiveScene().name == "InfiniteMode")
         {
             SceneManager.LoadScene("InfiniteMode");
         }
-        
+
+        UIManager.instance.SetActiveSceneUIGroup(true);
     }
 
     public void OnClickOpenMainMenu()
@@ -142,8 +154,12 @@ public class UI_Button_All : MonoBehaviour
 
         ObjectManager.instance.AllObjectSetActiveFalse();
 
+        UIManager.instance.Init();        
+
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+
+        UIManager.instance.SetActiveMainMenuGroup(true);
     }
 
     public void OnMouseEnter()

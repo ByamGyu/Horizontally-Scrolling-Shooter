@@ -518,8 +518,20 @@ public class PlayerController : MonoBehaviour
     }
 
     public int GetLife() { return _life; }
-    public void AddScore(int score) { _score += score; }
-    public int GetScore() { return _score; }
+
+    public void AddScore(int score)
+    {
+        // 플레이어 객체에 점수 기록(최대한 여기서 쓰는건 제거)
+        _score += score;
+
+        // 게임 인스턴스에도 점수 기록
+        GameInstance.instance.SetPlayerScore(_score);
+    }
+
+    public int GetScore()
+    {
+        return _score;
+    }
     public void SetIsHit(bool tmp) { _isHit = tmp; }
     public bool GetIsHit() { return _isHit; }
 

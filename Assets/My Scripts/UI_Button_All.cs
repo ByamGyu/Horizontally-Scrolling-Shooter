@@ -69,6 +69,8 @@ public class UI_Button_All : MonoBehaviour
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
+        GameInstance.instance.Read1stScoreFile();
+
         ObjectManager.instance.AllObjectSetActiveFalse();
 
         UIManager.instance.Init();
@@ -94,6 +96,8 @@ public class UI_Button_All : MonoBehaviour
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
+        GameInstance.instance.Read1stScoreFile();
+
         ObjectManager.instance.AllObjectSetActiveFalse();
 
         UIManager.instance.Init();
@@ -108,6 +112,8 @@ public class UI_Button_All : MonoBehaviour
     public void OnClickRetry()
     {
         GameManager.instance.Init();
+
+        GameInstance.instance.Read1stScoreFile();
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
@@ -133,6 +139,8 @@ public class UI_Button_All : MonoBehaviour
     {
         GameManager.instance._gamemode = Define.GameMode.None;
 
+        GameInstance.instance.Read1stScoreFile();
+
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 
         ObjectManager.instance.AllObjectSetActiveFalse();
@@ -147,7 +155,6 @@ public class UI_Button_All : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        //Debug.Log("버튼에 마우스 올라감!");
         SoundManager.instance.PlaySoundEffectOneShot("UI_Change", 0.5f);
     }
 }

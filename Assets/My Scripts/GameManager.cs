@@ -32,15 +32,10 @@ public class GameManager : MonoBehaviour
     public int _BossSpawnTurn = 0;
     public bool _WarningSound = false;
     public int _WarningSoundCnt = 0;
-    public int _PlayerScore = 0;
 
 
     // 게임모드 설정
     public Define.GameMode _gamemode = Define.GameMode.None;
-
-
-    // UI 차지 공격 바 관련
-    public Slider _ChargeAttackBar;
 
 
     // 적 기체 txt 파일로 스폰하는데 사용됨
@@ -107,6 +102,9 @@ public class GameManager : MonoBehaviour
         Init();
 
         _Player = GameObject.Find("Player");
+
+        // 스테이지별로 게임이 시작될 때 점수 UI 초기화
+        UIManager.instance.InitScoreTextAndHighScoreTextAtGameStart();
     }
 
     public void Init()
@@ -115,7 +113,6 @@ public class GameManager : MonoBehaviour
         _Spawn_Delay_Time_Obstacle_Cur = 0;
         _BossSpawnTurn = 0;
         _WarningSoundCnt = 0;
-        _PlayerScore = 0;
         _Enemy_Cnt = 1;
     }
 
@@ -190,7 +187,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if (_gamemode == Define.GameMode.UI || _gamemode == Define.GameMode.None) return;
 
@@ -244,15 +241,14 @@ public class GameManager : MonoBehaviour
             SpawnObstacle_CampaignMode();
         }
 
-
         // 점수 갱신
         if(_Player != null)
         {
-            PlayerController playerinfo = _Player.GetComponent<PlayerController>();
-            _PlayerScore = playerinfo.GetScore();
-            GameInstance.instance.SetPlayerScore(_PlayerScore);
+            // 게임 인스턴스에 점수 저장
+            GameInstance.instance.SetPlayerScore(GameInstance.instance.GetPlayerScore());
 
-            UIManager.instance.UpdateScoreText(playerinfo.GetScore());
+            // UI 갱신
+            UIManager.instance.UpdateScoreText(GameInstance.instance.GetPlayerScore());
         }
     }
 
@@ -274,17 +270,12 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;            
             UIManager.instance.SetActiveStageClearGroup(true);
 
-            // 점수 갱신
-            PlayerController playerinfo = _Player.GetComponent<PlayerController>();
-            _PlayerScore = playerinfo.GetScore();
-            GameInstance.instance.SetPlayerScore(_PlayerScore);
-
             // ui에 점수 적용
-            UIManager.instance._scoretext.text = string.Format("Total Score: " + "{0:n0}", _PlayerScore);
+            UIManager.instance._scoretext.text = string.Format("Total Score: " + "{0:n0}", GameInstance.instance.GetPlayerScore());
 
             UIManager.instance.SetActiveSceneUIGroup(false);
 
-            SoundManager.instance.PlayBGM("Stage_Clear", 0.75f, true);
+            SoundManager.instance.PlayBGM("Stage_Clear", 0.6f, true);
 
             return;
         }
@@ -659,13 +650,6 @@ public class GameManager : MonoBehaviour
         // 다음 스폰시간 갱신
         _Spawn_Delay_Time_Obstacle_Next = _spawnList_obstacle[_spawnIndex_obstacle].delay; // index out of range 문제 있음
         _Spawn_Delay_Time_Obstacle_Cur = 0f;
-    }
-
-    public void UpdateChargeGuage(float curvalue, float maxvalue = 3.0f)
-    {
-        if (curvalue == 0) _ChargeAttackBar.value = 0;
-
-        _ChargeAttackBar.value = curvalue / maxvalue;
     }
 
     public void RespawnPlayerInvoke(float time)

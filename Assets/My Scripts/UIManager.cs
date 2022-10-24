@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public Text _scoretext;
+    public Text _hightscoretext;
     public Text _stageclearscoretext;
     public Image[] _lifeImage;
     public Image[] _UltImage;
@@ -71,11 +72,7 @@ public class UIManager : MonoBehaviour
         {
             SetActiveMainMenuGroup(true);
         }
-        else if (_CurScene.name == "Stage_01")
-        {
-            SetActiveSceneUIGroup(true);
-        }
-        else if (_CurScene.name == "InfiniteMode")
+        else if (_CurScene.name == "Stage_01" || _CurScene.name == "InfiniteMode")
         {
             SetActiveSceneUIGroup(true);
         }
@@ -85,7 +82,37 @@ public class UIManager : MonoBehaviour
     {
         _scoretext.text = string.Format("Score: " + "{0:n0}", tmp);
 
+        if(tmp >= GameInstance.instance.Get1stScore())
+        {
+            _hightscoretext.text = string.Format("High Score: " + "{0:n0}", tmp);
+        }
+
         UpdateStageClearScoreText(tmp);
+    }
+
+    public void InitScoreTextAndHighScoreTextAtGameStart() // 씬에 따라서 처음 시작할 때 점수 text 갱신 용도
+    {
+        _CurScene = SceneManager.GetActiveScene();
+
+        if (_CurScene.name == "Stage_01")
+        {
+            _scoretext.text = string.Format("Score: " + "{0:n0}", 0);
+
+            int hightscoretmp = GameInstance.instance.Get1stScore();
+            _hightscoretext.text = string.Format("High Score: " + "{0:n0}", hightscoretmp);
+        }
+        else if(_CurScene.name == "InfiniteMode")
+        {
+            _scoretext.text = string.Format("Score: " + "{0:n0}", 0);
+
+            int hightscoretmp = GameInstance.instance.Get1stScore();
+            _hightscoretext.text = string.Format("High Score: " + "{0:n0}", hightscoretmp);
+        }
+        else if(_CurScene == null)
+        {
+            Debug.Log("점수와 상관없는 씬이거나 코드 업데이트 바람!");
+            return;
+        }
     }
 
     public void UpdateStageClearScoreText(int tmp)

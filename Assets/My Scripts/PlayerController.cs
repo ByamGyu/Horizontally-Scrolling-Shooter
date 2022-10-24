@@ -154,9 +154,7 @@ public class PlayerController : MonoBehaviour
 
         transform.position = CurPos + NextPos; // 다음 위치
     }
-
-
-    
+        
     void Calculate_ChargeAttackTime()
     {
         // ']'키에서 손을 떼면
@@ -471,7 +469,10 @@ public class PlayerController : MonoBehaviour
         SetChargeAttack(false);
         _chargeTime = 0f;
 
+        UIManager.instance.UpdateChargeGuage(0);
+        _soundeffectchargedisplay = false;
         SoundManager.instance.PlaySoundEffectOneShot("Enemy_Destroy(Small)", 0.75f);
+        SoundManager.instance.StopSoundEffectAudioSource();
         EffectManager.instance.SpawnEffect("Effect_Explosion_Orangespark", transform.position, new Vector3(0, 0, 0));
     }
 

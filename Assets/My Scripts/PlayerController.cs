@@ -106,16 +106,6 @@ public class PlayerController : MonoBehaviour
         Fire_Ult();
     }
 
-    void OpenMenuUI()
-    {
-
-    }
-
-    void CloseMenuUI()
-    {
-
-    }
-
     void CalculateInvincible()
     {
         if (_invincibleTime <= 0) // 무적시간이 없으면

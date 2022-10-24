@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_invincibleTime <= 0) // 무적시간이 없으면
         {
-            _invincibleTime = 0.0f;
+            _invincibleTime = 0;
 
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
             renderer.color = new Color(1, 1, 1, 1);
@@ -416,19 +416,16 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-        else // 이동제한 경계선이 아닌 모든 처리
+        else // 경계선 이동제한이 아닌 모든 처리
         {
             // 무적상태면 return;
             if (_invincibleTime > 0) return;
 
+            // 플레이어 탄환은 무시
             if(collision.gameObject.tag == "PlayerBullet")
             {
                 return;
             }
-
-            // 한번에 여러번 맞는 현상 방지
-            if (_isHit == true) return;
-            _isHit = true;
 
             if (collision.gameObject.tag == "Enemy")
             {

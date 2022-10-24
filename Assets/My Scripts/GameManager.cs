@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
         _spawnIndex = 0;
 
         // 스폰 txt파일 읽기 (7:45)(13:32)
-        // Resources 폴더 내부의 파일 (Resources 폴더는 절대 변경할 수 없다)
+        // Resources 폴더 내부의 파일
         TextAsset textFile = Resources.Load("Stage_01_SpawnData") as TextAsset;
         StringReader stringReader = new StringReader(textFile.text);
 
@@ -666,7 +666,6 @@ public class GameManager : MonoBehaviour
 
         _Player.transform.position = new Vector3(-8, 0, 0);
         playerinfo.SetInvincibleTime(2.5f); // 무적시간 설정
-        playerinfo.SetIsHit(false);
         _Player.SetActive(true);
     }
 
@@ -675,56 +674,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         UIManager.instance.Init();
         UIManager.instance.SetActiveGameOverGroup(true);
-        //RecordScoretxtFile();
     }
-
-    //public void RecordScoretxtFile()
-    //{
-    //    // 모드에 맞게 txt파일을 생성해서 점수를 저장
-    //    if (_gamemode == Define.GameMode.Campaign)
-    //    {
-    //        string path = "Assets/Resources/CampaignModeHighScore";
-    //        StreamWriter sw = new StreamWriter(path + ".txt"); ;
-
-    //        // 파일이 없으면 생성
-    //        if (File.Exists(path) == false)
-    //        {
-    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
-    //            sw.Flush();
-    //            sw.Close();
-    //            return;
-    //        }
-    //        else // 파일이 있으면 기존 파일을 삭제하고 새롭게 기록함
-    //        {
-    //            System.IO.File.Delete(path + ".txt");
-    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
-    //            sw.Flush();
-    //            sw.Close();
-    //            return;
-    //        }
-    //    }
-    //    else if (_gamemode == Define.GameMode.Infinite)
-    //    {
-    //        string path = "Assets/Resources/InfiniteModeHighScore";
-    //        StreamWriter sw = new StreamWriter(path + ".txt"); ;
-
-    //        if (File.Exists(path) == false)
-    //        {
-    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
-    //            sw.Flush();
-    //            sw.Close();
-    //            return;
-    //        }
-    //        else
-    //        {
-    //            System.IO.File.Delete(path + ".txt");
-    //            sw.WriteLine(GameInstance.instance.GetPlayerScore());
-    //            sw.Flush();
-    //            sw.Close();
-    //            return;
-    //        }
-    //    }
-    //}
 
     public void SetEnemyCnt(int tmp)
     {

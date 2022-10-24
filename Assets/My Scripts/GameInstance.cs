@@ -53,6 +53,12 @@ public class GameInstance : MonoBehaviour
         Read1stScoreFile();
     }
 
+    public void InitPlayerScore()
+    {
+        _playerscore_InfiniteMode = 0;
+        _playerscore_CampaignMode = 0;
+    }
+
     public void Read1stScoreFile() // text 파일에 저장된 기존 최고 점수 가져오기
     {
         TextAsset textFile = Resources.Load("CampaignModeHighScore") as TextAsset;

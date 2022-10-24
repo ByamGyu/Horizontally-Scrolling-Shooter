@@ -114,6 +114,7 @@ public class UI_Button_All : MonoBehaviour
         GameManager.instance.Init();
 
         GameInstance.instance.Read1stScoreFile();
+        GameInstance.instance.InitPlayerScore();
 
         SoundManager.instance.PlaySoundEffectOneShot("UI_Select");
 

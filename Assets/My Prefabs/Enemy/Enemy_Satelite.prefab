@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.5
-  _life: 10
-  _MaxLife: 10
+  _life: 31
+  _MaxLife: 31
   _score: 300
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
   _Bullet_Shot_Delay_Cur: 0
-  _Bullet_Shot_Delay_Max: 5
+  _Bullet_Shot_Delay_Max: 4

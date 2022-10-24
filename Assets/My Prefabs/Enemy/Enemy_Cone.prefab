@@ -259,4 +259,4 @@ MonoBehaviour:
   _rigid: {fileID: 0}
   _Player: {fileID: 0}
   _Bullet_Shot_Delay_Cur: 0
-  _Bullet_Shot_Delay_Max: 3
+  _Bullet_Shot_Delay_Max: 2.5

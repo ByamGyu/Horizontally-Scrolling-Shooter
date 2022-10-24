@@ -8,7 +8,7 @@ public class Enemy_Satelite : Enemy_Base
     [SerializeField]
     float _Bullet_Shot_Delay_Cur = 0.0f;
     [SerializeField]
-    float _Bullet_Shot_Delay_Max = 5f;
+    float _Bullet_Shot_Delay_Max = 4f;
 
 
     void Start()

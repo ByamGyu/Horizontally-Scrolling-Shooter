@@ -65,7 +65,7 @@ public class GameInstance : MonoBehaviour
         if (textFile == null) // 파일이 없으면 생성
         {
             string fullpath = "Assets/Resources/CampaignModeHighScore";
-            System.IO.File.WriteAllText(fullpath + ".txt", "");
+            System.IO.File.WriteAllText(fullpath + ".txt", "0");
         }
         else // 파일이 있으면 점수 읽어오기
         {
@@ -88,7 +88,7 @@ public class GameInstance : MonoBehaviour
         if (textFile2 == null) // 파일이 없으면 생성
         {
             string fullpath = "Assets/Resources/InfiniteModeHighScore";
-            System.IO.File.WriteAllText(fullpath + ".txt", "");
+            System.IO.File.WriteAllText(fullpath + ".txt", "0");
         }
         else
         {

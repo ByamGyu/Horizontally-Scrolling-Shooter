@@ -43,7 +43,7 @@ public class Enemy_Base : MonoBehaviour
 
         if(_life <= 0)
         {
-            _Player = GameObject.FindGameObjectWithTag("Player"); // 처음 몇 개체만 플레이어가 null로 잡히는 이상한 버그 해결용
+            _Player = GameObject.FindGameObjectWithTag("Player"); // 처음 몇 개체만 플레이어가 null로 잡히는 버그 해결용
             if(_Player != null)
             {
                 PlayerController playerinfo = _Player.GetComponent<PlayerController>();
